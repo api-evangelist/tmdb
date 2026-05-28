@@ -1,0 +1,32 @@
+aid: tmdb
+name: TMDb
+description: "Community-based movie data"
+url: https://www.themoviedb.org/documentation/api
+specificationVersion: '0.20'
+created: '2026-05-28'
+modified: '2026-05-28'
+x-source: public-apis/public-apis
+x-category: "Video"
+x-tier: 3
+x-tier-reason: bulk-registered-from-public-apis
+tags:
+  - Video
+  - Public APIs
+apis:
+  - name: TMDb
+    description: "Community-based movie data"
+    humanURL: https://www.themoviedb.org/documentation/api
+    baseURL: https://www.themoviedb.org/documentation/api
+    tags:
+      - Video
+    properties:
+      - type: Documentation
+        url: https://www.themoviedb.org/documentation/api
+common:
+  - type: Website
+    url: https://www.themoviedb.org/documentation/api
+  - type: PublicAPIsListing
+    url: https://github.com/public-apis/public-apis
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
