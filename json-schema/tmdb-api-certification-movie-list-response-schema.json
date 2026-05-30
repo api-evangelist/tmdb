@@ -1,0 +1,1229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-certification-movie-list-response-schema.json",
+  "title": "CertificationMovieListResponse",
+  "description": "TMDB Certifications \u2014 Movie Certifications (200 payload).",
+  "type": "object",
+  "properties": {
+    "certifications": {
+      "type": "object",
+      "properties": {
+        "AU": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "E"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Exempt from classification. Films that are exempt from classification must not contain contentious material (i.e. material that would ordinarily be rated M or higher)."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "BG": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "D"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Prohibited for persons under 16."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "BR": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "14"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Not recommended for minors under fourteen. More violent material, stronger sex references and/or nudity."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "CA": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "G"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "All ages."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  2
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "CA-QC": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "NR"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "No rating information."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  0
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "DE": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "12"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Children 12 or older admitted, children between 6 and 11 only when accompanied by parent or a legal guardian."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  3
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "DK": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "NR"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "No rating information."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  0
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "ES": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "A"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "General admission."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "FI": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "K-16"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Over 16 years."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "FR": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "TP"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Valid for all audiences."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "GB": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "15"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Only those over 15 years are admitted. Nobody younger than 15 can rent or buy a 15-rated VHS, DVD, Blu-ray Disc, UMD or game, or watch a film in the cinema with this rating. Films under this category can contain adult themes, hard drugs, frequent strong language and limited use of very strong language, strong violence and strong sex references, and nudity without graphic detail. Sexual activity may be portrayed but without any strong detail. Sexual violence may be shown if discreet and justified by context."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  5
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "HU": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "6"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Not recommended below age of 6."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  2
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "IN": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "U"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Unrestricted Public Exhibition throughout India, suitable for all age groups. Films under this category should not upset children over 4. Such films may contain educational, social or family-oriented themes. Films under this category may also contain fantasy violence and/or mild bad language."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "IT": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "NR"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "No rating information."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  0
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "LT": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "NR"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "No rating information."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  0
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "MY": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "NR"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "No rating information."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  0
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "NL": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "AL"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "All ages."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "NO": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "6"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "6 years (no restriction for children accompanied by an adult)."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  2
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "NZ": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "G"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Suitable for general audiences."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "PH": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "NR"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "No rating information."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  0
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "PT": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "P\u00fablicos"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "For all the public (especially designed for children under 3 years of age)."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "RU": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "6+"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "(For children above 6) \u2013 Unsuitable for children under 6."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  2
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "SE": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "11"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Children over the age of 7, who are accompanied by an adult, are admitted to films that have been passed for children from the age of 11."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  3
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "US": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "R"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Under 17 requires accompanying parent or adult guardian 21 or older. The parent/guardian is required to stay with the child under 17 through the entire movie, even if the parent gives the child/teenager permission to see the film alone. These films may contain strong profanity, graphic sexuality, nudity, strong violence, horror, gore, and strong drug use. A movie rated R for profanity often has more severe or frequent language than the PG-13 rating would permit. An R-rated movie may have more blood, gore, drug use, nudity, or graphic sexuality than a PG-13 movie would admit."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "KR": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "All"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Film suitable for all ages."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  0
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "SK": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "U"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "General audience."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "TH": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "P"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Educational."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "MX": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "AA"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Informative-only rating: Understandable for children under 7 years."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "ID": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "SU"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "All ages."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "TR": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "Genel \u0130zleyici Kitlesi"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "General audience."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "AR": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "ATP"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "For all public."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "GR": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "K"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "No restrictions."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "TW": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "0+"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Viewing is permitted for audiences of all ages."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "ZA": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "A"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Suitable for all."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "SG": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "G"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Suitable for all ages."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "IE": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "G"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "Suitable for children of school going age (note: children can be enrolled in school from the age of 4)."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "PR": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "G"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  ""
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "JP": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "G"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "General, suitable for all ages."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "VI": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "G"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  "All ages admitted."
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "CH": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "0"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  ""
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "IL": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "All"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  ""
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "HK": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "I"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  ""
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "MO": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "A"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  ""
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "LV": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "U"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  ""
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        },
+        "LU": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "certification": {
+                "type": "string",
+                "examples": [
+                  "EA"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "examples": [
+                  ""
+                ]
+              },
+              "order": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-guest-session-rated-tv-episodes-response-schema.json",
+  "title": "GuestSessionRatedTvEpisodesResponse",
+  "description": "TMDB Guest Sessions \u2014 Rated TV Episodes (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "air_date": {
+            "type": "string",
+            "examples": [
+              "2011-04-17"
+            ]
+          },
+          "episode_number": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              63056
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Winter Is Coming"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Jon Arryn, the Hand of the King, is dead. King Robert Baratheon plans to ask his oldest friend, Eddard Stark, to take Jon's place. Across the sea, Viserys Targaryen plans to wed his sister to a nomadic warlord in exchange for an army."
+            ]
+          },
+          "production_code": {
+            "type": "string",
+            "examples": [
+              "101"
+            ]
+          },
+          "runtime": {
+            "type": "integer",
+            "examples": [
+              62
+            ],
+            "default": 0
+          },
+          "season_number": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "show_id": {
+            "type": "integer",
+            "examples": [
+              1399
+            ],
+            "default": 0
+          },
+          "still_path": {
+            "type": "string",
+            "examples": [
+              "/9hGF3WUkBf7cSjMg0cdMDHJkByd.jpg"
+            ]
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              7.843
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              286
+            ],
+            "default": 0
+          },
+          "rating": {
+            "type": "number",
+            "examples": [
+              8.5
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    }
+  }
+}

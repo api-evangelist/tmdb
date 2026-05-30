@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-account-add-favorite-response-schema.json",
+  "title": "AccountAddFavoriteResponse",
+  "description": "TMDB Account \u2014 Add Favorite (200 payload).",
+  "type": "object",
+  "properties": {
+    "status_code": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "status_message": {
+      "type": "string",
+      "examples": [
+        "Success."
+      ]
+    }
+  }
+}

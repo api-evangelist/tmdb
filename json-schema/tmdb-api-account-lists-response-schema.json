@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-account-lists-response-schema.json",
+  "title": "AccountListsResponse",
+  "description": "TMDB Account \u2014 Lists (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "examples": [
+              ""
+            ]
+          },
+          "favorite_count": {
+            "type": "integer",
+            "examples": [
+              0
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              120174
+            ],
+            "default": 0
+          },
+          "item_count": {
+            "type": "integer",
+            "examples": [
+              5
+            ],
+            "default": 0
+          },
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "list_type": {
+            "type": "string",
+            "examples": [
+              "movie"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Test Alpha Sort"
+            ]
+          },
+          "poster_path": {}
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        2
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        25
+      ],
+      "default": 0
+    }
+  }
+}

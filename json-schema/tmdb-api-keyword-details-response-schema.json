@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-keyword-details-response-schema.json",
+  "title": "KeywordDetailsResponse",
+  "description": "TMDB Keywords \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        1701
+      ],
+      "default": 0
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "hero"
+      ]
+    }
+  }
+}

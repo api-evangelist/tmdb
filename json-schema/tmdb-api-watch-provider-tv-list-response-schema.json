@@ -1,0 +1,489 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-watch-provider-tv-list-response-schema.json",
+  "title": "WatchProviderTvListResponse",
+  "description": "TMDB Watch Providers \u2014 TV Providers (200 payload).",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "display_priorities": {
+            "type": "object",
+            "properties": {
+              "CA": {
+                "type": "integer",
+                "examples": [
+                  6
+                ],
+                "default": 0
+              },
+              "AE": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              },
+              "AR": {
+                "type": "integer",
+                "examples": [
+                  3
+                ],
+                "default": 0
+              },
+              "AT": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "AU": {
+                "type": "integer",
+                "examples": [
+                  10
+                ],
+                "default": 0
+              },
+              "BE": {
+                "type": "integer",
+                "examples": [
+                  6
+                ],
+                "default": 0
+              },
+              "BO": {
+                "type": "integer",
+                "examples": [
+                  6
+                ],
+                "default": 0
+              },
+              "BR": {
+                "type": "integer",
+                "examples": [
+                  8
+                ],
+                "default": 0
+              },
+              "BG": {
+                "type": "integer",
+                "examples": [
+                  2
+                ],
+                "default": 0
+              },
+              "CH": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "CL": {
+                "type": "integer",
+                "examples": [
+                  3
+                ],
+                "default": 0
+              },
+              "CO": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "CR": {
+                "type": "integer",
+                "examples": [
+                  5
+                ],
+                "default": 0
+              },
+              "CZ": {
+                "type": "integer",
+                "examples": [
+                  3
+                ],
+                "default": 0
+              },
+              "DE": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "DK": {
+                "type": "integer",
+                "examples": [
+                  7
+                ],
+                "default": 0
+              },
+              "EC": {
+                "type": "integer",
+                "examples": [
+                  7
+                ],
+                "default": 0
+              },
+              "EE": {
+                "type": "integer",
+                "examples": [
+                  3
+                ],
+                "default": 0
+              },
+              "EG": {
+                "type": "integer",
+                "examples": [
+                  2
+                ],
+                "default": 0
+              },
+              "ES": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "FI": {
+                "type": "integer",
+                "examples": [
+                  10
+                ],
+                "default": 0
+              },
+              "FR": {
+                "type": "integer",
+                "examples": [
+                  5
+                ],
+                "default": 0
+              },
+              "GB": {
+                "type": "integer",
+                "examples": [
+                  5
+                ],
+                "default": 0
+              },
+              "GR": {
+                "type": "integer",
+                "examples": [
+                  2
+                ],
+                "default": 0
+              },
+              "GT": {
+                "type": "integer",
+                "examples": [
+                  7
+                ],
+                "default": 0
+              },
+              "HK": {
+                "type": "integer",
+                "examples": [
+                  5
+                ],
+                "default": 0
+              },
+              "HN": {
+                "type": "integer",
+                "examples": [
+                  7
+                ],
+                "default": 0
+              },
+              "HU": {
+                "type": "integer",
+                "examples": [
+                  3
+                ],
+                "default": 0
+              },
+              "ID": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "IE": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "IN": {
+                "type": "integer",
+                "examples": [
+                  8
+                ],
+                "default": 0
+              },
+              "IT": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "JP": {
+                "type": "integer",
+                "examples": [
+                  7
+                ],
+                "default": 0
+              },
+              "LT": {
+                "type": "integer",
+                "examples": [
+                  3
+                ],
+                "default": 0
+              },
+              "LV": {
+                "type": "integer",
+                "examples": [
+                  3
+                ],
+                "default": 0
+              },
+              "MX": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "MY": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "NL": {
+                "type": "integer",
+                "examples": [
+                  8
+                ],
+                "default": 0
+              },
+              "NO": {
+                "type": "integer",
+                "examples": [
+                  6
+                ],
+                "default": 0
+              },
+              "NZ": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "PE": {
+                "type": "integer",
+                "examples": [
+                  3
+                ],
+                "default": 0
+              },
+              "PH": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "PL": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              },
+              "PT": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "PY": {
+                "type": "integer",
+                "examples": [
+                  7
+                ],
+                "default": 0
+              },
+              "RU": {
+                "type": "integer",
+                "examples": [
+                  2
+                ],
+                "default": 0
+              },
+              "SA": {
+                "type": "integer",
+                "examples": [
+                  1
+                ],
+                "default": 0
+              },
+              "SE": {
+                "type": "integer",
+                "examples": [
+                  8
+                ],
+                "default": 0
+              },
+              "SG": {
+                "type": "integer",
+                "examples": [
+                  5
+                ],
+                "default": 0
+              },
+              "SK": {
+                "type": "integer",
+                "examples": [
+                  3
+                ],
+                "default": 0
+              },
+              "TH": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "TR": {
+                "type": "integer",
+                "examples": [
+                  6
+                ],
+                "default": 0
+              },
+              "TW": {
+                "type": "integer",
+                "examples": [
+                  7
+                ],
+                "default": 0
+              },
+              "US": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "VE": {
+                "type": "integer",
+                "examples": [
+                  4
+                ],
+                "default": 0
+              },
+              "ZA": {
+                "type": "integer",
+                "examples": [
+                  2
+                ],
+                "default": 0
+              },
+              "SI": {
+                "type": "integer",
+                "examples": [
+                  31
+                ],
+                "default": 0
+              },
+              "CV": {
+                "type": "integer",
+                "examples": [
+                  13
+                ],
+                "default": 0
+              },
+              "GH": {
+                "type": "integer",
+                "examples": [
+                  17
+                ],
+                "default": 0
+              },
+              "MU": {
+                "type": "integer",
+                "examples": [
+                  15
+                ],
+                "default": 0
+              },
+              "MZ": {
+                "type": "integer",
+                "examples": [
+                  16
+                ],
+                "default": 0
+              },
+              "UG": {
+                "type": "integer",
+                "examples": [
+                  16
+                ],
+                "default": 0
+              },
+              "IL": {
+                "type": "integer",
+                "examples": [
+                  28
+                ],
+                "default": 0
+              }
+            }
+          },
+          "display_priority": {
+            "type": "integer",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "logo_path": {
+            "type": "string",
+            "examples": [
+              "/peURlLlr8jggOwK53fJ5wdQl05y.jpg"
+            ]
+          },
+          "provider_name": {
+            "type": "string",
+            "examples": [
+              "Apple TV"
+            ]
+          },
+          "provider_id": {
+            "type": "integer",
+            "examples": [
+              2
+            ],
+            "default": 0
+          }
+        }
+      }
+    }
+  }
+}

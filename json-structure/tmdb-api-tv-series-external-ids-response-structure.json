@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-series-external-ids-response-structure.json",
+  "name": "TvSeriesExternalIdsResponse",
+  "description": "TMDB TV Series \u2014 External IDs (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    },
+    "imdb_id": {
+      "type": "string",
+      "examples": [
+        "tt0944947"
+      ]
+    },
+    "freebase_mid": {
+      "type": "string",
+      "examples": [
+        "/m/0524b41"
+      ]
+    },
+    "freebase_id": {
+      "type": "string",
+      "examples": [
+        "/en/game_of_thrones"
+      ]
+    },
+    "tvdb_id": {
+      "type": "int32",
+      "examples": [
+        121361
+      ],
+      "default": 0
+    },
+    "tvrage_id": {
+      "type": "int32",
+      "examples": [
+        24493
+      ],
+      "default": 0
+    },
+    "wikidata_id": {
+      "type": "string",
+      "examples": [
+        "Q23572"
+      ]
+    },
+    "facebook_id": {
+      "type": "string",
+      "examples": [
+        "GameOfThrones"
+      ]
+    },
+    "instagram_id": {
+      "type": "string",
+      "examples": [
+        "gameofthrones"
+      ]
+    },
+    "twitter_id": {
+      "type": "string",
+      "examples": [
+        "GameOfThrones"
+      ]
+    }
+  }
+}

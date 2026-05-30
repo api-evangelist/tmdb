@@ -1,0 +1,82 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: The Movie Database
+providerId: tmdb
+created: '2026-05-30'
+modified: '2026-05-30'
+reconciled: true
+tags:
+- Rate Limiting
+- Catalog
+- Movies
+- TV
+- Video
+description: >-
+  TMDB enforces a soft request-rate ceiling around 40 requests per second to prevent excessive bulk
+  scraping rather than as a strict per-user quota. The historical 40-requests-per-10-seconds limit was
+  removed on 2019-12-16. Limits are scoped to your account/API key (no separate live vs sandbox tier).
+  Responses use HTTP 429 when the limit is exceeded; the documented response also returns a TMDB-internal
+  status_code 25 in the JSON body. Rate limit policy can change without notice — TMDB recommends building
+  client back-off behavior rather than assuming a hard contract.
+sources:
+- https://developer.themoviedb.org/docs/rate-limiting
+- https://www.themoviedb.org/talk/category/5047958519c29526b50017d6
+headers:
+  retryAfter: Retry-After
+responseCodes:
+  throttled: 429
+  quotaExceeded: 429
+limits:
+- name: Request rate per API key
+  scope: api_key
+  metric: requests_per_second
+  limit: 40
+  timeFrame: second
+  notes: >-
+    TMDB documents the ceiling as "somewhere in the 40 requests per second range" and explicitly warns
+    that the exact threshold can shift. Treat 40 RPS as the practical maximum; back off on 429.
+- name: Daily ID export rate
+  scope: client
+  metric: requests_per_day
+  limit: -1
+  timeFrame: day
+  notes: >-
+    The /3/configuration and daily ID export files (https://files.tmdb.org/) are intended for batch
+    download — fetch each export once per day and consume locally rather than polling.
+- name: Image CDN
+  scope: client
+  metric: requests_per_second
+  limit: -1
+  notes: >-
+    Image CDN traffic (image.tmdb.org) is not subject to the API rate limit; cache aggressively at your
+    own edge.
+policies:
+- name: Exponential back-off on 429
+  description: >-
+    On 429 responses, pause the request stream and retry with an increasing back-off (e.g. 1s, 2s, 4s,
+    8s capped at 30s). Honor any Retry-After header when present.
+- name: Cache for up to 6 months
+  description: >-
+    Per the TMDB API Terms of Use, you may cache responses for up to 6 months. Caching is the primary
+    mechanism for staying well under the rate limit.
+- name: Use append_to_response
+  description: >-
+    Combine related sub-resource fetches into one request using ?append_to_response=credits,images,videos
+    on detail endpoints. This is the cheapest way to reduce request volume against a movie/TV/person.
+- name: Use daily ID exports for bulk discovery
+  description: >-
+    Don't iterate /discover/* across the entire catalog. Use the daily ID export files to find new IDs,
+    then call detail endpoints for the deltas.
+- name: Soft limit — subject to change
+  description: >-
+    TMDB explicitly notes the rate-limit threshold can change without notice. Treat it as a soft policy
+    rather than a contractual SLO.
+- name: No live/sandbox split
+  description: >-
+    There is no separate sandbox tier. Use a test account/API key for development work but understand
+    you share the same limit ceiling as production traffic.
+- name: Plan-level quotas — none
+  description: >-
+    Non-commercial use has no monthly request cap. Commercial use rate limits, if any, are negotiated
+    in the commercial agreement and not publicly documented.

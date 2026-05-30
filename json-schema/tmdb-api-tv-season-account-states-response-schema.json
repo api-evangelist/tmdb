@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-season-account-states-response-schema.json",
+  "title": "TvSeasonAccountStatesResponse",
+  "description": "TMDB TV Series \u2014 Account States (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        3624
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "examples": [
+              63056
+            ],
+            "default": 0
+          },
+          "episode_number": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "rated": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "integer",
+                "examples": [
+                  9
+                ],
+                "default": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

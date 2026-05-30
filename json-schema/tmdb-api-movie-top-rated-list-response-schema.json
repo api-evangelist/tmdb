@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-movie-top-rated-list-response-schema.json",
+  "title": "MovieTopRatedListResponse",
+  "description": "TMDB Movies \u2014 Top Rated (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/tmU7GeKVybMWFButWEGl2M4GeiP.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                18
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              238
+            ],
+            "default": 0
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_title": {
+            "type": "string",
+            "examples": [
+              "The Godfather"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge."
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              100.932
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"
+            ]
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "1972-03-14"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "examples": [
+              "The Godfather"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              8.7
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              17806
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        552
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        11032
+      ],
+      "default": 0
+    }
+  }
+}

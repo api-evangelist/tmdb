@@ -1,0 +1,113 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: The Movie Database
+providerId: tmdb
+created: '2026-05-30'
+modified: '2026-05-30'
+reconciled: false
+tags:
+- FinOps
+- FOCUS
+- Catalog
+- Entertainment
+- Movies
+- TV
+- Video
+description: >-
+  FOCUS-aligned FinOps shape for TMDB. The public API has no metered billing — non-commercial use is
+  free, commercial use is governed by a negotiated written agreement with no published price sheet. The
+  FinOps meters below are internal-cost meters: they reflect what a TMDB consumer should track to model
+  their own consumption (request volume, image bandwidth, cache age) for accountability and to inform
+  commercial negotiations with TMDB. There is no TMDB-issued invoice to reconcile against.
+sources:
+- https://www.themoviedb.org/api-terms-of-use
+- https://developer.themoviedb.org/docs/rate-limiting
+- https://developer.themoviedb.org/docs/getting-started
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: The Movie Database, LLC
+serviceCategory: Media + Entertainment Catalog
+billingModel:
+  pricingCategory: Custom (Non-Commercial Free + Negotiated Commercial)
+  billingFrequency: On-Demand (when commercial agreement is in place)
+  billingCurrency: USD (negotiated)
+  chargeCategories:
+  - Usage
+  - Purchase
+focusColumns:
+  ServiceName: The Movie Database API
+  ServiceCategory: Media + Entertainment Catalog
+  ServiceSubcategory: Movie / TV / People Metadata
+  ProviderName: The Movie Database, LLC
+  PublisherName: The Movie Database, LLC
+  InvoiceIssuerName: The Movie Database, LLC
+  BillingCurrency: USD
+  ChargeCategory: Usage
+meters:
+- name: api_requests
+  unit: request
+  aggregation: sum
+  dimensions:
+  - resource_family
+  - http_method
+  - status_code
+  - region
+- name: image_bytes_egress
+  unit: GB
+  aggregation: sum
+  dimensions:
+  - image_size
+  - region
+- name: cache_age_seconds
+  unit: second
+  aggregation: max
+  dimensions:
+  - resource_family
+- name: daily_id_export_downloads
+  unit: download
+  aggregation: count
+  dimensions:
+  - entity_type
+- name: append_to_response_calls
+  unit: request
+  aggregation: sum
+  dimensions:
+  - parent_resource
+  - sub_resource_count
+- name: rate_limit_429_count
+  unit: response
+  aggregation: count
+  dimensions:
+  - api_key
+  - resource_family
+principles:
+- name: Visibility
+  description: >-
+    TMDB does not expose a usage/billing API. Instrument your own client (per-API-key request counters,
+    429-response counters, image CDN bandwidth from your egress provider) and emit FOCUS-shaped rows to
+    your warehouse. Use the /3/configuration response for image base URLs so you can attribute egress to
+    TMDB content.
+- name: Allocation
+  description: >-
+    Tag each TMDB API key with the team/product/feature consuming it. Allocate request and 429-response
+    counts back to the owning workflow (e.g. recommendations, browse, watch-provider lookup). Image CDN
+    bytes attributable to TMDB posters/backdrops should be tagged with the originating page or feature.
+- name: Optimization
+  description: >-
+    Three big levers in order of impact — (1) cache responses up to the 6-month TTL ceiling allowed by
+    the Terms of Use; (2) use ?append_to_response to fold sub-resource lookups (credits, images, videos)
+    into the parent detail call so 4-6 round trips become one; (3) use the nightly daily-ID exports for
+    bulk discovery instead of paginating /discover. For images, cache aggressively at your CDN edge and
+    pick the smallest size variant that satisfies the layout.
+- name: Accountability
+  description: >-
+    Assign one owner per TMDB API key. Alert on 429 rate as a leading indicator of cost (you can't pay
+    TMDB more to raise the limit — only redesign). For commercial integrations, the API Owner is also
+    the contract owner for the written commercial agreement with TMDB and is responsible for any
+    negotiated pricing entries showing up as `Purchase` charges in FOCUS.

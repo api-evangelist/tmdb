@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-account-watchlist-movies-response-structure.json",
+  "name": "AccountWatchlistMoviesResponse",
+  "description": "TMDB Account \u2014 Watchlist Movies (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/rgNzvSagnlc32TuMEBa529QFIig.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "int32",
+              "examples": [
+                878
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              76726
+            ],
+            "default": 0
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_title": {
+            "type": "string",
+            "examples": [
+              "Chronicle"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Three high school students make an incredible discovery, leading to their developing uncanny powers beyond their understanding. As they learn to control their abilities and use them to their advantage, their lives start to spin out of control, and their darker sides begin to take over."
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              37.148
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/xENglsVIIWEEhhB5lgpy33tGcKI.jpg"
+            ]
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "2012-02-01"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Chronicle"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "double",
+            "examples": [
+              6.822
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              4741
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        34
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        677
+      ],
+      "default": 0
+    }
+  }
+}

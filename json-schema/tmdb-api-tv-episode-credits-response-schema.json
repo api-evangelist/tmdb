@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-episode-credits-response-schema.json",
+  "title": "TvEpisodeCreditsResponse",
+  "description": "TMDB TV Series \u2014 Credits (200 payload).",
+  "type": "object",
+  "properties": {
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "integer",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              22970
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Acting"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Peter Dinklage"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Peter Dinklage"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              30.6
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/lRsRgnksAhBRXwAB68MFjmTtLrk.jpg"
+            ]
+          },
+          "character": {
+            "type": "string",
+            "examples": [
+              "Tyrion Lannister"
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "5256c8b219c2956ff6047cd8"
+            ]
+          },
+          "order": {
+            "type": "integer",
+            "examples": [
+              0
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "crew": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "department": {
+            "type": "string",
+            "examples": [
+              "Directing"
+            ]
+          },
+          "job": {
+            "type": "string",
+            "examples": [
+              "Director"
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "5256c8a219c2956ff6046e77"
+            ]
+          },
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "integer",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              44797
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Directing"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Timothy Van Patten"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Timothy Van Patten"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              8.292
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/MzSOFrd99HRdr6pkSRSctk3kBR.jpg"
+            ]
+          }
+        }
+      }
+    },
+    "guest_stars": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "character": {
+            "type": "string",
+            "examples": [
+              "Benjen Stark"
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "5256c8b919c2956ff604836a"
+            ]
+          },
+          "order": {
+            "type": "integer",
+            "examples": [
+              62
+            ],
+            "default": 0
+          },
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "integer",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              119783
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Acting"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Joseph Mawle"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Joseph Mawle"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              8.559
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/1Ocb9v3h54beGVoJMm4w50UQhLf.jpg"
+            ]
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        63056
+      ],
+      "default": 0
+    }
+  }
+}

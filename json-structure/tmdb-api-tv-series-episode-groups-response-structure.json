@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-series-episode-groups-response-structure.json",
+  "name": "TvSeriesEpisodeGroupsResponse",
+  "description": "TMDB TV Series \u2014 Episode Groups (200 payload).",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "examples": [
+              ""
+            ]
+          },
+          "episode_count": {
+            "type": "int32",
+            "examples": [
+              102
+            ],
+            "default": 0
+          },
+          "group_count": {
+            "type": "int32",
+            "examples": [
+              9
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "string",
+            "examples": [
+              "5e9077d2e640d600151f32bd"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Aired Order"
+            ]
+          },
+          "network": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "int32",
+                "examples": [
+                  49
+                ],
+                "default": 0
+              },
+              "logo_path": {
+                "type": "string",
+                "examples": [
+                  "/tuomPhY2UtuPTqqFnKMVHvSb724.png"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "examples": [
+                  "HBO"
+                ]
+              },
+              "origin_country": {
+                "type": "string",
+                "examples": [
+                  "US"
+                ]
+              }
+            }
+          },
+          "type": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "int32",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    }
+  }
+}

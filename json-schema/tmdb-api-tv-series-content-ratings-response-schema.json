@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-series-content-ratings-response-schema.json",
+  "title": "TvSeriesContentRatingsResponse",
+  "description": "TMDB TV Series \u2014 Content Ratings (200 payload).",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "descriptors": {
+            "type": "array"
+          },
+          "iso_3166_1": {
+            "type": "string",
+            "examples": [
+              "DE"
+            ]
+          },
+          "rating": {
+            "type": "string",
+            "examples": [
+              "16"
+            ]
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    }
+  }
+}

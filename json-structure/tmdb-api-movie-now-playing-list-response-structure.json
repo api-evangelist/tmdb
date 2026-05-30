@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-movie-now-playing-list-response-structure.json",
+  "name": "MovieNowPlayingListResponse",
+  "description": "TMDB Movies \u2014 Now Playing (200 payload).",
+  "type": "object",
+  "properties": {
+    "dates": {
+      "type": "object",
+      "properties": {
+        "maximum": {
+          "type": "string",
+          "examples": [
+            "2023-05-03"
+          ]
+        },
+        "minimum": {
+          "type": "string",
+          "examples": [
+            "2023-03-16"
+          ]
+        }
+      }
+    },
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/iJQIbOPm81fPEGKt5BPuZmfnA54.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "int32",
+              "examples": [
+                16
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              502356
+            ],
+            "default": 0
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_title": {
+            "type": "string",
+            "examples": [
+              "The Super Mario Bros. Movie"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "While working underground to fix a water main, Brooklyn plumbers\u2014and brothers\u2014Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi."
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              6572.614
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg"
+            ]
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "2023-04-05"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "The Super Mario Bros. Movie"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "double",
+            "examples": [
+              7.5
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              1456
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        87
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        1734
+      ],
+      "default": 0
+    }
+  }
+}

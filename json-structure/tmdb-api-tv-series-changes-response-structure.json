@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-series-changes-response-structure.json",
+  "name": "TvSeriesChangesResponse",
+  "description": "TMDB TV Series \u2014 Changes (200 payload).",
+  "type": "object",
+  "properties": {
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "examples": [
+              "images"
+            ]
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "examples": [
+                    "640435cf021cee0084710972"
+                  ]
+                },
+                "action": {
+                  "type": "string",
+                  "examples": [
+                    "updated"
+                  ]
+                },
+                "time": {
+                  "type": "string",
+                  "examples": [
+                    "2023-03-05 06:25:19 UTC"
+                  ]
+                },
+                "iso_639_1": {
+                  "type": "string",
+                  "examples": [
+                    "en"
+                  ]
+                },
+                "iso_3166_1": {
+                  "type": "string",
+                  "examples": [
+                    ""
+                  ]
+                },
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "poster": {
+                      "type": "object",
+                      "properties": {
+                        "file_path": {
+                          "type": "string",
+                          "examples": [
+                            "/ouudK6RCNnsbT1CSXrlATXQIQTG.jpg"
+                          ]
+                        },
+                        "iso_639_1": {
+                          "type": "string",
+                          "examples": [
+                            "en"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "original_value": {
+                  "type": "object",
+                  "properties": {
+                    "poster": {
+                      "type": "object",
+                      "properties": {
+                        "file_path": {
+                          "type": "string",
+                          "examples": [
+                            "/ouudK6RCNnsbT1CSXrlATXQIQTG.jpg"
+                          ]
+                        },
+                        "iso_639_1": {
+                          "type": "string",
+                          "examples": [
+                            "fr"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

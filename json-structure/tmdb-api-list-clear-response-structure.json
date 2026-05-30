@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-list-clear-response-structure.json",
+  "name": "ListClearResponse",
+  "description": "TMDB Lists \u2014 Clear (200 payload).",
+  "type": "object",
+  "properties": {
+    "status_code": {
+      "type": "int32",
+      "examples": [
+        12
+      ],
+      "default": 0
+    },
+    "status_message": {
+      "type": "string",
+      "examples": [
+        "The item/record was updated successfully."
+      ]
+    }
+  }
+}

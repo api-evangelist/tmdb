@@ -1,0 +1,35 @@
+{
+  "adult": false,
+  "backdrop_path": {},
+  "belongs_to_collection": {},
+  "budget": 0,
+  "genres": [
+    {}
+  ],
+  "homepage": "",
+  "id": 1119232,
+  "imdb_id": {},
+  "original_language": "fr",
+  "original_title": "K\u00f6nig Charles III",
+  "overview": "",
+  "popularity": 0,
+  "poster_path": {},
+  "production_companies": [
+    {}
+  ],
+  "production_countries": [
+    {}
+  ],
+  "release_date": "",
+  "revenue": 0,
+  "runtime": 0,
+  "spoken_languages": [
+    {}
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "K\u00f6nig Charles III",
+  "video": false,
+  "vote_average": 0,
+  "vote_count": 0
+}

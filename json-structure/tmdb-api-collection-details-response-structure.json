@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-collection-details-response-structure.json",
+  "name": "CollectionDetailsResponse",
+  "description": "TMDB Collections \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        10
+      ],
+      "default": 0
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "Star Wars Collection"
+      ]
+    },
+    "original_language": {
+      "type": "string",
+      "examples": [
+        "en"
+      ]
+    },
+    "original_name": {
+      "type": "string",
+      "examples": [
+        "Star Wars Collection"
+      ]
+    },
+    "overview": {
+      "type": "string",
+      "examples": [
+        "An epic space-opera theatrical film series, which depicts the adventures of various characters \"a long time ago in a galaxy far, far away\u2026.\""
+      ]
+    },
+    "poster_path": {
+      "type": "string",
+      "examples": [
+        "/22dj38IckjzEEUZwN1tPU5VJ1qq.jpg"
+      ]
+    },
+    "backdrop_path": {
+      "type": "string",
+      "examples": [
+        "/4z9ijhgEthfRHShoOvMaBlpciXS.jpg"
+      ]
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/2w4xG178RpB4MDAIfTkqAuSJzec.jpg"
+            ]
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              11
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Star Wars"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Star Wars"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire."
+            ]
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg"
+            ]
+          },
+          "media_type": {
+            "type": "string",
+            "examples": [
+              "movie"
+            ]
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "int32",
+              "examples": [
+                12
+              ],
+              "default": 0
+            }
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              15.8557
+            ],
+            "default": 0
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "1977-05-25"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "double",
+            "examples": [
+              8.205
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              21522
+            ],
+            "default": 0
+          }
+        }
+      }
+    }
+  }
+}

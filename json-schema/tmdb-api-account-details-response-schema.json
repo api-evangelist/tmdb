@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-account-details-response-schema.json",
+  "title": "AccountDetailsResponse",
+  "description": "TMDB Account \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "avatar": {
+      "type": "object",
+      "properties": {
+        "gravatar": {
+          "type": "object",
+          "properties": {
+            "hash": {
+              "type": "string",
+              "examples": [
+                "c9e9fc152ee756a900db85757c29815d"
+              ]
+            }
+          }
+        },
+        "tmdb": {
+          "type": "object",
+          "properties": {
+            "avatar_path": {
+              "type": "string",
+              "examples": [
+                "/xy44UvpbTgzs9kWmp4C3fEaCl5h.png"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        548
+      ],
+      "default": 0
+    },
+    "iso_639_1": {
+      "type": "string",
+      "examples": [
+        "en"
+      ]
+    },
+    "iso_3166_1": {
+      "type": "string",
+      "examples": [
+        "CA"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "Travis Bell"
+      ]
+    },
+    "include_adult": {
+      "type": "boolean",
+      "examples": [
+        false
+      ],
+      "default": true
+    },
+    "username": {
+      "type": "string",
+      "examples": [
+        "travisbell"
+      ]
+    }
+  }
+}

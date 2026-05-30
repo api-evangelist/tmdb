@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-configuration-details-response-schema.json",
+  "title": "ConfigurationDetailsResponse",
+  "description": "TMDB Configuration \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "images": {
+      "type": "object",
+      "properties": {
+        "base_url": {
+          "type": "string",
+          "examples": [
+            "http://image.tmdb.org/t/p/"
+          ]
+        },
+        "secure_base_url": {
+          "type": "string",
+          "examples": [
+            "https://image.tmdb.org/t/p/"
+          ]
+        },
+        "backdrop_sizes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "examples": [
+              "w300"
+            ]
+          }
+        },
+        "logo_sizes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "examples": [
+              "w45"
+            ]
+          }
+        },
+        "poster_sizes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "examples": [
+              "w92"
+            ]
+          }
+        },
+        "profile_sizes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "examples": [
+              "w45"
+            ]
+          }
+        },
+        "still_sizes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "examples": [
+              "w92"
+            ]
+          }
+        }
+      }
+    },
+    "change_keys": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "adult"
+        ]
+      }
+    }
+  }
+}

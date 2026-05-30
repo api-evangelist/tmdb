@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-search-keyword-response-structure.json",
+  "name": "SearchKeywordResponse",
+  "description": "TMDB Search \u2014 Keyword (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "int32",
+            "examples": [
+              262419
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "lost"
+            ]
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        5
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        84
+      ],
+      "default": 0
+    }
+  }
+}

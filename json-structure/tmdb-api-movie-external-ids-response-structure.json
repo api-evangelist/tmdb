@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-movie-external-ids-response-structure.json",
+  "name": "MovieExternalIdsResponse",
+  "description": "TMDB Movies \u2014 External IDs (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        550
+      ],
+      "default": 0
+    },
+    "imdb_id": {
+      "type": "string",
+      "examples": [
+        "tt0137523"
+      ]
+    },
+    "wikidata_id": {},
+    "facebook_id": {
+      "type": "string",
+      "examples": [
+        "FightClub"
+      ]
+    },
+    "instagram_id": {},
+    "twitter_id": {}
+  }
+}

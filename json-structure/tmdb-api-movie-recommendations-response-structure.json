@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-movie-recommendations-response-structure.json",
+  "name": "MovieRecommendationsResponse",
+  "description": "TMDB Movies \u2014 Recommendations (200 payload).",
+  "type": "object",
+  "properties": {}
+}

@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-lists-copy-response-schema.json",
+  "title": "ListsCopyResponse",
+  "description": "TMDB TV Series \u2014 Lists (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    },
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "examples": [
+              ""
+            ]
+          },
+          "favorite_count": {
+            "type": "integer",
+            "examples": [
+              0
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              8257231
+            ],
+            "default": 0
+          },
+          "item_count": {
+            "type": "integer",
+            "examples": [
+              182
+            ],
+            "default": 0
+          },
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "iso_3166_1": {
+            "type": "string",
+            "examples": [
+              "US"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Done"
+            ]
+          },
+          "poster_path": {}
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        96
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        1906
+      ],
+      "default": 0
+    }
+  }
+}

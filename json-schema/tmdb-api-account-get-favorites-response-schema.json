@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-account-get-favorites-response-schema.json",
+  "title": "AccountGetFavoritesResponse",
+  "description": "TMDB Account \u2014 Favorite Movies (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/se5Hxz7PArQZOG3Nx2bpfOhLhtV.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                28
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              9806
+            ],
+            "default": 0
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_title": {
+            "type": "string",
+            "examples": [
+              "The Incredibles"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Bob Parr has given up his superhero days to log in time as an insurance adjuster and raise his three children with his formerly heroic wife in suburbia. But when he receives a mysterious assignment, it's time to get back into costume."
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              71.477
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg"
+            ]
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "2004-10-27"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "examples": [
+              "The Incredibles"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              7.702
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              16162
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        4
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        80
+      ],
+      "default": 0
+    }
+  }
+}

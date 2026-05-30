@@ -1,0 +1,343 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-season-details-response-schema.json",
+  "title": "TvSeasonDetailsResponse",
+  "description": "TMDB TV Series \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string",
+      "examples": [
+        "5256c89f19c2956ff6046d47"
+      ]
+    },
+    "air_date": {
+      "type": "string",
+      "examples": [
+        "2011-04-17"
+      ]
+    },
+    "episodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "air_date": {
+            "type": "string",
+            "examples": [
+              "2011-04-17"
+            ]
+          },
+          "episode_number": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "episode_type": {
+            "type": "string",
+            "examples": [
+              "standard"
+            ]
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              63056
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Winter Is Coming"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Jon Arryn, the Hand of the King, is dead. King Robert Baratheon plans to ask his oldest friend, Eddard Stark, to take Jon's place. Across the sea, Viserys Targaryen plans to wed his sister to a nomadic warlord in exchange for an army."
+            ]
+          },
+          "production_code": {
+            "type": "string",
+            "examples": [
+              "101"
+            ]
+          },
+          "runtime": {
+            "type": "integer",
+            "examples": [
+              62
+            ],
+            "default": 0
+          },
+          "season_number": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "show_id": {
+            "type": "integer",
+            "examples": [
+              1399
+            ],
+            "default": 0
+          },
+          "still_path": {
+            "type": "string",
+            "examples": [
+              "/9hGF3WUkBf7cSjMg0cdMDHJkByd.jpg"
+            ]
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              8.1
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              396
+            ],
+            "default": 0
+          },
+          "crew": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "department": {
+                  "type": "string",
+                  "examples": [
+                    "Directing"
+                  ]
+                },
+                "job": {
+                  "type": "string",
+                  "examples": [
+                    "Director"
+                  ]
+                },
+                "credit_id": {
+                  "type": "string",
+                  "examples": [
+                    "5256c8a219c2956ff6046e77"
+                  ]
+                },
+                "adult": {
+                  "type": "boolean",
+                  "examples": [
+                    false
+                  ],
+                  "default": true
+                },
+                "gender": {
+                  "type": "integer",
+                  "examples": [
+                    2
+                  ],
+                  "default": 0
+                },
+                "id": {
+                  "type": "integer",
+                  "examples": [
+                    44797
+                  ],
+                  "default": 0
+                },
+                "known_for_department": {
+                  "type": "string",
+                  "examples": [
+                    "Directing"
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "examples": [
+                    "Tim Van Patten"
+                  ]
+                },
+                "original_name": {
+                  "type": "string",
+                  "examples": [
+                    "Tim Van Patten"
+                  ]
+                },
+                "popularity": {
+                  "type": "number",
+                  "examples": [
+                    0.8004
+                  ],
+                  "default": 0
+                },
+                "profile_path": {
+                  "type": "string",
+                  "examples": [
+                    "/vwcARZBg4PEzOwnPsXdjRWeUVrZ.jpg"
+                  ]
+                }
+              }
+            }
+          },
+          "guest_stars": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "character": {
+                  "type": "string",
+                  "examples": [
+                    "Benjen Stark"
+                  ]
+                },
+                "credit_id": {
+                  "type": "string",
+                  "examples": [
+                    "5256c8b919c2956ff604836a"
+                  ]
+                },
+                "order": {
+                  "type": "integer",
+                  "examples": [
+                    61
+                  ],
+                  "default": 0
+                },
+                "adult": {
+                  "type": "boolean",
+                  "examples": [
+                    false
+                  ],
+                  "default": true
+                },
+                "gender": {
+                  "type": "integer",
+                  "examples": [
+                    2
+                  ],
+                  "default": 0
+                },
+                "id": {
+                  "type": "integer",
+                  "examples": [
+                    119783
+                  ],
+                  "default": 0
+                },
+                "known_for_department": {
+                  "type": "string",
+                  "examples": [
+                    "Acting"
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "examples": [
+                    "Joseph Mawle"
+                  ]
+                },
+                "original_name": {
+                  "type": "string",
+                  "examples": [
+                    "Joseph Mawle"
+                  ]
+                },
+                "popularity": {
+                  "type": "number",
+                  "examples": [
+                    0.8932
+                  ],
+                  "default": 0
+                },
+                "profile_path": {
+                  "type": "string",
+                  "examples": [
+                    "/1Ocb9v3h54beGVoJMm4w50UQhLf.jpg"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "Season 1"
+      ]
+    },
+    "networks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "examples": [
+              49
+            ],
+            "default": 0
+          },
+          "logo_path": {
+            "type": "string",
+            "examples": [
+              "/tuomPhY2UtuPTqqFnKMVHvSb724.png"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "HBO"
+            ]
+          },
+          "origin_country": {
+            "type": "string",
+            "examples": [
+              "US"
+            ]
+          }
+        }
+      }
+    },
+    "overview": {
+      "type": "string",
+      "examples": [
+        "Trouble is brewing in the Seven Kingdoms of Westeros. For the driven inhabitants of this visionary world, control of Westeros' Iron Throne holds the lure of great power. But in a land where the seasons can last a lifetime, winter is coming...and beyond the Great Wall that protects them, an ancient evil has returned. In Season One, the story centers on three primary areas: the Stark and the Lannister families, whose designs on controlling the throne threaten a tenuous peace; the dragon princess Daenerys, heir to the former dynasty, who waits just over the Narrow Sea with her malevolent brother Viserys; and the Great Wall--a massive barrier of ice where a forgotten danger is stirring."
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        3624
+      ],
+      "default": 0
+    },
+    "poster_path": {
+      "type": "string",
+      "examples": [
+        "/wgfKiqzuMrFIkU1M68DDDY8kGC1.jpg"
+      ]
+    },
+    "season_number": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "vote_average": {
+      "type": "number",
+      "examples": [
+        8.4
+      ],
+      "default": 0
+    }
+  }
+}

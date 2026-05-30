@@ -1,0 +1,483 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-series-details-response-structure.json",
+  "name": "TvSeriesDetailsResponse",
+  "description": "TMDB TV Series \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "adult": {
+      "type": "boolean",
+      "examples": [
+        false
+      ],
+      "default": true
+    },
+    "backdrop_path": {
+      "type": "string",
+      "examples": [
+        "/6LWy0jvMpmjoS9fojNgHIKoWL05.jpg"
+      ]
+    },
+    "created_by": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "int32",
+            "examples": [
+              9813
+            ],
+            "default": 0
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "5256c8c219c2956ff604858a"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "David Benioff"
+            ]
+          },
+          "gender": {
+            "type": "int32",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/xvNN5huL0X8yJ7h3IZfGG4O2zBD.jpg"
+            ]
+          }
+        }
+      }
+    },
+    "episode_run_time": {
+      "type": "array",
+      "items": {
+        "type": "int32",
+        "examples": [
+          60
+        ],
+        "default": 0
+      }
+    },
+    "first_air_date": {
+      "type": "string",
+      "examples": [
+        "2011-04-17"
+      ]
+    },
+    "genres": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "int32",
+            "examples": [
+              10765
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Sci-Fi & Fantasy"
+            ]
+          }
+        }
+      }
+    },
+    "homepage": {
+      "type": "string",
+      "examples": [
+        "http://www.hbo.com/game-of-thrones"
+      ]
+    },
+    "id": {
+      "type": "int32",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    },
+    "in_production": {
+      "type": "boolean",
+      "examples": [
+        false
+      ],
+      "default": true
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "en"
+        ]
+      }
+    },
+    "last_air_date": {
+      "type": "string",
+      "examples": [
+        "2019-05-19"
+      ]
+    },
+    "last_episode_to_air": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "int32",
+          "examples": [
+            1551830
+          ],
+          "default": 0
+        },
+        "name": {
+          "type": "string",
+          "examples": [
+            "The Iron Throne"
+          ]
+        },
+        "overview": {
+          "type": "string",
+          "examples": [
+            "In the aftermath of the devastating attack on King's Landing, Daenerys must face the survivors."
+          ]
+        },
+        "vote_average": {
+          "type": "double",
+          "examples": [
+            4.809
+          ],
+          "default": 0
+        },
+        "vote_count": {
+          "type": "int32",
+          "examples": [
+            241
+          ],
+          "default": 0
+        },
+        "air_date": {
+          "type": "string",
+          "examples": [
+            "2019-05-19"
+          ]
+        },
+        "episode_number": {
+          "type": "int32",
+          "examples": [
+            6
+          ],
+          "default": 0
+        },
+        "production_code": {
+          "type": "string",
+          "examples": [
+            "806"
+          ]
+        },
+        "runtime": {
+          "type": "int32",
+          "examples": [
+            80
+          ],
+          "default": 0
+        },
+        "season_number": {
+          "type": "int32",
+          "examples": [
+            8
+          ],
+          "default": 0
+        },
+        "show_id": {
+          "type": "int32",
+          "examples": [
+            1399
+          ],
+          "default": 0
+        },
+        "still_path": {
+          "type": "string",
+          "examples": [
+            "/zBi2O5EJfgTS6Ae0HdAYLm9o2nf.jpg"
+          ]
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "Game of Thrones"
+      ]
+    },
+    "next_episode_to_air": {},
+    "networks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "int32",
+            "examples": [
+              49
+            ],
+            "default": 0
+          },
+          "logo_path": {
+            "type": "string",
+            "examples": [
+              "/tuomPhY2UtuPTqqFnKMVHvSb724.png"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "HBO"
+            ]
+          },
+          "origin_country": {
+            "type": "string",
+            "examples": [
+              "US"
+            ]
+          }
+        }
+      }
+    },
+    "number_of_episodes": {
+      "type": "int32",
+      "examples": [
+        73
+      ],
+      "default": 0
+    },
+    "number_of_seasons": {
+      "type": "int32",
+      "examples": [
+        8
+      ],
+      "default": 0
+    },
+    "origin_country": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "US"
+        ]
+      }
+    },
+    "original_language": {
+      "type": "string",
+      "examples": [
+        "en"
+      ]
+    },
+    "original_name": {
+      "type": "string",
+      "examples": [
+        "Game of Thrones"
+      ]
+    },
+    "overview": {
+      "type": "string",
+      "examples": [
+        "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond."
+      ]
+    },
+    "popularity": {
+      "type": "double",
+      "examples": [
+        346.098
+      ],
+      "default": 0
+    },
+    "poster_path": {
+      "type": "string",
+      "examples": [
+        "/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg"
+      ]
+    },
+    "production_companies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "int32",
+            "examples": [
+              76043
+            ],
+            "default": 0
+          },
+          "logo_path": {
+            "type": "string",
+            "examples": [
+              "/9RO2vbQ67otPrBLXCaC8UMp3Qat.png"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Revolution Sun Studios"
+            ]
+          },
+          "origin_country": {
+            "type": "string",
+            "examples": [
+              "US"
+            ]
+          }
+        }
+      }
+    },
+    "production_countries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "iso_3166_1": {
+            "type": "string",
+            "examples": [
+              "GB"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "United Kingdom"
+            ]
+          }
+        }
+      }
+    },
+    "seasons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "air_date": {
+            "type": "string",
+            "examples": [
+              "2010-12-05"
+            ]
+          },
+          "episode_count": {
+            "type": "int32",
+            "examples": [
+              272
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              3627
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Specials"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              ""
+            ]
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/kMTcwNRfFKCZ0O2OaBZS0nZ2AIe.jpg"
+            ]
+          },
+          "season_number": {
+            "type": "int32",
+            "examples": [
+              0
+            ],
+            "default": 0
+          },
+          "vote_average": {
+            "type": "int32",
+            "examples": [
+              0
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "spoken_languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "english_name": {
+            "type": "string",
+            "examples": [
+              "English"
+            ]
+          },
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "English"
+            ]
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "examples": [
+        "Ended"
+      ]
+    },
+    "tagline": {
+      "type": "string",
+      "examples": [
+        "Winter Is Coming"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "examples": [
+        "Scripted"
+      ]
+    },
+    "vote_average": {
+      "type": "double",
+      "examples": [
+        8.438
+      ],
+      "default": 0
+    },
+    "vote_count": {
+      "type": "int32",
+      "examples": [
+        21390
+      ],
+      "default": 0
+    }
+  }
+}

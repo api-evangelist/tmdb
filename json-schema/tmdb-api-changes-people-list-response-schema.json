@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-changes-people-list-response-schema.json",
+  "title": "ChangesPeopleListResponse",
+  "description": "TMDB People \u2014 People List (200 payload).",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "examples": [
+              4037513
+            ],
+            "default": 0
+          },
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          }
+        }
+      }
+    },
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        53
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        5292
+      ],
+      "default": 0
+    }
+  }
+}

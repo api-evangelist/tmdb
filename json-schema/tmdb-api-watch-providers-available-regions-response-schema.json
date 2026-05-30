@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-watch-providers-available-regions-response-schema.json",
+  "title": "WatchProvidersAvailableRegionsResponse",
+  "description": "TMDB Watch Providers \u2014 Available Regions (200 payload).",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "iso_3166_1": {
+            "type": "string",
+            "examples": [
+              "AD"
+            ]
+          },
+          "english_name": {
+            "type": "string",
+            "examples": [
+              "Andorra"
+            ]
+          },
+          "native_name": {
+            "type": "string",
+            "examples": [
+              "Andorra"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

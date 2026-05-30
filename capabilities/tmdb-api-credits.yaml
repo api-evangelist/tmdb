@@ -1,0 +1,100 @@
+!!omap
+- naftiko: 1.0.0-alpha2
+- info: !!omap
+  - label: TMDB API — Credits
+  - description: |-
+      TMDB — Credits. 1 operations. Lead operation: TMDB Credits — Details. Self-contained Naftiko capability covering one TMDB business surface.
+  - tags:
+    - TMDB
+    - Credits
+  - created: '2026-05-30'
+  - modified: '2026-05-30'
+- binds:
+  - !!omap
+    - namespace: env
+    - keys: !!omap
+      - TMDB_BEARER_TOKEN: TMDB_BEARER_TOKEN
+- capability: !!omap
+  - consumes:
+    - !!omap
+      - type: http
+      - namespace: tmdb-api-credits
+      - baseUri: https://api.themoviedb.org
+      - description: TMDB API — Credits business capability. Self-contained, no shared references.
+      - authentication: !!omap
+        - type: bearer
+        - token: '{{env.TMDB_BEARER_TOKEN}}'
+      - resources:
+        - !!omap
+          - name: 3-credit-credit-id
+          - path: /3/credit/{credit_id}
+          - operations:
+            - !!omap
+              - name: credit-details
+              - method: GET
+              - description: TMDB Credits — Details
+              - inputParameters:
+                - !!omap
+                  - name: credit_id
+                  - in: path
+                  - type: string
+                  - required: true
+                  - description: credit_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+  - exposes:
+    - !!omap
+      - type: rest
+      - namespace: tmdb-api-credits-rest
+      - port: 8080
+      - description: REST adapter for TMDB API — Credits. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+      - resources:
+        - !!omap
+          - path: /v1/credit/{credit_id}
+          - name: credit-credit-id
+          - description: REST surface for /3/credit/{credit_id}.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: credit-details
+              - description: TMDB Credits — Details
+              - call: tmdb-api-credits.credit-details
+              - with: !!omap
+                - credit_id: rest.credit_id
+                - language: rest.language
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+    - !!omap
+      - type: mcp
+      - namespace: tmdb-api-credits-mcp
+      - port: 9090
+      - transport: http
+      - description: MCP adapter for TMDB API — Credits. One tool per consumed operation, routed inline through this capability's consumes block.
+      - tools:
+        - !!omap
+          - name: details
+          - description: TMDB Credits — Details
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-credits.credit-details
+          - with: !!omap
+            - credit_id: tools.credit_id
+            - language: tools.language
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.

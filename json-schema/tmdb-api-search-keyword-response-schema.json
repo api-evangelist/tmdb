@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-search-keyword-response-schema.json",
+  "title": "SearchKeywordResponse",
+  "description": "TMDB Search \u2014 Keyword (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "examples": [
+              262419
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "lost"
+            ]
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        5
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        84
+      ],
+      "default": 0
+    }
+  }
+}

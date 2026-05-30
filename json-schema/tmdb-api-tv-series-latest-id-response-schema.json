@@ -1,0 +1,277 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-series-latest-id-response-schema.json",
+  "title": "TvSeriesLatestIdResponse",
+  "description": "TMDB TV Series \u2014 Latest (200 payload).",
+  "type": "object",
+  "properties": {
+    "adult": {
+      "type": "boolean",
+      "examples": [
+        false
+      ],
+      "default": true
+    },
+    "backdrop_path": {},
+    "created_by": {
+      "type": "array"
+    },
+    "episode_run_time": {
+      "type": "array"
+    },
+    "first_air_date": {
+      "type": "string",
+      "examples": [
+        ""
+      ]
+    },
+    "genres": {
+      "type": "array"
+    },
+    "homepage": {
+      "type": "string",
+      "examples": [
+        ""
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        225491
+      ],
+      "default": 0
+    },
+    "in_production": {
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    },
+    "languages": {
+      "type": "array"
+    },
+    "last_air_date": {
+      "type": "string",
+      "examples": [
+        "2023-04-21"
+      ]
+    },
+    "last_episode_to_air": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "examples": [
+            4398801
+          ],
+          "default": 0
+        },
+        "name": {
+          "type": "string",
+          "examples": [
+            "Episode 8"
+          ]
+        },
+        "overview": {
+          "type": "string",
+          "examples": [
+            ""
+          ]
+        },
+        "vote_average": {
+          "type": "integer",
+          "examples": [
+            0
+          ],
+          "default": 0
+        },
+        "vote_count": {
+          "type": "integer",
+          "examples": [
+            0
+          ],
+          "default": 0
+        },
+        "air_date": {
+          "type": "string",
+          "examples": [
+            "2023-04-21"
+          ]
+        },
+        "episode_number": {
+          "type": "integer",
+          "examples": [
+            8
+          ],
+          "default": 0
+        },
+        "production_code": {
+          "type": "string",
+          "examples": [
+            ""
+          ]
+        },
+        "runtime": {},
+        "season_number": {
+          "type": "integer",
+          "examples": [
+            1
+          ],
+          "default": 0
+        },
+        "show_id": {
+          "type": "integer",
+          "examples": [
+            225491
+          ],
+          "default": 0
+        },
+        "still_path": {}
+      }
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "\u5996\u602a\u4f20"
+      ]
+    },
+    "next_episode_to_air": {},
+    "networks": {
+      "type": "array"
+    },
+    "number_of_episodes": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "number_of_seasons": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "origin_country": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "CN"
+        ]
+      }
+    },
+    "original_language": {
+      "type": "string",
+      "examples": [
+        "zh"
+      ]
+    },
+    "original_name": {
+      "type": "string",
+      "examples": [
+        "\u5996\u602a\u4f20"
+      ]
+    },
+    "overview": {
+      "type": "string",
+      "examples": [
+        ""
+      ]
+    },
+    "popularity": {
+      "type": "integer",
+      "examples": [
+        0
+      ],
+      "default": 0
+    },
+    "poster_path": {},
+    "production_companies": {
+      "type": "array"
+    },
+    "production_countries": {
+      "type": "array"
+    },
+    "seasons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "air_date": {},
+          "episode_count": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              338956
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Season 1"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              ""
+            ]
+          },
+          "poster_path": {},
+          "season_number": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "spoken_languages": {
+      "type": "array"
+    },
+    "status": {
+      "type": "string",
+      "examples": [
+        "Returning Series"
+      ]
+    },
+    "tagline": {
+      "type": "string",
+      "examples": [
+        ""
+      ]
+    },
+    "type": {
+      "type": "string",
+      "examples": [
+        "Scripted"
+      ]
+    },
+    "vote_average": {
+      "type": "integer",
+      "examples": [
+        0
+      ],
+      "default": 0
+    },
+    "vote_count": {
+      "type": "integer",
+      "examples": [
+        0
+      ],
+      "default": 0
+    }
+  }
+}

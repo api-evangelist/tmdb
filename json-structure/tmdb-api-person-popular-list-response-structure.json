@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-person-popular-list-response-structure.json",
+  "name": "PersonPopularListResponse",
+  "description": "TMDB People \u2014 Popular (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "int32",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              224513
+            ],
+            "default": 0
+          },
+          "known_for": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "adult": {
+                  "type": "boolean",
+                  "examples": [
+                    false
+                  ],
+                  "default": true
+                },
+                "backdrop_path": {
+                  "type": "string",
+                  "examples": [
+                    "/ilRyazdMJwN05exqhwK4tMKBYZs.jpg"
+                  ]
+                },
+                "genre_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "int32",
+                    "examples": [
+                      878
+                    ],
+                    "default": 0
+                  }
+                },
+                "id": {
+                  "type": "int32",
+                  "examples": [
+                    335984
+                  ],
+                  "default": 0
+                },
+                "media_type": {
+                  "type": "string",
+                  "examples": [
+                    "movie"
+                  ]
+                },
+                "original_language": {
+                  "type": "string",
+                  "examples": [
+                    "en"
+                  ]
+                },
+                "original_title": {
+                  "type": "string",
+                  "examples": [
+                    "Blade Runner 2049"
+                  ]
+                },
+                "overview": {
+                  "type": "string",
+                  "examples": [
+                    "Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for 30 years."
+                  ]
+                },
+                "poster_path": {
+                  "type": "string",
+                  "examples": [
+                    "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg"
+                  ]
+                },
+                "release_date": {
+                  "type": "string",
+                  "examples": [
+                    "2017-10-04"
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "examples": [
+                    "Blade Runner 2049"
+                  ]
+                },
+                "video": {
+                  "type": "boolean",
+                  "examples": [
+                    false
+                  ],
+                  "default": true
+                },
+                "vote_average": {
+                  "type": "double",
+                  "examples": [
+                    7.5
+                  ],
+                  "default": 0
+                },
+                "vote_count": {
+                  "type": "int32",
+                  "examples": [
+                    11771
+                  ],
+                  "default": 0
+                }
+              }
+            }
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Acting"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Ana de Armas"
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              343.33
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/3vxvsmYLTf4jnr163SUlBIw51ee.jpg"
+            ]
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        500
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        10000
+      ],
+      "default": 0
+    }
+  }
+}

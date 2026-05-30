@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-keyword-movies-response-schema.json",
+  "title": "KeywordMoviesResponse",
+  "description": "TMDB Keywords \u2014 Movies (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        1701
+      ],
+      "default": 0
+    },
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/3CxUndGhUcZdt1Zggjdb2HkLLQX.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                28
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              640146
+            ],
+            "default": 0
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_title": {
+            "type": "string",
+            "examples": [
+              "Ant-Man and the Wasp: Quantumania"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Das Superhelden-Duo Scott Lang und Hope Van Dyne erkundet zusammen mit Hopes Eltern Hank Pym und Janet Van Dyne das Quantenreich, interagiert mit seltsamen neuen Kreaturen und begibt sich auf ein Abenteuer, das sie \u00fcber die Grenzen dessen hinaustreiben wird, was sie f\u00fcr m\u00f6glich gehalten haben."
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              9200.005
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/nA5otwVxAfpBP4PVgeuBk3qHcLY.jpg"
+            ]
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "2023-02-15"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "examples": [
+              "Ant-Man and the Wasp: Quantumania"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              6.5
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              2079
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        11
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        211
+      ],
+      "default": 0
+    }
+  }
+}

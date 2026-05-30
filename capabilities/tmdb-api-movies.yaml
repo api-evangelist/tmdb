@@ -1,0 +1,1541 @@
+!!omap
+- naftiko: 1.0.0-alpha2
+- info: !!omap
+  - label: TMDB API — Movies
+  - description: |-
+      TMDB — Movies. 24 operations. Lead operation: TMDB Movies — Movie List. Self-contained Naftiko capability covering one TMDB business surface.
+  - tags:
+    - TMDB
+    - Movies
+  - created: '2026-05-30'
+  - modified: '2026-05-30'
+- binds:
+  - !!omap
+    - namespace: env
+    - keys: !!omap
+      - TMDB_BEARER_TOKEN: TMDB_BEARER_TOKEN
+- capability: !!omap
+  - consumes:
+    - !!omap
+      - type: http
+      - namespace: tmdb-api-movies
+      - baseUri: https://api.themoviedb.org
+      - description: TMDB API — Movies business capability. Self-contained, no shared references.
+      - authentication: !!omap
+        - type: bearer
+        - token: '{{env.TMDB_BEARER_TOKEN}}'
+      - resources:
+        - !!omap
+          - name: 3-movie-changes
+          - path: /3/movie/changes
+          - operations:
+            - !!omap
+              - name: changes-movie-list
+              - method: GET
+              - description: TMDB Movies — Movie List
+              - inputParameters:
+                - !!omap
+                  - name: end_date
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: end_date parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: start_date
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: start_date parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-now-playing
+          - path: /3/movie/now_playing
+          - operations:
+            - !!omap
+              - name: movie-now-playing-list
+              - method: GET
+              - description: TMDB Movies — Now Playing
+              - inputParameters:
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: region
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: ISO-3166-1 code
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-popular
+          - path: /3/movie/popular
+          - operations:
+            - !!omap
+              - name: movie-popular-list
+              - method: GET
+              - description: TMDB Movies — Popular
+              - inputParameters:
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: region
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: ISO-3166-1 code
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-top-rated
+          - path: /3/movie/top_rated
+          - operations:
+            - !!omap
+              - name: movie-top-rated-list
+              - method: GET
+              - description: TMDB Movies — Top Rated
+              - inputParameters:
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: region
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: ISO-3166-1 code
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-upcoming
+          - path: /3/movie/upcoming
+          - operations:
+            - !!omap
+              - name: movie-upcoming-list
+              - method: GET
+              - description: TMDB Movies — Upcoming
+              - inputParameters:
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: region
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: ISO-3166-1 code
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id
+          - path: /3/movie/{movie_id}
+          - operations:
+            - !!omap
+              - name: movie-details
+              - method: GET
+              - description: TMDB Movies — Details
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: append_to_response
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: comma separated list of endpoints within this namespace, 20 items max
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-account-states
+          - path: /3/movie/{movie_id}/account_states
+          - operations:
+            - !!omap
+              - name: movie-account-states
+              - method: GET
+              - description: TMDB Movies — Account States
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+                - !!omap
+                  - name: guest_session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: guest_session_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-alternative-titles
+          - path: /3/movie/{movie_id}/alternative_titles
+          - operations:
+            - !!omap
+              - name: movie-alternative-titles
+              - method: GET
+              - description: TMDB Movies — Alternative Titles
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: country
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: specify a ISO-3166-1 value to filter the results
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-changes
+          - path: /3/movie/{movie_id}/changes
+          - operations:
+            - !!omap
+              - name: movie-changes
+              - method: GET
+              - description: TMDB Movies — Changes
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: end_date
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: end_date parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: start_date
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: start_date parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-credits
+          - path: /3/movie/{movie_id}/credits
+          - operations:
+            - !!omap
+              - name: movie-credits
+              - method: GET
+              - description: TMDB Movies — Credits
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-external-ids
+          - path: /3/movie/{movie_id}/external_ids
+          - operations:
+            - !!omap
+              - name: movie-external-ids
+              - method: GET
+              - description: TMDB Movies — External IDs
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-images
+          - path: /3/movie/{movie_id}/images
+          - operations:
+            - !!omap
+              - name: movie-images
+              - method: GET
+              - description: TMDB Movies — Images
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: include_image_language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: 'specify a comma separated list of ISO-639-1 values to query, for example: `en-US,null`'
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-keywords
+          - path: /3/movie/{movie_id}/keywords
+          - operations:
+            - !!omap
+              - name: movie-keywords
+              - method: GET
+              - description: TMDB Movies — Keywords
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: string
+                  - required: true
+                  - description: movie_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-latest
+          - path: /3/movie/latest
+          - operations:
+            - !!omap
+              - name: movie-latest-id
+              - method: GET
+              - description: TMDB Movies — Latest
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-lists
+          - path: /3/movie/{movie_id}/lists
+          - operations:
+            - !!omap
+              - name: movie-lists
+              - method: GET
+              - description: TMDB Movies — Lists
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-recommendations
+          - path: /3/movie/{movie_id}/recommendations
+          - operations:
+            - !!omap
+              - name: movie-recommendations
+              - method: GET
+              - description: TMDB Movies — Recommendations
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-release-dates
+          - path: /3/movie/{movie_id}/release_dates
+          - operations:
+            - !!omap
+              - name: movie-release-dates
+              - method: GET
+              - description: TMDB Movies — Release Dates
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-reviews
+          - path: /3/movie/{movie_id}/reviews
+          - operations:
+            - !!omap
+              - name: movie-reviews
+              - method: GET
+              - description: TMDB Movies — Reviews
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-similar
+          - path: /3/movie/{movie_id}/similar
+          - operations:
+            - !!omap
+              - name: movie-similar
+              - method: GET
+              - description: TMDB Movies — Similar
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-translations
+          - path: /3/movie/{movie_id}/translations
+          - operations:
+            - !!omap
+              - name: movie-translations
+              - method: GET
+              - description: TMDB Movies — Translations
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-videos
+          - path: /3/movie/{movie_id}/videos
+          - operations:
+            - !!omap
+              - name: movie-videos
+              - method: GET
+              - description: TMDB Movies — Videos
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-watch-providers
+          - path: /3/movie/{movie_id}/watch/providers
+          - operations:
+            - !!omap
+              - name: movie-watch-providers
+              - method: GET
+              - description: TMDB Movies — Watch Providers
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-movie-movie-id-rating
+          - path: /3/movie/{movie_id}/rating
+          - operations:
+            - !!omap
+              - name: movie-add-rating
+              - method: POST
+              - description: TMDB Movies — Add Rating
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: guest_session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: guest_session_id parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+                - !!omap
+                  - name: Content-Type
+                  - in: header
+                  - type: string
+                  - required: true
+                  - description: Content-Type parameter.
+                - !!omap
+                  - name: body
+                  - in: body
+                  - type: object
+                  - required: true
+                  - description: JSON request body.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+            - !!omap
+              - name: movie-delete-rating
+              - method: DELETE
+              - description: TMDB Movies — Delete Rating
+              - inputParameters:
+                - !!omap
+                  - name: movie_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: movie_id parameter.
+                - !!omap
+                  - name: Content-Type
+                  - in: header
+                  - type: string
+                  - required: false
+                  - description: Content-Type parameter.
+                - !!omap
+                  - name: guest_session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: guest_session_id parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+  - exposes:
+    - !!omap
+      - type: rest
+      - namespace: tmdb-api-movies-rest
+      - port: 8080
+      - description: REST adapter for TMDB API — Movies. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+      - resources:
+        - !!omap
+          - path: /v1/movie/changes
+          - name: movie-changes
+          - description: REST surface for /3/movie/changes.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: changes-movie-list
+              - description: TMDB Movies — Movie List
+              - call: tmdb-api-movies.changes-movie-list
+              - with: !!omap
+                - end_date: rest.end_date
+                - page: rest.page
+                - start_date: rest.start_date
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/now_playing
+          - name: movie-now-playing
+          - description: REST surface for /3/movie/now_playing.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-now-playing-list
+              - description: TMDB Movies — Now Playing
+              - call: tmdb-api-movies.movie-now-playing-list
+              - with: !!omap
+                - language: rest.language
+                - page: rest.page
+                - region: rest.region
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/popular
+          - name: movie-popular
+          - description: REST surface for /3/movie/popular.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-popular-list
+              - description: TMDB Movies — Popular
+              - call: tmdb-api-movies.movie-popular-list
+              - with: !!omap
+                - language: rest.language
+                - page: rest.page
+                - region: rest.region
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/top_rated
+          - name: movie-top-rated
+          - description: REST surface for /3/movie/top_rated.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-top-rated-list
+              - description: TMDB Movies — Top Rated
+              - call: tmdb-api-movies.movie-top-rated-list
+              - with: !!omap
+                - language: rest.language
+                - page: rest.page
+                - region: rest.region
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/upcoming
+          - name: movie-upcoming
+          - description: REST surface for /3/movie/upcoming.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-upcoming-list
+              - description: TMDB Movies — Upcoming
+              - call: tmdb-api-movies.movie-upcoming-list
+              - with: !!omap
+                - language: rest.language
+                - page: rest.page
+                - region: rest.region
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}
+          - name: movie-movie-id
+          - description: REST surface for /3/movie/{movie_id}.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-details
+              - description: TMDB Movies — Details
+              - call: tmdb-api-movies.movie-details
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - append_to_response: rest.append_to_response
+                - language: rest.language
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/account_states
+          - name: movie-movie-id-account-states
+          - description: REST surface for /3/movie/{movie_id}/account_states.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-account-states
+              - description: TMDB Movies — Account States
+              - call: tmdb-api-movies.movie-account-states
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - session_id: rest.session_id
+                - guest_session_id: rest.guest_session_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/alternative_titles
+          - name: movie-movie-id-alternative-titles
+          - description: REST surface for /3/movie/{movie_id}/alternative_titles.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-alternative-titles
+              - description: TMDB Movies — Alternative Titles
+              - call: tmdb-api-movies.movie-alternative-titles
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - country: rest.country
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/changes
+          - name: movie-movie-id-changes
+          - description: REST surface for /3/movie/{movie_id}/changes.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-changes
+              - description: TMDB Movies — Changes
+              - call: tmdb-api-movies.movie-changes
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - end_date: rest.end_date
+                - page: rest.page
+                - start_date: rest.start_date
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/credits
+          - name: movie-movie-id-credits
+          - description: REST surface for /3/movie/{movie_id}/credits.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-credits
+              - description: TMDB Movies — Credits
+              - call: tmdb-api-movies.movie-credits
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - language: rest.language
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/external_ids
+          - name: movie-movie-id-external-ids
+          - description: REST surface for /3/movie/{movie_id}/external_ids.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-external-ids
+              - description: TMDB Movies — External IDs
+              - call: tmdb-api-movies.movie-external-ids
+              - with: !!omap
+                - movie_id: rest.movie_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/images
+          - name: movie-movie-id-images
+          - description: REST surface for /3/movie/{movie_id}/images.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-images
+              - description: TMDB Movies — Images
+              - call: tmdb-api-movies.movie-images
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - include_image_language: rest.include_image_language
+                - language: rest.language
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/keywords
+          - name: movie-movie-id-keywords
+          - description: REST surface for /3/movie/{movie_id}/keywords.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-keywords
+              - description: TMDB Movies — Keywords
+              - call: tmdb-api-movies.movie-keywords
+              - with: !!omap
+                - movie_id: rest.movie_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/latest
+          - name: movie-latest
+          - description: REST surface for /3/movie/latest.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-latest-id
+              - description: TMDB Movies — Latest
+              - call: tmdb-api-movies.movie-latest-id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/lists
+          - name: movie-movie-id-lists
+          - description: REST surface for /3/movie/{movie_id}/lists.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-lists
+              - description: TMDB Movies — Lists
+              - call: tmdb-api-movies.movie-lists
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - language: rest.language
+                - page: rest.page
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/recommendations
+          - name: movie-movie-id-recommendations
+          - description: REST surface for /3/movie/{movie_id}/recommendations.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-recommendations
+              - description: TMDB Movies — Recommendations
+              - call: tmdb-api-movies.movie-recommendations
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - language: rest.language
+                - page: rest.page
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/release_dates
+          - name: movie-movie-id-release-dates
+          - description: REST surface for /3/movie/{movie_id}/release_dates.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-release-dates
+              - description: TMDB Movies — Release Dates
+              - call: tmdb-api-movies.movie-release-dates
+              - with: !!omap
+                - movie_id: rest.movie_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/reviews
+          - name: movie-movie-id-reviews
+          - description: REST surface for /3/movie/{movie_id}/reviews.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-reviews
+              - description: TMDB Movies — Reviews
+              - call: tmdb-api-movies.movie-reviews
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - language: rest.language
+                - page: rest.page
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/similar
+          - name: movie-movie-id-similar
+          - description: REST surface for /3/movie/{movie_id}/similar.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-similar
+              - description: TMDB Movies — Similar
+              - call: tmdb-api-movies.movie-similar
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - language: rest.language
+                - page: rest.page
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/translations
+          - name: movie-movie-id-translations
+          - description: REST surface for /3/movie/{movie_id}/translations.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-translations
+              - description: TMDB Movies — Translations
+              - call: tmdb-api-movies.movie-translations
+              - with: !!omap
+                - movie_id: rest.movie_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/videos
+          - name: movie-movie-id-videos
+          - description: REST surface for /3/movie/{movie_id}/videos.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-videos
+              - description: TMDB Movies — Videos
+              - call: tmdb-api-movies.movie-videos
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - language: rest.language
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/watch/providers
+          - name: movie-movie-id-watch-providers
+          - description: REST surface for /3/movie/{movie_id}/watch/providers.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: movie-watch-providers
+              - description: TMDB Movies — Watch Providers
+              - call: tmdb-api-movies.movie-watch-providers
+              - with: !!omap
+                - movie_id: rest.movie_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/movie/{movie_id}/rating
+          - name: movie-movie-id-rating
+          - description: REST surface for /3/movie/{movie_id}/rating.
+          - operations:
+            - !!omap
+              - method: POST
+              - name: movie-add-rating
+              - description: TMDB Movies — Add Rating
+              - call: tmdb-api-movies.movie-add-rating
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - guest_session_id: rest.guest_session_id
+                - session_id: rest.session_id
+                - Content-Type: rest.Content-Type
+                - body: rest.body
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+            - !!omap
+              - method: DELETE
+              - name: movie-delete-rating
+              - description: TMDB Movies — Delete Rating
+              - call: tmdb-api-movies.movie-delete-rating
+              - with: !!omap
+                - movie_id: rest.movie_id
+                - Content-Type: rest.Content-Type
+                - guest_session_id: rest.guest_session_id
+                - session_id: rest.session_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+    - !!omap
+      - type: mcp
+      - namespace: tmdb-api-movies-mcp
+      - port: 9090
+      - transport: http
+      - description: MCP adapter for TMDB API — Movies. One tool per consumed operation, routed inline through this capability's consumes block.
+      - tools:
+        - !!omap
+          - name: movie-list
+          - description: TMDB Movies — Movie List
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.changes-movie-list
+          - with: !!omap
+            - end_date: tools.end_date
+            - page: tools.page
+            - start_date: tools.start_date
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: now-playing
+          - description: TMDB Movies — Now Playing
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-now-playing-list
+          - with: !!omap
+            - language: tools.language
+            - page: tools.page
+            - region: tools.region
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: popular
+          - description: TMDB Movies — Popular
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-popular-list
+          - with: !!omap
+            - language: tools.language
+            - page: tools.page
+            - region: tools.region
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: top-rated
+          - description: TMDB Movies — Top Rated
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-top-rated-list
+          - with: !!omap
+            - language: tools.language
+            - page: tools.page
+            - region: tools.region
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: upcoming
+          - description: TMDB Movies — Upcoming
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-upcoming-list
+          - with: !!omap
+            - language: tools.language
+            - page: tools.page
+            - region: tools.region
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: details
+          - description: TMDB Movies — Details
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-details
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - append_to_response: tools.append_to_response
+            - language: tools.language
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: account-states
+          - description: TMDB Movies — Account States
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-account-states
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - session_id: tools.session_id
+            - guest_session_id: tools.guest_session_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: alternative-titles
+          - description: TMDB Movies — Alternative Titles
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-alternative-titles
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - country: tools.country
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: changes
+          - description: TMDB Movies — Changes
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-changes
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - end_date: tools.end_date
+            - page: tools.page
+            - start_date: tools.start_date
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: credits
+          - description: TMDB Movies — Credits
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-credits
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - language: tools.language
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: external-ids
+          - description: TMDB Movies — External IDs
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-external-ids
+          - with: !!omap
+            - movie_id: tools.movie_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: images
+          - description: TMDB Movies — Images
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-images
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - include_image_language: tools.include_image_language
+            - language: tools.language
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: keywords
+          - description: TMDB Movies — Keywords
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-keywords
+          - with: !!omap
+            - movie_id: tools.movie_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: latest
+          - description: TMDB Movies — Latest
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-latest-id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: lists
+          - description: TMDB Movies — Lists
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-lists
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - language: tools.language
+            - page: tools.page
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: recommendations
+          - description: TMDB Movies — Recommendations
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-recommendations
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - language: tools.language
+            - page: tools.page
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: release-dates
+          - description: TMDB Movies — Release Dates
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-release-dates
+          - with: !!omap
+            - movie_id: tools.movie_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: reviews
+          - description: TMDB Movies — Reviews
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-reviews
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - language: tools.language
+            - page: tools.page
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: similar
+          - description: TMDB Movies — Similar
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-similar
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - language: tools.language
+            - page: tools.page
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: translations
+          - description: TMDB Movies — Translations
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-translations
+          - with: !!omap
+            - movie_id: tools.movie_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: videos
+          - description: TMDB Movies — Videos
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-videos
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - language: tools.language
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: watch-providers
+          - description: TMDB Movies — Watch Providers
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-movies.movie-watch-providers
+          - with: !!omap
+            - movie_id: tools.movie_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: add-rating
+          - description: TMDB Movies — Add Rating
+          - hints: !!omap
+            - readOnly: false
+            - destructive: false
+            - idempotent: false
+          - call: tmdb-api-movies.movie-add-rating
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - guest_session_id: tools.guest_session_id
+            - session_id: tools.session_id
+            - Content-Type: tools.Content-Type
+            - body: tools.body
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: delete-rating
+          - description: TMDB Movies — Delete Rating
+          - hints: !!omap
+            - readOnly: false
+            - destructive: true
+            - idempotent: true
+          - call: tmdb-api-movies.movie-delete-rating
+          - with: !!omap
+            - movie_id: tools.movie_id
+            - Content-Type: tools.Content-Type
+            - guest_session_id: tools.guest_session_id
+            - session_id: tools.session_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.

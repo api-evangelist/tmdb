@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-series-credits-response-schema.json",
+  "title": "TvSeriesCreditsResponse",
+  "description": "TMDB TV Series \u2014 Credits (200 payload).",
+  "type": "object",
+  "properties": {
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "integer",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              22970
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Acting"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Peter Dinklage"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Peter Dinklage"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              30.6
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/lRsRgnksAhBRXwAB68MFjmTtLrk.jpg"
+            ]
+          },
+          "character": {
+            "type": "string",
+            "examples": [
+              "Tyrion Lannister"
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "5256c8b219c2956ff6047cd8"
+            ]
+          },
+          "order": {
+            "type": "integer",
+            "examples": [
+              0
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "crew": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "integer",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              1406855
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Production"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Duncan Muggoch"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Duncan Muggoch"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              1.592
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/ukGjJ62Ejd4cFziald03G34Fsrp.jpg"
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "5ceab029c3a3682e93217a85"
+            ]
+          },
+          "department": {
+            "type": "string",
+            "examples": [
+              "Production"
+            ]
+          },
+          "job": {
+            "type": "string",
+            "examples": [
+              "Producer"
+            ]
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    }
+  }
+}

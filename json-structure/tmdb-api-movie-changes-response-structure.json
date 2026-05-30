@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-movie-changes-response-structure.json",
+  "name": "MovieChangesResponse",
+  "description": "TMDB Movies \u2014 Changes (200 payload).",
+  "type": "object",
+  "properties": {
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "examples": [
+              "images"
+            ]
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "examples": [
+                    "643197b96dea3a00d4377270"
+                  ]
+                },
+                "action": {
+                  "type": "string",
+                  "examples": [
+                    "added"
+                  ]
+                },
+                "time": {
+                  "type": "string",
+                  "examples": [
+                    "2023-04-08 16:35:05 UTC"
+                  ]
+                },
+                "iso_639_1": {
+                  "type": "string",
+                  "examples": [
+                    ""
+                  ]
+                },
+                "iso_3166_1": {
+                  "type": "string",
+                  "examples": [
+                    ""
+                  ]
+                },
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "poster": {
+                      "type": "object",
+                      "properties": {
+                        "file_path": {
+                          "type": "string",
+                          "examples": [
+                            "/s9ZrHprviFCx3azfWNBtt1LPSnL.jpg"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

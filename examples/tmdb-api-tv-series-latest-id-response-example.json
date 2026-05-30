@@ -1,0 +1,75 @@
+{
+  "adult": false,
+  "backdrop_path": {},
+  "created_by": [
+    {}
+  ],
+  "episode_run_time": [
+    {}
+  ],
+  "first_air_date": "",
+  "genres": [
+    {}
+  ],
+  "homepage": "",
+  "id": 225491,
+  "in_production": true,
+  "languages": [
+    {}
+  ],
+  "last_air_date": "2023-04-21",
+  "last_episode_to_air": {
+    "id": 4398801,
+    "name": "Episode 8",
+    "overview": "",
+    "vote_average": 0,
+    "vote_count": 0,
+    "air_date": "2023-04-21",
+    "episode_number": 8,
+    "production_code": "",
+    "runtime": {},
+    "season_number": 1,
+    "show_id": 225491,
+    "still_path": {}
+  },
+  "name": "\u5996\u602a\u4f20",
+  "next_episode_to_air": {},
+  "networks": [
+    {}
+  ],
+  "number_of_episodes": 1,
+  "number_of_seasons": 1,
+  "origin_country": [
+    "CN"
+  ],
+  "original_language": "zh",
+  "original_name": "\u5996\u602a\u4f20",
+  "overview": "",
+  "popularity": 0,
+  "poster_path": {},
+  "production_companies": [
+    {}
+  ],
+  "production_countries": [
+    {}
+  ],
+  "seasons": [
+    {
+      "air_date": {},
+      "episode_count": 1,
+      "id": 338956,
+      "name": "Season 1",
+      "overview": "",
+      "poster_path": {},
+      "season_number": 1
+    }
+  ],
+  "spoken_languages": [
+    {}
+  ],
+  "status": "Returning Series",
+  "tagline": "",
+  "type": "Scripted",
+  "vote_average": 0,
+  "vote_count": 0
+}

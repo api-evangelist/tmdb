@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-episode-videos-response-structure.json",
+  "name": "TvEpisodeVideosResponse",
+  "description": "TMDB TV Series \u2014 Videos (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        3624
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "iso_3166_1": {
+            "type": "string",
+            "examples": [
+              "US"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Game Of Thrones - Season 1 Recap - Official HBO UK"
+            ]
+          },
+          "key": {
+            "type": "string",
+            "examples": [
+              "e0Y8KpQpW8c"
+            ]
+          },
+          "site": {
+            "type": "string",
+            "examples": [
+              "YouTube"
+            ]
+          },
+          "size": {
+            "type": "int32",
+            "examples": [
+              1080
+            ],
+            "default": 0
+          },
+          "type": {
+            "type": "string",
+            "examples": [
+              "Recap"
+            ]
+          },
+          "official": {
+            "type": "boolean",
+            "examples": [
+              true
+            ],
+            "default": true
+          },
+          "published_at": {
+            "type": "string",
+            "examples": [
+              "2015-05-19T16:31:23.000Z"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "examples": [
+              "5ce71a920e0a265ac0cfe497"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

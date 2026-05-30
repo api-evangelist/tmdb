@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-search-company-response-structure.json",
+  "name": "SearchCompanyResponse",
+  "description": "TMDB Search \u2014 Company (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "int32",
+            "examples": [
+              3268
+            ],
+            "default": 0
+          },
+          "logo_path": {
+            "type": "string",
+            "examples": [
+              "/tuomPhY2UtuPTqqFnKMVHvSb724.png"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "HBO"
+            ]
+          },
+          "origin_country": {
+            "type": "string",
+            "examples": [
+              "US"
+            ]
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        2
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        22
+      ],
+      "default": 0
+    }
+  }
+}

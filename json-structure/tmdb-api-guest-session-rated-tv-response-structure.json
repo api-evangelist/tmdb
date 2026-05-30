@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-guest-session-rated-tv-response-structure.json",
+  "name": "GuestSessionRatedTvResponse",
+  "description": "TMDB Guest Sessions \u2014 Rated TV (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/2OMB0ynKlyIenMJWI2Dy9IWT4c.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "int32",
+              "examples": [
+                10765
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              1399
+            ],
+            "default": 0
+          },
+          "origin_country": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "examples": [
+                "US"
+              ]
+            }
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Game of Thrones"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond."
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              404.299
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/7WUHnWGx5OO145IRxPDUkQSh4C7.jpg"
+            ]
+          },
+          "first_air_date": {
+            "type": "string",
+            "examples": [
+              "2011-04-17"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Game of Thrones"
+            ]
+          },
+          "vote_average": {
+            "type": "double",
+            "examples": [
+              8.436
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              21025
+            ],
+            "default": 0
+          },
+          "rating": {
+            "type": "double",
+            "examples": [
+              8.5
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    }
+  }
+}

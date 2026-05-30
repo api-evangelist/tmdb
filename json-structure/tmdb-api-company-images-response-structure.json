@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-company-images-response-structure.json",
+  "name": "CompanyImagesResponse",
+  "description": "TMDB Companies \u2014 Images (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "logos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "aspect_ratio": {
+            "type": "double",
+            "examples": [
+              2.97979797979798
+            ],
+            "default": 0
+          },
+          "file_path": {
+            "type": "string",
+            "examples": [
+              "/o86DbpburjxrqAzEDhXZcyE8pDb.png"
+            ]
+          },
+          "height": {
+            "type": "int32",
+            "examples": [
+              99
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "string",
+            "examples": [
+              "5aa080d6c3a3683fea00011e"
+            ]
+          },
+          "file_type": {
+            "type": "string",
+            "examples": [
+              ".svg"
+            ]
+          },
+          "vote_average": {
+            "type": "double",
+            "examples": [
+              5.384
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "width": {
+            "type": "int32",
+            "examples": [
+              295
+            ],
+            "default": 0
+          }
+        }
+      }
+    }
+  }
+}

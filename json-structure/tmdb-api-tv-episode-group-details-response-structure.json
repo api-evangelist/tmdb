@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-episode-group-details-response-structure.json",
+  "name": "TvEpisodeGroupDetailsResponse",
+  "description": "TMDB TV Series \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "examples": [
+        "Comedians in Cars organized in Netflix's collections."
+      ]
+    },
+    "episode_count": {
+      "type": "int32",
+      "examples": [
+        83
+      ],
+      "default": 0
+    },
+    "group_count": {
+      "type": "int32",
+      "examples": [
+        6
+      ],
+      "default": 0
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "examples": [
+              "5acf93efc3a368739a0000a9"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "First Cup"
+            ]
+          },
+          "order": {
+            "type": "int32",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "episodes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "air_date": {
+                  "type": "string",
+                  "examples": [
+                    "2015-06-17"
+                  ]
+                },
+                "episode_number": {
+                  "type": "int32",
+                  "examples": [
+                    3
+                  ],
+                  "default": 0
+                },
+                "id": {
+                  "type": "int32",
+                  "examples": [
+                    1078262
+                  ],
+                  "default": 0
+                },
+                "name": {
+                  "type": "string",
+                  "examples": [
+                    "Jim Carrey: We Love Breathing What You're Burning, Baby"
+                  ]
+                },
+                "overview": {
+                  "type": "string",
+                  "examples": [
+                    "Jerry\u2019s full of testosterone as he steps into a \u201876 Lamborghini Countach with Jim Carrey, who\u2019s between a three-week cleanse and a five-day silent retreat. After coffee, it\u2019s off to Carrey\u2019s studio to study a portrait of a gorilla with a machine gun. Wow."
+                  ]
+                },
+                "production_code": {
+                  "type": "string",
+                  "examples": [
+                    ""
+                  ]
+                },
+                "runtime": {},
+                "season_number": {
+                  "type": "int32",
+                  "examples": [
+                    6
+                  ],
+                  "default": 0
+                },
+                "show_id": {
+                  "type": "int32",
+                  "examples": [
+                    59717
+                  ],
+                  "default": 0
+                },
+                "still_path": {
+                  "type": "string",
+                  "examples": [
+                    "/aOyE420zuFq9zWtEWjIccAiTrzU.jpg"
+                  ]
+                },
+                "vote_average": {
+                  "type": "double",
+                  "examples": [
+                    7.4
+                  ],
+                  "default": 0
+                },
+                "vote_count": {
+                  "type": "int32",
+                  "examples": [
+                    5
+                  ],
+                  "default": 0
+                },
+                "order": {
+                  "type": "int32",
+                  "examples": [
+                    0
+                  ],
+                  "default": 0
+                }
+              }
+            }
+          },
+          "locked": {
+            "type": "boolean",
+            "examples": [
+              true
+            ],
+            "default": true
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "5acf93e60e0a26346d0000ce"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "Netflix Collections"
+      ]
+    },
+    "network": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "int32",
+          "examples": [
+            213
+          ],
+          "default": 0
+        },
+        "logo_path": {
+          "type": "string",
+          "examples": [
+            "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "examples": [
+            "Netflix"
+          ]
+        },
+        "origin_country": {
+          "type": "string",
+          "examples": [
+            ""
+          ]
+        }
+      }
+    },
+    "type": {
+      "type": "integer",
+      "examples": [
+        4
+      ],
+      "default": 0
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/rgNzvSagnlc32TuMEBa529QFIig.jpg",
+      "genre_ids": [
+        878
+      ],
+      "id": 76726,
+      "original_language": "en",
+      "original_title": "Chronicle",
+      "overview": "Three high school students make an incredible discovery, leading to their developing uncanny powers beyond their understanding. As they learn to control their abilities and use them to their advantage, their lives start to spin out of control, and their darker sides begin to take over.",
+      "popularity": 37.148,
+      "poster_path": "/xENglsVIIWEEhhB5lgpy33tGcKI.jpg",
+      "release_date": "2012-02-01",
+      "title": "Chronicle",
+      "video": false,
+      "vote_average": 6.822,
+      "vote_count": 4741
+    }
+  ],
+  "total_pages": 34,
+  "total_results": 677
+}

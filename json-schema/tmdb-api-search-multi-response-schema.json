@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-search-multi-response-schema.json",
+  "title": "SearchMultiResponse",
+  "description": "TMDB Search \u2014 Multi (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/aDYSnJAK0BTVeE8osOy22Kz3SXY.jpg"
+            ]
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              11
+            ],
+            "default": 0
+          },
+          "title": {
+            "type": "string",
+            "examples": [
+              "Star Wars"
+            ]
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_title": {
+            "type": "string",
+            "examples": [
+              "Star Wars"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire."
+            ]
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg"
+            ]
+          },
+          "media_type": {
+            "type": "string",
+            "examples": [
+              "movie"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                12
+              ],
+              "default": 0
+            }
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              78.047
+            ],
+            "default": 0
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "1977-05-25"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              8.208
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              18528
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string"
+          },
+          "original_name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        11
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        201
+      ],
+      "default": 0
+    }
+  }
+}

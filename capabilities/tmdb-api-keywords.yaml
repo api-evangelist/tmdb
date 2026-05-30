@@ -1,0 +1,167 @@
+!!omap
+- naftiko: 1.0.0-alpha2
+- info: !!omap
+  - label: TMDB API — Keywords
+  - description: |-
+      TMDB — Keywords. 2 operations. Lead operation: TMDB Keywords — Details. Self-contained Naftiko capability covering one TMDB business surface.
+  - tags:
+    - TMDB
+    - Keywords
+  - created: '2026-05-30'
+  - modified: '2026-05-30'
+- binds:
+  - !!omap
+    - namespace: env
+    - keys: !!omap
+      - TMDB_BEARER_TOKEN: TMDB_BEARER_TOKEN
+- capability: !!omap
+  - consumes:
+    - !!omap
+      - type: http
+      - namespace: tmdb-api-keywords
+      - baseUri: https://api.themoviedb.org
+      - description: TMDB API — Keywords business capability. Self-contained, no shared references.
+      - authentication: !!omap
+        - type: bearer
+        - token: '{{env.TMDB_BEARER_TOKEN}}'
+      - resources:
+        - !!omap
+          - name: 3-keyword-keyword-id
+          - path: /3/keyword/{keyword_id}
+          - operations:
+            - !!omap
+              - name: keyword-details
+              - method: GET
+              - description: TMDB Keywords — Details
+              - inputParameters:
+                - !!omap
+                  - name: keyword_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: keyword_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-keyword-keyword-id-movies
+          - path: /3/keyword/{keyword_id}/movies
+          - operations:
+            - !!omap
+              - name: keyword-movies
+              - method: GET
+              - description: TMDB Keywords — Movies
+              - inputParameters:
+                - !!omap
+                  - name: keyword_id
+                  - in: path
+                  - type: string
+                  - required: true
+                  - description: keyword_id parameter.
+                - !!omap
+                  - name: include_adult
+                  - in: query
+                  - type: boolean
+                  - required: false
+                  - description: include_adult parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+  - exposes:
+    - !!omap
+      - type: rest
+      - namespace: tmdb-api-keywords-rest
+      - port: 8080
+      - description: REST adapter for TMDB API — Keywords. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+      - resources:
+        - !!omap
+          - path: /v1/keyword/{keyword_id}
+          - name: keyword-keyword-id
+          - description: REST surface for /3/keyword/{keyword_id}.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: keyword-details
+              - description: TMDB Keywords — Details
+              - call: tmdb-api-keywords.keyword-details
+              - with: !!omap
+                - keyword_id: rest.keyword_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/keyword/{keyword_id}/movies
+          - name: keyword-keyword-id-movies
+          - description: REST surface for /3/keyword/{keyword_id}/movies.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: keyword-movies
+              - description: TMDB Keywords — Movies
+              - call: tmdb-api-keywords.keyword-movies
+              - with: !!omap
+                - keyword_id: rest.keyword_id
+                - include_adult: rest.include_adult
+                - language: rest.language
+                - page: rest.page
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+    - !!omap
+      - type: mcp
+      - namespace: tmdb-api-keywords-mcp
+      - port: 9090
+      - transport: http
+      - description: MCP adapter for TMDB API — Keywords. One tool per consumed operation, routed inline through this capability's consumes block.
+      - tools:
+        - !!omap
+          - name: details
+          - description: TMDB Keywords — Details
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-keywords.keyword-details
+          - with: !!omap
+            - keyword_id: tools.keyword_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: movies
+          - description: TMDB Keywords — Movies
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-keywords.keyword-movies
+          - with: !!omap
+            - keyword_id: tools.keyword_id
+            - include_adult: tools.include_adult
+            - language: tools.language
+            - page: tools.page
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.

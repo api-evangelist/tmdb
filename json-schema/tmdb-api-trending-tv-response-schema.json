@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-trending-tv-response-schema.json",
+  "title": "TrendingTvResponse",
+  "description": "TMDB Trending \u2014 TV (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/8P15FsYcTwQZ4G5rRMd1TKD14Aq.jpg"
+            ]
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              103768
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Sweet Tooth"
+            ]
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Sweet Tooth"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "On a perilous adventure across a post-apocalyptic world, a lovable boy who's half-human and half-deer searches for a new beginning with a gruff protector."
+            ]
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/dBxxtfhC4vYrxB2fLsSxOTY2dQc.jpg"
+            ]
+          },
+          "media_type": {
+            "type": "string",
+            "examples": [
+              "tv"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                18
+              ],
+              "default": 0
+            }
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              137.498
+            ],
+            "default": 0
+          },
+          "first_air_date": {
+            "type": "string",
+            "examples": [
+              "2021-06-04"
+            ]
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              7.928
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              1094
+            ],
+            "default": 0
+          },
+          "origin_country": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "examples": [
+                "US"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        1000
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        20000
+      ],
+      "default": 0
+    }
+  }
+}

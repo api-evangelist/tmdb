@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-person-external-ids-response-schema.json",
+  "title": "PersonExternalIdsResponse",
+  "description": "TMDB People \u2014 External IDs (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        31
+      ],
+      "default": 0
+    },
+    "freebase_mid": {
+      "type": "string",
+      "examples": [
+        "/m/0bxtg"
+      ]
+    },
+    "freebase_id": {
+      "type": "string",
+      "examples": [
+        "/en/tom_hanks"
+      ]
+    },
+    "imdb_id": {
+      "type": "string",
+      "examples": [
+        "nm0000158"
+      ]
+    },
+    "tvrage_id": {
+      "type": "integer",
+      "examples": [
+        14293
+      ],
+      "default": 0
+    },
+    "wikidata_id": {
+      "type": "string",
+      "examples": [
+        "Q2263"
+      ]
+    },
+    "facebook_id": {
+      "type": "string",
+      "examples": [
+        "TomHanks"
+      ]
+    },
+    "instagram_id": {
+      "type": "string",
+      "examples": [
+        "tomhanks"
+      ]
+    },
+    "tiktok_id": {
+      "type": "string",
+      "examples": [
+        "tomhanks"
+      ]
+    },
+    "twitter_id": {
+      "type": "string",
+      "examples": [
+        "tomhanks"
+      ]
+    },
+    "youtube_id": {}
+  }
+}

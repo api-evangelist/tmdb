@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-person-latest-id-response-structure.json",
+  "name": "PersonLatestIdResponse",
+  "description": "TMDB People \u2014 Latest (200 payload).",
+  "type": "object",
+  "properties": {
+    "adult": {
+      "type": "boolean",
+      "examples": [
+        false
+      ],
+      "default": true
+    },
+    "also_known_as": {
+      "type": "array"
+    },
+    "biography": {
+      "type": "string",
+      "examples": [
+        ""
+      ]
+    },
+    "birthday": {},
+    "deathday": {},
+    "gender": {
+      "type": "int32",
+      "examples": [
+        0
+      ],
+      "default": 0
+    },
+    "homepage": {},
+    "id": {
+      "type": "int32",
+      "examples": [
+        4064343
+      ],
+      "default": 0
+    },
+    "imdb_id": {},
+    "known_for_department": {},
+    "name": {
+      "type": "string",
+      "examples": [
+        "\u00c1ngel Cruz"
+      ]
+    },
+    "place_of_birth": {},
+    "popularity": {
+      "type": "int32",
+      "examples": [
+        0
+      ],
+      "default": 0
+    },
+    "profile_path": {}
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-series-alternative-titles-response-schema.json",
+  "title": "TvSeriesAlternativeTitlesResponse",
+  "description": "TMDB TV Series \u2014 Alternative Titles (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "iso_3166_1": {
+            "type": "string",
+            "examples": [
+              "AL"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "examples": [
+              "Froni i shpatave"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "examples": [
+              ""
+            ]
+          }
+        }
+      }
+    }
+  }
+}

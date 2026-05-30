@@ -1,0 +1,5111 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-season-watch-providers-response-structure.json",
+  "name": "TvSeasonWatchProvidersResponse",
+  "description": "TMDB TV Series \u2014 Watch Providers (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        3624
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "object",
+      "properties": {
+        "AD": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=AD"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      24
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "AE": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=AE"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kC6JTo59Gj6I4vJPyBAYGh0sKAE.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      629
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "OSN+"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      7
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "AG": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=AG"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      11
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "AR": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=AR"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/nr5UBW4IGKgBwmhpTMOfcvnX2vX.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      467
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "DIRECTV GO"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      12
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "AT": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=AT"
+              ]
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      3
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kAZkQcIxMxTmlwdgSB05fqtymp0.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      29
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Sky Go"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      8
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "AU": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=AU"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/fejdSG7TwNQ5E0p6u7A6LVs280R.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      134
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Foxtel Now"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      8
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/oMYZg3cGAGp9ecKGlBgumcjDmnN.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      2
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Apple TV"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      11
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "BA": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=BA"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      27
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "BB": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=BB"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      23
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "BE": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=BE"
+              ]
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      33
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kwftIxtjuCAROIcdd53UEjzSmca.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1857
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Telenet"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      31
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "BG": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=BG"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      21
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "BH": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=BH"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kC6JTo59Gj6I4vJPyBAYGh0sKAE.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      629
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "OSN+"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      29
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "BO": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=BO"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      30
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "BR": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=BR"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      6
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "BS": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=BS"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      24
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "BZ": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=BZ"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      9
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "CA": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=CA"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ewOptMVIYcOadMGGJz8DJueH2bH.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      230
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Crave"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      4
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/oMYZg3cGAGp9ecKGlBgumcjDmnN.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      2
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Apple TV"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      5
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "CH": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=CH"
+              ]
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/8z7rC8uIDaTM91X0ZfkRf04ydj2.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      3
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Google Play Movies"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      5
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ytApMa9fThUQUFTn696AeNBrB8f.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      210
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Sky"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      6
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "CI": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=CI"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      19
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "CL": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=CL"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      7
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "CM": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=CM"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      0
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "CO": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=CO"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      6
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "CR": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=CR"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      4
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "CZ": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=CZ"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/489t5n9o1KhH7voGNQkrXT7vBKV.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1939
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Lepsi TV"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      26
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "DE": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=DE"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kAZkQcIxMxTmlwdgSB05fqtymp0.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      29
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Sky Go"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      8
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/oMYZg3cGAGp9ecKGlBgumcjDmnN.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      2
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Apple TV"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      4
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "DK": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=DK"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      39
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "DO": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=DO"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      30
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "EC": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=EC"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/tRNA2CRgA4XHvd7Mx9dH3sFtDVb.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      339
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "MovistarTV"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      4
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "EG": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=EG"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kC6JTo59Gj6I4vJPyBAYGh0sKAE.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      629
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "OSN+"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      20
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ES": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=ES"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/f6TRLB3H4jDpFEZ0z2KWSSvu1SB.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      149
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Movistar Plus+ Ficci\u00f3n Total "
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      6
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      32
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "FI": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=FI"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/eglAxQEXSO13p6gNf3HKymrIu7y.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      540
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Elisa Viihde"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      18
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      54
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "FR": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=FR"
+              ]
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/oMYZg3cGAGp9ecKGlBgumcjDmnN.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      2
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Apple TV"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      4
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      78
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "GB": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=GB"
+              ]
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/oMYZg3cGAGp9ecKGlBgumcjDmnN.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      2
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Apple TV"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      4
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/g0E9h3JAeIwmdvxlT73jiEuxdNj.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      39
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Now TV"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      43
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "GG": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=GG"
+              ]
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      84
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "GQ": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=GQ"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      7
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "GT": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=GT"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      4
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "GY": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=GY"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      3
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "HK": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=HK"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      38
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "HN": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=HN"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      30
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "HR": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=HR"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      33
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "HU": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=HU"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      28
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ID": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=ID"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      39
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "IE": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=IE"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/g0E9h3JAeIwmdvxlT73jiEuxdNj.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      39
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Now TV"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/6AKbY2ayaEuH4zKg2prqoVQ9iaY.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      130
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Sky Store"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      9
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "IN": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=IN"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kVqjgpcwvDJOhCupjcLzwwtOp52.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      2336
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "JioHotstar"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      5
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "IQ": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=IQ"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kC6JTo59Gj6I4vJPyBAYGh0sKAE.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      629
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "OSN+"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      7
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "IT": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=IT"
+              ]
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      33
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/g0E9h3JAeIwmdvxlT73jiEuxdNj.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      39
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Now TV"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "JM": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=JM"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      22
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "JO": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=JO"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kC6JTo59Gj6I4vJPyBAYGh0sKAE.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      629
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "OSN+"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      31
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "JP": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=JP"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/a5T7vNaGvoeckYO6rQkHolvyYf4.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      84
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "U-NEXT"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      2
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      5
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "rent": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      5
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "KE": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=KE"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      7
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "LB": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=LB"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kC6JTo59Gj6I4vJPyBAYGh0sKAE.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      629
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "OSN+"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      7
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "LC": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=LC"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "MC": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=MC"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      25
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "MD": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=MD"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      25
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ME": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=ME"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      6
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "MG": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=MG"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      0
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "MK": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=MK"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      26
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ML": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=ML"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      0
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "MU": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=MU"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      5
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "MX": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=MX"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      5
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "MY": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=MY"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      31
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "MZ": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=MZ"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      7
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "NE": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=NE"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      19
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "NG": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=NG"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      21
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "NI": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=NI"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      13
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "NL": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=NL"
+              ]
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      34
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      48
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "NO": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=NO"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/3ZigBD8WTEPcEHAvMWiJGUsv5u4.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      578
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Strim"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      27
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "NZ": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=NZ"
+              ]
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      59
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/iscLKFDwQlr0BAgVDBcuRapLiwC.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      273
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Neon TV"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      3
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "OM": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=OM"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kC6JTo59Gj6I4vJPyBAYGh0sKAE.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      629
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "OSN+"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      31
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "PA": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=PA"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      30
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "PE": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=PE"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      7
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "PH": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=PH"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      32
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "PL": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=PL"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jhMNVBV2UocEGepRkr9oFPD7Gpb.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      505
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Player"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      27
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "PT": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=PT"
+              ]
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      43
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      32
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "PY": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=PY"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      29
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "QA": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=QA"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kC6JTo59Gj6I4vJPyBAYGh0sKAE.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      629
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "OSN+"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      31
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "RO": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=RO"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      23
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "RS": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=RS"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      28
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "RU": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=RU"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/5z8dpQN27kybhn21EVLZcJPpMEo.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      115
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Okko"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      0
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "SA": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=SA"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/kC6JTo59Gj6I4vJPyBAYGh0sKAE.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      629
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "OSN+"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      20
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "SC": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=SC"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      6
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "SE": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=SE"
+              ]
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      39
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      44
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "SG": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=SG"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      31
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "SI": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=SI"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      28
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "SK": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=SK"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      37
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "SN": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=SN"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      7
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "SV": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=SV"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      30
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "TC": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=TC"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "TD": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=TD"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      0
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "TH": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=TH"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      30
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "TR": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=TR"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      29
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "TT": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=TT"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      11
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "TW": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=TW"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      38
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "US": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=US"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      11
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            },
+            "buy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/seGSXajazLMCKGB5hnRCidtjay1.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      10
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "Amazon Video"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      6
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "UY": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=UY"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      3
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "VE": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=VE"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/jbe4gVSfRlbPTdESXhEKpornsfu.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      1899
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "HBO Max"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      27
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ZA": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=ZA"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      4
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ZM": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=ZM"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      7
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ZW": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string",
+              "examples": [
+                "https://www.themoviedb.org/tv/1399-game-of-thrones/watch?locale=ZW"
+              ]
+            },
+            "flatrate": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "logo_path": {
+                    "type": "string",
+                    "examples": [
+                      "/ilR8XFZOr3e3wETQ4ZXLjXQXrts.jpg"
+                    ]
+                  },
+                  "provider_id": {
+                    "type": "int32",
+                    "examples": [
+                      55
+                    ],
+                    "default": 0
+                  },
+                  "provider_name": {
+                    "type": "string",
+                    "examples": [
+                      "ShowMax"
+                    ]
+                  },
+                  "display_priority": {
+                    "type": "int32",
+                    "examples": [
+                      0
+                    ],
+                    "default": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

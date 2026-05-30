@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-trending-people-response-schema.json",
+  "title": "TrendingPeopleResponse",
+  "description": "TMDB Trending \u2014 People (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              224513
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Ana de Armas"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Ana de Armas"
+            ]
+          },
+          "media_type": {
+            "type": "string",
+            "examples": [
+              "person"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              349.766
+            ],
+            "default": 0
+          },
+          "gender": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Acting"
+            ]
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/3vxvsmYLTf4jnr163SUlBIw51ee.jpg"
+            ]
+          },
+          "known_for": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "adult": {
+                  "type": "boolean",
+                  "examples": [
+                    false
+                  ],
+                  "default": true
+                },
+                "backdrop_path": {
+                  "type": "string",
+                  "examples": [
+                    "/ilRyazdMJwN05exqhwK4tMKBYZs.jpg"
+                  ]
+                },
+                "id": {
+                  "type": "integer",
+                  "examples": [
+                    335984
+                  ],
+                  "default": 0
+                },
+                "title": {
+                  "type": "string",
+                  "examples": [
+                    "Blade Runner 2049"
+                  ]
+                },
+                "original_language": {
+                  "type": "string",
+                  "examples": [
+                    "en"
+                  ]
+                },
+                "original_title": {
+                  "type": "string",
+                  "examples": [
+                    "Blade Runner 2049"
+                  ]
+                },
+                "overview": {
+                  "type": "string",
+                  "examples": [
+                    "Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for 30 years."
+                  ]
+                },
+                "poster_path": {
+                  "type": "string",
+                  "examples": [
+                    "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg"
+                  ]
+                },
+                "media_type": {
+                  "type": "string",
+                  "examples": [
+                    "movie"
+                  ]
+                },
+                "genre_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "examples": [
+                      878
+                    ],
+                    "default": 0
+                  }
+                },
+                "popularity": {
+                  "type": "number",
+                  "examples": [
+                    79.571
+                  ],
+                  "default": 0
+                },
+                "release_date": {
+                  "type": "string",
+                  "examples": [
+                    "2017-10-04"
+                  ]
+                },
+                "video": {
+                  "type": "boolean",
+                  "examples": [
+                    false
+                  ],
+                  "default": true
+                },
+                "vote_average": {
+                  "type": "number",
+                  "examples": [
+                    7.531
+                  ],
+                  "default": 0
+                },
+                "vote_count": {
+                  "type": "integer",
+                  "examples": [
+                    11771
+                  ],
+                  "default": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        1000
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        20000
+      ],
+      "default": 0
+    }
+  }
+}

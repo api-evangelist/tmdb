@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-authentication-validate-key401response-schema.json",
+  "title": "AuthenticationValidateKey401Response",
+  "description": "TMDB Authentication \u2014 Validate Key (401 payload).",
+  "type": "object",
+  "properties": {
+    "status_code": {
+      "type": "integer",
+      "examples": [
+        7
+      ],
+      "default": 0
+    },
+    "status_message": {
+      "type": "string",
+      "examples": [
+        "Invalid API key: You must be granted a valid key."
+      ]
+    },
+    "success": {
+      "type": "boolean",
+      "examples": [
+        false
+      ],
+      "default": true
+    }
+  }
+}

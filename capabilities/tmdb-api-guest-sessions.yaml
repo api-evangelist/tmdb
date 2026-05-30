@@ -1,0 +1,266 @@
+!!omap
+- naftiko: 1.0.0-alpha2
+- info: !!omap
+  - label: TMDB API — Guest Sessions
+  - description: |-
+      TMDB — Guest Sessions. 3 operations. Lead operation: TMDB Guest Sessions — Rated Movies. Self-contained Naftiko capability covering one TMDB business surface.
+  - tags:
+    - TMDB
+    - Guest Sessions
+  - created: '2026-05-30'
+  - modified: '2026-05-30'
+- binds:
+  - !!omap
+    - namespace: env
+    - keys: !!omap
+      - TMDB_BEARER_TOKEN: TMDB_BEARER_TOKEN
+- capability: !!omap
+  - consumes:
+    - !!omap
+      - type: http
+      - namespace: tmdb-api-guest-sessions
+      - baseUri: https://api.themoviedb.org
+      - description: TMDB API — Guest Sessions business capability. Self-contained, no shared references.
+      - authentication: !!omap
+        - type: bearer
+        - token: '{{env.TMDB_BEARER_TOKEN}}'
+      - resources:
+        - !!omap
+          - name: 3-guest-session-guest-session-id-rated-movies
+          - path: /3/guest_session/{guest_session_id}/rated/movies
+          - operations:
+            - !!omap
+              - name: guest-session-rated-movies
+              - method: GET
+              - description: TMDB Guest Sessions — Rated Movies
+              - inputParameters:
+                - !!omap
+                  - name: guest_session_id
+                  - in: path
+                  - type: string
+                  - required: true
+                  - description: guest_session_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: sort_by
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: sort_by parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-guest-session-guest-session-id-rated-tv
+          - path: /3/guest_session/{guest_session_id}/rated/tv
+          - operations:
+            - !!omap
+              - name: guest-session-rated-tv
+              - method: GET
+              - description: TMDB Guest Sessions — Rated TV
+              - inputParameters:
+                - !!omap
+                  - name: guest_session_id
+                  - in: path
+                  - type: string
+                  - required: true
+                  - description: guest_session_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: sort_by
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: sort_by parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-guest-session-guest-session-id-rated-tv-episodes
+          - path: /3/guest_session/{guest_session_id}/rated/tv/episodes
+          - operations:
+            - !!omap
+              - name: guest-session-rated-tv-episodes
+              - method: GET
+              - description: TMDB Guest Sessions — Rated TV Episodes
+              - inputParameters:
+                - !!omap
+                  - name: guest_session_id
+                  - in: path
+                  - type: string
+                  - required: true
+                  - description: guest_session_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: sort_by
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: sort_by parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+  - exposes:
+    - !!omap
+      - type: rest
+      - namespace: tmdb-api-guest-sessions-rest
+      - port: 8080
+      - description: REST adapter for TMDB API — Guest Sessions. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+      - resources:
+        - !!omap
+          - path: /v1/guest_session/{guest_session_id}/rated/movies
+          - name: guest-session-guest-session-id-rated-movies
+          - description: REST surface for /3/guest_session/{guest_session_id}/rated/movies.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: guest-session-rated-movies
+              - description: TMDB Guest Sessions — Rated Movies
+              - call: tmdb-api-guest-sessions.guest-session-rated-movies
+              - with: !!omap
+                - guest_session_id: rest.guest_session_id
+                - language: rest.language
+                - page: rest.page
+                - sort_by: rest.sort_by
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/guest_session/{guest_session_id}/rated/tv
+          - name: guest-session-guest-session-id-rated-tv
+          - description: REST surface for /3/guest_session/{guest_session_id}/rated/tv.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: guest-session-rated-tv
+              - description: TMDB Guest Sessions — Rated TV
+              - call: tmdb-api-guest-sessions.guest-session-rated-tv
+              - with: !!omap
+                - guest_session_id: rest.guest_session_id
+                - language: rest.language
+                - page: rest.page
+                - sort_by: rest.sort_by
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/guest_session/{guest_session_id}/rated/tv/episodes
+          - name: guest-session-guest-session-id-rated-tv-episodes
+          - description: REST surface for /3/guest_session/{guest_session_id}/rated/tv/episodes.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: guest-session-rated-tv-episodes
+              - description: TMDB Guest Sessions — Rated TV Episodes
+              - call: tmdb-api-guest-sessions.guest-session-rated-tv-episodes
+              - with: !!omap
+                - guest_session_id: rest.guest_session_id
+                - language: rest.language
+                - page: rest.page
+                - sort_by: rest.sort_by
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+    - !!omap
+      - type: mcp
+      - namespace: tmdb-api-guest-sessions-mcp
+      - port: 9090
+      - transport: http
+      - description: MCP adapter for TMDB API — Guest Sessions. One tool per consumed operation, routed inline through this capability's consumes block.
+      - tools:
+        - !!omap
+          - name: rated-movies
+          - description: TMDB Guest Sessions — Rated Movies
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-guest-sessions.guest-session-rated-movies
+          - with: !!omap
+            - guest_session_id: tools.guest_session_id
+            - language: tools.language
+            - page: tools.page
+            - sort_by: tools.sort_by
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: rated-tv
+          - description: TMDB Guest Sessions — Rated TV
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-guest-sessions.guest-session-rated-tv
+          - with: !!omap
+            - guest_session_id: tools.guest_session_id
+            - language: tools.language
+            - page: tools.page
+            - sort_by: tools.sort_by
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: rated-tv-episodes
+          - description: TMDB Guest Sessions — Rated TV Episodes
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-guest-sessions.guest-session-rated-tv-episodes
+          - with: !!omap
+            - guest_session_id: tools.guest_session_id
+            - language: tools.language
+            - page: tools.page
+            - sort_by: tools.sort_by
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.

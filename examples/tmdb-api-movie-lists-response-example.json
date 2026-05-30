@@ -1,0 +1,18 @@
+{
+  "id": 550,
+  "page": 1,
+  "results": [
+    {
+      "description": "Movies I own",
+      "favorite_count": 0,
+      "id": 8248696,
+      "item_count": 409,
+      "iso_639_1": "en",
+      "list_type": "movie",
+      "name": "My Movies",
+      "poster_path": {}
+    }
+  ],
+  "total_pages": 122,
+  "total_results": 2422
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-season-changes-by-id-response-structure.json",
+  "name": "TvSeasonChangesByIdResponse",
+  "description": "TMDB TV Series \u2014 Changes (200 payload).",
+  "type": "object",
+  "properties": {
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "examples": [
+              "episode"
+            ]
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "examples": [
+                    "5717c8c69251414cfd00250f"
+                  ]
+                },
+                "action": {
+                  "type": "string",
+                  "examples": [
+                    "updated"
+                  ]
+                },
+                "time": {
+                  "type": "string",
+                  "examples": [
+                    "2016-04-20 18:21:58 UTC"
+                  ]
+                },
+                "value": {
+                  "type": "object",
+                  "properties": {
+                    "episode_id": {
+                      "type": "int32",
+                      "examples": [
+                        63056
+                      ],
+                      "default": 0
+                    },
+                    "episode_number": {
+                      "type": "int32",
+                      "examples": [
+                        1
+                      ],
+                      "default": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

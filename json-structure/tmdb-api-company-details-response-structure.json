@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-company-details-response-structure.json",
+  "name": "CompanyDetailsResponse",
+  "description": "TMDB Companies \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "examples": [
+        ""
+      ]
+    },
+    "headquarters": {
+      "type": "string",
+      "examples": [
+        "San Francisco, California"
+      ]
+    },
+    "homepage": {
+      "type": "string",
+      "examples": [
+        "https://www.lucasfilm.com"
+      ]
+    },
+    "id": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "logo_path": {
+      "type": "string",
+      "examples": [
+        "/o86DbpburjxrqAzEDhXZcyE8pDb.png"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "Lucasfilm Ltd."
+      ]
+    },
+    "origin_country": {
+      "type": "string",
+      "examples": [
+        "US"
+      ]
+    },
+    "parent_company": {}
+  }
+}

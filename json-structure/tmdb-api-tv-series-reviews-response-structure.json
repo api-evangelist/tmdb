@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-series-reviews-response-structure.json",
+  "name": "TvSeriesReviewsResponse",
+  "description": "TMDB TV Series \u2014 Reviews (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    },
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "author": {
+            "type": "string",
+            "examples": [
+              "lmao7"
+            ]
+          },
+          "author_details": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "examples": [
+                  "lmao7"
+                ]
+              },
+              "username": {
+                "type": "string",
+                "examples": [
+                  "lmao7"
+                ]
+              },
+              "avatar_path": {
+                "type": "string",
+                "examples": [
+                  "/ekmYOUU4tfx9zGGadjRdE7UPce.jpg"
+                ]
+              },
+              "rating": {
+                "type": "int32",
+                "examples": [
+                  9
+                ],
+                "default": 0
+              }
+            }
+          },
+          "content": {
+            "type": "string",
+            "examples": [
+              "I started watching when it came out as I heard that fans of LOTR also liked this. I stopped watching after Season 1 as I was devastated lol kinda. Only 2015 I decided to continue watching and got addicted like it seemed complicated at first, too many stories and characters. I even used a guide from internet like family tree per house while watching or GOT wiki so I can have more background on the characters. For a TV series, this show can really take you to a different world and never knowing what will happen. It is very daring that any time anybody can just die (I learned not to be attached and have accepted that they will all die so I won't be devastated hehe). I have never read the books but the show is entertaining and you will really root for your faves and really hate on those you hate. \r\n\r\nFantasy, action, drama, comedy, love...and lots of surprises!"
+            ]
+          },
+          "created_at": {
+            "type": "string",
+            "examples": [
+              "2017-02-20T05:47:28.872Z"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "examples": [
+              "58aa82f09251416f92006a3a"
+            ]
+          },
+          "updated_at": {
+            "type": "string",
+            "examples": [
+              "2021-06-23T15:57:54.649Z"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "examples": [
+              "https://www.themoviedb.org/review/58aa82f09251416f92006a3a"
+            ]
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        11
+      ],
+      "default": 0
+    }
+  }
+}

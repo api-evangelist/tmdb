@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-keyword-details-response-structure.json",
+  "name": "KeywordDetailsResponse",
+  "description": "TMDB Keywords \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        1701
+      ],
+      "default": 0
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "hero"
+      ]
+    }
+  }
+}

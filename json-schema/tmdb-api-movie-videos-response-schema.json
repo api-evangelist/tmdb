@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-movie-videos-response-schema.json",
+  "title": "MovieVideosResponse",
+  "description": "TMDB Movies \u2014 Videos (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        550
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "iso_3166_1": {
+            "type": "string",
+            "examples": [
+              "US"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Fight Club (1999) Trailer - Starring Brad Pitt, Edward Norton, Helena Bonham Carter"
+            ]
+          },
+          "key": {
+            "type": "string",
+            "examples": [
+              "O-b2VfmmbyA"
+            ]
+          },
+          "site": {
+            "type": "string",
+            "examples": [
+              "YouTube"
+            ]
+          },
+          "size": {
+            "type": "integer",
+            "examples": [
+              720
+            ],
+            "default": 0
+          },
+          "type": {
+            "type": "string",
+            "examples": [
+              "Trailer"
+            ]
+          },
+          "official": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "published_at": {
+            "type": "string",
+            "examples": [
+              "2016-03-05T02:03:14.000Z"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "examples": [
+              "639d5326be6d88007f170f44"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

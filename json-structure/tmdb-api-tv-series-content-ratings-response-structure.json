@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-series-content-ratings-response-structure.json",
+  "name": "TvSeriesContentRatingsResponse",
+  "description": "TMDB TV Series \u2014 Content Ratings (200 payload).",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "descriptors": {
+            "type": "array"
+          },
+          "iso_3166_1": {
+            "type": "string",
+            "examples": [
+              "DE"
+            ]
+          },
+          "rating": {
+            "type": "string",
+            "examples": [
+              "16"
+            ]
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "int32",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    }
+  }
+}

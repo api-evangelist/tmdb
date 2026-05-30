@@ -1,0 +1,27 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/7phlGHRupo38EnuwmkAHdNUqov3.jpg",
+      "genre_ids": [
+        35
+      ],
+      "id": 58932,
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "The Crazy Ones",
+      "overview": "The Crazy Ones is an American situation comedy series created by David E. Kelley that stars Robin Williams and Sarah Michelle Gellar. The single-camera project premiered on CBS on September 26, 2013, as part of the 2013\u201314 American television season as a Thursday night 9 pm entry. Bill D'Elia, Dean Lorey, Jason Winer, John Montgomery and Mark Teitelbaum serve as executive producers for 20th Century Fox Television.",
+      "popularity": 8.939,
+      "poster_path": "/s2e7hTrdmNUaJDf0yDP5b4AHvrD.jpg",
+      "first_air_date": "2013-09-26",
+      "name": "The Crazy Ones",
+      "vote_average": 6.176,
+      "vote_count": 94
+    }
+  ],
+  "total_pages": 17,
+  "total_results": 325
+}

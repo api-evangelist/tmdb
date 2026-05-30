@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-changes-movie-list-response-structure.json",
+  "name": "ChangesMovieListResponse",
+  "description": "TMDB Movies \u2014 Movie List (200 payload).",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "int32",
+            "examples": [
+              1120293
+            ],
+            "default": 0
+          },
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          }
+        }
+      }
+    },
+    "page": {
+      "type": "int32",
+      "examples": [
+        3
+      ],
+      "default": 0
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        57
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        5700
+      ],
+      "default": 0
+    }
+  }
+}

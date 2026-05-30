@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-movie-release-dates-response-schema.json",
+  "title": "MovieReleaseDatesResponse",
+  "description": "TMDB Movies \u2014 Release Dates (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        550
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "iso_3166_1": {
+            "type": "string",
+            "examples": [
+              "BG"
+            ]
+          },
+          "release_dates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "certification": {
+                  "type": "string",
+                  "examples": [
+                    "c"
+                  ]
+                },
+                "descriptors": {
+                  "type": "array"
+                },
+                "iso_639_1": {
+                  "type": "string",
+                  "examples": [
+                    ""
+                  ]
+                },
+                "note": {
+                  "type": "string",
+                  "examples": [
+                    ""
+                  ]
+                },
+                "release_date": {
+                  "type": "string",
+                  "examples": [
+                    "2012-08-28T00:00:00.000Z"
+                  ]
+                },
+                "type": {
+                  "type": "integer",
+                  "examples": [
+                    3
+                  ],
+                  "default": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

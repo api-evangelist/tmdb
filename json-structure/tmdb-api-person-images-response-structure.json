@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-person-images-response-structure.json",
+  "name": "PersonImagesResponse",
+  "description": "TMDB People \u2014 Images (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        287
+      ],
+      "default": 0
+    },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "aspect_ratio": {
+            "type": "double",
+            "examples": [
+              0.666
+            ],
+            "default": 0
+          },
+          "height": {
+            "type": "int32",
+            "examples": [
+              980
+            ],
+            "default": 0
+          },
+          "iso_639_1": {},
+          "file_path": {
+            "type": "string",
+            "examples": [
+              "/cckcYc2v0yh1tc9QjRelptcOBko.jpg"
+            ]
+          },
+          "vote_average": {
+            "type": "double",
+            "examples": [
+              5.288
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              89
+            ],
+            "default": 0
+          },
+          "width": {
+            "type": "int32",
+            "examples": [
+              653
+            ],
+            "default": 0
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-season-aggregate-credits-response-structure.json",
+  "name": "TvSeasonAggregateCreditsResponse",
+  "description": "TMDB TV Series \u2014 Aggregate Credits (200 payload).",
+  "type": "object",
+  "properties": {
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "int32",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              22970
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Acting"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Peter Dinklage"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Peter Dinklage"
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              30.6
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/lRsRgnksAhBRXwAB68MFjmTtLrk.jpg"
+            ]
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "credit_id": {
+                  "type": "string",
+                  "examples": [
+                    "5256c8b219c2956ff6047cd8"
+                  ]
+                },
+                "character": {
+                  "type": "string",
+                  "examples": [
+                    "Tyrion Lannister"
+                  ]
+                },
+                "episode_count": {
+                  "type": "int32",
+                  "examples": [
+                    10
+                  ],
+                  "default": 0
+                }
+              }
+            }
+          },
+          "total_episode_count": {
+            "type": "int32",
+            "examples": [
+              10
+            ],
+            "default": 0
+          },
+          "order": {
+            "type": "int32",
+            "examples": [
+              0
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "crew": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "int32",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              9153
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Art"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Gemma Jackson"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Gemma Jackson"
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              0.995
+            ],
+            "default": 0
+          },
+          "profile_path": {},
+          "jobs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "credit_id": {
+                  "type": "string",
+                  "examples": [
+                    "54eee8b8c3a3686d5e005430"
+                  ]
+                },
+                "job": {
+                  "type": "string",
+                  "examples": [
+                    "Production Design"
+                  ]
+                },
+                "episode_count": {
+                  "type": "int32",
+                  "examples": [
+                    10
+                  ],
+                  "default": 0
+                }
+              }
+            }
+          },
+          "department": {
+            "type": "string",
+            "examples": [
+              "Art"
+            ]
+          },
+          "total_episode_count": {
+            "type": "int32",
+            "examples": [
+              10
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "int32",
+      "examples": [
+        3624
+      ],
+      "default": 0
+    }
+  }
+}

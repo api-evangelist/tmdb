@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-authentication-create-guest-session-response-structure.json",
+  "name": "AuthenticationCreateGuestSessionResponse",
+  "description": "TMDB Authentication \u2014 Create Guest Session (200 payload).",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    },
+    "guest_session_id": {
+      "type": "string",
+      "examples": [
+        "1ce82ec1223641636ad4a60b07de3581"
+      ]
+    },
+    "expires_at": {
+      "type": "string",
+      "examples": [
+        "2016-08-27 16:26:40 UTC"
+      ]
+    }
+  }
+}

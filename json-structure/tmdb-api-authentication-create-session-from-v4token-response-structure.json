@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-authentication-create-session-from-v4token-response-structure.json",
+  "name": "AuthenticationCreateSessionFromV4TokenResponse",
+  "description": "TMDB Authentication \u2014 Create Session (from V4 Token) (200 payload).",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    },
+    "session_id": {
+      "type": "string",
+      "examples": [
+        "2629f70fb498edc263a0adb99118ac41f0053e8c"
+      ]
+    }
+  }
+}

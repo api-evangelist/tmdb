@@ -1,0 +1,39 @@
+{
+  "description": "Comedians in Cars organized in Netflix's collections.",
+  "episode_count": 83,
+  "group_count": 6,
+  "groups": [
+    {
+      "id": "5acf93efc3a368739a0000a9",
+      "name": "First Cup",
+      "order": 1,
+      "episodes": [
+        {
+          "air_date": {},
+          "episode_number": {},
+          "id": {},
+          "name": {},
+          "overview": {},
+          "production_code": {},
+          "runtime": {},
+          "season_number": {},
+          "show_id": {},
+          "still_path": {},
+          "vote_average": {},
+          "vote_count": {},
+          "order": {}
+        }
+      ],
+      "locked": true
+    }
+  ],
+  "id": "5acf93e60e0a26346d0000ce",
+  "name": "Netflix Collections",
+  "network": {
+    "id": 213,
+    "logo_path": "/wwemzKWzjKYJFfCeiB57q3r4Bcm.png",
+    "name": "Netflix",
+    "origin_country": ""
+  },
+  "type": 4
+}

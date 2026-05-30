@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-season-images-response-schema.json",
+  "title": "TvSeasonImagesResponse",
+  "description": "TMDB TV Series \u2014 Images (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        3624
+      ],
+      "default": 0
+    },
+    "posters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "aspect_ratio": {
+            "type": "number",
+            "examples": [
+              0.667
+            ],
+            "default": 0
+          },
+          "height": {
+            "type": "integer",
+            "examples": [
+              1500
+            ],
+            "default": 0
+          },
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "file_path": {
+            "type": "string",
+            "examples": [
+              "/wgfKiqzuMrFIkU1M68DDDY8kGC1.jpg"
+            ]
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              5.514
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              18
+            ],
+            "default": 0
+          },
+          "width": {
+            "type": "integer",
+            "examples": [
+              1000
+            ],
+            "default": 0
+          }
+        }
+      }
+    }
+  }
+}

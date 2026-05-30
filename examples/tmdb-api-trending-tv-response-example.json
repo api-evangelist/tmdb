@@ -1,0 +1,28 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/8P15FsYcTwQZ4G5rRMd1TKD14Aq.jpg",
+      "id": 103768,
+      "name": "Sweet Tooth",
+      "original_language": "en",
+      "original_name": "Sweet Tooth",
+      "overview": "On a perilous adventure across a post-apocalyptic world, a lovable boy who's half-human and half-deer searches for a new beginning with a gruff protector.",
+      "poster_path": "/dBxxtfhC4vYrxB2fLsSxOTY2dQc.jpg",
+      "media_type": "tv",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 137.498,
+      "first_air_date": "2021-06-04",
+      "vote_average": 7.928,
+      "vote_count": 1094,
+      "origin_country": [
+        "US"
+      ]
+    }
+  ],
+  "total_pages": 1000,
+  "total_results": 20000
+}

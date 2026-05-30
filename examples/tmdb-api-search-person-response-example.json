@@ -1,0 +1,36 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "gender": 2,
+      "id": 31,
+      "known_for_department": "Acting",
+      "name": "Tom Hanks",
+      "original_name": "Tom Hanks",
+      "popularity": 84.631,
+      "profile_path": "/xndWFsBlClOJFRdhSt4NBwiPq2o.jpg",
+      "known_for": [
+        {
+          "adult": {},
+          "backdrop_path": {},
+          "id": {},
+          "title": {},
+          "original_language": {},
+          "original_title": {},
+          "overview": {},
+          "poster_path": {},
+          "media_type": {},
+          "genre_ids": {},
+          "popularity": {},
+          "release_date": {},
+          "video": {},
+          "vote_average": {},
+          "vote_count": {}
+        }
+      ]
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 1
+}

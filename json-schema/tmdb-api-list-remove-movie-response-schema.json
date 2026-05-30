@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-list-remove-movie-response-schema.json",
+  "title": "ListRemoveMovieResponse",
+  "description": "TMDB Lists \u2014 Remove Movie (200 payload).",
+  "type": "object",
+  "properties": {
+    "status_code": {
+      "type": "integer",
+      "examples": [
+        13
+      ],
+      "default": 0
+    },
+    "status_message": {
+      "type": "string",
+      "examples": [
+        "The item/record was deleted successfully."
+      ]
+    }
+  }
+}

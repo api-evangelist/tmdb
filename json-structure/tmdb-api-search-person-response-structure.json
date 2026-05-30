@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-search-person-response-structure.json",
+  "name": "SearchPersonResponse",
+  "description": "TMDB Search \u2014 Person (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "int32",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              31
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Acting"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Tom Hanks"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Tom Hanks"
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              84.631
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/xndWFsBlClOJFRdhSt4NBwiPq2o.jpg"
+            ]
+          },
+          "known_for": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "adult": {
+                  "type": "boolean",
+                  "examples": [
+                    false
+                  ],
+                  "default": true
+                },
+                "backdrop_path": {
+                  "type": "string",
+                  "examples": [
+                    "/3h1JZGDhZ8nzxdgvkxha0qBqi05.jpg"
+                  ]
+                },
+                "id": {
+                  "type": "int32",
+                  "examples": [
+                    13
+                  ],
+                  "default": 0
+                },
+                "name": {
+                  "type": "string",
+                  "examples": [
+                    "Forrest Gump"
+                  ]
+                },
+                "original_language": {
+                  "type": "string",
+                  "examples": [
+                    "en"
+                  ]
+                },
+                "original_title": {
+                  "type": "string",
+                  "examples": [
+                    "Forrest Gump"
+                  ]
+                },
+                "overview": {
+                  "type": "string",
+                  "examples": [
+                    "A man with a low IQ has accomplished great things in his life and been present during significant historic events\u2014in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him."
+                  ]
+                },
+                "poster_path": {
+                  "type": "string",
+                  "examples": [
+                    "/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg"
+                  ]
+                },
+                "media_type": {
+                  "type": "string",
+                  "examples": [
+                    "movie"
+                  ]
+                },
+                "genre_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "int32",
+                    "examples": [
+                      35
+                    ],
+                    "default": 0
+                  }
+                },
+                "popularity": {
+                  "type": "double",
+                  "examples": [
+                    67.209
+                  ],
+                  "default": 0
+                },
+                "release_date": {
+                  "type": "string",
+                  "examples": [
+                    "1994-06-23"
+                  ]
+                },
+                "video": {
+                  "type": "boolean",
+                  "examples": [
+                    false
+                  ],
+                  "default": true
+                },
+                "vote_average": {
+                  "type": "double",
+                  "examples": [
+                    8.481
+                  ],
+                  "default": 0
+                },
+                "vote_count": {
+                  "type": "int32",
+                  "examples": [
+                    24525
+                  ],
+                  "default": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    }
+  }
+}

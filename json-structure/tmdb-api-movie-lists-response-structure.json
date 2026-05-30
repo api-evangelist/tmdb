@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-movie-lists-response-structure.json",
+  "name": "MovieListsResponse",
+  "description": "TMDB Movies \u2014 Lists (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        550
+      ],
+      "default": 0
+    },
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "examples": [
+              "Movies I own"
+            ]
+          },
+          "favorite_count": {
+            "type": "int32",
+            "examples": [
+              0
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              8248696
+            ],
+            "default": 0
+          },
+          "item_count": {
+            "type": "int32",
+            "examples": [
+              409
+            ],
+            "default": 0
+          },
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "list_type": {
+            "type": "string",
+            "examples": [
+              "movie"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "My Movies"
+            ]
+          },
+          "poster_path": {}
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        122
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        2422
+      ],
+      "default": 0
+    }
+  }
+}

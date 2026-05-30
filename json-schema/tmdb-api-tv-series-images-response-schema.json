@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-series-images-response-schema.json",
+  "title": "TvSeriesImagesResponse",
+  "description": "TMDB TV Series \u2014 Images (200 payload).",
+  "type": "object",
+  "properties": {
+    "backdrops": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "aspect_ratio": {
+            "type": "number",
+            "examples": [
+              1.778
+            ],
+            "default": 0
+          },
+          "height": {
+            "type": "integer",
+            "examples": [
+              800
+            ],
+            "default": 0
+          },
+          "iso_639_1": {},
+          "file_path": {
+            "type": "string",
+            "examples": [
+              "/hZkgoQYus5vegHoetLkCJzb17zJ.jpg"
+            ]
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              5.622
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              20
+            ],
+            "default": 0
+          },
+          "width": {
+            "type": "integer",
+            "examples": [
+              1422
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        550
+      ],
+      "default": 0
+    },
+    "logos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "aspect_ratio": {
+            "type": "number",
+            "examples": [
+              5.203
+            ],
+            "default": 0
+          },
+          "height": {
+            "type": "integer",
+            "examples": [
+              79
+            ],
+            "default": 0
+          },
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "he"
+            ]
+          },
+          "file_path": {
+            "type": "string",
+            "examples": [
+              "/c1KLulrIhUqY5fT42nmC5aERGCp.png"
+            ]
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              5.312
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "width": {
+            "type": "integer",
+            "examples": [
+              411
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "posters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "aspect_ratio": {
+            "type": "number",
+            "examples": [
+              0.667
+            ],
+            "default": 0
+          },
+          "height": {
+            "type": "integer",
+            "examples": [
+              900
+            ],
+            "default": 0
+          },
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "pt"
+            ]
+          },
+          "file_path": {
+            "type": "string",
+            "examples": [
+              "/r3pPehX4ik8NLYPpbDRAh0YRtMb.jpg"
+            ]
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              5.258
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              6
+            ],
+            "default": 0
+          },
+          "width": {
+            "type": "integer",
+            "examples": [
+              600
+            ],
+            "default": 0
+          }
+        }
+      }
+    }
+  }
+}

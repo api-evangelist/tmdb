@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-genre-tv-list-response-schema.json",
+  "title": "GenreTvListResponse",
+  "description": "TMDB Genres \u2014 TV List (200 payload).",
+  "type": "object",
+  "properties": {
+    "genres": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "examples": [
+              10759
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Action & Adventure"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

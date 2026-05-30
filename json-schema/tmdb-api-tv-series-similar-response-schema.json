@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-series-similar-response-schema.json",
+  "title": "TvSeriesSimilarResponse",
+  "description": "TMDB TV Series \u2014 Similar (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/zcFSvWa34nDn2NcqOPuthyOIBWT.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                18
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              197063
+            ],
+            "default": 0
+          },
+          "origin_country": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "examples": [
+                "KR"
+              ]
+            }
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "ko"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "\uc885\uc774\ub2ec"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "A thriller drama about Yoo I-hwa, a stay-at-home mom living her comfortable and contented life without desires, but to her husband's indifference. While working as a bank contract employee, she unexpectedly touches money from VIP clients and gradually falls into an irreversible collapse."
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              12.299
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/xXWynVdMGyJXBUDvIN27AXM3iJJ.jpg"
+            ]
+          },
+          "first_air_date": {
+            "type": "string",
+            "examples": [
+              "2023-04-10"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Pale Moon"
+            ]
+          },
+          "vote_average": {
+            "type": "integer",
+            "examples": [
+              7
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              2
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        82
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        1639
+      ],
+      "default": 0
+    }
+  }
+}

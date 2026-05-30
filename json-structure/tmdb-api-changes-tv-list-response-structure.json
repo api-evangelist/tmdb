@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-changes-tv-list-response-structure.json",
+  "name": "ChangesTvListResponse",
+  "description": "TMDB TV Series \u2014 TV List (200 payload).",
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "int32",
+            "examples": [
+              225591
+            ],
+            "default": 0
+          },
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          }
+        }
+      }
+    },
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        18
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        1763
+      ],
+      "default": 0
+    }
+  }
+}

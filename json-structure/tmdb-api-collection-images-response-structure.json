@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-collection-images-response-structure.json",
+  "name": "CollectionImagesResponse",
+  "description": "TMDB Collections \u2014 Images (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        10
+      ],
+      "default": 0
+    },
+    "backdrops": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "aspect_ratio": {
+            "type": "double",
+            "examples": [
+              1.778
+            ],
+            "default": 0
+          },
+          "height": {
+            "type": "int32",
+            "examples": [
+              1080
+            ],
+            "default": 0
+          },
+          "iso_639_1": {},
+          "file_path": {
+            "type": "string",
+            "examples": [
+              "/d8duYyyC9J5T825Hg7grmaabfxQ.jpg"
+            ]
+          },
+          "vote_average": {
+            "type": "double",
+            "examples": [
+              5.464
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              30
+            ],
+            "default": 0
+          },
+          "width": {
+            "type": "int32",
+            "examples": [
+              1920
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "posters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "aspect_ratio": {
+            "type": "double",
+            "examples": [
+              0.667
+            ],
+            "default": 0
+          },
+          "height": {
+            "type": "int32",
+            "examples": [
+              3000
+            ],
+            "default": 0
+          },
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "file_path": {
+            "type": "string",
+            "examples": [
+              "/r8Ph5MYXL04Qzu4QBbq2KjqwtkQ.jpg"
+            ]
+          },
+          "vote_average": {
+            "type": "double",
+            "examples": [
+              5.516
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              14
+            ],
+            "default": 0
+          },
+          "width": {
+            "type": "int32",
+            "examples": [
+              2000
+            ],
+            "default": 0
+          }
+        }
+      }
+    }
+  }
+}

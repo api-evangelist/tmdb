@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-authentication-create-session-from-login-response-structure.json",
+  "name": "AuthenticationCreateSessionFromLoginResponse",
+  "description": "TMDB Authentication \u2014 Create Session (with Login) (200 payload).",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    },
+    "expires_at": {
+      "type": "string",
+      "examples": [
+        "2018-07-24 04:10:26 UTC"
+      ]
+    },
+    "request_token": {
+      "type": "string",
+      "examples": [
+        "1531f1a558c8357ce8990cf887ff196e8f5402ec"
+      ]
+    }
+  }
+}

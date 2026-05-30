@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-collection-translations-response-structure.json",
+  "name": "CollectionTranslationsResponse",
+  "description": "TMDB Collections \u2014 Translations (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        10
+      ],
+      "default": 0
+    },
+    "translations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "iso_3166_1": {
+            "type": "string",
+            "examples": [
+              "AE"
+            ]
+          },
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "ar"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "\u0627\u0644\u0639\u0631\u0628\u064a\u0629"
+            ]
+          },
+          "english_name": {
+            "type": "string",
+            "examples": [
+              "Arabic"
+            ]
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "examples": [
+                  ""
+                ]
+              },
+              "overview": {
+                "type": "string",
+                "examples": [
+                  ""
+                ]
+              },
+              "homepage": {
+                "type": "string",
+                "examples": [
+                  ""
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

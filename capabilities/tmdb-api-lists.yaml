@@ -1,0 +1,485 @@
+!!omap
+- naftiko: 1.0.0-alpha2
+- info: !!omap
+  - label: TMDB API — Lists
+  - description: |-
+      TMDB — Lists. 7 operations. Lead operation: TMDB Lists — Add Movie. Self-contained Naftiko capability covering one TMDB business surface.
+  - tags:
+    - TMDB
+    - Lists
+  - created: '2026-05-30'
+  - modified: '2026-05-30'
+- binds:
+  - !!omap
+    - namespace: env
+    - keys: !!omap
+      - TMDB_BEARER_TOKEN: TMDB_BEARER_TOKEN
+- capability: !!omap
+  - consumes:
+    - !!omap
+      - type: http
+      - namespace: tmdb-api-lists
+      - baseUri: https://api.themoviedb.org
+      - description: TMDB API — Lists business capability. Self-contained, no shared references.
+      - authentication: !!omap
+        - type: bearer
+        - token: '{{env.TMDB_BEARER_TOKEN}}'
+      - resources:
+        - !!omap
+          - name: 3-list-list-id-add-item
+          - path: /3/list/{list_id}/add_item
+          - operations:
+            - !!omap
+              - name: list-add-movie
+              - method: POST
+              - description: TMDB Lists — Add Movie
+              - inputParameters:
+                - !!omap
+                  - name: list_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: list_id parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: true
+                  - description: session_id parameter.
+                - !!omap
+                  - name: body
+                  - in: body
+                  - type: object
+                  - required: true
+                  - description: JSON request body.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-list-list-id-item-status
+          - path: /3/list/{list_id}/item_status
+          - operations:
+            - !!omap
+              - name: list-check-item-status
+              - method: GET
+              - description: TMDB Lists — Check Item Status
+              - inputParameters:
+                - !!omap
+                  - name: list_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: list_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: movie_id
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: movie_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-list-list-id-clear
+          - path: /3/list/{list_id}/clear
+          - operations:
+            - !!omap
+              - name: list-clear
+              - method: POST
+              - description: TMDB Lists — Clear
+              - inputParameters:
+                - !!omap
+                  - name: list_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: list_id parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: true
+                  - description: session_id parameter.
+                - !!omap
+                  - name: confirm
+                  - in: query
+                  - type: boolean
+                  - required: true
+                  - description: confirm parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-list
+          - path: /3/list
+          - operations:
+            - !!omap
+              - name: list-create
+              - method: POST
+              - description: TMDB Lists — Create
+              - inputParameters:
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: true
+                  - description: session_id parameter.
+                - !!omap
+                  - name: body
+                  - in: body
+                  - type: object
+                  - required: true
+                  - description: JSON request body.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-list-list-id
+          - path: /3/list/{list_id}
+          - operations:
+            - !!omap
+              - name: list-delete
+              - method: DELETE
+              - description: TMDB Lists — Delete
+              - inputParameters:
+                - !!omap
+                  - name: list_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: list_id parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: true
+                  - description: session_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+            - !!omap
+              - name: list-details
+              - method: GET
+              - description: TMDB Lists — Details
+              - inputParameters:
+                - !!omap
+                  - name: list_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: list_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-list-list-id-remove-item
+          - path: /3/list/{list_id}/remove_item
+          - operations:
+            - !!omap
+              - name: list-remove-movie
+              - method: POST
+              - description: TMDB Lists — Remove Movie
+              - inputParameters:
+                - !!omap
+                  - name: list_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: list_id parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: true
+                  - description: session_id parameter.
+                - !!omap
+                  - name: body
+                  - in: body
+                  - type: object
+                  - required: true
+                  - description: JSON request body.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+  - exposes:
+    - !!omap
+      - type: rest
+      - namespace: tmdb-api-lists-rest
+      - port: 8080
+      - description: REST adapter for TMDB API — Lists. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+      - resources:
+        - !!omap
+          - path: /v1/list/{list_id}/add_item
+          - name: list-list-id-add-item
+          - description: REST surface for /3/list/{list_id}/add_item.
+          - operations:
+            - !!omap
+              - method: POST
+              - name: list-add-movie
+              - description: TMDB Lists — Add Movie
+              - call: tmdb-api-lists.list-add-movie
+              - with: !!omap
+                - list_id: rest.list_id
+                - session_id: rest.session_id
+                - body: rest.body
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/list/{list_id}/item_status
+          - name: list-list-id-item-status
+          - description: REST surface for /3/list/{list_id}/item_status.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: list-check-item-status
+              - description: TMDB Lists — Check Item Status
+              - call: tmdb-api-lists.list-check-item-status
+              - with: !!omap
+                - list_id: rest.list_id
+                - language: rest.language
+                - movie_id: rest.movie_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/list/{list_id}/clear
+          - name: list-list-id-clear
+          - description: REST surface for /3/list/{list_id}/clear.
+          - operations:
+            - !!omap
+              - method: POST
+              - name: list-clear
+              - description: TMDB Lists — Clear
+              - call: tmdb-api-lists.list-clear
+              - with: !!omap
+                - list_id: rest.list_id
+                - session_id: rest.session_id
+                - confirm: rest.confirm
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/list
+          - name: list
+          - description: REST surface for /3/list.
+          - operations:
+            - !!omap
+              - method: POST
+              - name: list-create
+              - description: TMDB Lists — Create
+              - call: tmdb-api-lists.list-create
+              - with: !!omap
+                - session_id: rest.session_id
+                - body: rest.body
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/list/{list_id}
+          - name: list-list-id
+          - description: REST surface for /3/list/{list_id}.
+          - operations:
+            - !!omap
+              - method: DELETE
+              - name: list-delete
+              - description: TMDB Lists — Delete
+              - call: tmdb-api-lists.list-delete
+              - with: !!omap
+                - list_id: rest.list_id
+                - session_id: rest.session_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+            - !!omap
+              - method: GET
+              - name: list-details
+              - description: TMDB Lists — Details
+              - call: tmdb-api-lists.list-details
+              - with: !!omap
+                - list_id: rest.list_id
+                - language: rest.language
+                - page: rest.page
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/list/{list_id}/remove_item
+          - name: list-list-id-remove-item
+          - description: REST surface for /3/list/{list_id}/remove_item.
+          - operations:
+            - !!omap
+              - method: POST
+              - name: list-remove-movie
+              - description: TMDB Lists — Remove Movie
+              - call: tmdb-api-lists.list-remove-movie
+              - with: !!omap
+                - list_id: rest.list_id
+                - session_id: rest.session_id
+                - body: rest.body
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+    - !!omap
+      - type: mcp
+      - namespace: tmdb-api-lists-mcp
+      - port: 9090
+      - transport: http
+      - description: MCP adapter for TMDB API — Lists. One tool per consumed operation, routed inline through this capability's consumes block.
+      - tools:
+        - !!omap
+          - name: add-movie
+          - description: TMDB Lists — Add Movie
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: false
+          - call: tmdb-api-lists.list-add-movie
+          - with: !!omap
+            - list_id: tools.list_id
+            - session_id: tools.session_id
+            - body: tools.body
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: check-item-status
+          - description: TMDB Lists — Check Item Status
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-lists.list-check-item-status
+          - with: !!omap
+            - list_id: tools.list_id
+            - language: tools.language
+            - movie_id: tools.movie_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: clear
+          - description: TMDB Lists — Clear
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: false
+          - call: tmdb-api-lists.list-clear
+          - with: !!omap
+            - list_id: tools.list_id
+            - session_id: tools.session_id
+            - confirm: tools.confirm
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: create
+          - description: TMDB Lists — Create
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: false
+          - call: tmdb-api-lists.list-create
+          - with: !!omap
+            - session_id: tools.session_id
+            - body: tools.body
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: delete
+          - description: TMDB Lists — Delete
+          - hints: !!omap
+            - readOnly: false
+            - destructive: true
+            - idempotent: true
+          - call: tmdb-api-lists.list-delete
+          - with: !!omap
+            - list_id: tools.list_id
+            - session_id: tools.session_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: details
+          - description: TMDB Lists — Details
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-lists.list-details
+          - with: !!omap
+            - list_id: tools.list_id
+            - language: tools.language
+            - page: tools.page
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: remove-movie
+          - description: TMDB Lists — Remove Movie
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: false
+          - call: tmdb-api-lists.list-remove-movie
+          - with: !!omap
+            - list_id: tools.list_id
+            - session_id: tools.session_id
+            - body: tools.body
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.

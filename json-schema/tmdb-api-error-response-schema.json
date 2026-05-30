@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-error-response-schema.json",
+  "title": "ErrorResponse",
+  "description": "Standard TMDB API error envelope returned on 4xx/5xx responses.",
+  "type": "object",
+  "properties": {
+    "status_code": {
+      "type": "integer",
+      "description": "TMDB-internal status code (not the HTTP code).",
+      "examples": [
+        34
+      ]
+    },
+    "status_message": {
+      "type": "string",
+      "description": "Human-readable error message describing the problem.",
+      "examples": [
+        "The resource you requested could not be found."
+      ]
+    },
+    "success": {
+      "type": "boolean",
+      "description": "Always false on error responses.",
+      "examples": [
+        false
+      ]
+    }
+  },
+  "required": [
+    "status_code",
+    "status_message",
+    "success"
+  ]
+}

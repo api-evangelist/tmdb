@@ -1,0 +1,26 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "backdrop_path": "/99vBORZixICa32Pwdwj0lWcr8K.jpg",
+      "first_air_date": "2021-09-03",
+      "genre_ids": [
+        10764
+      ],
+      "id": 130392,
+      "name": "The D'Amelio Show",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "The D'Amelio Show",
+      "overview": "From relative obscurity and a seemingly normal life, to overnight success and thrust into the Hollywood limelight overnight, the D\u2019Amelios are faced with new challenges and opportunities they could not have imagined.",
+      "popularity": 12.459,
+      "poster_path": "/phv2Jc4H8cvRzvTKb9X1uKMboTu.jpg",
+      "vote_average": 8.9,
+      "vote_count": 3190
+    }
+  ],
+  "total_pages": 142,
+  "total_results": 2833
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-series-keywords-response-schema.json",
+  "title": "TvSeriesKeywordsResponse",
+  "description": "TMDB TV Series \u2014 Keywords (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "examples": [
+              "based on novel or book"
+            ]
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              818
+            ],
+            "default": 0
+          }
+        }
+      }
+    }
+  }
+}

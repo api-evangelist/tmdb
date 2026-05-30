@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-account-watchlist-tv-response-structure.json",
+  "name": "AccountWatchlistTvResponse",
+  "description": "TMDB Account \u2014 Watchlist TV (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/7phlGHRupo38EnuwmkAHdNUqov3.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "int32",
+              "examples": [
+                35
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              58932
+            ],
+            "default": 0
+          },
+          "origin_country": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "examples": [
+                "US"
+              ]
+            }
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "The Crazy Ones"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "The Crazy Ones is an American situation comedy series created by David E. Kelley that stars Robin Williams and Sarah Michelle Gellar. The single-camera project premiered on CBS on September 26, 2013, as part of the 2013\u201314 American television season as a Thursday night 9 pm entry. Bill D'Elia, Dean Lorey, Jason Winer, John Montgomery and Mark Teitelbaum serve as executive producers for 20th Century Fox Television."
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              8.939
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/s2e7hTrdmNUaJDf0yDP5b4AHvrD.jpg"
+            ]
+          },
+          "first_air_date": {
+            "type": "string",
+            "examples": [
+              "2013-09-26"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "The Crazy Ones"
+            ]
+          },
+          "vote_average": {
+            "type": "double",
+            "examples": [
+              6.176
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              94
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        17
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        325
+      ],
+      "default": 0
+    }
+  }
+}

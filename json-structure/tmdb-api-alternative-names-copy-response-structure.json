@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-alternative-names-copy-response-structure.json",
+  "name": "AlternativeNamesCopyResponse",
+  "description": "TMDB Networks \u2014 Images (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        49
+      ],
+      "default": 0
+    },
+    "logos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "aspect_ratio": {
+            "type": "double",
+            "examples": [
+              2.425287356321839
+            ],
+            "default": 0
+          },
+          "file_path": {
+            "type": "string",
+            "examples": [
+              "/tuomPhY2UtuPTqqFnKMVHvSb724.png"
+            ]
+          },
+          "height": {
+            "type": "int32",
+            "examples": [
+              174
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "string",
+            "examples": [
+              "5a7a67a40e0a26020a000091"
+            ]
+          },
+          "file_type": {
+            "type": "string",
+            "examples": [
+              ".svg"
+            ]
+          },
+          "vote_average": {
+            "type": "double",
+            "examples": [
+              5.318
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              3
+            ],
+            "default": 0
+          },
+          "width": {
+            "type": "int32",
+            "examples": [
+              422
+            ],
+            "default": 0
+          }
+        }
+      }
+    }
+  }
+}

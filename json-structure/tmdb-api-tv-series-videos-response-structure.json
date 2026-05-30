@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-series-videos-response-structure.json",
+  "name": "TvSeriesVideosResponse",
+  "description": "TMDB TV Series \u2014 Videos (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "iso_3166_1": {
+            "type": "string",
+            "examples": [
+              "US"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Inside Game of Thrones: A Story in Camera Work \u2013 BTS (HBO)"
+            ]
+          },
+          "key": {
+            "type": "string",
+            "examples": [
+              "y2ZJ3lTaREY"
+            ]
+          },
+          "site": {
+            "type": "string",
+            "examples": [
+              "YouTube"
+            ]
+          },
+          "size": {
+            "type": "int32",
+            "examples": [
+              1080
+            ],
+            "default": 0
+          },
+          "type": {
+            "type": "string",
+            "examples": [
+              "Behind the Scenes"
+            ]
+          },
+          "official": {
+            "type": "boolean",
+            "examples": [
+              true
+            ],
+            "default": true
+          },
+          "published_at": {
+            "type": "string",
+            "examples": [
+              "2019-03-25T14:00:06.000Z"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "examples": [
+              "5c999b48c3a36863b73b9d42"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

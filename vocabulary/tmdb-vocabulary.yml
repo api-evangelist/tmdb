@@ -1,0 +1,1062 @@
+!!omap
+- vocabulary: 1.0.0
+- info: !!omap
+  - provider: TMDB
+  - description: |-
+      TMDB vocabulary mapping the operational dimension (OpenAPI surface — 148 paths / 152 operations) to the capability dimension (21 Naftiko capability files, one per tag) plus the personas who consume each workflow.
+  - created: '2026-05-30'
+  - modified: '2026-05-30'
+- operational: !!omap
+  - apis:
+    - !!omap
+      - name: TMDB API
+      - namespace: tmdb-api
+      - version: '3'
+      - baseUrl: https://api.themoviedb.org
+      - status: active
+      - paths: 148
+      - operations: 152
+  - resources:
+    - !!omap
+      - name: account
+      - apis:
+        - TMDB API
+      - tags:
+        - Account
+      - operations: 11
+    - !!omap
+      - name: authentication
+      - apis:
+        - TMDB API
+      - tags:
+        - Authentication
+      - operations: 7
+    - !!omap
+      - name: certification
+      - apis:
+        - TMDB API
+      - tags:
+        - Certifications
+      - operations: 2
+    - !!omap
+      - name: collection
+      - apis:
+        - TMDB API
+      - tags:
+        - Collections
+      - operations: 3
+    - !!omap
+      - name: company
+      - apis:
+        - TMDB API
+      - tags:
+        - Companies
+      - operations: 3
+    - !!omap
+      - name: configuration
+      - apis:
+        - TMDB API
+      - tags:
+        - Configuration
+      - operations: 6
+    - !!omap
+      - name: credit
+      - apis:
+        - TMDB API
+      - tags:
+        - Credits
+      - operations: 1
+    - !!omap
+      - name: discover
+      - apis:
+        - TMDB API
+      - tags:
+        - Discover
+      - operations: 2
+    - !!omap
+      - name: find
+      - apis:
+        - TMDB API
+      - tags:
+        - Find
+      - operations: 1
+    - !!omap
+      - name: genre
+      - apis:
+        - TMDB API
+      - tags:
+        - Genres
+      - operations: 2
+    - !!omap
+      - name: guest_session
+      - apis:
+        - TMDB API
+      - tags:
+        - Guest Sessions
+      - operations: 3
+    - !!omap
+      - name: keyword
+      - apis:
+        - TMDB API
+      - tags:
+        - Keywords
+      - operations: 2
+    - !!omap
+      - name: list
+      - apis:
+        - TMDB API
+      - tags:
+        - Lists
+      - operations: 7
+    - !!omap
+      - name: movie
+      - apis:
+        - TMDB API
+      - tags:
+        - Movies
+      - operations: 24
+    - !!omap
+      - name: network
+      - apis:
+        - TMDB API
+      - tags:
+        - Networks
+      - operations: 3
+    - !!omap
+      - name: person
+      - apis:
+        - TMDB API
+      - tags:
+        - People
+      - operations: 12
+    - !!omap
+      - name: review
+      - apis:
+        - TMDB API
+      - tags:
+        - Reviews
+      - operations: 1
+    - !!omap
+      - name: search
+      - apis:
+        - TMDB API
+      - tags:
+        - Search
+      - operations: 7
+    - !!omap
+      - name: trending
+      - apis:
+        - TMDB API
+      - tags:
+        - Trending
+      - operations: 4
+    - !!omap
+      - name: tv
+      - apis:
+        - TMDB API
+      - tags:
+        - TV Series
+      - operations: 48
+    - !!omap
+      - name: watch
+      - apis:
+        - TMDB API
+      - tags:
+        - Watch Providers
+      - operations: 3
+  - actions:
+    - !!omap
+      - name: add
+      - methods:
+        - POST
+      - pattern: write
+    - !!omap
+      - name: create
+      - methods:
+        - GET
+        - POST
+      - pattern: write
+    - !!omap
+      - name: delete
+      - methods:
+        - DELETE
+      - pattern: destructive
+    - !!omap
+      - name: discover
+      - methods:
+        - GET
+      - pattern: query
+    - !!omap
+      - name: get
+      - methods:
+        - GET
+      - pattern: read
+    - !!omap
+      - name: list
+      - methods:
+        - DELETE
+        - GET
+        - POST
+      - pattern: read
+    - !!omap
+      - name: search
+      - methods:
+        - GET
+      - pattern: query
+  - schemas: !!omap
+    - account:
+      - AccountAddFavoriteResponse
+      - AccountAddToWatchlistResponse
+      - AccountDetailsResponse
+      - AccountGetFavoritesResponse
+      - AccountListsResponse
+    - auth:
+      - AuthenticationCreateGuestSessionResponse
+      - AuthenticationCreateRequestTokenResponse
+      - AuthenticationCreateSessionFromLoginResponse
+      - AuthenticationCreateSessionFromV4TokenResponse
+      - AuthenticationCreateSessionResponse
+      - AuthenticationDeleteSessionResponse
+      - AuthenticationValidateKey401Response
+      - AuthenticationValidateKeyResponse
+    - configuration:
+      - ConfigurationDetailsResponse
+    - discover_search:
+      - SearchCollectionResponse
+      - SearchCompanyResponse
+      - SearchKeywordResponse
+      - SearchMultiResponse
+    - errors:
+      - ErrorResponse
+    - lists:
+      - ListCheckItemStatusResponse
+      - ListClearResponse
+      - ListCreateResponse
+      - ListDeleteResponse
+      - ListDetailsResponse
+      - ListsCopyResponse
+    - movies:
+      - AccountRatedMoviesResponse
+      - AccountWatchlistMoviesResponse
+      - CertificationMovieListResponse
+      - ChangesMovieListResponse
+      - DiscoverMovieResponse
+      - GenreMovieListResponse
+      - GuestSessionRatedMoviesResponse
+      - KeywordMoviesResponse
+      - ListAddMovieResponse
+      - ListRemoveMovieResponse
+      - MovieAccountStatesResponse
+      - MovieAddRatingResponse
+      - MovieAlternativeTitlesResponse
+      - MovieChangesResponse
+      - MovieCreditsResponse
+      - MovieDeleteRatingResponse
+      - MovieDetailsResponse
+      - MovieExternalIdsResponse
+      - MovieImagesResponse
+      - MovieKeywordsResponse
+      - MovieLatestIdResponse
+      - MovieListsResponse
+      - MovieNowPlayingListResponse
+      - MoviePopularListResponse
+      - MovieRecommendationsResponse
+      - MovieReleaseDatesResponse
+      - MovieReviewsResponse
+      - MovieSimilarResponse
+      - MovieTopRatedListResponse
+      - MovieTranslationsResponse
+      - MovieUpcomingListResponse
+      - MovieVideosResponse
+      - MovieWatchProvidersResponse
+      - PersonMovieCreditsResponse
+      - SearchMovieResponse
+      - TrendingMoviesResponse
+      - WatchProvidersMovieListResponse
+    - other:
+      - AlternativeNamesCopyResponse
+      - CollectionDetailsResponse
+      - CollectionImagesResponse
+      - CollectionTranslationsResponse
+      - CompanyAlternativeNamesResponse
+      - CompanyDetailsResponse
+      - CompanyImagesResponse
+      - CreditDetailsResponse
+      - DetailsCopyResponse
+      - FindByIdResponse
+      - KeywordDetailsResponse
+      - NetworkDetailsResponse
+      - ReviewDetailsResponse
+      - TranslationsResponse
+    - people:
+      - ChangesPeopleListResponse
+      - PersonChangesResponse
+      - PersonCombinedCreditsResponse
+      - PersonDetailsResponse
+      - PersonExternalIdsResponse
+      - PersonImagesResponse
+      - PersonLatestIdResponse
+      - PersonPopularListResponse
+      - PersonTaggedImagesResponse
+      - SearchPersonResponse
+      - TrendingPeopleResponse
+    - trending:
+      - TrendingAllResponse
+    - tv:
+      - AccountFavoriteTvResponse
+      - AccountRatedTvEpisodesResponse
+      - AccountRatedTvResponse
+      - AccountWatchlistTvResponse
+      - CertificationsTvListResponse
+      - ChangesTvListResponse
+      - DiscoverTvResponse
+      - GenreTvListResponse
+      - GuestSessionRatedTvEpisodesResponse
+      - GuestSessionRatedTvResponse
+      - PersonTvCreditsResponse
+      - SearchTvResponse
+      - TrendingTvResponse
+      - TvEpisodeAccountStatesResponse
+      - TvEpisodeAddRatingResponse
+      - TvEpisodeChangesByIdResponse
+      - TvEpisodeCreditsResponse
+      - TvEpisodeDeleteRatingResponse
+      - TvEpisodeDetailsResponse
+      - TvEpisodeExternalIdsResponse
+      - TvEpisodeGroupDetailsResponse
+      - TvEpisodeImagesResponse
+      - TvEpisodeTranslationsResponse
+      - TvEpisodeVideosResponse
+      - TvSeasonAccountStatesResponse
+      - TvSeasonAggregateCreditsResponse
+      - TvSeasonChangesByIdResponse
+      - TvSeasonCreditsResponse
+      - TvSeasonDetailsResponse
+      - TvSeasonExternalIdsResponse
+      - TvSeasonImagesResponse
+      - TvSeasonTranslationsResponse
+      - TvSeasonVideosResponse
+      - TvSeasonWatchProvidersResponse
+      - TvSeriesAccountStatesResponse
+      - TvSeriesAddRatingResponse
+      - TvSeriesAggregateCreditsResponse
+      - TvSeriesAiringTodayListResponse
+      - TvSeriesAlternativeTitlesResponse
+      - TvSeriesChangesResponse
+      - TvSeriesContentRatingsResponse
+      - TvSeriesCreditsResponse
+      - TvSeriesDeleteRatingResponse
+      - TvSeriesDetailsResponse
+      - TvSeriesEpisodeGroupsResponse
+      - TvSeriesExternalIdsResponse
+      - TvSeriesImagesResponse
+      - TvSeriesKeywordsResponse
+      - TvSeriesLatestIdResponse
+      - TvSeriesOnTheAirListResponse
+      - TvSeriesPopularListResponse
+      - TvSeriesRecommendationsResponse
+      - TvSeriesReviewsResponse
+      - TvSeriesScreenedTheatricallyResponse
+      - TvSeriesSimilarResponse
+      - TvSeriesTopRatedListResponse
+      - TvSeriesTranslationsResponse
+      - TvSeriesVideosResponse
+      - TvSeriesWatchProvidersResponse
+      - WatchProviderTvListResponse
+    - watch_providers:
+      - WatchProvidersAvailableRegionsResponse
+  - parameters: !!omap
+    - pagination:
+      - page
+    - identifiers:
+      - account_id
+      - collection_id
+      - company_id
+      - credit_id
+      - episode_id
+      - external_id
+      - guest_session_id
+      - keyword_id
+      - list_id
+      - movie_id
+      - network_id
+      - person_id
+      - review_id
+      - season_id
+      - series_id
+      - session_id
+      - tv_episode_group_id
+    - filters:
+      - sort_by
+      - with_cast
+      - with_companies
+      - with_crew
+      - with_genres
+      - with_keywords
+      - with_networks
+      - with_origin_country
+      - with_original_language
+      - with_people
+      - with_release_type
+      - with_runtime.gte
+      - with_runtime.lte
+      - with_status
+      - with_type
+      - with_watch_monetization_types
+      - with_watch_providers
+      - without_companies
+      - without_genres
+      - without_keywords
+      - without_watch_providers
+    - query:
+      - Content-Type
+      - air_date.gte
+      - air_date.lte
+      - append_to_response
+      - certification
+      - certification.gte
+      - certification.lte
+      - certification_country
+      - confirm
+      - country
+      - end_date
+      - episode_number
+      - external_source
+      - first_air_date.gte
+      - first_air_date.lte
+      - first_air_date_year
+      - include_adult
+      - include_image_language
+      - include_null_first_air_dates
+      - include_video
+      - include_video_language
+      - language
+      - primary_release_date.gte
+      - primary_release_date.lte
+      - primary_release_year
+      - query
+      - region
+      - release_date.gte
+      - release_date.lte
+      - screened_theatrically
+      - season_number
+      - start_date
+      - time_window
+      - timezone
+      - vote_average.gte
+      - vote_average.lte
+      - vote_count.gte
+      - vote_count.lte
+      - watch_region
+      - year
+  - authentication: !!omap
+    - schemes:
+      - !!omap
+        - name: bearerAuth
+        - type: http
+        - scheme: bearer
+        - description: v4 API Read Access Token in Authorization header.
+        - appliesTo:
+          - TMDB API
+      - !!omap
+        - name: apiKeyAuth
+        - type: apiKey
+        - location: query
+        - paramName: api_key
+        - description: v3 API key query parameter.
+        - appliesTo:
+          - TMDB API
+    - authFlows:
+      - application
+      - user
+      - guest-session
+      - oauth-style-v4
+- capability: !!omap
+  - workflows:
+    - !!omap
+      - name: TMDB API — Account
+      - file: capabilities/tmdb-api-account.yaml
+      - description: |-
+          TMDB — Account. 11 operations. Lead operation: TMDB Account — Details. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 11
+      - tools: 11
+      - personas:
+        - reviews-community-manager
+      - domains:
+        - TMDB
+        - Account
+    - !!omap
+      - name: TMDB API — Authentication
+      - file: capabilities/tmdb-api-authentication.yaml
+      - description: |-
+          TMDB — Authentication. 7 operations. Lead operation: TMDB Authentication — Validate Key. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 7
+      - tools: 7
+      - personas:
+        - identity-engineer
+      - domains:
+        - TMDB
+        - Authentication
+    - !!omap
+      - name: TMDB API — Certifications
+      - file: capabilities/tmdb-api-certifications.yaml
+      - description: |-
+          TMDB — Certifications. 2 operations. Lead operation: TMDB Certifications — Movie Certifications. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 2
+      - tools: 2
+      - personas:
+        - reviews-community-manager
+      - domains:
+        - TMDB
+        - Certifications
+    - !!omap
+      - name: TMDB API — Collections
+      - file: capabilities/tmdb-api-collections.yaml
+      - description: |-
+          TMDB — Collections. 3 operations. Lead operation: TMDB Collections — Details. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 3
+      - tools: 3
+      - personas:
+        - catalog-engineer
+      - domains:
+        - TMDB
+        - Collections
+    - !!omap
+      - name: TMDB API — Companies
+      - file: capabilities/tmdb-api-companies.yaml
+      - description: |-
+          TMDB — Companies. 3 operations. Lead operation: TMDB Companies — Details. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 3
+      - tools: 3
+      - personas:
+        - catalog-engineer
+      - domains:
+        - TMDB
+        - Companies
+    - !!omap
+      - name: TMDB API — Configuration
+      - file: capabilities/tmdb-api-configuration.yaml
+      - description: |-
+          TMDB — Configuration. 6 operations. Lead operation: TMDB Configuration — Details. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 6
+      - tools: 6
+      - personas:
+        - catalog-engineer
+      - domains:
+        - TMDB
+        - Configuration
+    - !!omap
+      - name: TMDB API — Credits
+      - file: capabilities/tmdb-api-credits.yaml
+      - description: |-
+          TMDB — Credits. 1 operations. Lead operation: TMDB Credits — Details. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 1
+      - tools: 1
+      - personas:
+        - identity-engineer
+      - domains:
+        - TMDB
+        - Credits
+    - !!omap
+      - name: TMDB API — Discover
+      - file: capabilities/tmdb-api-discover.yaml
+      - description: |-
+          TMDB — Discover. 2 operations. Lead operation: TMDB Discover — Movie. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 2
+      - tools: 2
+      - personas:
+        - discovery-product-manager
+      - domains:
+        - TMDB
+        - Discover
+    - !!omap
+      - name: TMDB API — Find
+      - file: capabilities/tmdb-api-find.yaml
+      - description: |-
+          TMDB — Find. 1 operations. Lead operation: TMDB Find — Find by ID. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 1
+      - tools: 1
+      - personas:
+        - availability-analyst
+      - domains:
+        - TMDB
+        - Find
+    - !!omap
+      - name: TMDB API — Genres
+      - file: capabilities/tmdb-api-genres.yaml
+      - description: |-
+          TMDB — Genres. 2 operations. Lead operation: TMDB Genres — Movie List. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 2
+      - tools: 2
+      - personas:
+        - discovery-product-manager
+      - domains:
+        - TMDB
+        - Genres
+    - !!omap
+      - name: TMDB API — Guest Sessions
+      - file: capabilities/tmdb-api-guest-sessions.yaml
+      - description: |-
+          TMDB — Guest Sessions. 3 operations. Lead operation: TMDB Guest Sessions — Rated Movies. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 3
+      - tools: 3
+      - personas:
+        - identity-engineer
+      - domains:
+        - TMDB
+        - Guest Sessions
+    - !!omap
+      - name: TMDB API — Keywords
+      - file: capabilities/tmdb-api-keywords.yaml
+      - description: |-
+          TMDB — Keywords. 2 operations. Lead operation: TMDB Keywords — Details. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 2
+      - tools: 2
+      - personas:
+        - discovery-product-manager
+      - domains:
+        - TMDB
+        - Keywords
+    - !!omap
+      - name: TMDB API — Lists
+      - file: capabilities/tmdb-api-lists.yaml
+      - description: |-
+          TMDB — Lists. 7 operations. Lead operation: TMDB Lists — Add Movie. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 7
+      - tools: 7
+      - personas:
+        - reviews-community-manager
+      - domains:
+        - TMDB
+        - Lists
+    - !!omap
+      - name: TMDB API — Movies
+      - file: capabilities/tmdb-api-movies.yaml
+      - description: |-
+          TMDB — Movies. 24 operations. Lead operation: TMDB Movies — Movie List. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 24
+      - tools: 24
+      - personas:
+        - catalog-engineer
+      - domains:
+        - TMDB
+        - Movies
+    - !!omap
+      - name: TMDB API — Networks
+      - file: capabilities/tmdb-api-networks.yaml
+      - description: |-
+          TMDB — Networks. 3 operations. Lead operation: TMDB Networks — Details. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 3
+      - tools: 3
+      - personas:
+        - catalog-engineer
+      - domains:
+        - TMDB
+        - Networks
+    - !!omap
+      - name: TMDB API — People
+      - file: capabilities/tmdb-api-people.yaml
+      - description: |-
+          TMDB — People. 12 operations. Lead operation: TMDB People — People List. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 12
+      - tools: 12
+      - personas:
+        - catalog-engineer
+      - domains:
+        - TMDB
+        - People
+    - !!omap
+      - name: TMDB API — Reviews
+      - file: capabilities/tmdb-api-reviews.yaml
+      - description: |-
+          TMDB — Reviews. 1 operations. Lead operation: TMDB Reviews — Details. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 1
+      - tools: 1
+      - personas:
+        - reviews-community-manager
+      - domains:
+        - TMDB
+        - Reviews
+    - !!omap
+      - name: TMDB API — Search
+      - file: capabilities/tmdb-api-search.yaml
+      - description: |-
+          TMDB — Search. 7 operations. Lead operation: TMDB Search — Collection. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 7
+      - tools: 7
+      - personas:
+        - discovery-product-manager
+      - domains:
+        - TMDB
+        - Search
+    - !!omap
+      - name: TMDB API — Trending
+      - file: capabilities/tmdb-api-trending.yaml
+      - description: |-
+          TMDB — Trending. 4 operations. Lead operation: TMDB Trending — All. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 4
+      - tools: 4
+      - personas:
+        - discovery-product-manager
+      - domains:
+        - TMDB
+        - Trending
+    - !!omap
+      - name: TMDB API — TV Series
+      - file: capabilities/tmdb-api-tv-series.yaml
+      - description: |-
+          TMDB — TV Series. 48 operations. Lead operation: TMDB TV Series — TV List. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 48
+      - tools: 48
+      - personas:
+        - catalog-engineer
+      - domains:
+        - TMDB
+        - TV Series
+    - !!omap
+      - name: TMDB API — Watch Providers
+      - file: capabilities/tmdb-api-watch-providers.yaml
+      - description: |-
+          TMDB — Watch Providers. 3 operations. Lead operation: TMDB Watch Providers — Available Regions. Self-contained Naftiko capability covering one TMDB business surface.
+      - apis:
+        - TMDB API
+      - operations: 3
+      - tools: 3
+      - personas:
+        - availability-analyst
+      - domains:
+        - TMDB
+        - Watch Providers
+  - personas:
+    - !!omap
+      - id: catalog-engineer
+      - name: Catalog / Content Engineer
+      - description: Engineer responsible for ingesting movie/TV metadata into a streaming or watch-tracker product.
+      - workflows:
+        - TMDB API — Movies
+        - TMDB API — TV Series
+        - TMDB API — People
+        - TMDB API — Collections
+        - TMDB API — Companies
+        - TMDB API — Networks
+        - TMDB API — Configuration
+    - !!omap
+      - id: discovery-product-manager
+      - name: Discovery / Recommendations Product Manager
+      - description: Owns browse, search, recommendations, and trending experiences in a media app.
+      - workflows:
+        - TMDB API — Discover
+        - TMDB API — Search
+        - TMDB API — Trending
+        - TMDB API — Genres
+        - TMDB API — Keywords
+    - !!omap
+      - id: availability-analyst
+      - name: Availability / Watch Provider Analyst
+      - description: Tracks where titles are available to stream/rent/buy per region using JustWatch-sourced data.
+      - workflows:
+        - TMDB API — Watch Providers
+        - TMDB API — Find
+    - !!omap
+      - id: reviews-community-manager
+      - name: Reviews & Community Manager
+      - description: Surfaces community reviews and ratings; manages user lists, favorites, watchlists.
+      - workflows:
+        - TMDB API — Reviews
+        - TMDB API — Lists
+        - TMDB API — Account
+        - TMDB API — Certifications
+    - !!omap
+      - id: identity-engineer
+      - name: Identity / Session Engineer
+      - description: Implements user, guest, and application authentication against TMDB v3 + v4.
+      - workflows:
+        - TMDB API — Authentication
+        - TMDB API — Guest Sessions
+        - TMDB API — Credits
+  - domains:
+    - !!omap
+      - name: Catalog
+      - description: Movies, TV, people, collections, companies, networks.
+    - !!omap
+      - name: Discovery
+      - description: Search, discover, trending, genres, keywords.
+    - !!omap
+      - name: Availability
+      - description: Watch providers, find external IDs, regions.
+    - !!omap
+      - name: Community
+      - description: Reviews, lists, account-owned favorites/watchlist/ratings.
+    - !!omap
+      - name: Identity
+      - description: Application, user, and guest authentication.
+    - !!omap
+      - name: Platform
+      - description: Configuration, certifications, credits.
+  - namespaces: !!omap
+    - consumed:
+      - tmdb-api-account
+      - tmdb-api-authentication
+      - tmdb-api-certifications
+      - tmdb-api-collections
+      - tmdb-api-companies
+      - tmdb-api-configuration
+      - tmdb-api-credits
+      - tmdb-api-discover
+      - tmdb-api-find
+      - tmdb-api-genres
+      - tmdb-api-guest-sessions
+      - tmdb-api-keywords
+      - tmdb-api-lists
+      - tmdb-api-movies
+      - tmdb-api-networks
+      - tmdb-api-people
+      - tmdb-api-reviews
+      - tmdb-api-search
+      - tmdb-api-trending
+      - tmdb-api-tv-series
+      - tmdb-api-watch-providers
+    - rest_exposed:
+      - tmdb-api-account-rest
+      - tmdb-api-authentication-rest
+      - tmdb-api-certifications-rest
+      - tmdb-api-collections-rest
+      - tmdb-api-companies-rest
+      - tmdb-api-configuration-rest
+      - tmdb-api-credits-rest
+      - tmdb-api-discover-rest
+      - tmdb-api-find-rest
+      - tmdb-api-genres-rest
+      - tmdb-api-guest-sessions-rest
+      - tmdb-api-keywords-rest
+      - tmdb-api-lists-rest
+      - tmdb-api-movies-rest
+      - tmdb-api-networks-rest
+      - tmdb-api-people-rest
+      - tmdb-api-reviews-rest
+      - tmdb-api-search-rest
+      - tmdb-api-trending-rest
+      - tmdb-api-tv-series-rest
+      - tmdb-api-watch-providers-rest
+    - mcp_exposed:
+      - tmdb-api-account-mcp
+      - tmdb-api-authentication-mcp
+      - tmdb-api-certifications-mcp
+      - tmdb-api-collections-mcp
+      - tmdb-api-companies-mcp
+      - tmdb-api-configuration-mcp
+      - tmdb-api-credits-mcp
+      - tmdb-api-discover-mcp
+      - tmdb-api-find-mcp
+      - tmdb-api-genres-mcp
+      - tmdb-api-guest-sessions-mcp
+      - tmdb-api-keywords-mcp
+      - tmdb-api-lists-mcp
+      - tmdb-api-movies-mcp
+      - tmdb-api-networks-mcp
+      - tmdb-api-people-mcp
+      - tmdb-api-reviews-mcp
+      - tmdb-api-search-mcp
+      - tmdb-api-trending-mcp
+      - tmdb-api-tv-series-mcp
+      - tmdb-api-watch-providers-mcp
+  - binds:
+    - !!omap
+      - envVar: TMDB_BEARER_TOKEN
+      - description: v4 API Read Access Token (preferred); set per workflow.
+      - usedBy: all capabilities
+- crossReference:
+  - !!omap
+    - resource: account
+    - operations:
+      - account-details
+      - account-add-favorite
+      - account-add-to-watchlist
+      - account-get-favorites
+      - account-favorite-tv
+    - workflow: TMDB API — Account
+  - !!omap
+    - resource: authentication
+    - operations:
+      - authentication-validate-key
+      - authentication-create-guest-session
+      - authentication-create-request-token
+      - authentication-create-session
+      - authentication-create-session-from-v4-token
+    - workflow: TMDB API — Authentication
+  - !!omap
+    - resource: certification
+    - operations:
+      - certification-movie-list
+      - certifications-tv-list
+    - workflow: TMDB API — Certifications
+  - !!omap
+    - resource: collection
+    - operations:
+      - collection-details
+      - collection-images
+      - collection-translations
+    - workflow: TMDB API — Collections
+  - !!omap
+    - resource: company
+    - operations:
+      - company-details
+      - company-alternative-names
+      - company-images
+    - workflow: TMDB API — General
+  - !!omap
+    - resource: configuration
+    - operations:
+      - configuration-details
+      - configuration-countries
+      - configuration-jobs
+      - configuration-languages
+      - configuration-primary-translations
+    - workflow: TMDB API — Configuration
+  - !!omap
+    - resource: credit
+    - operations:
+      - credit-details
+    - workflow: TMDB API — Credits
+  - !!omap
+    - resource: discover
+    - operations:
+      - discover-movie
+      - discover-tv
+    - workflow: TMDB API — Discover
+  - !!omap
+    - resource: find
+    - operations:
+      - find-by-id
+    - workflow: TMDB API — Find
+  - !!omap
+    - resource: genre
+    - operations:
+      - genre-movie-list
+      - genre-tv-list
+    - workflow: TMDB API — Genres
+  - !!omap
+    - resource: guest_session
+    - operations:
+      - guest-session-rated-movies
+      - guest-session-rated-tv
+      - guest-session-rated-tv-episodes
+    - workflow: TMDB API — General
+  - !!omap
+    - resource: keyword
+    - operations:
+      - keyword-details
+      - keyword-movies
+    - workflow: TMDB API — Keywords
+  - !!omap
+    - resource: list
+    - operations:
+      - list-add-movie
+      - list-check-item-status
+      - list-clear
+      - list-create
+      - list-delete
+    - workflow: TMDB API — Lists
+  - !!omap
+    - resource: movie
+    - operations:
+      - changes-movie-list
+      - movie-now-playing-list
+      - movie-popular-list
+      - movie-top-rated-list
+      - movie-upcoming-list
+    - workflow: TMDB API — Movies
+  - !!omap
+    - resource: network
+    - operations:
+      - network-details
+      - details-copy
+      - alternative-names-copy
+    - workflow: TMDB API — Networks
+  - !!omap
+    - resource: person
+    - operations:
+      - changes-people-list
+      - person-popular-list
+      - person-details
+      - person-changes
+      - person-combined-credits
+    - workflow: TMDB API — General
+  - !!omap
+    - resource: review
+    - operations:
+      - review-details
+    - workflow: TMDB API — Reviews
+  - !!omap
+    - resource: search
+    - operations:
+      - search-collection
+      - search-company
+      - search-keyword
+      - search-movie
+      - search-multi
+    - workflow: TMDB API — Search
+  - !!omap
+    - resource: trending
+    - operations:
+      - trending-all
+      - trending-movies
+      - trending-people
+      - trending-tv
+    - workflow: TMDB API — Trending
+  - !!omap
+    - resource: tv
+    - operations:
+      - changes-tv-list
+      - tv-series-airing-today-list
+      - tv-series-on-the-air-list
+      - tv-series-popular-list
+      - tv-series-top-rated-list
+    - workflow: TMDB API — TV Series
+  - !!omap
+    - resource: watch
+    - operations:
+      - watch-providers-available-regions
+      - watch-providers-movie-list
+      - watch-provider-tv-list
+    - workflow: TMDB API — Watch Providers

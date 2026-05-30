@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-discover-movie-response-schema.json",
+  "title": "DiscoverMovieResponse",
+  "description": "TMDB Discover \u2014 Movie (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/8YFL5QQVPy3AgrEQxNYVSgiPEbe.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                28
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              640146
+            ],
+            "default": 0
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_title": {
+            "type": "string",
+            "examples": [
+              "Ant-Man and the Wasp: Quantumania"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible."
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              9272.643
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/ngl2FKBlU4fhbdsrtdom9LVLBXw.jpg"
+            ]
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "2023-02-15"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "examples": [
+              "Ant-Man and the Wasp: Quantumania"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              6.5
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              1856
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        38020
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        760385
+      ],
+      "default": 0
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-movie-upcoming-list-response-schema.json",
+  "title": "MovieUpcomingListResponse",
+  "description": "TMDB Movies \u2014 Upcoming (200 payload).",
+  "type": "object",
+  "properties": {
+    "dates": {
+      "type": "object",
+      "properties": {
+        "maximum": {
+          "type": "string",
+          "examples": [
+            "2023-05-23"
+          ]
+        },
+        "minimum": {
+          "type": "string",
+          "examples": [
+            "2023-05-04"
+          ]
+        }
+      }
+    },
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/7bWxAsNPv9CXHOhZbJVlj2KxgfP.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                27
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              713704
+            ],
+            "default": 0
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_title": {
+            "type": "string",
+            "examples": [
+              "Evil Dead Rise"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Two sisters find an ancient vinyl that gives birth to bloodthirsty demons that run amok in a Los Angeles apartment building and thrusts them into a primal battle for survival as they face the most nightmarish version of family imaginable."
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              1696.367
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/mIBCtPvKZQlxubxKMeViO2UrP3q.jpg"
+            ]
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "2023-04-12"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "examples": [
+              "Evil Dead Rise"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "integer",
+            "examples": [
+              7
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              207
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        19
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        369
+      ],
+      "default": 0
+    }
+  }
+}

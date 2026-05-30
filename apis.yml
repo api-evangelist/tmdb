@@ -1,32 +1,262 @@
 aid: tmdb
-name: TMDb
-description: "Community-based movie data"
-url: https://www.themoviedb.org/documentation/api
+name: The Movie Database
+kind: company
+description: >-
+  The Movie Database (TMDB) is a community-built movie, TV, and people metadata catalog with a free REST
+  API used by streaming apps, recommendation engines, second-screen experiences, fan sites, and AI/ML
+  workflows. The TMDB API v3 exposes ~150 endpoints across movies, TV series, seasons, episodes, people,
+  credits, images, collections, companies, networks, keywords, genres, reviews, lists, certifications,
+  trending, discover/search, watch providers, account/lists, authentication, and configuration. A v4
+  surface adds OAuth-style user authentication and richer list management. Non-commercial use is free;
+  commercial use requires a separate written agreement with TMDB.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/apis.yml
+type: Index
+access: 3rd-Party
+position: Consuming
 specificationVersion: '0.20'
 created: '2026-05-28'
-modified: '2026-05-28'
+modified: '2026-05-30'
 x-source: public-apis/public-apis
-x-category: "Video"
+x-category: Video
+x-type: company
 x-tier: 3
 x-tier-reason: bulk-registered-from-public-apis
 tags:
-  - Video
-  - Public APIs
+- Catalog
+- Discovery
+- Entertainment
+- Images
+- Media
+- Metadata
+- Movies
+- People
+- Recommendations
+- Reviews
+- Search
+- Streaming
+- Trending
+- TV
+- Video
+- Watch Providers
 apis:
-  - name: TMDb
-    description: "Community-based movie data"
-    humanURL: https://www.themoviedb.org/documentation/api
-    baseURL: https://www.themoviedb.org/documentation/api
-    tags:
-      - Video
-    properties:
-      - type: Documentation
-        url: https://www.themoviedb.org/documentation/api
+- aid: tmdb:tmdb-api
+  name: TMDB API
+  description: >-
+    The full TMDB REST API surface (v3). Covers movies, TV series, seasons, episodes, people, credits,
+    images, collections, companies, networks, keywords, genres, reviews, lists, certifications, find,
+    trending, discover, search, watch providers, configuration, authentication, account, and guest
+    sessions. JSON over HTTPS, with optional append_to_response to combine related sub-resources in a
+    single response.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.themoviedb.org/reference/intro/getting-started
+  baseURL: https://api.themoviedb.org
+  tags:
+  - Catalog
+  - Discovery
+  - Metadata
+  - Movies
+  - People
+  - REST
+  - Search
+  - TV
+  - Video
+  properties:
+  - type: Documentation
+    url: https://developer.themoviedb.org/reference/intro/getting-started
+  - type: OpenAPI
+    url: openapi/tmdb-api-openapi-original.yml
+  - type: SignUp
+    url: https://www.themoviedb.org/signup
+  - type: GetAPIKey
+    url: https://www.themoviedb.org/settings/api
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+  - type: ChangeLog
+    url: https://www.themoviedb.org/talk/category/5047958519c29526b50017d6
+  - type: LLMsTxt
+    url: https://developer.themoviedb.org/llms.txt
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-account.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-authentication.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-certifications.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-collections.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-companies.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-configuration.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-credits.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-discover.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-find.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-genres.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-guest-sessions.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-keywords.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-lists.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-movies.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-networks.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-people.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-reviews.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-search.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-trending.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-tv-series.yaml
+  - type: NaftikoCapability
+    url: capabilities/tmdb-api-watch-providers.yaml
 common:
-  - type: Website
-    url: https://www.themoviedb.org/documentation/api
-  - type: PublicAPIsListing
-    url: https://github.com/public-apis/public-apis
+- type: Website
+  url: https://www.themoviedb.org
+- type: Documentation
+  url: https://developer.themoviedb.org/
+- type: APIOverview
+  url: https://developer.themoviedb.org/docs/getting-started
+- type: SignUp
+  url: https://www.themoviedb.org/signup
+- type: GetAPIKey
+  url: https://www.themoviedb.org/settings/api
+- type: Authentication
+  url: https://developer.themoviedb.org/docs/authentication-application
+- type: RateLimitingDocs
+  url: https://developer.themoviedb.org/docs/rate-limiting
+- type: TermsOfService
+  url: https://www.themoviedb.org/api-terms-of-use
+- type: PrivacyPolicy
+  url: https://www.themoviedb.org/privacy-policy
+- type: Support
+  url: https://www.themoviedb.org/talk
+- type: StatusPage
+  url: https://status.themoviedb.org
+- type: LLMsTxt
+  url: https://developer.themoviedb.org/llms.txt
+- type: Wrappers
+  url: https://developer.themoviedb.org/docs/wrappers-and-libraries
+- type: SDK
+  url: https://github.com/celiao/tmdbsimple
+  name: tmdbsimple (Python)
+- type: SDK
+  url: https://pypi.org/project/tmdbsimple/
+  name: tmdbsimple (PyPI)
+- type: SDK
+  url: https://github.com/grantholle/moviedb-promise
+  name: moviedb-promise (JavaScript)
+- type: SDK
+  url: https://www.npmjs.com/package/moviedb-promise
+  name: moviedb-promise (npm)
+- type: SDK
+  url: https://github.com/leandrowkz/tmdb
+  name: tmdb (TypeScript)
+- type: SDK
+  url: https://github.com/blakejoy/tmdb-ts
+  name: tmdb-ts (TypeScript)
+- type: SDK
+  url: https://github.com/LordMike/TMDbLib
+  name: TMDbLib (.NET)
+- type: SDK
+  url: https://github.com/cyruzin/golang-tmdb
+  name: golang-tmdb (Go)
+- type: SDK
+  url: https://github.com/ryanbradynd05/go-tmdb
+  name: go-tmdb (Go)
+- type: SDK
+  url: https://github.com/adamayoung/TMDb
+  name: TMDb (Swift)
+- type: SDK
+  url: https://github.com/wtfzdotnet/php-tmdb-api
+  name: php-tmdb-api (PHP)
+- type: SDK
+  url: https://github.com/ahmetabdi/themoviedb
+  name: themoviedb (Ruby)
+- type: SDK
+  url: https://github.com/c-eg/themoviedbapi
+  name: themoviedbapi (Java)
+- type: Tools
+  title: MCP Server
+  url: https://github.com/leonardogilrodriguez/mcp-tmdb
+  name: MCP-TMDB (community)
+- type: Plans
+  url: plans/tmdb-plans-pricing.yml
+  name: Plans & Pricing
+- type: RateLimits
+  url: rate-limits/tmdb-rate-limits.yml
+  name: Rate Limits
+- type: FinOps
+  url: finops/tmdb-finops.yml
+  name: FinOps
+- type: SpectralRules
+  url: rules/tmdb-rules.yml
+  name: Spectral Rules
+- type: Vocabulary
+  url: vocabulary/tmdb-vocabulary.yml
+  name: Vocabulary
+- type: JSONLD
+  url: json-ld/tmdb-context.jsonld
+  name: JSON-LD Context
+features:
+- name: Movie Metadata
+  description: Full movie details — title, overview, runtime, budget, revenue, genres, languages, production companies, release dates, ratings, images, videos, and credits.
+- name: TV Metadata
+  description: Series, seasons, and episode data with cast, crew, air dates, episode groups, content ratings, and networks.
+- name: People Metadata
+  description: Cast and crew profiles with combined movie + TV credits, biographies, images, external IDs (IMDB, social), and translations.
+- name: Search
+  description: Multi-search and per-resource search (movie, TV, person, company, collection, keyword) with relevance ranking and pagination.
+- name: Discover
+  description: Faceted browse of movies and TV shows with 30+ filters including genre, year, rating, language, region, watch provider, runtime, and cast/crew.
+- name: Trending
+  description: Daily and weekly trending lists across movies, TV, and people based on community activity.
+- name: Append To Response
+  description: Combine up to 20 related sub-resource calls (credits, images, videos, similar, recommendations) into a single HTTP request to minimise round trips.
+- name: Watch Providers
+  description: Per-region availability data sourced from JustWatch covering streaming, rent, and buy options for movies and TV.
+- name: Images
+  description: Multi-language poster, backdrop, logo, and profile images with size variants served via the TMDB image CDN.
+- name: Daily ID Exports
+  description: Bulk-downloadable nightly JSON files listing all valid IDs for movies, TV, people, and other entities for incremental sync.
+- name: Lists & Account
+  description: User-owned lists, favorites, watchlist, and ratings via authenticated v3 and v4 endpoints.
+- name: Configuration
+  description: Image base URLs, supported languages, countries, timezones, and translation endpoints needed to render content correctly.
+use-cases:
+- name: Streaming Catalog Enrichment
+  description: Streaming and VOD apps pull canonical title metadata, posters, and watch provider availability to populate browse and detail screens.
+- name: Recommendation Engines
+  description: ML teams use TMDB metadata + ratings + trending signals as a feature source for personalised movie and TV recommendations.
+- name: Fan Sites and Communities
+  description: Fan wikis, review sites, and watch-tracker apps build out person, film, and series pages using TMDB as the authoritative source.
+- name: Second-Screen Experiences
+  description: Companion apps surface cast, trivia, and where-to-watch data while users are watching a film or show.
+- name: Media Asset Management
+  description: PMS-style libraries (Plex, Jellyfin, Kodi) match local files to TMDB IDs to pull metadata and artwork for personal media.
+- name: AI/ML Research Datasets
+  description: Researchers build movie/TV datasets for embeddings, recommendation, or NLP — subject to TMDB's commercial-use approval for AI training.
+integrations:
+- name: JustWatch
+- name: IMDB
+- name: TVDb
+- name: Plex
+- name: Jellyfin
+- name: Kodi
+- name: Sonarr
+- name: Radarr
+- name: Letterboxd
+- name: Trakt
+- name: Stremio
+- name: MCP
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-search-collection-response-schema.json",
+  "title": "SearchCollectionResponse",
+  "description": "TMDB Search \u2014 Collection (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/zuW6fOiusv4X9nnW3paHGfXcSll.jpg"
+            ]
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              86311
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "The Avengers Collection"
+            ]
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "The Avengers Collection"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "A superhero film series produced by Marvel Studios based on the Marvel Comics superhero team of the same name, and part of the Marvel Cinematic Universe (MCU).  The series features an ensemble cast from the Marvel Cinematic Universe series films, as they join forces for the peacekeeping organization S.H.I.E.L.D. led by Nick Fury."
+            ]
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/yFSIUVTCvgYrpalUktulvk3Gi5Y.jpg"
+            ]
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    }
+  }
+}

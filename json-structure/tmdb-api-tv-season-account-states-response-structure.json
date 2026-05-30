@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-season-account-states-response-structure.json",
+  "name": "TvSeasonAccountStatesResponse",
+  "description": "TMDB TV Series \u2014 Account States (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        3624
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "int32",
+            "examples": [
+              63056
+            ],
+            "default": 0
+          },
+          "episode_number": {
+            "type": "int32",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "rated": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "int32",
+                "examples": [
+                  9
+                ],
+                "default": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,210 @@
+!!omap
+- naftiko: 1.0.0-alpha2
+- info: !!omap
+  - label: TMDB API — Watch Providers
+  - description: |-
+      TMDB — Watch Providers. 3 operations. Lead operation: TMDB Watch Providers — Available Regions. Self-contained Naftiko capability covering one TMDB business surface.
+  - tags:
+    - TMDB
+    - Watch Providers
+  - created: '2026-05-30'
+  - modified: '2026-05-30'
+- binds:
+  - !!omap
+    - namespace: env
+    - keys: !!omap
+      - TMDB_BEARER_TOKEN: TMDB_BEARER_TOKEN
+- capability: !!omap
+  - consumes:
+    - !!omap
+      - type: http
+      - namespace: tmdb-api-watch-providers
+      - baseUri: https://api.themoviedb.org
+      - description: TMDB API — Watch Providers business capability. Self-contained, no shared references.
+      - authentication: !!omap
+        - type: bearer
+        - token: '{{env.TMDB_BEARER_TOKEN}}'
+      - resources:
+        - !!omap
+          - name: 3-watch-providers-regions
+          - path: /3/watch/providers/regions
+          - operations:
+            - !!omap
+              - name: watch-providers-available-regions
+              - method: GET
+              - description: TMDB Watch Providers — Available Regions
+              - inputParameters:
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-watch-providers-movie
+          - path: /3/watch/providers/movie
+          - operations:
+            - !!omap
+              - name: watch-providers-movie-list
+              - method: GET
+              - description: TMDB Watch Providers — Movie Providers
+              - inputParameters:
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: watch_region
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: watch_region parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-watch-providers-tv
+          - path: /3/watch/providers/tv
+          - operations:
+            - !!omap
+              - name: watch-provider-tv-list
+              - method: GET
+              - description: TMDB Watch Providers — TV Providers
+              - inputParameters:
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: watch_region
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: watch_region parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+  - exposes:
+    - !!omap
+      - type: rest
+      - namespace: tmdb-api-watch-providers-rest
+      - port: 8080
+      - description: REST adapter for TMDB API — Watch Providers. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+      - resources:
+        - !!omap
+          - path: /v1/watch/providers/regions
+          - name: watch-providers-regions
+          - description: REST surface for /3/watch/providers/regions.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: watch-providers-available-regions
+              - description: TMDB Watch Providers — Available Regions
+              - call: tmdb-api-watch-providers.watch-providers-available-regions
+              - with: !!omap
+                - language: rest.language
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/watch/providers/movie
+          - name: watch-providers-movie
+          - description: REST surface for /3/watch/providers/movie.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: watch-providers-movie-list
+              - description: TMDB Watch Providers — Movie Providers
+              - call: tmdb-api-watch-providers.watch-providers-movie-list
+              - with: !!omap
+                - language: rest.language
+                - watch_region: rest.watch_region
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/watch/providers/tv
+          - name: watch-providers-tv
+          - description: REST surface for /3/watch/providers/tv.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: watch-provider-tv-list
+              - description: TMDB Watch Providers — TV Providers
+              - call: tmdb-api-watch-providers.watch-provider-tv-list
+              - with: !!omap
+                - language: rest.language
+                - watch_region: rest.watch_region
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+    - !!omap
+      - type: mcp
+      - namespace: tmdb-api-watch-providers-mcp
+      - port: 9090
+      - transport: http
+      - description: MCP adapter for TMDB API — Watch Providers. One tool per consumed operation, routed inline through this capability's consumes block.
+      - tools:
+        - !!omap
+          - name: available-regions
+          - description: TMDB Watch Providers — Available Regions
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-watch-providers.watch-providers-available-regions
+          - with: !!omap
+            - language: tools.language
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: movie-providers
+          - description: TMDB Watch Providers — Movie Providers
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-watch-providers.watch-providers-movie-list
+          - with: !!omap
+            - language: tools.language
+            - watch_region: tools.watch_region
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: tv-providers
+          - description: TMDB Watch Providers — TV Providers
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-watch-providers.watch-provider-tv-list
+          - with: !!omap
+            - language: tools.language
+            - watch_region: tools.watch_region
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.

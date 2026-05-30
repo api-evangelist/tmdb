@@ -1,0 +1,39 @@
+{
+  "id": 31,
+  "page": 1,
+  "results": [
+    {
+      "aspect_ratio": 0.6666666666666666,
+      "file_path": "/1wY4psJ5NVEhCuOYROwLH2XExM2.jpg",
+      "height": 1500,
+      "id": "5b235d740e0a265b5d0031d9",
+      "iso_639_1": "en",
+      "vote_average": 5.456,
+      "vote_count": 7,
+      "width": 1000,
+      "image_type": "poster",
+      "media": {
+        "adult": false,
+        "backdrop_path": "/bdD39MpSVhKjxarTxLSfX6baoMP.jpg",
+        "id": 857,
+        "title": "Saving Private Ryan",
+        "original_language": "en",
+        "original_title": "Saving Private Ryan",
+        "overview": "As U.S. troops storm the beaches of Normandy, three brothers lie dead on the battlefield, with a fourth trapped behind enemy lines. Ranger captain John Miller and seven men are tasked with penetrating German-held territory and bringing the boy home.",
+        "poster_path": "/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg",
+        "media_type": "movie",
+        "genre_ids": [
+          {}
+        ],
+        "popularity": 70.45,
+        "release_date": "1998-07-24",
+        "video": false,
+        "vote_average": 8.208,
+        "vote_count": 14134
+      },
+      "media_type": "movie"
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 13
+}

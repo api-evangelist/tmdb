@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-search-tv-response-schema.json",
+  "title": "SearchTvResponse",
+  "description": "TMDB Search \u2014 TV (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/bsNm9z2TJfe0WO3RedPGWQ8mG1X.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                18
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              1396
+            ],
+            "default": 0
+          },
+          "origin_country": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "examples": [
+                "US"
+              ]
+            }
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Breaking Bad"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime."
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              298.884
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/ggFHVNu6YYI5L9pCfOacjizRGt.jpg"
+            ]
+          },
+          "first_air_date": {
+            "type": "string",
+            "examples": [
+              "2008-01-20"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Breaking Bad"
+            ]
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              8.879
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              11536
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    }
+  }
+}

@@ -1,0 +1,218 @@
+!!omap
+- naftiko: 1.0.0-alpha2
+- info: !!omap
+  - label: TMDB API — Collections
+  - description: |-
+      TMDB — Collections. 3 operations. Lead operation: TMDB Collections — Details. Self-contained Naftiko capability covering one TMDB business surface.
+  - tags:
+    - TMDB
+    - Collections
+  - created: '2026-05-30'
+  - modified: '2026-05-30'
+- binds:
+  - !!omap
+    - namespace: env
+    - keys: !!omap
+      - TMDB_BEARER_TOKEN: TMDB_BEARER_TOKEN
+- capability: !!omap
+  - consumes:
+    - !!omap
+      - type: http
+      - namespace: tmdb-api-collections
+      - baseUri: https://api.themoviedb.org
+      - description: TMDB API — Collections business capability. Self-contained, no shared references.
+      - authentication: !!omap
+        - type: bearer
+        - token: '{{env.TMDB_BEARER_TOKEN}}'
+      - resources:
+        - !!omap
+          - name: 3-collection-collection-id
+          - path: /3/collection/{collection_id}
+          - operations:
+            - !!omap
+              - name: collection-details
+              - method: GET
+              - description: TMDB Collections — Details
+              - inputParameters:
+                - !!omap
+                  - name: collection_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: collection_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-collection-collection-id-images
+          - path: /3/collection/{collection_id}/images
+          - operations:
+            - !!omap
+              - name: collection-images
+              - method: GET
+              - description: TMDB Collections — Images
+              - inputParameters:
+                - !!omap
+                  - name: collection_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: collection_id parameter.
+                - !!omap
+                  - name: include_image_language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: 'specify a comma separated list of ISO-639-1 values to query, for example: `en-US,null`'
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-collection-collection-id-translations
+          - path: /3/collection/{collection_id}/translations
+          - operations:
+            - !!omap
+              - name: collection-translations
+              - method: GET
+              - description: TMDB Collections — Translations
+              - inputParameters:
+                - !!omap
+                  - name: collection_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: collection_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+  - exposes:
+    - !!omap
+      - type: rest
+      - namespace: tmdb-api-collections-rest
+      - port: 8080
+      - description: REST adapter for TMDB API — Collections. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+      - resources:
+        - !!omap
+          - path: /v1/collection/{collection_id}
+          - name: collection-collection-id
+          - description: REST surface for /3/collection/{collection_id}.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: collection-details
+              - description: TMDB Collections — Details
+              - call: tmdb-api-collections.collection-details
+              - with: !!omap
+                - collection_id: rest.collection_id
+                - language: rest.language
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/collection/{collection_id}/images
+          - name: collection-collection-id-images
+          - description: REST surface for /3/collection/{collection_id}/images.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: collection-images
+              - description: TMDB Collections — Images
+              - call: tmdb-api-collections.collection-images
+              - with: !!omap
+                - collection_id: rest.collection_id
+                - include_image_language: rest.include_image_language
+                - language: rest.language
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/collection/{collection_id}/translations
+          - name: collection-collection-id-translations
+          - description: REST surface for /3/collection/{collection_id}/translations.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: collection-translations
+              - description: TMDB Collections — Translations
+              - call: tmdb-api-collections.collection-translations
+              - with: !!omap
+                - collection_id: rest.collection_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+    - !!omap
+      - type: mcp
+      - namespace: tmdb-api-collections-mcp
+      - port: 9090
+      - transport: http
+      - description: MCP adapter for TMDB API — Collections. One tool per consumed operation, routed inline through this capability's consumes block.
+      - tools:
+        - !!omap
+          - name: details
+          - description: TMDB Collections — Details
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-collections.collection-details
+          - with: !!omap
+            - collection_id: tools.collection_id
+            - language: tools.language
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: images
+          - description: TMDB Collections — Images
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-collections.collection-images
+          - with: !!omap
+            - collection_id: tools.collection_id
+            - include_image_language: tools.include_image_language
+            - language: tools.language
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: translations
+          - description: TMDB Collections — Translations
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-collections.collection-translations
+          - with: !!omap
+            - collection_id: tools.collection_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.

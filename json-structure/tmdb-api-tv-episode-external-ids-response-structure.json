@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-episode-external-ids-response-structure.json",
+  "name": "TvEpisodeExternalIdsResponse",
+  "description": "TMDB TV Series \u2014 External IDs (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        63056
+      ],
+      "default": 0
+    },
+    "imdb_id": {
+      "type": "string",
+      "examples": [
+        "tt1480055"
+      ]
+    },
+    "freebase_mid": {
+      "type": "string",
+      "examples": [
+        "/m/0gmc6ph"
+      ]
+    },
+    "freebase_id": {
+      "type": "string",
+      "examples": [
+        "/en/winter_is_coming"
+      ]
+    },
+    "tvdb_id": {
+      "type": "int32",
+      "examples": [
+        3254641
+      ],
+      "default": 0
+    },
+    "tvrage_id": {
+      "type": "int32",
+      "examples": [
+        1065008299
+      ],
+      "default": 0
+    },
+    "wikidata_id": {
+      "type": "string",
+      "examples": [
+        "Q2614622"
+      ]
+    }
+  }
+}

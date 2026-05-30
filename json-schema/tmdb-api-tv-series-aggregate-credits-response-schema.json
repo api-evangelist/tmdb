@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-series-aggregate-credits-response-schema.json",
+  "title": "TvSeriesAggregateCreditsResponse",
+  "description": "TMDB TV Series \u2014 Aggregate Credits (200 payload).",
+  "type": "object",
+  "properties": {
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              1223786
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Acting"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Emilia Clarke"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Emilia Clarke"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              42.737
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/u59kTmNHXzaGZqokivxLPiBVIML.jpg"
+            ]
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "credit_id": {
+                  "type": "string",
+                  "examples": [
+                    "5256c8af19c2956ff60479f6"
+                  ]
+                },
+                "character": {
+                  "type": "string",
+                  "examples": [
+                    "Daenerys Targaryen"
+                  ]
+                },
+                "episode_count": {
+                  "type": "integer",
+                  "examples": [
+                    78
+                  ],
+                  "default": 0
+                }
+              }
+            }
+          },
+          "total_episode_count": {
+            "type": "integer",
+            "examples": [
+              78
+            ],
+            "default": 0
+          },
+          "order": {
+            "type": "integer",
+            "examples": [
+              6
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "crew": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              6411
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Art"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Deborah Riley"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Deborah Riley"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              1.4
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/cjhADpqdrnwB1PdDUKaBnWrIj2Q.jpg"
+            ]
+          },
+          "jobs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "credit_id": {
+                  "type": "string",
+                  "examples": [
+                    "54eee9e5c3a3686d5800584e"
+                  ]
+                },
+                "job": {
+                  "type": "string",
+                  "examples": [
+                    "Production Design"
+                  ]
+                },
+                "episode_count": {
+                  "type": "integer",
+                  "examples": [
+                    43
+                  ],
+                  "default": 0
+                }
+              }
+            }
+          },
+          "department": {
+            "type": "string",
+            "examples": [
+              "Art"
+            ]
+          },
+          "total_episode_count": {
+            "type": "integer",
+            "examples": [
+              43
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    }
+  }
+}

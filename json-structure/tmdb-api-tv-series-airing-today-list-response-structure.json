@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-series-airing-today-list-response-structure.json",
+  "name": "TvSeriesAiringTodayListResponse",
+  "description": "TMDB TV Series \u2014 Airing Today (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/mAJ84W6I8I272Da87qplS2Dp9ST.jpg"
+            ]
+          },
+          "first_air_date": {
+            "type": "string",
+            "examples": [
+              "2023-01-23"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "int32",
+              "examples": [
+                9648
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              202250
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Dirty Linen"
+            ]
+          },
+          "origin_country": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "examples": [
+                "PH"
+              ]
+            }
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "tl"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Dirty Linen"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "To exact vengeance, a young woman infiltrates the household of an influential family as a housemaid to expose their dirty secrets. However, love will get in the way of her revenge plot."
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              2797.914
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/aoAZgnmMzY9vVy9VWnO3U5PZENh.jpg"
+            ]
+          },
+          "vote_average": {
+            "type": "int32",
+            "examples": [
+              5
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              13
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        14
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        265
+      ],
+      "default": 0
+    }
+  }
+}

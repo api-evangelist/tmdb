@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-movie-latest-id-response-structure.json",
+  "name": "MovieLatestIdResponse",
+  "description": "TMDB Movies \u2014 Latest (200 payload).",
+  "type": "object",
+  "properties": {
+    "adult": {
+      "type": "boolean",
+      "examples": [
+        false
+      ],
+      "default": true
+    },
+    "backdrop_path": {},
+    "belongs_to_collection": {},
+    "budget": {
+      "type": "int32",
+      "examples": [
+        0
+      ],
+      "default": 0
+    },
+    "genres": {
+      "type": "array"
+    },
+    "homepage": {
+      "type": "string",
+      "examples": [
+        ""
+      ]
+    },
+    "id": {
+      "type": "int32",
+      "examples": [
+        1119232
+      ],
+      "default": 0
+    },
+    "imdb_id": {},
+    "original_language": {
+      "type": "string",
+      "examples": [
+        "fr"
+      ]
+    },
+    "original_title": {
+      "type": "string",
+      "examples": [
+        "K\u00f6nig Charles III"
+      ]
+    },
+    "overview": {
+      "type": "string",
+      "examples": [
+        ""
+      ]
+    },
+    "popularity": {
+      "type": "int32",
+      "examples": [
+        0
+      ],
+      "default": 0
+    },
+    "poster_path": {},
+    "production_companies": {
+      "type": "array"
+    },
+    "production_countries": {
+      "type": "array"
+    },
+    "release_date": {
+      "type": "string",
+      "examples": [
+        ""
+      ]
+    },
+    "revenue": {
+      "type": "int32",
+      "examples": [
+        0
+      ],
+      "default": 0
+    },
+    "runtime": {
+      "type": "int32",
+      "examples": [
+        0
+      ],
+      "default": 0
+    },
+    "spoken_languages": {
+      "type": "array"
+    },
+    "status": {
+      "type": "string",
+      "examples": [
+        "Released"
+      ]
+    },
+    "tagline": {
+      "type": "string",
+      "examples": [
+        ""
+      ]
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "K\u00f6nig Charles III"
+      ]
+    },
+    "video": {
+      "type": "boolean",
+      "examples": [
+        false
+      ],
+      "default": true
+    },
+    "vote_average": {
+      "type": "int32",
+      "examples": [
+        0
+      ],
+      "default": 0
+    },
+    "vote_count": {
+      "type": "int32",
+      "examples": [
+        0
+      ],
+      "default": 0
+    }
+  }
+}

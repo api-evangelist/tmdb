@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-network-details-response-schema.json",
+  "title": "NetworkDetailsResponse",
+  "description": "TMDB Networks \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "headquarters": {
+      "type": "string",
+      "examples": [
+        "New York City, New York"
+      ]
+    },
+    "homepage": {
+      "type": "string",
+      "examples": [
+        "https://www.hbo.com"
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        49
+      ],
+      "default": 0
+    },
+    "logo_path": {
+      "type": "string",
+      "examples": [
+        "/tuomPhY2UtuPTqqFnKMVHvSb724.png"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "HBO"
+      ]
+    },
+    "origin_country": {
+      "type": "string",
+      "examples": [
+        "US"
+      ]
+    }
+  }
+}

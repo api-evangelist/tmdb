@@ -1,0 +1,882 @@
+!!omap
+- naftiko: 1.0.0-alpha2
+- info: !!omap
+  - label: TMDB API — Account
+  - description: |-
+      TMDB — Account. 11 operations. Lead operation: TMDB Account — Details. Self-contained Naftiko capability covering one TMDB business surface.
+  - tags:
+    - TMDB
+    - Account
+  - created: '2026-05-30'
+  - modified: '2026-05-30'
+- binds:
+  - !!omap
+    - namespace: env
+    - keys: !!omap
+      - TMDB_BEARER_TOKEN: TMDB_BEARER_TOKEN
+- capability: !!omap
+  - consumes:
+    - !!omap
+      - type: http
+      - namespace: tmdb-api-account
+      - baseUri: https://api.themoviedb.org
+      - description: TMDB API — Account business capability. Self-contained, no shared references.
+      - authentication: !!omap
+        - type: bearer
+        - token: '{{env.TMDB_BEARER_TOKEN}}'
+      - resources:
+        - !!omap
+          - name: 3-account-account-id
+          - path: /3/account/{account_id}
+          - operations:
+            - !!omap
+              - name: account-details
+              - method: GET
+              - description: TMDB Account — Details
+              - inputParameters:
+                - !!omap
+                  - name: account_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: account_id parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-account-account-id-favorite
+          - path: /3/account/{account_id}/favorite
+          - operations:
+            - !!omap
+              - name: account-add-favorite
+              - method: POST
+              - description: TMDB Account — Add Favorite
+              - inputParameters:
+                - !!omap
+                  - name: account_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: account_id parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+                - !!omap
+                  - name: body
+                  - in: body
+                  - type: object
+                  - required: true
+                  - description: JSON request body.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-account-account-id-watchlist
+          - path: /3/account/{account_id}/watchlist
+          - operations:
+            - !!omap
+              - name: account-add-to-watchlist
+              - method: POST
+              - description: TMDB Account — Add to Watchlist
+              - inputParameters:
+                - !!omap
+                  - name: account_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: account_id parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+                - !!omap
+                  - name: body
+                  - in: body
+                  - type: object
+                  - required: true
+                  - description: JSON request body.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-account-account-id-favorite-movies
+          - path: /3/account/{account_id}/favorite/movies
+          - operations:
+            - !!omap
+              - name: account-get-favorites
+              - method: GET
+              - description: TMDB Account — Favorite Movies
+              - inputParameters:
+                - !!omap
+                  - name: account_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: account_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+                - !!omap
+                  - name: sort_by
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: sort_by parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-account-account-id-favorite-tv
+          - path: /3/account/{account_id}/favorite/tv
+          - operations:
+            - !!omap
+              - name: account-favorite-tv
+              - method: GET
+              - description: TMDB Account — Favorite TV
+              - inputParameters:
+                - !!omap
+                  - name: account_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: account_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+                - !!omap
+                  - name: sort_by
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: sort_by parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-account-account-id-lists
+          - path: /3/account/{account_id}/lists
+          - operations:
+            - !!omap
+              - name: account-lists
+              - method: GET
+              - description: TMDB Account — Lists
+              - inputParameters:
+                - !!omap
+                  - name: account_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: account_id parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-account-account-id-rated-movies
+          - path: /3/account/{account_id}/rated/movies
+          - operations:
+            - !!omap
+              - name: account-rated-movies
+              - method: GET
+              - description: TMDB Account — Rated Movies
+              - inputParameters:
+                - !!omap
+                  - name: account_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: account_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+                - !!omap
+                  - name: sort_by
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: sort_by parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-account-account-id-rated-tv
+          - path: /3/account/{account_id}/rated/tv
+          - operations:
+            - !!omap
+              - name: account-rated-tv
+              - method: GET
+              - description: TMDB Account — Rated TV
+              - inputParameters:
+                - !!omap
+                  - name: account_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: account_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+                - !!omap
+                  - name: sort_by
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: sort_by parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-account-account-id-rated-tv-episodes
+          - path: /3/account/{account_id}/rated/tv/episodes
+          - operations:
+            - !!omap
+              - name: account-rated-tv-episodes
+              - method: GET
+              - description: TMDB Account — Rated TV Episodes
+              - inputParameters:
+                - !!omap
+                  - name: account_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: account_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+                - !!omap
+                  - name: sort_by
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: sort_by parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-account-account-id-watchlist-movies
+          - path: /3/account/{account_id}/watchlist/movies
+          - operations:
+            - !!omap
+              - name: account-watchlist-movies
+              - method: GET
+              - description: TMDB Account — Watchlist Movies
+              - inputParameters:
+                - !!omap
+                  - name: account_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: account_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+                - !!omap
+                  - name: sort_by
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: sort_by parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-account-account-id-watchlist-tv
+          - path: /3/account/{account_id}/watchlist/tv
+          - operations:
+            - !!omap
+              - name: account-watchlist-tv
+              - method: GET
+              - description: TMDB Account — Watchlist TV
+              - inputParameters:
+                - !!omap
+                  - name: account_id
+                  - in: path
+                  - type: integer
+                  - required: true
+                  - description: account_id parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: session_id
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: session_id parameter.
+                - !!omap
+                  - name: sort_by
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: sort_by parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+  - exposes:
+    - !!omap
+      - type: rest
+      - namespace: tmdb-api-account-rest
+      - port: 8080
+      - description: REST adapter for TMDB API — Account. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+      - resources:
+        - !!omap
+          - path: /v1/account/{account_id}
+          - name: account-account-id
+          - description: REST surface for /3/account/{account_id}.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: account-details
+              - description: TMDB Account — Details
+              - call: tmdb-api-account.account-details
+              - with: !!omap
+                - account_id: rest.account_id
+                - session_id: rest.session_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/account/{account_id}/favorite
+          - name: account-account-id-favorite
+          - description: REST surface for /3/account/{account_id}/favorite.
+          - operations:
+            - !!omap
+              - method: POST
+              - name: account-add-favorite
+              - description: TMDB Account — Add Favorite
+              - call: tmdb-api-account.account-add-favorite
+              - with: !!omap
+                - account_id: rest.account_id
+                - session_id: rest.session_id
+                - body: rest.body
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/account/{account_id}/watchlist
+          - name: account-account-id-watchlist
+          - description: REST surface for /3/account/{account_id}/watchlist.
+          - operations:
+            - !!omap
+              - method: POST
+              - name: account-add-to-watchlist
+              - description: TMDB Account — Add to Watchlist
+              - call: tmdb-api-account.account-add-to-watchlist
+              - with: !!omap
+                - account_id: rest.account_id
+                - session_id: rest.session_id
+                - body: rest.body
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/account/{account_id}/favorite/movies
+          - name: account-account-id-favorite-movies
+          - description: REST surface for /3/account/{account_id}/favorite/movies.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: account-get-favorites
+              - description: TMDB Account — Favorite Movies
+              - call: tmdb-api-account.account-get-favorites
+              - with: !!omap
+                - account_id: rest.account_id
+                - language: rest.language
+                - page: rest.page
+                - session_id: rest.session_id
+                - sort_by: rest.sort_by
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/account/{account_id}/favorite/tv
+          - name: account-account-id-favorite-tv
+          - description: REST surface for /3/account/{account_id}/favorite/tv.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: account-favorite-tv
+              - description: TMDB Account — Favorite TV
+              - call: tmdb-api-account.account-favorite-tv
+              - with: !!omap
+                - account_id: rest.account_id
+                - language: rest.language
+                - page: rest.page
+                - session_id: rest.session_id
+                - sort_by: rest.sort_by
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/account/{account_id}/lists
+          - name: account-account-id-lists
+          - description: REST surface for /3/account/{account_id}/lists.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: account-lists
+              - description: TMDB Account — Lists
+              - call: tmdb-api-account.account-lists
+              - with: !!omap
+                - account_id: rest.account_id
+                - page: rest.page
+                - session_id: rest.session_id
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/account/{account_id}/rated/movies
+          - name: account-account-id-rated-movies
+          - description: REST surface for /3/account/{account_id}/rated/movies.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: account-rated-movies
+              - description: TMDB Account — Rated Movies
+              - call: tmdb-api-account.account-rated-movies
+              - with: !!omap
+                - account_id: rest.account_id
+                - language: rest.language
+                - page: rest.page
+                - session_id: rest.session_id
+                - sort_by: rest.sort_by
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/account/{account_id}/rated/tv
+          - name: account-account-id-rated-tv
+          - description: REST surface for /3/account/{account_id}/rated/tv.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: account-rated-tv
+              - description: TMDB Account — Rated TV
+              - call: tmdb-api-account.account-rated-tv
+              - with: !!omap
+                - account_id: rest.account_id
+                - language: rest.language
+                - page: rest.page
+                - session_id: rest.session_id
+                - sort_by: rest.sort_by
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/account/{account_id}/rated/tv/episodes
+          - name: account-account-id-rated-tv-episodes
+          - description: REST surface for /3/account/{account_id}/rated/tv/episodes.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: account-rated-tv-episodes
+              - description: TMDB Account — Rated TV Episodes
+              - call: tmdb-api-account.account-rated-tv-episodes
+              - with: !!omap
+                - account_id: rest.account_id
+                - language: rest.language
+                - page: rest.page
+                - session_id: rest.session_id
+                - sort_by: rest.sort_by
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/account/{account_id}/watchlist/movies
+          - name: account-account-id-watchlist-movies
+          - description: REST surface for /3/account/{account_id}/watchlist/movies.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: account-watchlist-movies
+              - description: TMDB Account — Watchlist Movies
+              - call: tmdb-api-account.account-watchlist-movies
+              - with: !!omap
+                - account_id: rest.account_id
+                - language: rest.language
+                - page: rest.page
+                - session_id: rest.session_id
+                - sort_by: rest.sort_by
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/account/{account_id}/watchlist/tv
+          - name: account-account-id-watchlist-tv
+          - description: REST surface for /3/account/{account_id}/watchlist/tv.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: account-watchlist-tv
+              - description: TMDB Account — Watchlist TV
+              - call: tmdb-api-account.account-watchlist-tv
+              - with: !!omap
+                - account_id: rest.account_id
+                - language: rest.language
+                - page: rest.page
+                - session_id: rest.session_id
+                - sort_by: rest.sort_by
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+    - !!omap
+      - type: mcp
+      - namespace: tmdb-api-account-mcp
+      - port: 9090
+      - transport: http
+      - description: MCP adapter for TMDB API — Account. One tool per consumed operation, routed inline through this capability's consumes block.
+      - tools:
+        - !!omap
+          - name: details
+          - description: TMDB Account — Details
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-account.account-details
+          - with: !!omap
+            - account_id: tools.account_id
+            - session_id: tools.session_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: add-favorite
+          - description: TMDB Account — Add Favorite
+          - hints: !!omap
+            - readOnly: false
+            - destructive: false
+            - idempotent: false
+          - call: tmdb-api-account.account-add-favorite
+          - with: !!omap
+            - account_id: tools.account_id
+            - session_id: tools.session_id
+            - body: tools.body
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: add-watchlist
+          - description: TMDB Account — Add to Watchlist
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: false
+          - call: tmdb-api-account.account-add-to-watchlist
+          - with: !!omap
+            - account_id: tools.account_id
+            - session_id: tools.session_id
+            - body: tools.body
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: favorite-movies
+          - description: TMDB Account — Favorite Movies
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-account.account-get-favorites
+          - with: !!omap
+            - account_id: tools.account_id
+            - language: tools.language
+            - page: tools.page
+            - session_id: tools.session_id
+            - sort_by: tools.sort_by
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: favorite-tv
+          - description: TMDB Account — Favorite TV
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-account.account-favorite-tv
+          - with: !!omap
+            - account_id: tools.account_id
+            - language: tools.language
+            - page: tools.page
+            - session_id: tools.session_id
+            - sort_by: tools.sort_by
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: lists
+          - description: TMDB Account — Lists
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-account.account-lists
+          - with: !!omap
+            - account_id: tools.account_id
+            - page: tools.page
+            - session_id: tools.session_id
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: rated-movies
+          - description: TMDB Account — Rated Movies
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-account.account-rated-movies
+          - with: !!omap
+            - account_id: tools.account_id
+            - language: tools.language
+            - page: tools.page
+            - session_id: tools.session_id
+            - sort_by: tools.sort_by
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: rated-tv
+          - description: TMDB Account — Rated TV
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-account.account-rated-tv
+          - with: !!omap
+            - account_id: tools.account_id
+            - language: tools.language
+            - page: tools.page
+            - session_id: tools.session_id
+            - sort_by: tools.sort_by
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: rated-tv-episodes
+          - description: TMDB Account — Rated TV Episodes
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-account.account-rated-tv-episodes
+          - with: !!omap
+            - account_id: tools.account_id
+            - language: tools.language
+            - page: tools.page
+            - session_id: tools.session_id
+            - sort_by: tools.sort_by
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: watchlist-movies
+          - description: TMDB Account — Watchlist Movies
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-account.account-watchlist-movies
+          - with: !!omap
+            - account_id: tools.account_id
+            - language: tools.language
+            - page: tools.page
+            - session_id: tools.session_id
+            - sort_by: tools.sort_by
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: watchlist-tv
+          - description: TMDB Account — Watchlist TV
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-account.account-watchlist-tv
+          - with: !!omap
+            - account_id: tools.account_id
+            - language: tools.language
+            - page: tools.page
+            - session_id: tools.session_id
+            - sort_by: tools.sort_by
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.

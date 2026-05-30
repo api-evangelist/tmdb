@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-person-movie-credits-response-schema.json",
+  "title": "PersonMovieCreditsResponse",
+  "description": "TMDB People \u2014 Movie Credits (200 payload).",
+  "type": "object",
+  "properties": {
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/3h1JZGDhZ8nzxdgvkxha0qBqi05.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                35
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              13
+            ],
+            "default": 0
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_title": {
+            "type": "string",
+            "examples": [
+              "Forrest Gump"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "A man with a low IQ has accomplished great things in his life and been present during significant historic events\u2014in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him."
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              62.225
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg"
+            ]
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "1994-06-23"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "examples": [
+              "Forrest Gump"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              8.481
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              24535
+            ],
+            "default": 0
+          },
+          "character": {
+            "type": "string",
+            "examples": [
+              "Forrest Gump"
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "52fe420ec3a36847f800074f"
+            ]
+          },
+          "order": {
+            "type": "integer",
+            "examples": [
+              0
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "crew": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/tx3uj8GPWf5pzb0gWATJ4bokNHI.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                99
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              87061
+            ],
+            "default": 0
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "fr"
+            ]
+          },
+          "original_title": {
+            "type": "string",
+            "examples": [
+              "Le Voyage extraordinaire"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "An account of the extraordinary life of film pioneer Georges M\u00e9li\u00e8s (1861-1938) and the amazing story of the copy in color of his masterpiece \u201cA Trip to the Moon\u201d (1902), unexpectedly found in Spain and restored thanks to the heroic efforts of a group of true cinema lovers."
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              6.007
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/zHNNT9gfiGsuadR6x38KYOp6ekq.jpg"
+            ]
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "2011-12-08"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "examples": [
+              "The Extraordinary Voyage"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              7.6
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              47
+            ],
+            "default": 0
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "5d818a63d34eb3002c4f8fea"
+            ]
+          },
+          "department": {
+            "type": "string",
+            "examples": [
+              "Crew"
+            ]
+          },
+          "job": {
+            "type": "string",
+            "examples": [
+              "Thanks"
+            ]
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        31
+      ],
+      "default": 0
+    }
+  }
+}

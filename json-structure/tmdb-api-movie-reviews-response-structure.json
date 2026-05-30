@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-movie-reviews-response-structure.json",
+  "name": "MovieReviewsResponse",
+  "description": "TMDB Movies \u2014 Reviews (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        550
+      ],
+      "default": 0
+    },
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "author": {
+            "type": "string",
+            "examples": [
+              "Goddard"
+            ]
+          },
+          "author_details": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "examples": [
+                  ""
+                ]
+              },
+              "username": {
+                "type": "string",
+                "examples": [
+                  "Goddard"
+                ]
+              },
+              "avatar_path": {
+                "type": "string",
+                "examples": [
+                  "/https://secure.gravatar.com/avatar/f248ec34f953bc62cafcbdd81fddd6b6.jpg"
+                ]
+              },
+              "rating": {}
+            }
+          },
+          "content": {
+            "type": "string",
+            "examples": [
+              "Pretty awesome movie.  It shows what one crazy person can convince other crazy people to do.  Everyone needs something to believe in.  I recommend Jesus Christ, but they want Tyler Durden."
+            ]
+          },
+          "created_at": {
+            "type": "string",
+            "examples": [
+              "2018-06-09T17:51:53.359Z"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "examples": [
+              "5b1c13b9c3a36848f2026384"
+            ]
+          },
+          "updated_at": {
+            "type": "string",
+            "examples": [
+              "2021-06-23T15:58:09.421Z"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "examples": [
+              "https://www.themoviedb.org/review/5b1c13b9c3a36848f2026384"
+            ]
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        8
+      ],
+      "default": 0
+    }
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-person-tv-credits-response-schema.json",
+  "title": "PersonTvCreditsResponse",
+  "description": "TMDB People \u2014 TV Credits (200 payload).",
+  "type": "object",
+  "properties": {
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/ttvojTMgaIN7U8gqB5LlNqO4vPN.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                10767
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              1900
+            ],
+            "default": 0
+          },
+          "origin_country": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "examples": [
+                "US"
+              ]
+            }
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "LIVE with Kelly and Mark"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "A morning talk show with A-list celebrity guests, top-notch performances and one-of-a-kind segments that are unrivaled on daytime television, plus spontaneous, hilarious and unpredictable talk."
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              700.508
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/l5y8egG27p2fSTyq8s21SQMmQLy.jpg"
+            ]
+          },
+          "first_air_date": {
+            "type": "string",
+            "examples": [
+              "1988-09-05"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "LIVE with Kelly and Mark"
+            ]
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              5.4
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              25
+            ],
+            "default": 0
+          },
+          "character": {
+            "type": "string",
+            "examples": [
+              ""
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "52571af019c29571140d5c92"
+            ]
+          },
+          "episode_count": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "crew": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/6uMA6EAiwcsCqQJwWgYwtORvE0v.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                35
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              2391
+            ],
+            "default": 0
+          },
+          "origin_country": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "examples": [
+                "US"
+              ]
+            }
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Tales from the Crypt"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Cadaverous scream legend the Crypt Keeper is your macabre host for these forays of fright and fun based on the classic E.C. Comics tales from back in the day. So shamble up to the bar and pick your poison. Will it be an insane Santa on a personal slay ride? Honeymooners out to fulfill the \"til death do we part\" vow ASAP?"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              24.88
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/dDfXQH6Kg2JNASI0dqNALukjhk1.jpg"
+            ]
+          },
+          "first_air_date": {
+            "type": "string",
+            "examples": [
+              "1989-06-10"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Tales from the Crypt"
+            ]
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              7.978
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              757
+            ],
+            "default": 0
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "525734f3760ee3776a397211"
+            ]
+          },
+          "department": {
+            "type": "string",
+            "examples": [
+              "Directing"
+            ]
+          },
+          "episode_count": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "job": {
+            "type": "string",
+            "examples": [
+              "Director"
+            ]
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        31
+      ],
+      "default": 0
+    }
+  }
+}

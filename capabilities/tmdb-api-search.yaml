@@ -1,0 +1,582 @@
+!!omap
+- naftiko: 1.0.0-alpha2
+- info: !!omap
+  - label: TMDB API — Search
+  - description: |-
+      TMDB — Search. 7 operations. Lead operation: TMDB Search — Collection. Self-contained Naftiko capability covering one TMDB business surface.
+  - tags:
+    - TMDB
+    - Search
+  - created: '2026-05-30'
+  - modified: '2026-05-30'
+- binds:
+  - !!omap
+    - namespace: env
+    - keys: !!omap
+      - TMDB_BEARER_TOKEN: TMDB_BEARER_TOKEN
+- capability: !!omap
+  - consumes:
+    - !!omap
+      - type: http
+      - namespace: tmdb-api-search
+      - baseUri: https://api.themoviedb.org
+      - description: TMDB API — Search business capability. Self-contained, no shared references.
+      - authentication: !!omap
+        - type: bearer
+        - token: '{{env.TMDB_BEARER_TOKEN}}'
+      - resources:
+        - !!omap
+          - name: 3-search-collection
+          - path: /3/search/collection
+          - operations:
+            - !!omap
+              - name: search-collection
+              - method: GET
+              - description: TMDB Search — Collection
+              - inputParameters:
+                - !!omap
+                  - name: query
+                  - in: query
+                  - type: string
+                  - required: true
+                  - description: query parameter.
+                - !!omap
+                  - name: include_adult
+                  - in: query
+                  - type: boolean
+                  - required: false
+                  - description: include_adult parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: region
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: region parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-search-company
+          - path: /3/search/company
+          - operations:
+            - !!omap
+              - name: search-company
+              - method: GET
+              - description: TMDB Search — Company
+              - inputParameters:
+                - !!omap
+                  - name: query
+                  - in: query
+                  - type: string
+                  - required: true
+                  - description: query parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-search-keyword
+          - path: /3/search/keyword
+          - operations:
+            - !!omap
+              - name: search-keyword
+              - method: GET
+              - description: TMDB Search — Keyword
+              - inputParameters:
+                - !!omap
+                  - name: query
+                  - in: query
+                  - type: string
+                  - required: true
+                  - description: query parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-search-movie
+          - path: /3/search/movie
+          - operations:
+            - !!omap
+              - name: search-movie
+              - method: GET
+              - description: TMDB Search — Movie
+              - inputParameters:
+                - !!omap
+                  - name: query
+                  - in: query
+                  - type: string
+                  - required: true
+                  - description: query parameter.
+                - !!omap
+                  - name: include_adult
+                  - in: query
+                  - type: boolean
+                  - required: false
+                  - description: include_adult parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: primary_release_year
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: primary_release_year parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: region
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: region parameter.
+                - !!omap
+                  - name: year
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: year parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-search-multi
+          - path: /3/search/multi
+          - operations:
+            - !!omap
+              - name: search-multi
+              - method: GET
+              - description: TMDB Search — Multi
+              - inputParameters:
+                - !!omap
+                  - name: query
+                  - in: query
+                  - type: string
+                  - required: true
+                  - description: query parameter.
+                - !!omap
+                  - name: include_adult
+                  - in: query
+                  - type: boolean
+                  - required: false
+                  - description: include_adult parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-search-person
+          - path: /3/search/person
+          - operations:
+            - !!omap
+              - name: search-person
+              - method: GET
+              - description: TMDB Search — Person
+              - inputParameters:
+                - !!omap
+                  - name: query
+                  - in: query
+                  - type: string
+                  - required: true
+                  - description: query parameter.
+                - !!omap
+                  - name: include_adult
+                  - in: query
+                  - type: boolean
+                  - required: false
+                  - description: include_adult parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+        - !!omap
+          - name: 3-search-tv
+          - path: /3/search/tv
+          - operations:
+            - !!omap
+              - name: search-tv
+              - method: GET
+              - description: TMDB Search — TV
+              - inputParameters:
+                - !!omap
+                  - name: query
+                  - in: query
+                  - type: string
+                  - required: true
+                  - description: query parameter.
+                - !!omap
+                  - name: first_air_date_year
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: 'Search only the first air date. Valid values are: 1000..9999'
+                - !!omap
+                  - name: include_adult
+                  - in: query
+                  - type: boolean
+                  - required: false
+                  - description: include_adult parameter.
+                - !!omap
+                  - name: language
+                  - in: query
+                  - type: string
+                  - required: false
+                  - description: language parameter.
+                - !!omap
+                  - name: page
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: page parameter.
+                - !!omap
+                  - name: year
+                  - in: query
+                  - type: integer
+                  - required: false
+                  - description: 'Search the first air date and all episode air dates. Valid values are: 1000..9999'
+              - outputRawFormat: json
+              - outputParameters:
+                - !!omap
+                  - name: result
+                  - type: object
+                  - value: $.
+  - exposes:
+    - !!omap
+      - type: rest
+      - namespace: tmdb-api-search-rest
+      - port: 8080
+      - description: REST adapter for TMDB API — Search. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+      - resources:
+        - !!omap
+          - path: /v1/search/collection
+          - name: search-collection
+          - description: REST surface for /3/search/collection.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: search-collection
+              - description: TMDB Search — Collection
+              - call: tmdb-api-search.search-collection
+              - with: !!omap
+                - query: rest.query
+                - include_adult: rest.include_adult
+                - language: rest.language
+                - page: rest.page
+                - region: rest.region
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/search/company
+          - name: search-company
+          - description: REST surface for /3/search/company.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: search-company
+              - description: TMDB Search — Company
+              - call: tmdb-api-search.search-company
+              - with: !!omap
+                - query: rest.query
+                - page: rest.page
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/search/keyword
+          - name: search-keyword
+          - description: REST surface for /3/search/keyword.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: search-keyword
+              - description: TMDB Search — Keyword
+              - call: tmdb-api-search.search-keyword
+              - with: !!omap
+                - query: rest.query
+                - page: rest.page
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/search/movie
+          - name: search-movie
+          - description: REST surface for /3/search/movie.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: search-movie
+              - description: TMDB Search — Movie
+              - call: tmdb-api-search.search-movie
+              - with: !!omap
+                - query: rest.query
+                - include_adult: rest.include_adult
+                - language: rest.language
+                - primary_release_year: rest.primary_release_year
+                - page: rest.page
+                - region: rest.region
+                - year: rest.year
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/search/multi
+          - name: search-multi
+          - description: REST surface for /3/search/multi.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: search-multi
+              - description: TMDB Search — Multi
+              - call: tmdb-api-search.search-multi
+              - with: !!omap
+                - query: rest.query
+                - include_adult: rest.include_adult
+                - language: rest.language
+                - page: rest.page
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/search/person
+          - name: search-person
+          - description: REST surface for /3/search/person.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: search-person
+              - description: TMDB Search — Person
+              - call: tmdb-api-search.search-person
+              - with: !!omap
+                - query: rest.query
+                - include_adult: rest.include_adult
+                - language: rest.language
+                - page: rest.page
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+        - !!omap
+          - path: /v1/search/tv
+          - name: search-tv
+          - description: REST surface for /3/search/tv.
+          - operations:
+            - !!omap
+              - method: GET
+              - name: search-tv
+              - description: TMDB Search — TV
+              - call: tmdb-api-search.search-tv
+              - with: !!omap
+                - query: rest.query
+                - first_air_date_year: rest.first_air_date_year
+                - include_adult: rest.include_adult
+                - language: rest.language
+                - page: rest.page
+                - year: rest.year
+              - outputParameters:
+                - !!omap
+                  - type: object
+                  - mapping: $.
+    - !!omap
+      - type: mcp
+      - namespace: tmdb-api-search-mcp
+      - port: 9090
+      - transport: http
+      - description: MCP adapter for TMDB API — Search. One tool per consumed operation, routed inline through this capability's consumes block.
+      - tools:
+        - !!omap
+          - name: collection
+          - description: TMDB Search — Collection
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-search.search-collection
+          - with: !!omap
+            - query: tools.query
+            - include_adult: tools.include_adult
+            - language: tools.language
+            - page: tools.page
+            - region: tools.region
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: company
+          - description: TMDB Search — Company
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-search.search-company
+          - with: !!omap
+            - query: tools.query
+            - page: tools.page
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: keyword
+          - description: TMDB Search — Keyword
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-search.search-keyword
+          - with: !!omap
+            - query: tools.query
+            - page: tools.page
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: movie
+          - description: TMDB Search — Movie
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-search.search-movie
+          - with: !!omap
+            - query: tools.query
+            - include_adult: tools.include_adult
+            - language: tools.language
+            - primary_release_year: tools.primary_release_year
+            - page: tools.page
+            - region: tools.region
+            - year: tools.year
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: multi
+          - description: TMDB Search — Multi
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-search.search-multi
+          - with: !!omap
+            - query: tools.query
+            - include_adult: tools.include_adult
+            - language: tools.language
+            - page: tools.page
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: person
+          - description: TMDB Search — Person
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-search.search-person
+          - with: !!omap
+            - query: tools.query
+            - include_adult: tools.include_adult
+            - language: tools.language
+            - page: tools.page
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.
+        - !!omap
+          - name: tv
+          - description: TMDB Search — TV
+          - hints: !!omap
+            - readOnly: true
+            - destructive: false
+            - idempotent: true
+          - call: tmdb-api-search.search-tv
+          - with: !!omap
+            - query: tools.query
+            - first_air_date_year: tools.first_air_date_year
+            - include_adult: tools.include_adult
+            - language: tools.language
+            - page: tools.page
+            - year: tools.year
+          - outputParameters:
+            - !!omap
+              - type: object
+              - mapping: $.

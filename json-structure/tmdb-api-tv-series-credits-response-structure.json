@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-series-credits-response-structure.json",
+  "name": "TvSeriesCreditsResponse",
+  "description": "TMDB TV Series \u2014 Credits (200 payload).",
+  "type": "object",
+  "properties": {
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "int32",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              22970
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Acting"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Peter Dinklage"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Peter Dinklage"
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              30.6
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/lRsRgnksAhBRXwAB68MFjmTtLrk.jpg"
+            ]
+          },
+          "character": {
+            "type": "string",
+            "examples": [
+              "Tyrion Lannister"
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "5256c8b219c2956ff6047cd8"
+            ]
+          },
+          "order": {
+            "type": "int32",
+            "examples": [
+              0
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "crew": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "int32",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              1406855
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Production"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Duncan Muggoch"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Duncan Muggoch"
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              1.592
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/ukGjJ62Ejd4cFziald03G34Fsrp.jpg"
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "5ceab029c3a3682e93217a85"
+            ]
+          },
+          "department": {
+            "type": "string",
+            "examples": [
+              "Production"
+            ]
+          },
+          "job": {
+            "type": "string",
+            "examples": [
+              "Producer"
+            ]
+          }
+        }
+      }
+    },
+    "id": {
+      "type": "int32",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    }
+  }
+}

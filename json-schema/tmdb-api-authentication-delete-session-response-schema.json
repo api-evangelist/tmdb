@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-authentication-delete-session-response-schema.json",
+  "title": "AuthenticationDeleteSessionResponse",
+  "description": "TMDB Authentication \u2014 Delete Session (200 payload).",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/dUVbWINfRMGojGZRcO6GF1Z2nV8.jpg",
+      "genre_ids": [
+        12
+      ],
+      "id": 120,
+      "original_language": "en",
+      "original_title": "The Lord of the Rings: The Fellowship of the Ring",
+      "overview": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.",
+      "popularity": 84.737,
+      "poster_path": "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+      "release_date": "2001-12-18",
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "video": false,
+      "vote_average": 8.396,
+      "vote_count": 22579,
+      "rating": 8
+    }
+  ],
+  "total_pages": 47,
+  "total_results": 940
+}

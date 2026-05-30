@@ -1,0 +1,1457 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "tmdb": {
+      "@id": "tmdb:tmdb",
+      "@type": "@id"
+    },
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "AccountAddFavoriteResponse": "tmdb:AccountAddFavoriteResponse",
+    "AccountAddToWatchlistResponse": "tmdb:AccountAddToWatchlistResponse",
+    "AccountDetailsResponse": "tmdb:AccountDetailsResponse",
+    "AccountFavoriteTvResponse": "tmdb:AccountFavoriteTvResponse",
+    "AccountGetFavoritesResponse": "tmdb:AccountGetFavoritesResponse",
+    "AccountListsResponse": "tmdb:AccountListsResponse",
+    "AccountRatedMoviesResponse": "tmdb:AccountRatedMoviesResponse",
+    "AccountRatedTvEpisodesResponse": "tmdb:AccountRatedTvEpisodesResponse",
+    "AccountRatedTvResponse": "tmdb:AccountRatedTvResponse",
+    "AccountWatchlistMoviesResponse": "tmdb:AccountWatchlistMoviesResponse",
+    "AccountWatchlistTvResponse": "tmdb:AccountWatchlistTvResponse",
+    "AlternativeNamesCopyResponse": "tmdb:AlternativeNamesCopyResponse",
+    "AuthenticationCreateGuestSessionResponse": "tmdb:AuthenticationCreateGuestSessionResponse",
+    "AuthenticationCreateRequestTokenResponse": "tmdb:AuthenticationCreateRequestTokenResponse",
+    "AuthenticationCreateSessionFromLoginResponse": "tmdb:AuthenticationCreateSessionFromLoginResponse",
+    "AuthenticationCreateSessionFromV4TokenResponse": "tmdb:AuthenticationCreateSessionFromV4TokenResponse",
+    "AuthenticationCreateSessionResponse": "tmdb:AuthenticationCreateSessionResponse",
+    "AuthenticationDeleteSessionResponse": "tmdb:AuthenticationDeleteSessionResponse",
+    "AuthenticationValidateKey401Response": "tmdb:AuthenticationValidateKey401Response",
+    "AuthenticationValidateKeyResponse": "tmdb:AuthenticationValidateKeyResponse",
+    "CertificationMovieListResponse": "tmdb:CertificationMovieListResponse",
+    "CertificationsTvListResponse": "tmdb:CertificationsTvListResponse",
+    "ChangesMovieListResponse": "tmdb:ChangesMovieListResponse",
+    "ChangesPeopleListResponse": "tmdb:ChangesPeopleListResponse",
+    "ChangesTvListResponse": "tmdb:ChangesTvListResponse",
+    "CollectionDetailsResponse": "tmdb:CollectionDetailsResponse",
+    "CollectionImagesResponse": "tmdb:CollectionImagesResponse",
+    "CollectionTranslationsResponse": "tmdb:CollectionTranslationsResponse",
+    "CompanyAlternativeNamesResponse": "tmdb:CompanyAlternativeNamesResponse",
+    "CompanyDetailsResponse": "tmdb:CompanyDetailsResponse",
+    "CompanyImagesResponse": "tmdb:CompanyImagesResponse",
+    "ConfigurationDetailsResponse": "tmdb:ConfigurationDetailsResponse",
+    "CreditDetailsResponse": "tmdb:CreditDetailsResponse",
+    "DetailsCopyResponse": "tmdb:DetailsCopyResponse",
+    "DiscoverMovieResponse": "tmdb:DiscoverMovieResponse",
+    "DiscoverTvResponse": "tmdb:DiscoverTvResponse",
+    "ErrorResponse": "tmdb:ErrorResponse",
+    "FindByIdResponse": "tmdb:FindByIdResponse",
+    "GenreMovieListResponse": "tmdb:GenreMovieListResponse",
+    "GenreTvListResponse": "tmdb:GenreTvListResponse",
+    "GuestSessionRatedMoviesResponse": "tmdb:GuestSessionRatedMoviesResponse",
+    "GuestSessionRatedTvEpisodesResponse": "tmdb:GuestSessionRatedTvEpisodesResponse",
+    "GuestSessionRatedTvResponse": "tmdb:GuestSessionRatedTvResponse",
+    "KeywordDetailsResponse": "tmdb:KeywordDetailsResponse",
+    "KeywordMoviesResponse": "tmdb:KeywordMoviesResponse",
+    "ListAddMovieResponse": "tmdb:ListAddMovieResponse",
+    "ListCheckItemStatusResponse": "tmdb:ListCheckItemStatusResponse",
+    "ListClearResponse": "tmdb:ListClearResponse",
+    "ListCreateResponse": "tmdb:ListCreateResponse",
+    "ListDeleteResponse": "tmdb:ListDeleteResponse",
+    "ListDetailsResponse": "tmdb:ListDetailsResponse",
+    "ListRemoveMovieResponse": "tmdb:ListRemoveMovieResponse",
+    "ListsCopyResponse": "tmdb:ListsCopyResponse",
+    "MovieAccountStatesResponse": "tmdb:MovieAccountStatesResponse",
+    "MovieAddRatingResponse": "tmdb:MovieAddRatingResponse",
+    "MovieAlternativeTitlesResponse": "tmdb:MovieAlternativeTitlesResponse",
+    "MovieChangesResponse": "tmdb:MovieChangesResponse",
+    "MovieCreditsResponse": "tmdb:MovieCreditsResponse",
+    "MovieDeleteRatingResponse": "tmdb:MovieDeleteRatingResponse",
+    "MovieDetailsResponse": "tmdb:MovieDetailsResponse",
+    "MovieExternalIdsResponse": "tmdb:MovieExternalIdsResponse",
+    "MovieImagesResponse": "tmdb:MovieImagesResponse",
+    "MovieKeywordsResponse": "tmdb:MovieKeywordsResponse",
+    "MovieLatestIdResponse": "tmdb:MovieLatestIdResponse",
+    "MovieListsResponse": "tmdb:MovieListsResponse",
+    "MovieNowPlayingListResponse": "tmdb:MovieNowPlayingListResponse",
+    "MoviePopularListResponse": "tmdb:MoviePopularListResponse",
+    "MovieRecommendationsResponse": "tmdb:MovieRecommendationsResponse",
+    "MovieReleaseDatesResponse": "tmdb:MovieReleaseDatesResponse",
+    "MovieReviewsResponse": "tmdb:MovieReviewsResponse",
+    "MovieSimilarResponse": "tmdb:MovieSimilarResponse",
+    "MovieTopRatedListResponse": "tmdb:MovieTopRatedListResponse",
+    "MovieTranslationsResponse": "tmdb:MovieTranslationsResponse",
+    "MovieUpcomingListResponse": "tmdb:MovieUpcomingListResponse",
+    "MovieVideosResponse": "tmdb:MovieVideosResponse",
+    "MovieWatchProvidersResponse": "tmdb:MovieWatchProvidersResponse",
+    "NetworkDetailsResponse": "tmdb:NetworkDetailsResponse",
+    "PersonChangesResponse": "tmdb:PersonChangesResponse",
+    "PersonCombinedCreditsResponse": "tmdb:PersonCombinedCreditsResponse",
+    "PersonDetailsResponse": "tmdb:PersonDetailsResponse",
+    "PersonExternalIdsResponse": "tmdb:PersonExternalIdsResponse",
+    "PersonImagesResponse": "tmdb:PersonImagesResponse",
+    "PersonLatestIdResponse": "tmdb:PersonLatestIdResponse",
+    "PersonMovieCreditsResponse": "tmdb:PersonMovieCreditsResponse",
+    "PersonPopularListResponse": "tmdb:PersonPopularListResponse",
+    "PersonTaggedImagesResponse": "tmdb:PersonTaggedImagesResponse",
+    "PersonTvCreditsResponse": "tmdb:PersonTvCreditsResponse",
+    "ReviewDetailsResponse": "tmdb:ReviewDetailsResponse",
+    "SearchCollectionResponse": "tmdb:SearchCollectionResponse",
+    "SearchCompanyResponse": "tmdb:SearchCompanyResponse",
+    "SearchKeywordResponse": "tmdb:SearchKeywordResponse",
+    "SearchMovieResponse": "tmdb:SearchMovieResponse",
+    "SearchMultiResponse": "tmdb:SearchMultiResponse",
+    "SearchPersonResponse": "tmdb:SearchPersonResponse",
+    "SearchTvResponse": "tmdb:SearchTvResponse",
+    "TranslationsResponse": "tmdb:TranslationsResponse",
+    "TrendingAllResponse": "tmdb:TrendingAllResponse",
+    "TrendingMoviesResponse": "tmdb:TrendingMoviesResponse",
+    "TrendingPeopleResponse": "tmdb:TrendingPeopleResponse",
+    "TrendingTvResponse": "tmdb:TrendingTvResponse",
+    "TvEpisodeAccountStatesResponse": "tmdb:TvEpisodeAccountStatesResponse",
+    "TvEpisodeAddRatingResponse": "tmdb:TvEpisodeAddRatingResponse",
+    "TvEpisodeChangesByIdResponse": "tmdb:TvEpisodeChangesByIdResponse",
+    "TvEpisodeCreditsResponse": "tmdb:TvEpisodeCreditsResponse",
+    "TvEpisodeDeleteRatingResponse": "tmdb:TvEpisodeDeleteRatingResponse",
+    "TvEpisodeDetailsResponse": "tmdb:TvEpisodeDetailsResponse",
+    "TvEpisodeExternalIdsResponse": "tmdb:TvEpisodeExternalIdsResponse",
+    "TvEpisodeGroupDetailsResponse": "tmdb:TvEpisodeGroupDetailsResponse",
+    "TvEpisodeImagesResponse": "tmdb:TvEpisodeImagesResponse",
+    "TvEpisodeTranslationsResponse": "tmdb:TvEpisodeTranslationsResponse",
+    "TvEpisodeVideosResponse": "tmdb:TvEpisodeVideosResponse",
+    "TvSeasonAccountStatesResponse": "tmdb:TvSeasonAccountStatesResponse",
+    "TvSeasonAggregateCreditsResponse": "tmdb:TvSeasonAggregateCreditsResponse",
+    "TvSeasonChangesByIdResponse": "tmdb:TvSeasonChangesByIdResponse",
+    "TvSeasonCreditsResponse": "tmdb:TvSeasonCreditsResponse",
+    "TvSeasonDetailsResponse": "tmdb:TvSeasonDetailsResponse",
+    "TvSeasonExternalIdsResponse": "tmdb:TvSeasonExternalIdsResponse",
+    "TvSeasonImagesResponse": "tmdb:TvSeasonImagesResponse",
+    "TvSeasonTranslationsResponse": "tmdb:TvSeasonTranslationsResponse",
+    "TvSeasonVideosResponse": "tmdb:TvSeasonVideosResponse",
+    "TvSeasonWatchProvidersResponse": "tmdb:TvSeasonWatchProvidersResponse",
+    "TvSeriesAccountStatesResponse": "tmdb:TvSeriesAccountStatesResponse",
+    "TvSeriesAddRatingResponse": "tmdb:TvSeriesAddRatingResponse",
+    "TvSeriesAggregateCreditsResponse": "tmdb:TvSeriesAggregateCreditsResponse",
+    "TvSeriesAiringTodayListResponse": "tmdb:TvSeriesAiringTodayListResponse",
+    "TvSeriesAlternativeTitlesResponse": "tmdb:TvSeriesAlternativeTitlesResponse",
+    "TvSeriesChangesResponse": "tmdb:TvSeriesChangesResponse",
+    "TvSeriesContentRatingsResponse": "tmdb:TvSeriesContentRatingsResponse",
+    "TvSeriesCreditsResponse": "tmdb:TvSeriesCreditsResponse",
+    "TvSeriesDeleteRatingResponse": "tmdb:TvSeriesDeleteRatingResponse",
+    "TvSeriesDetailsResponse": "tmdb:TvSeriesDetailsResponse",
+    "TvSeriesEpisodeGroupsResponse": "tmdb:TvSeriesEpisodeGroupsResponse",
+    "TvSeriesExternalIdsResponse": "tmdb:TvSeriesExternalIdsResponse",
+    "TvSeriesImagesResponse": "tmdb:TvSeriesImagesResponse",
+    "TvSeriesKeywordsResponse": "tmdb:TvSeriesKeywordsResponse",
+    "TvSeriesLatestIdResponse": "tmdb:TvSeriesLatestIdResponse",
+    "TvSeriesOnTheAirListResponse": "tmdb:TvSeriesOnTheAirListResponse",
+    "TvSeriesPopularListResponse": "tmdb:TvSeriesPopularListResponse",
+    "TvSeriesRecommendationsResponse": "tmdb:TvSeriesRecommendationsResponse",
+    "TvSeriesReviewsResponse": "tmdb:TvSeriesReviewsResponse",
+    "TvSeriesScreenedTheatricallyResponse": "tmdb:TvSeriesScreenedTheatricallyResponse",
+    "TvSeriesSimilarResponse": "tmdb:TvSeriesSimilarResponse",
+    "TvSeriesTopRatedListResponse": "tmdb:TvSeriesTopRatedListResponse",
+    "TvSeriesTranslationsResponse": "tmdb:TvSeriesTranslationsResponse",
+    "TvSeriesVideosResponse": "tmdb:TvSeriesVideosResponse",
+    "TvSeriesWatchProvidersResponse": "tmdb:TvSeriesWatchProvidersResponse",
+    "WatchProviderTvListResponse": "tmdb:WatchProviderTvListResponse",
+    "WatchProvidersAvailableRegionsResponse": "tmdb:WatchProvidersAvailableRegionsResponse",
+    "WatchProvidersMovieListResponse": "tmdb:WatchProvidersMovieListResponse",
+    "AD": {
+      "@id": "tmdb:AD",
+      "@type": "@id"
+    },
+    "AE": {
+      "@id": "tmdb:AE",
+      "@type": "@id"
+    },
+    "AG": {
+      "@id": "tmdb:AG",
+      "@type": "@id"
+    },
+    "AL": {
+      "@id": "tmdb:AL",
+      "@type": "@id"
+    },
+    "AR": {
+      "@id": "tmdb:AR",
+      "@container": "@set"
+    },
+    "AT": {
+      "@id": "tmdb:AT",
+      "@type": "@id"
+    },
+    "AU": {
+      "@id": "tmdb:AU",
+      "@container": "@set"
+    },
+    "BA": {
+      "@id": "tmdb:BA",
+      "@type": "@id"
+    },
+    "BB": {
+      "@id": "tmdb:BB",
+      "@type": "@id"
+    },
+    "BE": {
+      "@id": "tmdb:BE",
+      "@type": "@id"
+    },
+    "BG": {
+      "@id": "tmdb:BG",
+      "@container": "@set"
+    },
+    "BH": {
+      "@id": "tmdb:BH",
+      "@type": "@id"
+    },
+    "BO": {
+      "@id": "tmdb:BO",
+      "@type": "@id"
+    },
+    "BR": {
+      "@id": "tmdb:BR",
+      "@container": "@set"
+    },
+    "BS": {
+      "@id": "tmdb:BS",
+      "@type": "@id"
+    },
+    "BZ": {
+      "@id": "tmdb:BZ",
+      "@type": "@id"
+    },
+    "CA": {
+      "@id": "tmdb:CA",
+      "@container": "@set"
+    },
+    "CA-QC": {
+      "@id": "tmdb:CA-QC",
+      "@container": "@set"
+    },
+    "CH": {
+      "@id": "tmdb:CH",
+      "@container": "@set"
+    },
+    "CI": {
+      "@id": "tmdb:CI",
+      "@type": "@id"
+    },
+    "CL": {
+      "@id": "tmdb:CL",
+      "@type": "@id"
+    },
+    "CM": {
+      "@id": "tmdb:CM",
+      "@type": "@id"
+    },
+    "CO": {
+      "@id": "tmdb:CO",
+      "@type": "@id"
+    },
+    "CR": {
+      "@id": "tmdb:CR",
+      "@type": "@id"
+    },
+    "CV": {
+      "@id": "tmdb:CV",
+      "@type": "@id"
+    },
+    "CZ": {
+      "@id": "tmdb:CZ",
+      "@type": "@id"
+    },
+    "DE": {
+      "@id": "tmdb:DE",
+      "@container": "@set"
+    },
+    "DK": {
+      "@id": "tmdb:DK",
+      "@container": "@set"
+    },
+    "DO": {
+      "@id": "tmdb:DO",
+      "@type": "@id"
+    },
+    "DZ": {
+      "@id": "tmdb:DZ",
+      "@type": "@id"
+    },
+    "EC": {
+      "@id": "tmdb:EC",
+      "@type": "@id"
+    },
+    "EE": {
+      "@id": "tmdb:EE",
+      "@type": "@id"
+    },
+    "EG": {
+      "@id": "tmdb:EG",
+      "@type": "@id"
+    },
+    "ES": {
+      "@id": "tmdb:ES",
+      "@container": "@set"
+    },
+    "FI": {
+      "@id": "tmdb:FI",
+      "@container": "@set"
+    },
+    "FJ": {
+      "@id": "tmdb:FJ",
+      "@type": "@id"
+    },
+    "FR": {
+      "@id": "tmdb:FR",
+      "@container": "@set"
+    },
+    "GB": {
+      "@id": "tmdb:GB",
+      "@container": "@set"
+    },
+    "GF": {
+      "@id": "tmdb:GF",
+      "@type": "@id"
+    },
+    "GG": {
+      "@id": "tmdb:GG",
+      "@type": "@id"
+    },
+    "GH": {
+      "@id": "tmdb:GH",
+      "@type": "@id"
+    },
+    "GI": {
+      "@id": "tmdb:GI",
+      "@type": "@id"
+    },
+    "GQ": {
+      "@id": "tmdb:GQ",
+      "@type": "@id"
+    },
+    "GR": {
+      "@id": "tmdb:GR",
+      "@container": "@set"
+    },
+    "GT": {
+      "@id": "tmdb:GT",
+      "@type": "@id"
+    },
+    "GY": {
+      "@id": "tmdb:GY",
+      "@type": "@id"
+    },
+    "HK": {
+      "@id": "tmdb:HK",
+      "@container": "@set"
+    },
+    "HN": {
+      "@id": "tmdb:HN",
+      "@type": "@id"
+    },
+    "HR": {
+      "@id": "tmdb:HR",
+      "@type": "@id"
+    },
+    "HU": {
+      "@id": "tmdb:HU",
+      "@container": "@set"
+    },
+    "ID": {
+      "@id": "tmdb:ID",
+      "@container": "@set"
+    },
+    "IE": {
+      "@id": "tmdb:IE",
+      "@container": "@set"
+    },
+    "IL": {
+      "@id": "tmdb:IL",
+      "@container": "@set"
+    },
+    "IN": {
+      "@id": "tmdb:IN",
+      "@container": "@set"
+    },
+    "IQ": {
+      "@id": "tmdb:IQ",
+      "@type": "@id"
+    },
+    "IS": {
+      "@id": "tmdb:IS",
+      "@type": "@id"
+    },
+    "IT": {
+      "@id": "tmdb:IT",
+      "@container": "@set"
+    },
+    "JM": {
+      "@id": "tmdb:JM",
+      "@type": "@id"
+    },
+    "JO": {
+      "@id": "tmdb:JO",
+      "@type": "@id"
+    },
+    "JP": {
+      "@id": "tmdb:JP",
+      "@container": "@set"
+    },
+    "KE": {
+      "@id": "tmdb:KE",
+      "@type": "@id"
+    },
+    "KR": {
+      "@id": "tmdb:KR",
+      "@container": "@set"
+    },
+    "KW": {
+      "@id": "tmdb:KW",
+      "@type": "@id"
+    },
+    "LB": {
+      "@id": "tmdb:LB",
+      "@type": "@id"
+    },
+    "LC": {
+      "@id": "tmdb:LC",
+      "@type": "@id"
+    },
+    "LI": {
+      "@id": "tmdb:LI",
+      "@type": "@id"
+    },
+    "LT": {
+      "@id": "tmdb:LT",
+      "@container": "@set"
+    },
+    "LU": {
+      "@id": "tmdb:LU",
+      "@container": "@set"
+    },
+    "LV": {
+      "@id": "tmdb:LV",
+      "@container": "@set"
+    },
+    "LY": {
+      "@id": "tmdb:LY",
+      "@type": "@id"
+    },
+    "MA": {
+      "@id": "tmdb:MA",
+      "@container": "@set"
+    },
+    "MC": {
+      "@id": "tmdb:MC",
+      "@type": "@id"
+    },
+    "MD": {
+      "@id": "tmdb:MD",
+      "@type": "@id"
+    },
+    "ME": {
+      "@id": "tmdb:ME",
+      "@type": "@id"
+    },
+    "MG": {
+      "@id": "tmdb:MG",
+      "@type": "@id"
+    },
+    "MK": {
+      "@id": "tmdb:MK",
+      "@type": "@id"
+    },
+    "ML": {
+      "@id": "tmdb:ML",
+      "@type": "@id"
+    },
+    "MO": {
+      "@id": "tmdb:MO",
+      "@container": "@set"
+    },
+    "MT": {
+      "@id": "tmdb:MT",
+      "@type": "@id"
+    },
+    "MU": {
+      "@id": "tmdb:MU",
+      "@type": "@id"
+    },
+    "MX": {
+      "@id": "tmdb:MX",
+      "@container": "@set"
+    },
+    "MY": {
+      "@id": "tmdb:MY",
+      "@container": "@set"
+    },
+    "MZ": {
+      "@id": "tmdb:MZ",
+      "@type": "@id"
+    },
+    "NE": {
+      "@id": "tmdb:NE",
+      "@type": "@id"
+    },
+    "NG": {
+      "@id": "tmdb:NG",
+      "@type": "@id"
+    },
+    "NI": {
+      "@id": "tmdb:NI",
+      "@type": "@id"
+    },
+    "NL": {
+      "@id": "tmdb:NL",
+      "@container": "@set"
+    },
+    "NO": {
+      "@id": "tmdb:NO",
+      "@container": "@set"
+    },
+    "NZ": {
+      "@id": "tmdb:NZ",
+      "@container": "@set"
+    },
+    "OM": {
+      "@id": "tmdb:OM",
+      "@type": "@id"
+    },
+    "PA": {
+      "@id": "tmdb:PA",
+      "@type": "@id"
+    },
+    "PE": {
+      "@id": "tmdb:PE",
+      "@type": "@id"
+    },
+    "PH": {
+      "@id": "tmdb:PH",
+      "@container": "@set"
+    },
+    "PK": {
+      "@id": "tmdb:PK",
+      "@type": "@id"
+    },
+    "PL": {
+      "@id": "tmdb:PL",
+      "@container": "@set"
+    },
+    "PR": {
+      "@id": "tmdb:PR",
+      "@container": "@set"
+    },
+    "PS": {
+      "@id": "tmdb:PS",
+      "@type": "@id"
+    },
+    "PT": {
+      "@id": "tmdb:PT",
+      "@container": "@set"
+    },
+    "PY": {
+      "@id": "tmdb:PY",
+      "@type": "@id"
+    },
+    "QA": {
+      "@id": "tmdb:QA",
+      "@type": "@id"
+    },
+    "RO": {
+      "@id": "tmdb:RO",
+      "@type": "@id"
+    },
+    "RS": {
+      "@id": "tmdb:RS",
+      "@type": "@id"
+    },
+    "RU": {
+      "@id": "tmdb:RU",
+      "@container": "@set"
+    },
+    "SA": {
+      "@id": "tmdb:SA",
+      "@type": "@id"
+    },
+    "SC": {
+      "@id": "tmdb:SC",
+      "@type": "@id"
+    },
+    "SE": {
+      "@id": "tmdb:SE",
+      "@container": "@set"
+    },
+    "SG": {
+      "@id": "tmdb:SG",
+      "@container": "@set"
+    },
+    "SI": {
+      "@id": "tmdb:SI",
+      "@type": "@id"
+    },
+    "SK": {
+      "@id": "tmdb:SK",
+      "@container": "@set"
+    },
+    "SM": {
+      "@id": "tmdb:SM",
+      "@type": "@id"
+    },
+    "SN": {
+      "@id": "tmdb:SN",
+      "@type": "@id"
+    },
+    "SV": {
+      "@id": "tmdb:SV",
+      "@type": "@id"
+    },
+    "TC": {
+      "@id": "tmdb:TC",
+      "@type": "@id"
+    },
+    "TD": {
+      "@id": "tmdb:TD",
+      "@type": "@id"
+    },
+    "TH": {
+      "@id": "tmdb:TH",
+      "@container": "@set"
+    },
+    "TR": {
+      "@id": "tmdb:TR",
+      "@container": "@set"
+    },
+    "TT": {
+      "@id": "tmdb:TT",
+      "@type": "@id"
+    },
+    "TW": {
+      "@id": "tmdb:TW",
+      "@container": "@set"
+    },
+    "TZ": {
+      "@id": "tmdb:TZ",
+      "@type": "@id"
+    },
+    "UG": {
+      "@id": "tmdb:UG",
+      "@type": "@id"
+    },
+    "US": {
+      "@id": "tmdb:US",
+      "@container": "@set"
+    },
+    "UY": {
+      "@id": "tmdb:UY",
+      "@type": "@id"
+    },
+    "VE": {
+      "@id": "tmdb:VE",
+      "@type": "@id"
+    },
+    "VI": {
+      "@id": "tmdb:VI",
+      "@container": "@set"
+    },
+    "YE": {
+      "@id": "tmdb:YE",
+      "@type": "@id"
+    },
+    "ZA": {
+      "@id": "tmdb:ZA",
+      "@container": "@set"
+    },
+    "ZM": {
+      "@id": "tmdb:ZM",
+      "@type": "@id"
+    },
+    "ZW": {
+      "@id": "tmdb:ZW",
+      "@type": "@id"
+    },
+    "Id": {
+      "@id": "tmdb:_id",
+      "@type": "xsd:string"
+    },
+    "action": {
+      "@id": "tmdb:action",
+      "@type": "xsd:string"
+    },
+    "ads": {
+      "@id": "tmdb:ads",
+      "@container": "@set"
+    },
+    "adult": {
+      "@id": "tmdb:adult",
+      "@type": "xsd:boolean"
+    },
+    "airDate": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:string"
+    },
+    "alsoKnownAs": {
+      "@id": "tmdb:also_known_as",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "aspectRatio": {
+      "@id": "tmdb:aspect_ratio",
+      "@type": "xsd:decimal"
+    },
+    "author": {
+      "@id": "tmdb:author",
+      "@type": "xsd:string"
+    },
+    "authorDetails": {
+      "@id": "tmdb:author_details",
+      "@type": "@id"
+    },
+    "avatar": {
+      "@id": "tmdb:avatar",
+      "@type": "@id"
+    },
+    "avatarPath": {
+      "@id": "tmdb:avatar_path",
+      "@type": "xsd:string"
+    },
+    "backdropPath": {
+      "@id": "tmdb:backdrop_path",
+      "@type": "xsd:string"
+    },
+    "backdropSizes": {
+      "@id": "tmdb:backdrop_sizes",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "backdrops": {
+      "@id": "tmdb:backdrops",
+      "@container": "@set"
+    },
+    "baseUrl": {
+      "@id": "tmdb:base_url",
+      "@type": "xsd:string"
+    },
+    "belongsToCollection": {
+      "@id": "tmdb:belongs_to_collection",
+      "@type": "@id"
+    },
+    "biography": {
+      "@id": "schema:description",
+      "@type": "xsd:string"
+    },
+    "birthday": {
+      "@id": "schema:birthDate",
+      "@type": "xsd:string"
+    },
+    "budget": {
+      "@id": "tmdb:budget",
+      "@type": "xsd:integer"
+    },
+    "buy": {
+      "@id": "tmdb:buy",
+      "@container": "@set"
+    },
+    "cast": {
+      "@id": "tmdb:cast",
+      "@container": "@set"
+    },
+    "castId": {
+      "@id": "tmdb:cast_id",
+      "@type": "xsd:integer"
+    },
+    "certification": {
+      "@id": "tmdb:certification",
+      "@type": "xsd:string"
+    },
+    "certifications": {
+      "@id": "tmdb:certifications",
+      "@type": "@id"
+    },
+    "changeKeys": {
+      "@id": "tmdb:change_keys",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "changes": {
+      "@id": "tmdb:changes",
+      "@container": "@set"
+    },
+    "character": {
+      "@id": "tmdb:character",
+      "@type": "xsd:string"
+    },
+    "content": {
+      "@id": "tmdb:content",
+      "@type": "xsd:string"
+    },
+    "createdAt": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:string"
+    },
+    "createdBy": {
+      "@id": "tmdb:created_by",
+      "@type": "xsd:string"
+    },
+    "creditId": {
+      "@id": "tmdb:credit_id",
+      "@type": "xsd:string"
+    },
+    "creditType": {
+      "@id": "tmdb:credit_type",
+      "@type": "xsd:string"
+    },
+    "crew": {
+      "@id": "tmdb:crew",
+      "@container": "@set"
+    },
+    "data": {
+      "@id": "tmdb:data",
+      "@type": "@id"
+    },
+    "dates": {
+      "@id": "tmdb:dates",
+      "@type": "@id"
+    },
+    "deathday": {
+      "@id": "schema:deathDate"
+    },
+    "department": {
+      "@id": "tmdb:department",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "schema:description",
+      "@type": "xsd:string"
+    },
+    "descriptors": {
+      "@id": "tmdb:descriptors",
+      "@container": "@set"
+    },
+    "displayPriorities": {
+      "@id": "tmdb:display_priorities",
+      "@type": "@id"
+    },
+    "displayPriority": {
+      "@id": "tmdb:display_priority",
+      "@type": "xsd:integer"
+    },
+    "englishName": {
+      "@id": "tmdb:english_name",
+      "@type": "xsd:string"
+    },
+    "episodeCount": {
+      "@id": "tmdb:episode_count",
+      "@type": "xsd:integer"
+    },
+    "episodeId": {
+      "@id": "tmdb:episode_id",
+      "@type": "xsd:integer"
+    },
+    "episodeNumber": {
+      "@id": "tmdb:episode_number",
+      "@type": "xsd:integer"
+    },
+    "episodeRunTime": {
+      "@id": "tmdb:episode_run_time",
+      "@container": "@set",
+      "@type": "xsd:integer"
+    },
+    "episodeType": {
+      "@id": "tmdb:episode_type",
+      "@type": "xsd:string"
+    },
+    "episodes": {
+      "@id": "tmdb:episodes",
+      "@container": "@set"
+    },
+    "expiresAt": {
+      "@id": "tmdb:expires_at",
+      "@type": "xsd:string"
+    },
+    "facebookId": {
+      "@id": "tmdb:facebook_id",
+      "@type": "xsd:string"
+    },
+    "favorite": {
+      "@id": "tmdb:favorite",
+      "@type": "xsd:boolean"
+    },
+    "favoriteCount": {
+      "@id": "tmdb:favorite_count",
+      "@type": "xsd:integer"
+    },
+    "filePath": {
+      "@id": "tmdb:file_path",
+      "@type": "xsd:string"
+    },
+    "fileType": {
+      "@id": "tmdb:file_type",
+      "@type": "xsd:string"
+    },
+    "firstAirDate": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:string"
+    },
+    "flatrate": {
+      "@id": "tmdb:flatrate",
+      "@container": "@set"
+    },
+    "free": {
+      "@id": "tmdb:free",
+      "@container": "@set"
+    },
+    "freebaseId": {
+      "@id": "tmdb:freebase_id",
+      "@type": "xsd:string"
+    },
+    "freebaseMid": {
+      "@id": "tmdb:freebase_mid",
+      "@type": "xsd:string"
+    },
+    "gender": {
+      "@id": "tmdb:gender",
+      "@type": "xsd:integer"
+    },
+    "genreIds": {
+      "@id": "tmdb:genre_ids",
+      "@container": "@set",
+      "@type": "xsd:integer"
+    },
+    "genres": {
+      "@id": "tmdb:genres",
+      "@container": "@set"
+    },
+    "gravatar": {
+      "@id": "tmdb:gravatar",
+      "@type": "@id"
+    },
+    "groupCount": {
+      "@id": "tmdb:group_count",
+      "@type": "xsd:integer"
+    },
+    "groups": {
+      "@id": "tmdb:groups",
+      "@container": "@set"
+    },
+    "guestSessionId": {
+      "@id": "tmdb:guest_session_id",
+      "@type": "xsd:string"
+    },
+    "guestStars": {
+      "@id": "tmdb:guest_stars",
+      "@container": "@set"
+    },
+    "hash": {
+      "@id": "tmdb:hash",
+      "@type": "xsd:string"
+    },
+    "headquarters": {
+      "@id": "tmdb:headquarters",
+      "@type": "xsd:string"
+    },
+    "height": {
+      "@id": "tmdb:height",
+      "@type": "xsd:integer"
+    },
+    "homepage": {
+      "@id": "schema:url",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "tmdb:id",
+      "@type": "xsd:integer"
+    },
+    "imageType": {
+      "@id": "tmdb:image_type",
+      "@type": "xsd:string"
+    },
+    "images": {
+      "@id": "tmdb:images",
+      "@type": "@id"
+    },
+    "imdbId": {
+      "@id": "tmdb:imdb_id",
+      "@type": "xsd:string"
+    },
+    "inProduction": {
+      "@id": "tmdb:in_production",
+      "@type": "xsd:boolean"
+    },
+    "includeAdult": {
+      "@id": "tmdb:include_adult",
+      "@type": "xsd:boolean"
+    },
+    "instagramId": {
+      "@id": "tmdb:instagram_id"
+    },
+    "iso31661": {
+      "@id": "tmdb:iso_3166_1",
+      "@type": "xsd:string"
+    },
+    "iso6391": {
+      "@id": "tmdb:iso_639_1",
+      "@type": "xsd:string"
+    },
+    "itemCount": {
+      "@id": "tmdb:item_count",
+      "@type": "xsd:integer"
+    },
+    "itemPresent": {
+      "@id": "tmdb:item_present",
+      "@type": "xsd:boolean"
+    },
+    "items": {
+      "@id": "tmdb:items",
+      "@container": "@set"
+    },
+    "job": {
+      "@id": "tmdb:job",
+      "@type": "xsd:string"
+    },
+    "jobs": {
+      "@id": "tmdb:jobs",
+      "@container": "@set"
+    },
+    "key": {
+      "@id": "tmdb:key",
+      "@type": "xsd:string"
+    },
+    "keywords": {
+      "@id": "tmdb:keywords",
+      "@container": "@set"
+    },
+    "knownFor": {
+      "@id": "tmdb:known_for",
+      "@container": "@set"
+    },
+    "knownForDepartment": {
+      "@id": "tmdb:known_for_department",
+      "@type": "xsd:string"
+    },
+    "languages": {
+      "@id": "tmdb:languages",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "lastAirDate": {
+      "@id": "tmdb:last_air_date",
+      "@type": "xsd:string"
+    },
+    "lastEpisodeToAir": {
+      "@id": "tmdb:last_episode_to_air",
+      "@type": "@id"
+    },
+    "link": {
+      "@id": "tmdb:link",
+      "@type": "xsd:string"
+    },
+    "listId": {
+      "@id": "tmdb:list_id",
+      "@type": "xsd:integer"
+    },
+    "listType": {
+      "@id": "tmdb:list_type",
+      "@type": "xsd:string"
+    },
+    "locked": {
+      "@id": "tmdb:locked",
+      "@type": "xsd:boolean"
+    },
+    "logoPath": {
+      "@id": "tmdb:logo_path",
+      "@type": "xsd:string"
+    },
+    "logoSizes": {
+      "@id": "tmdb:logo_sizes",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "logos": {
+      "@id": "tmdb:logos",
+      "@container": "@set"
+    },
+    "maximum": {
+      "@id": "tmdb:maximum",
+      "@type": "xsd:string"
+    },
+    "meaning": {
+      "@id": "tmdb:meaning",
+      "@type": "xsd:string"
+    },
+    "media": {
+      "@id": "tmdb:media",
+      "@type": "@id"
+    },
+    "mediaId": {
+      "@id": "tmdb:media_id",
+      "@type": "xsd:integer"
+    },
+    "mediaTitle": {
+      "@id": "tmdb:media_title",
+      "@type": "xsd:string"
+    },
+    "mediaType": {
+      "@id": "tmdb:media_type",
+      "@type": "xsd:string"
+    },
+    "minimum": {
+      "@id": "tmdb:minimum",
+      "@type": "xsd:string"
+    },
+    "movieResults": {
+      "@id": "tmdb:movie_results",
+      "@container": "@set"
+    },
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "nativeName": {
+      "@id": "tmdb:native_name",
+      "@type": "xsd:string"
+    },
+    "network": {
+      "@id": "tmdb:network",
+      "@type": "@id"
+    },
+    "networks": {
+      "@id": "tmdb:networks",
+      "@container": "@set"
+    },
+    "nextEpisodeToAir": {
+      "@id": "tmdb:next_episode_to_air"
+    },
+    "note": {
+      "@id": "tmdb:note",
+      "@type": "xsd:string"
+    },
+    "numberOfEpisodes": {
+      "@id": "tmdb:number_of_episodes",
+      "@type": "xsd:integer"
+    },
+    "numberOfSeasons": {
+      "@id": "tmdb:number_of_seasons",
+      "@type": "xsd:integer"
+    },
+    "official": {
+      "@id": "tmdb:official",
+      "@type": "xsd:boolean"
+    },
+    "order": {
+      "@id": "tmdb:order",
+      "@type": "xsd:integer"
+    },
+    "originCountry": {
+      "@id": "tmdb:origin_country",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "originalLanguage": {
+      "@id": "tmdb:original_language",
+      "@type": "xsd:string"
+    },
+    "originalName": {
+      "@id": "tmdb:original_name",
+      "@type": "xsd:string"
+    },
+    "originalTitle": {
+      "@id": "tmdb:original_title",
+      "@type": "xsd:string"
+    },
+    "originalValue": {
+      "@id": "tmdb:original_value",
+      "@type": "@id"
+    },
+    "overview": {
+      "@id": "schema:description",
+      "@type": "xsd:string"
+    },
+    "page": {
+      "@id": "tmdb:page",
+      "@type": "xsd:integer"
+    },
+    "parentCompany": {
+      "@id": "tmdb:parent_company"
+    },
+    "parts": {
+      "@id": "tmdb:parts",
+      "@container": "@set"
+    },
+    "person": {
+      "@id": "tmdb:person",
+      "@type": "@id"
+    },
+    "personResults": {
+      "@id": "tmdb:person_results",
+      "@container": "@set"
+    },
+    "placeOfBirth": {
+      "@id": "schema:birthPlace",
+      "@type": "xsd:string"
+    },
+    "popularity": {
+      "@id": "schema:aggregateRating",
+      "@type": "xsd:decimal"
+    },
+    "poster": {
+      "@id": "tmdb:poster",
+      "@type": "@id"
+    },
+    "posterPath": {
+      "@id": "tmdb:poster_path",
+      "@type": "xsd:string"
+    },
+    "posterSizes": {
+      "@id": "tmdb:poster_sizes",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "posters": {
+      "@id": "tmdb:posters",
+      "@container": "@set"
+    },
+    "productionCode": {
+      "@id": "tmdb:production_code",
+      "@type": "xsd:string"
+    },
+    "productionCompanies": {
+      "@id": "tmdb:production_companies",
+      "@container": "@set"
+    },
+    "productionCountries": {
+      "@id": "tmdb:production_countries",
+      "@container": "@set"
+    },
+    "profilePath": {
+      "@id": "tmdb:profile_path",
+      "@type": "xsd:string"
+    },
+    "profileSizes": {
+      "@id": "tmdb:profile_sizes",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "profiles": {
+      "@id": "tmdb:profiles",
+      "@container": "@set"
+    },
+    "providerId": {
+      "@id": "tmdb:provider_id",
+      "@type": "xsd:integer"
+    },
+    "providerName": {
+      "@id": "tmdb:provider_name",
+      "@type": "xsd:string"
+    },
+    "publishedAt": {
+      "@id": "tmdb:published_at",
+      "@type": "xsd:string"
+    },
+    "rated": {
+      "@id": "tmdb:rated",
+      "@type": "@id"
+    },
+    "rating": {
+      "@id": "tmdb:rating",
+      "@type": "xsd:integer"
+    },
+    "releaseDate": {
+      "@id": "schema:datePublished",
+      "@type": "xsd:string"
+    },
+    "releaseDates": {
+      "@id": "tmdb:release_dates",
+      "@container": "@set"
+    },
+    "rent": {
+      "@id": "tmdb:rent",
+      "@container": "@set"
+    },
+    "requestToken": {
+      "@id": "tmdb:request_token",
+      "@type": "xsd:string"
+    },
+    "results": {
+      "@id": "tmdb:results",
+      "@container": "@set"
+    },
+    "revenue": {
+      "@id": "tmdb:revenue",
+      "@type": "xsd:integer"
+    },
+    "roles": {
+      "@id": "tmdb:roles",
+      "@container": "@set"
+    },
+    "runtime": {
+      "@id": "schema:duration",
+      "@type": "xsd:integer"
+    },
+    "seasonNumber": {
+      "@id": "tmdb:season_number",
+      "@type": "xsd:integer"
+    },
+    "seasons": {
+      "@id": "tmdb:seasons",
+      "@container": "@set"
+    },
+    "secureBaseUrl": {
+      "@id": "tmdb:secure_base_url",
+      "@type": "xsd:string"
+    },
+    "sessionId": {
+      "@id": "tmdb:session_id",
+      "@type": "xsd:string"
+    },
+    "showId": {
+      "@id": "tmdb:show_id",
+      "@type": "xsd:integer"
+    },
+    "site": {
+      "@id": "tmdb:site",
+      "@type": "xsd:string"
+    },
+    "size": {
+      "@id": "tmdb:size",
+      "@type": "xsd:integer"
+    },
+    "spokenLanguages": {
+      "@id": "tmdb:spoken_languages",
+      "@container": "@set"
+    },
+    "status": {
+      "@id": "tmdb:status",
+      "@type": "xsd:string"
+    },
+    "statusCode": {
+      "@id": "tmdb:status_code",
+      "@type": "xsd:integer"
+    },
+    "statusMessage": {
+      "@id": "tmdb:status_message",
+      "@type": "xsd:string"
+    },
+    "stillPath": {
+      "@id": "tmdb:still_path",
+      "@type": "xsd:string"
+    },
+    "stillSizes": {
+      "@id": "tmdb:still_sizes",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "stills": {
+      "@id": "tmdb:stills",
+      "@container": "@set"
+    },
+    "success": {
+      "@id": "tmdb:success",
+      "@type": "xsd:boolean"
+    },
+    "tagline": {
+      "@id": "tmdb:tagline",
+      "@type": "xsd:string"
+    },
+    "tiktokId": {
+      "@id": "tmdb:tiktok_id",
+      "@type": "xsd:string"
+    },
+    "time": {
+      "@id": "tmdb:time",
+      "@type": "xsd:string"
+    },
+    "title": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "titles": {
+      "@id": "tmdb:titles",
+      "@container": "@set"
+    },
+    "totalEpisodeCount": {
+      "@id": "tmdb:total_episode_count",
+      "@type": "xsd:integer"
+    },
+    "totalPages": {
+      "@id": "tmdb:total_pages",
+      "@type": "xsd:integer"
+    },
+    "totalResults": {
+      "@id": "tmdb:total_results",
+      "@type": "xsd:integer"
+    },
+    "translations": {
+      "@id": "tmdb:translations",
+      "@container": "@set"
+    },
+    "tvEpisodeResults": {
+      "@id": "tmdb:tv_episode_results",
+      "@container": "@set"
+    },
+    "tvResults": {
+      "@id": "tmdb:tv_results",
+      "@container": "@set"
+    },
+    "tvSeasonResults": {
+      "@id": "tmdb:tv_season_results",
+      "@container": "@set"
+    },
+    "tvdbId": {
+      "@id": "tmdb:tvdb_id",
+      "@type": "xsd:integer"
+    },
+    "tvrageId": {
+      "@id": "tmdb:tvrage_id",
+      "@type": "xsd:integer"
+    },
+    "twitterId": {
+      "@id": "tmdb:twitter_id"
+    },
+    "type": {
+      "@id": "tmdb:type",
+      "@type": "xsd:string"
+    },
+    "updatedAt": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "schema:url",
+      "@type": "xsd:string"
+    },
+    "username": {
+      "@id": "tmdb:username",
+      "@type": "xsd:string"
+    },
+    "value": {
+      "@id": "tmdb:value",
+      "@type": "xsd:integer"
+    },
+    "video": {
+      "@id": "tmdb:video",
+      "@type": "xsd:boolean"
+    },
+    "voteAverage": {
+      "@id": "schema:ratingValue",
+      "@type": "xsd:decimal"
+    },
+    "voteCount": {
+      "@id": "schema:ratingCount",
+      "@type": "xsd:integer"
+    },
+    "watchlist": {
+      "@id": "tmdb:watchlist",
+      "@type": "xsd:boolean"
+    },
+    "width": {
+      "@id": "tmdb:width",
+      "@type": "xsd:integer"
+    },
+    "wikidataId": {
+      "@id": "tmdb:wikidata_id"
+    },
+    "youtubeId": {
+      "@id": "tmdb:youtube_id"
+    }
+  }
+}

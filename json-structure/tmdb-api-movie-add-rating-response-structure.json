@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-movie-add-rating-response-structure.json",
+  "name": "MovieAddRatingResponse",
+  "description": "TMDB Movies \u2014 Add Rating (200 payload).",
+  "type": "object",
+  "properties": {
+    "status_code": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "status_message": {
+      "type": "string",
+      "examples": [
+        "Success."
+      ]
+    }
+  }
+}

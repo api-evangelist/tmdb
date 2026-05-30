@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-person-changes-response-schema.json",
+  "title": "PersonChangesResponse",
+  "description": "TMDB People \u2014 Changes (200 payload).",
+  "type": "object",
+  "properties": {
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "examples": [
+              "biography"
+            ]
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "examples": [
+                    "640469b113654500ba4e859a"
+                  ]
+                },
+                "action": {
+                  "type": "string",
+                  "examples": [
+                    "added"
+                  ]
+                },
+                "time": {
+                  "type": "string",
+                  "examples": [
+                    "2023-03-05 10:06:41 UTC"
+                  ]
+                },
+                "iso_639_1": {
+                  "type": "string",
+                  "examples": [
+                    "ca"
+                  ]
+                },
+                "iso_3166_1": {
+                  "type": "string",
+                  "examples": [
+                    "ES"
+                  ]
+                },
+                "value": {
+                  "type": "string",
+                  "examples": [
+                    "Thomas \"Tom\" Jeffrey Hanks (Concord, Calif\u00f2rnia, 9 de juliol de 1956) \u00e9s un actor de cinema i productor estatunidenc, guanyador dues vegades de l'Oscar al millor actor i considerat un dels m\u00e9s vers\u00e0tils i talentosos del cinema actual.\n\nHanks \u00e9s l'actor que m\u00e9s diners ha guanyat de tota la hist\u00f2ria del cinema amb un total de gaireb\u00e9 sis mil milions de d\u00f2lars (setembre 2006). \u00c9s tamb\u00e9 copropietari de Playtone, una companyia de producci\u00f3 de pel\u00b7l\u00edcules."
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

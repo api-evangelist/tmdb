@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-authentication-validate-key-response-structure.json",
+  "name": "AuthenticationValidateKeyResponse",
+  "description": "TMDB Authentication \u2014 Validate Key (200 payload).",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    },
+    "status_code": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "status_message": {
+      "type": "string",
+      "examples": [
+        "Success."
+      ]
+    }
+  }
+}

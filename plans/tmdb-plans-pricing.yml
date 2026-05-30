@@ -1,0 +1,94 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: The Movie Database
+providerId: tmdb
+created: '2026-05-30'
+modified: '2026-05-30'
+reconciled: false
+tags:
+- Catalog
+- Entertainment
+- Metadata
+- Movies
+- TV
+- Video
+description: >-
+  TMDB does not operate a self-serve commercial pricing surface. Non-commercial use of the TMDB API
+  (personal projects, hobby apps, research, OSS) is free behind an API key generated from your account
+  settings — there is no published per-call price or paid tier. Commercial use (charging users,
+  monetised products, ad-supported content, AI/ML training on TMDB data, sublicensing) requires a
+  separate written agreement with TMDB negotiated by email; pricing is custom and not published. A
+  cache TTL cap of 6 months applies to all uses. Use the rate-limits artifact for live request limits
+  and the FinOps artifact for an internal cost-tracking shape — neither implies a public price list.
+sources:
+- https://www.themoviedb.org/api-terms-of-use
+- https://developer.themoviedb.org/docs/getting-started
+- https://developer.themoviedb.org/docs/rate-limiting
+- https://www.themoviedb.org/settings/api
+plans:
+- id: tmdb-non-commercial
+  name: Non-Commercial
+  type: freemium
+  description: Free, attribution-required use for personal projects, hobby apps, research, and OSS.
+  entries:
+  - label: API requests
+    name: api_requests
+    type: metered
+    metric: request
+    limit: -1
+    timeFrame: usage
+    geo: global
+    unit: 1
+    price: '$0.00'
+    userMultiplied: false
+  - label: Cache retention cap
+    name: cache_retention
+    type: quota
+    metric: month
+    limit: 6
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: '$0.00'
+    userMultiplied: false
+  elements:
+  - name: Full TMDB API v3 surface (148 paths)
+  - name: TMDB API v4 user/list endpoints
+  - name: Image CDN access
+  - name: Daily ID exports
+  - name: Watch provider data (JustWatch-sourced)
+  - name: Community forum support
+- id: tmdb-commercial
+  name: Commercial
+  type: enterprise
+  description: >-
+    Required for any use that charges end users, monetises TMDB content, trains AI/ML systems on TMDB
+    data, or sublicenses access. Pricing is negotiated bilaterally with TMDB and not published.
+  entries:
+  - label: Commercial license fee
+    name: commercial_license
+    type: flat
+    metric: varies
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: 'contact sales'
+    userMultiplied: false
+  - label: Per-call rate (if metered in contract)
+    name: api_requests_commercial
+    type: metered
+    metric: request
+    limit: -1
+    timeFrame: usage
+    geo: global
+    unit: 1
+    price: 'see written agreement'
+    userMultiplied: false
+  elements:
+  - name: Full TMDB API surface for revenue-generating use
+  - name: AI/ML training rights (when negotiated)
+  - name: Sublicensing rights (when negotiated)
+  - name: Custom rate-limit accommodations
+  - name: Direct support channel

@@ -1,0 +1,238 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-episode-details-response-schema.json",
+  "title": "TvEpisodeDetailsResponse",
+  "description": "TMDB TV Series \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "air_date": {
+      "type": "string",
+      "examples": [
+        "2011-04-17"
+      ]
+    },
+    "crew": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "department": {
+            "type": "string",
+            "examples": [
+              "Directing"
+            ]
+          },
+          "job": {
+            "type": "string",
+            "examples": [
+              "Director"
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "5256c8a219c2956ff6046e77"
+            ]
+          },
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "integer",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              44797
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Directing"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Timothy Van Patten"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Timothy Van Patten"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              7.775
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/MzSOFrd99HRdr6pkSRSctk3kBR.jpg"
+            ]
+          }
+        }
+      }
+    },
+    "episode_number": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "guest_stars": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "character": {
+            "type": "string",
+            "examples": [
+              "Benjen Stark"
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "5256c8b919c2956ff604836a"
+            ]
+          },
+          "order": {
+            "type": "integer",
+            "examples": [
+              62
+            ],
+            "default": 0
+          },
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "integer",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              119783
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Acting"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Joseph Mawle"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Joseph Mawle"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              6.758
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/1Ocb9v3h54beGVoJMm4w50UQhLf.jpg"
+            ]
+          }
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "Winter Is Coming"
+      ]
+    },
+    "overview": {
+      "type": "string",
+      "examples": [
+        "Jon Arryn, the Hand of the King, is dead. King Robert Baratheon plans to ask his oldest friend, Eddard Stark, to take Jon's place. Across the sea, Viserys Targaryen plans to wed his sister to a nomadic warlord in exchange for an army."
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        63056
+      ],
+      "default": 0
+    },
+    "production_code": {
+      "type": "string",
+      "examples": [
+        "101"
+      ]
+    },
+    "runtime": {
+      "type": "integer",
+      "examples": [
+        62
+      ],
+      "default": 0
+    },
+    "season_number": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "still_path": {
+      "type": "string",
+      "examples": [
+        "/9hGF3WUkBf7cSjMg0cdMDHJkByd.jpg"
+      ]
+    },
+    "vote_average": {
+      "type": "number",
+      "examples": [
+        7.8
+      ],
+      "default": 0
+    },
+    "vote_count": {
+      "type": "integer",
+      "examples": [
+        286
+      ],
+      "default": 0
+    }
+  }
+}

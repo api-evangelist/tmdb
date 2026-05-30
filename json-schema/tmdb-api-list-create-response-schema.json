@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-list-create-response-schema.json",
+  "title": "ListCreateResponse",
+  "description": "TMDB Lists \u2014 Create (200 payload).",
+  "type": "object",
+  "properties": {
+    "status_message": {
+      "type": "string",
+      "examples": [
+        "The item/record was created successfully."
+      ]
+    },
+    "success": {
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    },
+    "status_code": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "list_id": {
+      "type": "integer",
+      "examples": [
+        5861
+      ],
+      "default": 0
+    }
+  }
+}

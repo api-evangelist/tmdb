@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-movie-credits-response-schema.json",
+  "title": "MovieCreditsResponse",
+  "description": "TMDB Movies \u2014 Credits (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        550
+      ],
+      "default": 0
+    },
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "integer",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              819
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Acting"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Edward Norton"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Edward Norton"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              26.99
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/8nytsqL59SFJTVYVrN72k6qkGgJ.jpg"
+            ]
+          },
+          "cast_id": {
+            "type": "integer",
+            "examples": [
+              4
+            ],
+            "default": 0
+          },
+          "character": {
+            "type": "string",
+            "examples": [
+              "The Narrator"
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "52fe4250c3a36847f80149f3"
+            ]
+          },
+          "order": {
+            "type": "integer",
+            "examples": [
+              0
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "crew": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "gender": {
+            "type": "integer",
+            "examples": [
+              2
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              376
+            ],
+            "default": 0
+          },
+          "known_for_department": {
+            "type": "string",
+            "examples": [
+              "Production"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Arnon Milchan"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "Arnon Milchan"
+            ]
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              2.931
+            ],
+            "default": 0
+          },
+          "profile_path": {
+            "type": "string",
+            "examples": [
+              "/b2hBExX4NnczNAnLuTBF4kmNhZm.jpg"
+            ]
+          },
+          "credit_id": {
+            "type": "string",
+            "examples": [
+              "55731b8192514111610027d7"
+            ]
+          },
+          "department": {
+            "type": "string",
+            "examples": [
+              "Production"
+            ]
+          },
+          "job": {
+            "type": "string",
+            "examples": [
+              "Executive Producer"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "certifications": {
+    "AU": [
+      {
+        "certification": "P",
+        "meaning": "Programming is intended for younger children 2\u201311; commercial stations must show at least 30 minutes of P-rated content each weekday and weekends at all times. No advertisements may be shown during P-rated programs.",
+        "order": 1
+      }
+    ],
+    "BR": [
+      {
+        "certification": "14",
+        "meaning": "Content suitable for viewers over the age of 14.",
+        "order": 3
+      }
+    ],
+    "CA": [
+      {
+        "certification": "Exempt",
+        "meaning": "Shows which are exempt from ratings (such as news and sports programming) will not display an on-screen rating at all.",
+        "order": 1
+      }
+    ],
+    "CA-QC": [
+      {
+        "certification": "18+",
+        "meaning": "Only to be viewed by adults and may contain extreme violence and graphic sexual content. It is mostly used for 18+ movies and pornography.",
+        "order": 5
+      }
+    ],
+    "DE": [
+      {
+        "certification": "0",
+        "meaning": "Can be aired at any time.",
+        "order": 1
+      }
+    ],
+    "ES": [
+      {
+        "certification": "NR",
+        "meaning": "No rating information.",
+        "order": 0
+      }
+    ],
+    "FR": [
+      {
+        "certification": "NR",
+        "meaning": "No rating information.",
+        "order": 0
+      }
+    ],
+    "GB": [
+      {
+        "certification": "U",
+        "meaning": "The U symbol stands for Universal. A U film should be suitable for audiences aged four years and over.",
+        "order": 0
+      }
+    ],
+    "HU": [
+      {
+        "certification": "Unrated",
+        "meaning": "Without age restriction.",
+        "order": 1
+      }
+    ],
+    "KR": [
+      {
+        "certification": "Exempt",
+        "meaning": "This rating is only for knowledge based game shows; lifestyle shows; documentary shows; news; current topic discussion shows; education/culture shows; sports that excludes MMA or other violent sports; and other programs that Korea Communications Standards Commission recognizes.",
+        "order": 1
+      }
+    ],
+    "LT": [
+      {
+        "certification": "S",
+        "meaning": "Intended for adult viewers from the age of 18 (corresponding to the age-appropriate index N-18) and broadcast between 23 (11pm) and 6 (6am) hours; Limited to minors and intended for adult audiences.",
+        "order": 3
+      }
+    ],
+    "NL": [
+      {
+        "certification": "NR",
+        "meaning": "No rating information.",
+        "order": 0
+      }
+    ],
+    "PH": [
+      {
+        "certification": "NR",
+        "meaning": "No rating information.",
+        "order": 0
+      }
+    ],
+    "PT": [
+      {
+        "certification": "12AP",
+        "meaning": "Acompanhamento Parental (may not be suitable for children under 12, parental guidance advised).",
+        "order": 3
+      }
+    ],
+    "RU": [
+      {
+        "certification": "16+",
+        "meaning": "Only teens the age of 16 or older can watch.",
+        "order": 4
+      }
+    ],
+    "SK": [
+      {
+        "certification": "NR",
+        "meaning": "No rating information.",
+        "order": 0
+      }
+    ],
+    "TH": [
+      {
+        "certification": "\u0e2a",
+        "meaning": "Sor - Educational movies which the public should be encouraged to see.",
+        "order": 1
+      }
+    ],
+    "US": [
+      {
+        "certification": "TV-MA",
+        "meaning": "This program is specifically designed to be viewed by adults and therefore may be unsuitable for children under 17.",
+        "order": 6
+      }
+    ],
+    "IT": [
+      {
+        "certification": "T",
+        "meaning": "All ages admitted.",
+        "order": 1
+      }
+    ],
+    "FI": [
+      {
+        "certification": "S",
+        "meaning": "Allowed at all times.",
+        "order": 0
+      }
+    ],
+    "MY": [
+      {
+        "certification": "U",
+        "meaning": "No age limit. Can be broadcast anytime.",
+        "order": 1
+      }
+    ],
+    "NZ": [
+      {
+        "certification": "G",
+        "meaning": "Approved for general viewing.",
+        "order": 1
+      }
+    ],
+    "NO": [
+      {
+        "certification": "A",
+        "meaning": "Allowed at all times.",
+        "order": 1
+      }
+    ],
+    "BG": [
+      {
+        "certification": "Unrated",
+        "meaning": "Can be viewed for each age.",
+        "order": 1
+      }
+    ],
+    "MX": [
+      {
+        "certification": "AA",
+        "meaning": "Aimed at children (can be broadcast anytime).",
+        "order": 1
+      }
+    ],
+    "IN": [
+      {
+        "certification": "U",
+        "meaning": "Viewable for all ages.",
+        "order": 1
+      }
+    ],
+    "DK": [
+      {
+        "certification": "A",
+        "meaning": "Suitable for a general audience.",
+        "order": 1
+      }
+    ],
+    "SE": [
+      {
+        "certification": "Btl",
+        "meaning": "",
+        "order": 1
+      }
+    ],
+    "ID": [
+      {
+        "certification": "SU",
+        "meaning": "Suitable for general audiences over the age of 2 years.",
+        "order": 1
+      }
+    ],
+    "TR": [
+      {
+        "certification": "Genel \u0130zleyici",
+        "meaning": "General audience. Suitable for all ages.",
+        "order": 1
+      }
+    ],
+    "AR": [
+      {
+        "certification": "ATP",
+        "meaning": "Suitable for all audiences.",
+        "order": 1
+      }
+    ],
+    "PL": [
+      {
+        "certification": "0",
+        "meaning": "Positive or neutral view of the world, little to no violence, non-sexual love, and no sexual content.",
+        "order": 1
+      }
+    ],
+    "MA": [
+      {
+        "certification": "NR",
+        "meaning": "All audiences.",
+        "order": 0
+      }
+    ],
+    "GR": [
+      {
+        "certification": "K",
+        "meaning": "Suitable for all ages.",
+        "order": 1
+      }
+    ],
+    "IL": [
+      {
+        "certification": "E",
+        "meaning": "Exempt from classification. This rating is usually applied to live broadcasts.",
+        "order": 1
+      }
+    ],
+    "TW": [
+      {
+        "certification": "0+",
+        "meaning": "Suitable for watching by general audiences.",
+        "order": 1
+      }
+    ],
+    "ZA": [
+      {
+        "certification": "All",
+        "meaning": "This is a programme/film that does not contain any obscenity, and is suitable for family viewing. A logo must be displayed in the corner of the screen for 30 seconds after each commercial break.",
+        "order": 1
+      }
+    ],
+    "SG": [
+      {
+        "certification": "G",
+        "meaning": "",
+        "order": 1
+      }
+    ],
+    "PR": [
+      {
+        "certification": "NR",
+        "meaning": "",
+        "order": 0
+      }
+    ],
+    "VI": [
+      {
+        "certification": "NR",
+        "meaning": "",
+        "order": 0
+      }
+    ]
+  }
+}

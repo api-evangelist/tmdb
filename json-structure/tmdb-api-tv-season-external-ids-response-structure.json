@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-season-external-ids-response-structure.json",
+  "name": "TvSeasonExternalIdsResponse",
+  "description": "TMDB TV Series \u2014 External IDs (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        3624
+      ],
+      "default": 0
+    },
+    "freebase_mid": {
+      "type": "string",
+      "examples": [
+        "/m/0gmd1gd"
+      ]
+    },
+    "freebase_id": {
+      "type": "string",
+      "examples": [
+        "/m/0gmd1gd"
+      ]
+    },
+    "tvdb_id": {
+      "type": "int32",
+      "examples": [
+        364731
+      ],
+      "default": 0
+    },
+    "tvrage_id": {},
+    "wikidata_id": {
+      "type": "string",
+      "examples": [
+        "Q1658029"
+      ]
+    }
+  }
+}

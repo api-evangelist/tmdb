@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-account-rated-tv-episodes-response-structure.json",
+  "name": "AccountRatedTvEpisodesResponse",
+  "description": "TMDB Account \u2014 Rated TV Episodes (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "air_date": {
+            "type": "string",
+            "examples": [
+              "2013-10-17"
+            ]
+          },
+          "episode_number": {
+            "type": "int32",
+            "examples": [
+              5
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              64782
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "The Workplace Proximity"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Amy starts working at Caltech which causes friction with Sheldon. Howard agrees with Sheldon who mentions this to Bernadette causing a big fight for the Wolowitzes."
+            ]
+          },
+          "production_code": {
+            "type": "string",
+            "examples": [
+              "4X5305"
+            ]
+          },
+          "runtime": {
+            "type": "int32",
+            "examples": [
+              22
+            ],
+            "default": 0
+          },
+          "season_number": {
+            "type": "int32",
+            "examples": [
+              7
+            ],
+            "default": 0
+          },
+          "show_id": {
+            "type": "int32",
+            "examples": [
+              1418
+            ],
+            "default": 0
+          },
+          "still_path": {
+            "type": "string",
+            "examples": [
+              "/k8atjbd5gAsntuhbPnFpvnvo0qn.jpg"
+            ]
+          },
+          "vote_average": {
+            "type": "double",
+            "examples": [
+              7.242
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              31
+            ],
+            "default": 0
+          },
+          "rating": {
+            "type": "int32",
+            "examples": [
+              8
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        10
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        186
+      ],
+      "default": 0
+    }
+  }
+}

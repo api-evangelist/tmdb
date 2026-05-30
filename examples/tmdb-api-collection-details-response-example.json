@@ -1,0 +1,30 @@
+{
+  "id": 10,
+  "name": "Star Wars Collection",
+  "original_language": "en",
+  "original_name": "Star Wars Collection",
+  "overview": "An epic space-opera theatrical film series, which depicts the adventures of various characters \"a long time ago in a galaxy far, far away\u2026.\"",
+  "poster_path": "/22dj38IckjzEEUZwN1tPU5VJ1qq.jpg",
+  "backdrop_path": "/4z9ijhgEthfRHShoOvMaBlpciXS.jpg",
+  "parts": [
+    {
+      "adult": false,
+      "backdrop_path": "/2w4xG178RpB4MDAIfTkqAuSJzec.jpg",
+      "id": 11,
+      "name": "Star Wars",
+      "original_name": "Star Wars",
+      "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+      "poster_path": "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+      "media_type": "movie",
+      "original_language": "en",
+      "genre_ids": [
+        12
+      ],
+      "popularity": 15.8557,
+      "release_date": "1977-05-25",
+      "video": false,
+      "vote_average": 8.205,
+      "vote_count": 21522
+    }
+  ]
+}

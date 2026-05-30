@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-authentication-create-request-token-response-schema.json",
+  "title": "AuthenticationCreateRequestTokenResponse",
+  "description": "TMDB Authentication \u2014 Create Request Token (200 payload).",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    },
+    "expires_at": {
+      "type": "string",
+      "examples": [
+        "2016-08-26 17:04:39 UTC"
+      ]
+    },
+    "request_token": {
+      "type": "string",
+      "examples": [
+        "ff5c7eeb5a8870efe3cd7fc5c282cffd26800ecd"
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-list-check-item-status-response-structure.json",
+  "name": "ListCheckItemStatusResponse",
+  "description": "TMDB Lists \u2014 Check Item Status (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "item_present": {
+      "type": "boolean",
+      "examples": [
+        true
+      ],
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-tv-series-screened-theatrically-response-schema.json",
+  "title": "TvSeriesScreenedTheatricallyResponse",
+  "description": "TMDB TV Series \u2014 Screened Theatrically (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        1399
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "examples": [
+              1159054
+            ],
+            "default": 0
+          },
+          "episode_number": {
+            "type": "integer",
+            "examples": [
+              10
+            ],
+            "default": 0
+          },
+          "season_number": {
+            "type": "integer",
+            "examples": [
+              5
+            ],
+            "default": 0
+          }
+        }
+      }
+    }
+  }
+}

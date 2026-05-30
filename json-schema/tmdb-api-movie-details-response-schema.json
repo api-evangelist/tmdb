@@ -1,0 +1,277 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-movie-details-response-schema.json",
+  "title": "MovieDetailsResponse",
+  "description": "TMDB Movies \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "adult": {
+      "type": "boolean",
+      "examples": [
+        false
+      ],
+      "default": "false"
+    },
+    "backdrop_path": {
+      "type": "string",
+      "examples": [
+        "/2w4xG178RpB4MDAIfTkqAuSJzec.jpg"
+      ]
+    },
+    "belongs_to_collection": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "examples": [
+            10
+          ],
+          "default": 0
+        },
+        "name": {
+          "type": "string",
+          "examples": [
+            "Star Wars Collection"
+          ]
+        },
+        "poster_path": {
+          "type": "string",
+          "examples": [
+            "/pWVLFh4OuejTpUaDQbB1C4zoS2p.jpg"
+          ]
+        },
+        "backdrop_path": {
+          "type": "string",
+          "examples": [
+            "/iY2ujEY2m68OTTlPFTiHub9joHS.jpg"
+          ]
+        }
+      }
+    },
+    "budget": {
+      "type": "integer",
+      "examples": [
+        11000000
+      ],
+      "default": 0
+    },
+    "genres": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "examples": [
+              12
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Adventure"
+            ]
+          }
+        }
+      }
+    },
+    "homepage": {
+      "type": "string",
+      "examples": [
+        "http://www.starwars.com/films/star-wars-episode-iv-a-new-hope"
+      ]
+    },
+    "id": {
+      "type": "integer",
+      "examples": [
+        11
+      ],
+      "default": 0
+    },
+    "imdb_id": {
+      "type": "string",
+      "examples": [
+        "tt0076759"
+      ]
+    },
+    "origin_country": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "examples": [
+          "US"
+        ]
+      }
+    },
+    "original_language": {
+      "type": "string",
+      "examples": [
+        "en"
+      ]
+    },
+    "original_title": {
+      "type": "string",
+      "examples": [
+        "Star Wars"
+      ]
+    },
+    "overview": {
+      "type": "string",
+      "examples": [
+        "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire."
+      ]
+    },
+    "popularity": {
+      "type": "number",
+      "examples": [
+        20.6912
+      ],
+      "default": 0
+    },
+    "poster_path": {
+      "type": "string",
+      "examples": [
+        "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg"
+      ]
+    },
+    "production_companies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "examples": [
+              1
+            ],
+            "default": 0
+          },
+          "logo_path": {
+            "type": "string",
+            "examples": [
+              "/tlVSws0RvvtPBwViUyOFAO0vcQS.png"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Lucasfilm Ltd."
+            ]
+          },
+          "origin_country": {
+            "type": "string",
+            "examples": [
+              "US"
+            ]
+          }
+        }
+      }
+    },
+    "production_countries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "iso_3166_1": {
+            "type": "string",
+            "examples": [
+              "US"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "United States of America"
+            ]
+          }
+        }
+      }
+    },
+    "release_date": {
+      "type": "string",
+      "examples": [
+        "1977-05-25"
+      ]
+    },
+    "revenue": {
+      "type": "integer",
+      "examples": [
+        775398007
+      ],
+      "default": 0
+    },
+    "runtime": {
+      "type": "integer",
+      "examples": [
+        121
+      ],
+      "default": 0
+    },
+    "spoken_languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "english_name": {
+            "type": "string",
+            "examples": [
+              "English"
+            ]
+          },
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "English"
+            ]
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "examples": [
+        "Released"
+      ]
+    },
+    "tagline": {
+      "type": "string",
+      "examples": [
+        "A long time ago in a galaxy far, far away..."
+      ]
+    },
+    "title": {
+      "type": "string",
+      "examples": [
+        "Star Wars"
+      ]
+    },
+    "video": {
+      "type": "boolean",
+      "examples": [
+        false
+      ],
+      "default": "false"
+    },
+    "vote_average": {
+      "type": "number",
+      "examples": [
+        8.2
+      ],
+      "default": 0
+    },
+    "vote_count": {
+      "type": "integer",
+      "examples": [
+        22061
+      ],
+      "default": 0
+    }
+  }
+}

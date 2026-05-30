@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-trending-movies-response-schema.json",
+  "title": "TrendingMoviesResponse",
+  "description": "TMDB Trending \u2014 Movies (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/44immBwzhDVyjn87b3x3l9mlhAD.jpg"
+            ]
+          },
+          "id": {
+            "type": "integer",
+            "examples": [
+              934433
+            ],
+            "default": 0
+          },
+          "title": {
+            "type": "string",
+            "examples": [
+              "Scream VI"
+            ]
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_title": {
+            "type": "string",
+            "examples": [
+              "Scream VI"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Following the latest Ghostface killings, the four survivors leave Woodsboro behind and start a fresh chapter."
+            ]
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/wDWwtvkRRlgTiUr6TyLSMX8FCuZ.jpg"
+            ]
+          },
+          "media_type": {
+            "type": "string",
+            "examples": [
+              "movie"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "examples": [
+                27
+              ],
+              "default": 0
+            }
+          },
+          "popularity": {
+            "type": "number",
+            "examples": [
+              609.941
+            ],
+            "default": 0
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "2023-03-08"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              7.374
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              684
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        1000
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        20000
+      ],
+      "default": 0
+    }
+  }
+}

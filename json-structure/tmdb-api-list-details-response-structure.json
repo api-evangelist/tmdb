@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-list-details-response-structure.json",
+  "name": "ListDetailsResponse",
+  "description": "TMDB Lists \u2014 Details (200 payload).",
+  "type": "object",
+  "properties": {
+    "created_by": {
+      "type": "string",
+      "examples": [
+        "travisbell"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "examples": [
+        "The idea behind this list is to collect the live action comic book movies from within the Marvel franchise."
+      ]
+    },
+    "favorite_count": {
+      "type": "int32",
+      "examples": [
+        0
+      ],
+      "default": 0
+    },
+    "id": {
+      "type": "string",
+      "examples": [
+        "1"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adult": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "int32",
+              "examples": [
+                28
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              634649
+            ],
+            "default": 0
+          },
+          "media_type": {
+            "type": "string",
+            "examples": [
+              "movie"
+            ]
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_title": {
+            "type": "string",
+            "examples": [
+              "Spider-Man: No Way Home"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "Peter Parker ist demaskiert und kann sein normales Leben nicht mehr von den hohen Eins\u00e4tzen als Superheld trennen. Als er Doctor Strange um Hilfe bittet, wird die Lage noch gef\u00e4hrlicher und er muss entdecken, was es wirklich bedeutet, Spider-Man zu sein."
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              398.217
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/iNKf4D0AzOj9GLq8ZyG3WZaqibL.jpg"
+            ]
+          },
+          "release_date": {
+            "type": "string",
+            "examples": [
+              "2021-12-15"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Spider-Man: No Way Home"
+            ]
+          },
+          "video": {
+            "type": "boolean",
+            "examples": [
+              false
+            ],
+            "default": true
+          },
+          "vote_average": {
+            "type": "int32",
+            "examples": [
+              8
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              17267
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "item_count": {
+      "type": "int32",
+      "examples": [
+        59
+      ],
+      "default": 0
+    },
+    "iso_639_1": {
+      "type": "string",
+      "examples": [
+        "en"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "examples": [
+        "The Marvel Universe"
+      ]
+    },
+    "poster_path": {
+      "type": "string",
+      "examples": [
+        "/coJVIUEOToAEGViuhclM7pXC75R.jpg"
+      ]
+    }
+  }
+}

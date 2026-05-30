@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-schema/tmdb-api-person-tagged-images-response-schema.json",
+  "title": "PersonTaggedImagesResponse",
+  "description": "TMDB People \u2014 Tagged Images (200 payload).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "examples": [
+        31
+      ],
+      "default": 0
+    },
+    "page": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "aspect_ratio": {
+            "type": "number",
+            "examples": [
+              0.6666666666666666
+            ],
+            "default": 0
+          },
+          "file_path": {
+            "type": "string",
+            "examples": [
+              "/1wY4psJ5NVEhCuOYROwLH2XExM2.jpg"
+            ]
+          },
+          "height": {
+            "type": "integer",
+            "examples": [
+              1500
+            ],
+            "default": 0
+          },
+          "id": {
+            "type": "string",
+            "examples": [
+              "5b235d740e0a265b5d0031d9"
+            ]
+          },
+          "iso_639_1": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "vote_average": {
+            "type": "number",
+            "examples": [
+              5.456
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "integer",
+            "examples": [
+              7
+            ],
+            "default": 0
+          },
+          "width": {
+            "type": "integer",
+            "examples": [
+              1000
+            ],
+            "default": 0
+          },
+          "image_type": {
+            "type": "string",
+            "examples": [
+              "poster"
+            ]
+          },
+          "media": {
+            "type": "object",
+            "properties": {
+              "adult": {
+                "type": "boolean",
+                "examples": [
+                  false
+                ],
+                "default": true
+              },
+              "backdrop_path": {
+                "type": "string",
+                "examples": [
+                  "/bdD39MpSVhKjxarTxLSfX6baoMP.jpg"
+                ]
+              },
+              "id": {
+                "type": "integer",
+                "examples": [
+                  857
+                ],
+                "default": 0
+              },
+              "title": {
+                "type": "string",
+                "examples": [
+                  "Saving Private Ryan"
+                ]
+              },
+              "original_language": {
+                "type": "string",
+                "examples": [
+                  "en"
+                ]
+              },
+              "original_title": {
+                "type": "string",
+                "examples": [
+                  "Saving Private Ryan"
+                ]
+              },
+              "overview": {
+                "type": "string",
+                "examples": [
+                  "As U.S. troops storm the beaches of Normandy, three brothers lie dead on the battlefield, with a fourth trapped behind enemy lines. Ranger captain John Miller and seven men are tasked with penetrating German-held territory and bringing the boy home."
+                ]
+              },
+              "poster_path": {
+                "type": "string",
+                "examples": [
+                  "/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg"
+                ]
+              },
+              "media_type": {
+                "type": "string",
+                "examples": [
+                  "movie"
+                ]
+              },
+              "genre_ids": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "examples": [
+                    18
+                  ],
+                  "default": 0
+                }
+              },
+              "popularity": {
+                "type": "number",
+                "examples": [
+                  70.45
+                ],
+                "default": 0
+              },
+              "release_date": {
+                "type": "string",
+                "examples": [
+                  "1998-07-24"
+                ]
+              },
+              "video": {
+                "type": "boolean",
+                "examples": [
+                  false
+                ],
+                "default": true
+              },
+              "vote_average": {
+                "type": "number",
+                "examples": [
+                  8.208
+                ],
+                "default": 0
+              },
+              "vote_count": {
+                "type": "integer",
+                "examples": [
+                  14134
+                ],
+                "default": 0
+              }
+            }
+          },
+          "media_type": {
+            "type": "string",
+            "examples": [
+              "movie"
+            ]
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "integer",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "integer",
+      "examples": [
+        13
+      ],
+      "default": 0
+    }
+  }
+}

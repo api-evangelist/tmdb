@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/json-structure/tmdb-api-tv-series-top-rated-list-response-structure.json",
+  "name": "TvSeriesTopRatedListResponse",
+  "description": "TMDB TV Series \u2014 Top Rated (200 payload).",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "int32",
+      "examples": [
+        1
+      ],
+      "default": 0
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "backdrop_path": {
+            "type": "string",
+            "examples": [
+              "/99vBORZixICa32Pwdwj0lWcr8K.jpg"
+            ]
+          },
+          "first_air_date": {
+            "type": "string",
+            "examples": [
+              "2021-09-03"
+            ]
+          },
+          "genre_ids": {
+            "type": "array",
+            "items": {
+              "type": "int32",
+              "examples": [
+                10764
+              ],
+              "default": 0
+            }
+          },
+          "id": {
+            "type": "int32",
+            "examples": [
+              130392
+            ],
+            "default": 0
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "The D'Amelio Show"
+            ]
+          },
+          "origin_country": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "examples": [
+                "US"
+              ]
+            }
+          },
+          "original_language": {
+            "type": "string",
+            "examples": [
+              "en"
+            ]
+          },
+          "original_name": {
+            "type": "string",
+            "examples": [
+              "The D'Amelio Show"
+            ]
+          },
+          "overview": {
+            "type": "string",
+            "examples": [
+              "From relative obscurity and a seemingly normal life, to overnight success and thrust into the Hollywood limelight overnight, the D\u2019Amelios are faced with new challenges and opportunities they could not have imagined."
+            ]
+          },
+          "popularity": {
+            "type": "double",
+            "examples": [
+              12.459
+            ],
+            "default": 0
+          },
+          "poster_path": {
+            "type": "string",
+            "examples": [
+              "/phv2Jc4H8cvRzvTKb9X1uKMboTu.jpg"
+            ]
+          },
+          "vote_average": {
+            "type": "double",
+            "examples": [
+              8.9
+            ],
+            "default": 0
+          },
+          "vote_count": {
+            "type": "int32",
+            "examples": [
+              3190
+            ],
+            "default": 0
+          }
+        }
+      }
+    },
+    "total_pages": {
+      "type": "int32",
+      "examples": [
+        142
+      ],
+      "default": 0
+    },
+    "total_results": {
+      "type": "int32",
+      "examples": [
+        2833
+      ],
+      "default": 0
+    }
+  }
+}
