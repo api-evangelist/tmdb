@@ -9,7 +9,7 @@ description: >-
   trending, discover/search, watch providers, account/lists, authentication, and configuration. A v4
   surface adds OAuth-style user authentication and richer list management. Non-commercial use is free;
   commercial use requires a separate written agreement with TMDB.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/apis.yml
 type: Index
 access: 3rd-Party
@@ -48,7 +48,7 @@ apis:
     trending, discover, search, watch providers, configuration, authentication, account, and guest
     sessions. JSON over HTTPS, with optional append_to_response to combine related sub-resources in a
     single response.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://developer.themoviedb.org/reference/intro/getting-started
   baseURL: https://api.themoviedb.org
   tags:
