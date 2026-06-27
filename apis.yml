@@ -66,7 +66,7 @@ apis:
     url: https://developer.themoviedb.org/reference/intro/getting-started
   - type: OpenAPI
     url: openapi/tmdb-api-openapi-original.yml
-  - type: SignUp
+  - type: Signup
     url: https://www.themoviedb.org/signup
   - type: GetAPIKey
     url: https://www.themoviedb.org/settings/api
@@ -74,49 +74,49 @@ apis:
     url: https://developer.themoviedb.org/docs/authentication-application
   - type: ChangeLog
     url: https://www.themoviedb.org/talk/category/5047958519c29526b50017d6
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://developer.themoviedb.org/llms.txt
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-account.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-authentication.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-certifications.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-collections.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-companies.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-configuration.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-credits.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-discover.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-find.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-genres.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-guest-sessions.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-keywords.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-lists.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-movies.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-networks.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-people.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-reviews.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-search.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-trending.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-tv-series.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/tmdb-api-watch-providers.yaml
 common:
 - type: Website
@@ -125,7 +125,7 @@ common:
   url: https://developer.themoviedb.org/
 - type: APIOverview
   url: https://developer.themoviedb.org/docs/getting-started
-- type: SignUp
+- type: Signup
   url: https://www.themoviedb.org/signup
 - type: GetAPIKey
   url: https://www.themoviedb.org/settings/api
@@ -141,47 +141,47 @@ common:
   url: https://www.themoviedb.org/talk
 - type: StatusPage
   url: https://status.themoviedb.org
-- type: LLMsTxt
+- type: LlmsText
   url: https://developer.themoviedb.org/llms.txt
 - type: Wrappers
   url: https://developer.themoviedb.org/docs/wrappers-and-libraries
-- type: SDK
+- type: SDKs
   url: https://github.com/celiao/tmdbsimple
   name: tmdbsimple (Python)
-- type: SDK
+- type: SDKs
   url: https://pypi.org/project/tmdbsimple/
   name: tmdbsimple (PyPI)
-- type: SDK
+- type: SDKs
   url: https://github.com/grantholle/moviedb-promise
   name: moviedb-promise (JavaScript)
-- type: SDK
+- type: SDKs
   url: https://www.npmjs.com/package/moviedb-promise
   name: moviedb-promise (npm)
-- type: SDK
+- type: SDKs
   url: https://github.com/leandrowkz/tmdb
   name: tmdb (TypeScript)
-- type: SDK
+- type: SDKs
   url: https://github.com/blakejoy/tmdb-ts
   name: tmdb-ts (TypeScript)
-- type: SDK
+- type: SDKs
   url: https://github.com/LordMike/TMDbLib
   name: TMDbLib (.NET)
-- type: SDK
+- type: SDKs
   url: https://github.com/cyruzin/golang-tmdb
   name: golang-tmdb (Go)
-- type: SDK
+- type: SDKs
   url: https://github.com/ryanbradynd05/go-tmdb
   name: go-tmdb (Go)
-- type: SDK
+- type: SDKs
   url: https://github.com/adamayoung/TMDb
   name: TMDb (Swift)
-- type: SDK
+- type: SDKs
   url: https://github.com/wtfzdotnet/php-tmdb-api
   name: php-tmdb-api (PHP)
-- type: SDK
+- type: SDKs
   url: https://github.com/ahmetabdi/themoviedb
   name: themoviedb (Ruby)
-- type: SDK
+- type: SDKs
   url: https://github.com/c-eg/themoviedbapi
   name: themoviedbapi (Java)
 - type: Tools
