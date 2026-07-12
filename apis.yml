@@ -119,6 +119,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/tmdb-api-watch-providers.yaml
 common:
+- type: DomainSecurity
+  url: security/tmdb-domain-security.yml
 - type: Website
   url: https://www.themoviedb.org
 - type: Documentation
