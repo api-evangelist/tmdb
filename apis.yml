@@ -9,7 +9,19 @@ description: >-
   trending, discover/search, watch providers, account/lists, authentication, and configuration. A v4
   surface adds OAuth-style user authentication and richer list management. Non-commercial use is free;
   commercial use requires a separate written agreement with TMDB.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tmdb.png
 url: https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/apis.yml
 type: Index
 access: 3rd-Party
