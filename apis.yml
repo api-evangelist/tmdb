@@ -88,48 +88,6 @@ apis:
     url: https://www.themoviedb.org/talk/category/5047958519c29526b50017d6
   - type: LlmsText
     url: https://developer.themoviedb.org/llms.txt
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-account.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-authentication.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-certifications.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-collections.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-companies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-configuration.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-credits.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-discover.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-find.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-genres.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-guest-sessions.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-keywords.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-lists.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-movies.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-networks.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-people.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-reviews.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-search.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-trending.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-tv-series.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/tmdb-api-watch-providers.yaml
 common:
 - type: DomainSecurity
   url: security/tmdb-domain-security.yml
