@@ -26,7 +26,7 @@ url: https://raw.githubusercontent.com/api-evangelist/tmdb/refs/heads/main/apis.
 type: Index
 access: 3rd-Party
 position: Consuming
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-05-28'
 modified: '2026-05-30'
 x-source: public-apis/public-apis
