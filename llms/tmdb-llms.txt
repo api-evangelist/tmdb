@@ -1,0 +1,49 @@
+# The Movie Database (TMDB) Documentation
+
+> Use the world's best entertainment API to get information about what movies and TV shows are streaming where, as well as all the metadata you need to build an amazing experience yourself.
+
+## Guides
+- [Getting Started](https://developer.themoviedb.org/docs/getting-started.md): Get started with the basics of the TMDB API.
+- [FAQ](https://developer.themoviedb.org/docs/faq.md)
+- [Popularity & Trending](https://developer.themoviedb.org/docs/popularity-and-trending.md)
+- [Wrappers & Libraries](https://developer.themoviedb.org/docs/wrappers-and-libraries.md): Here's a list of community contributed libraries for many popular languages in the world.
+- [Application](https://developer.themoviedb.org/docs/authentication-application.md): The default way to authenticate.
+- [Append To Response](https://developer.themoviedb.org/docs/append-to-response.md)
+- [Daily ID Exports](https://developer.themoviedb.org/docs/daily-id-exports.md): Download a list of valid IDs from TMDB.
+- [Finding Data](https://developer.themoviedb.org/docs/finding-data.md): How do you find data on TMDB?
+- [JSON & JSONP](https://developer.themoviedb.org/docs/json-and-jsonp.md)
+- [Languages](https://developer.themoviedb.org/docs/languages.md): Learn about languages on TMDB.
+- [Regions](https://developer.themoviedb.org/docs/region-support.md): How does region support work on TMDB?
+- [Search & Query For Details](https://developer.themoviedb.org/docs/search-and-query-for-details.md): Learn how to search and query for a movie.
+- [Basics](https://developer.themoviedb.org/docs/image-basics.md): How to build an image URL.
+- [Languages](https://developer.themoviedb.org/docs/image-languages.md): How do languages work with image queries?
+
+## API Reference
+- [My Requests](https://developer.themoviedb.org/reference/my-requests.md): Set up the welcome page for your API to help users make their first call.
+- [Details](https://developer.themoviedb.org/reference/account-details.md): Get the public details of an account on TMDB.
+- [Add Favorite](https://developer.themoviedb.org/reference/account-add-favorite.md): Mark a movie or TV show as a favourite.
+- [Add To Watchlist](https://developer.themoviedb.org/reference/account-add-to-watchlist.md): Add a movie or TV show to your watchlist.
+- [Favorite Movies](https://developer.themoviedb.org/reference/account-get-favorites.md): Get a users list of favourite movies.
+- [Favorite TV](https://developer.themoviedb.org/reference/account-favorite-tv.md): Get a users list of favourite TV shows.
+- [Lists](https://developer.themoviedb.org/reference/account-lists.md): Get a users list of custom lists.
+- [Rated Movies](https://developer.themoviedb.org/reference/account-rated-movies.md): Get a users list of rated movies.
+- [Rated TV](https://developer.themoviedb.org/reference/account-rated-tv.md): Get a users list of rated TV shows.
+- [Rated TV Episodes](https://developer.themoviedb.org/reference/account-rated-tv-episodes.md): Get a users list of rated TV episodes.
+- [Watchlist Movies](https://developer.themoviedb.org/reference/account-watchlist-movies.md): Get a list of movies added to a users watchlist.
+- [Watchlist TV](https://developer.themoviedb.org/reference/account-watchlist-tv.md): Get a list of TV shows added to a users watchlist.
+- [Create Session](https://developer.themoviedb.org/reference/authentication-create-session.md)
+- [Details](https://developer.themoviedb.org/reference/collection-details.md): Get collection details by ID.
+- [Images](https://developer.themoviedb.org/reference/collection-images.md): Get the images that belong to a collection.
+- [Movie](https://developer.themoviedb.org/reference/discover-movie.md): Find movies using over 30 filters and sort options.
+- [TV](https://developer.themoviedb.org/reference/discover-tv.md): Find TV shows using over 30 filters and sort options.
+- [Changes](https://developer.themoviedb.org/reference/movie-changes.md): Get the recent changes for a movie.
+- [Images](https://developer.themoviedb.org/reference/movie-images.md): Get the images that belong to a movie.
+- [Lists](https://developer.themoviedb.org/reference/movie-lists.md): Get the lists that a movie has been added to.
+- [Images](https://developer.themoviedb.org/reference/person-images.md): Get the profile images that belong to a person.
+- [Translations](https://developer.themoviedb.org/reference/translations.md): Get the translations that belong to a person.
+- [TV](https://developer.themoviedb.org/reference/search-tv.md): Search for TV shows by their original, translated and also known as names.
+- [Images](https://developer.themoviedb.org/reference/tv-series-images.md): Get the images that belong to a TV series.
+- [Lists](https://developer.themoviedb.org/reference/lists-copy.md): Get the lists that a TV series has been added to.
+- [Details](https://developer.themoviedb.org/reference/tv-season-details.md): Query the details of a TV season.
+- [Images](https://developer.themoviedb.org/reference/tv-season-images.md): Get the images that belong to a TV season.
+- [Images](https://developer.themoviedb.org/reference/tv-episode-images.md): Get the images that belong to a TV episode.
