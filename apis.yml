@@ -9,6 +9,17 @@ description: >-
   trending, discover/search, watch providers, account/lists, authentication, and configuration. A v4
   surface adds OAuth-style user authentication and richer list management. Non-commercial use is free;
   commercial use requires a separate written agreement with TMDB.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
