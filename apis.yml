@@ -1,14 +1,7 @@
 aid: tmdb
 name: The Movie Database
 kind: company
-description: >-
-  The Movie Database (TMDB) is a community-built movie, TV, and people metadata catalog with a free REST
-  API used by streaming apps, recommendation engines, second-screen experiences, fan sites, and AI/ML
-  workflows. The TMDB API v3 exposes ~150 endpoints across movies, TV series, seasons, episodes, people,
-  credits, images, collections, companies, networks, keywords, genres, reviews, lists, certifications,
-  trending, discover/search, watch providers, account/lists, authentication, and configuration. A v4
-  surface adds OAuth-style user authentication and richer list management. Non-commercial use is free;
-  commercial use requires a separate written agreement with TMDB.
+description: The Movie Database (TMDB) is a community-built movie, TV, and people metadata catalog with a free REST API used by streaming apps, recommendation engines, second-screen experiences, fan sites, and AI/ML workflows. The TMDB API v3 exposes ~150 endpoints across movies, TV series, seasons, episodes, people, credits, images, collections, companies, networks, keywords, genres, reviews, lists, certifications, trending, discover/search, watch providers, account/lists, authentication, and configuration. A v4 surface adds OAuth-style user authentication and richer list management. Non-commercial use is free; commercial use requires a separate written agreement with TMDB.
 deliveryModel:
   model: saas
   open_source: false
@@ -82,12 +75,7 @@ tags_raw:
 apis:
 - aid: tmdb:tmdb-api
   name: TMDB API
-  description: >-
-    The full TMDB REST API surface (v3). Covers movies, TV series, seasons, episodes, people, credits,
-    images, collections, companies, networks, keywords, genres, reviews, lists, certifications, find,
-    trending, discover, search, watch providers, configuration, authentication, account, and guest
-    sessions. JSON over HTTPS, with optional append_to_response to combine related sub-resources in a
-    single response.
+  description: The full TMDB REST API surface (v3). Covers movies, TV series, seasons, episodes, people, credits, images, collections, companies, networks, keywords, genres, reviews, lists, certifications, find, trending, discover, search, watch providers, configuration, authentication, account, and guest sessions. JSON over HTTPS, with optional append_to_response to combine related sub-resources in a single response.
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://developer.themoviedb.org/reference/intro/getting-started
   baseURL: https://api.themoviedb.org
@@ -116,6 +104,388 @@ apis:
     url: https://www.themoviedb.org/talk/category/5047958519c29526b50017d6
   - type: LlmsText
     url: https://developer.themoviedb.org/llms.txt
+- aid: tmdb:the-movie-database-account-api
+  name: The Movie Database Account API
+  description: The Account API from The Movie Database — 11 operation(s) for account.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Account
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-account-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-authentication-api
+  name: The Movie Database Authentication API
+  description: The Authentication API from The Movie Database — 7 operation(s) for authentication.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Authentication
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-authentication-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-certification-api
+  name: The Movie Database Certification API
+  description: The Certification API from The Movie Database — 2 operation(s) for certification.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Certification
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-certification-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-collection-api
+  name: The Movie Database Collection API
+  description: The Collection API from The Movie Database — 3 operation(s) for collection.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Collection
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-collection-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-company-api
+  name: The Movie Database Company API
+  description: The Company API from The Movie Database — 3 operation(s) for company.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Company
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-company-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-configuration-api
+  name: The Movie Database Configuration API
+  description: The Configuration API from The Movie Database — 6 operation(s) for configuration.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Configuration
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-configuration-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-credit-api
+  name: The Movie Database Credit API
+  description: The Credit API from The Movie Database — 1 operation(s) for credit.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Credit
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-credit-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-discover-api
+  name: The Movie Database Discover API
+  description: The Discover API from The Movie Database — 2 operation(s) for discover.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Discover
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-discover-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-find-api
+  name: The Movie Database Find API
+  description: The Find API from The Movie Database — 1 operation(s) for find.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Find
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-find-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-genre-api
+  name: The Movie Database Genre API
+  description: The Genre API from The Movie Database — 2 operation(s) for genre.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Genre
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-genre-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-guest-session-api
+  name: The Movie Database Guest Session API
+  description: The Guest Session API from The Movie Database — 3 operation(s) for guest session.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Guest Session
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-guest-session-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-keyword-api
+  name: The Movie Database Keyword API
+  description: The Keyword API from The Movie Database — 2 operation(s) for keyword.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Keyword
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-keyword-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-list-api
+  name: The Movie Database List API
+  description: The List API from The Movie Database — 6 operation(s) for list.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - List
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-list-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-movie-api
+  name: The Movie Database Movie API
+  description: The Movie API from The Movie Database — 23 operation(s) for movie.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Movie
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-movie-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-network-api
+  name: The Movie Database Network API
+  description: The Network API from The Movie Database — 3 operation(s) for network.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Network
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-network-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-person-api
+  name: The Movie Database Person API
+  description: The Person API from The Movie Database — 12 operation(s) for person.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Persons
+  tags_raw:
+  - Person
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-person-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-review-api
+  name: The Movie Database Review API
+  description: The Review API from The Movie Database — 1 operation(s) for review.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Review
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-review-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-search-api
+  name: The Movie Database Search API
+  description: The Search API from The Movie Database — 7 operation(s) for search.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-search-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-trending-api
+  name: The Movie Database Trending API
+  description: The Trending API from The Movie Database — 4 operation(s) for trending.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Trending
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-trending-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-tv-api
+  name: The Movie Database Tv API
+  description: The Tv API from The Movie Database — 46 operation(s) for tv.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - TV
+  tags_raw:
+  - Tv
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-tv-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
+- aid: tmdb:the-movie-database-watch-api
+  name: The Movie Database Watch API
+  description: The Watch API from The Movie Database — 3 operation(s) for watch.
+  humanURL: https://developer.themoviedb.org
+  baseURL: https://api.themoviedb.org/3
+  tags:
+  - Watch
+  properties:
+  - type: OpenAPI
+    url: openapi/the-movie-database-watch-api-openapi.yml
+  - type: Documentation
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Reference
+    url: https://developer.themoviedb.org/reference/getting-started
+  - type: GettingStarted
+    url: https://developer.themoviedb.org/docs/getting-started
+  - type: Authentication
+    url: https://developer.themoviedb.org/docs/authentication-application
 common:
 - type: DomainSecurity
   url: security/tmdb-domain-security.yml
