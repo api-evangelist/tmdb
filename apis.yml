@@ -471,6 +471,8 @@ apis:
   humanURL: https://developer.themoviedb.org/reference/intro/getting-started
   baseURL: https://api.themoviedb.org
   tags:
+  - Networks
+  tags_raw:
   - Network
   properties:
   - type: OpenAPI
@@ -499,6 +501,8 @@ apis:
   humanURL: https://developer.themoviedb.org/reference/intro/getting-started
   baseURL: https://api.themoviedb.org
   tags:
+  - Persons
+  tags_raw:
   - Person
   properties:
   - type: OpenAPI
@@ -611,6 +615,8 @@ apis:
   humanURL: https://developer.themoviedb.org/reference/intro/getting-started
   baseURL: https://api.themoviedb.org
   tags:
+  - TV
+  tags_raw:
   - Tv
   properties:
   - type: OpenAPI
