@@ -1,0 +1,97 @@
+openapi: 3.2.0
+info:
+  title: tmdb-api Account Genre API
+  version: '3'
+servers:
+- url: https://api.themoviedb.org
+security:
+- sec0: []
+tags:
+- name: Genre
+paths:
+  /3/genre/movie/list:
+    get:
+      summary: Movie List
+      description: Get the list of official genres for movies.
+      operationId: genre-movie-list
+      parameters:
+      - name: language
+        in: query
+        schema:
+          type: string
+          default: en
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"genres":[{"id":28,"name":"Action"},{"id":12,"name":"Abenteuer"},{"id":16,"name":"Animation"},{"id":35,"name":"Komödie"},{"id":80,"name":"Krimi"},{"id":99,"name":"Dokumentarfilm"},{"id":18,"name":"Drama"},{"id":10751,"name":"Familie"},{"id":14,"name":"Fantasy"},{"id":36,"name":"Historie"},{"id":27,"name":"Horror"},{"id":10402,"name":"Musik"},{"id":9648,"name":"Mystery"},{"id":10749,"name":"Liebesfilm"},{"id":878,"name":"Science Fiction"},{"id":10770,"name":"TV-Film"},{"id":53,"name":"Thriller"},{"id":10752,"name":"Kriegsfilm"},{"id":37,"name":"Western"}]}'
+              schema:
+                type: object
+                properties:
+                  genres:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 28
+                          default: 0
+                        name:
+                          type: string
+                          example: Action
+      deprecated: false
+      tags:
+      - Genre
+  /3/genre/tv/list:
+    get:
+      summary: TV List
+      description: Get the list of official genres for TV shows.
+      operationId: genre-tv-list
+      parameters:
+      - name: language
+        in: query
+        schema:
+          type: string
+          default: en
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"genres":[{"id":10759,"name":"Action & Adventure"},{"id":16,"name":"Animation"},{"id":35,"name":"Komödie"},{"id":80,"name":"Krimi"},{"id":99,"name":"Dokumentarfilm"},{"id":18,"name":"Drama"},{"id":10751,"name":"Familie"},{"id":10762,"name":"Kids"},{"id":9648,"name":"Mystery"},{"id":10763,"name":"News"},{"id":10764,"name":"Reality"},{"id":10765,"name":"Sci-Fi & Fantasy"},{"id":10766,"name":"Soap"},{"id":10767,"name":"Talk"},{"id":10768,"name":"War & Politics"},{"id":37,"name":"Western"}]}'
+              schema:
+                type: object
+                properties:
+                  genres:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 10759
+                          default: 0
+                        name:
+                          type: string
+                          example: Action & Adventure
+      deprecated: false
+      tags:
+      - Genre
+components:
+  securitySchemes:
+    sec0:
+      type: apiKey
+      in: header
+      name: Authorization
+      x-bearer-format: bearer
+x-readme:
+  headers: []
+  explorer-enabled: true
+  proxy-enabled: true
+x-readme-fauxas: true

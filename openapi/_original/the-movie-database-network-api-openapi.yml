@@ -1,0 +1,175 @@
+# x-archived-from: the-movie-database-network-api-openapi.yml
+# x-archived-on: 2026-09-16
+openapi: 3.2.0
+info:
+  title: tmdb-api Account Network API
+  version: '3'
+servers:
+- url: https://api.themoviedb.org
+security:
+- sec0: []
+tags:
+- name: Network
+paths:
+  /3/network/{network_id}:
+    get:
+      summary: Details
+      description: ''
+      operationId: network-details
+      parameters:
+      - name: network_id
+        in: path
+        schema:
+          type: integer
+          format: int32
+        required: true
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"headquarters":"New York City, New York","homepage":"https://www.hbo.com","id":49,"logo_path":"/tuomPhY2UtuPTqqFnKMVHvSb724.png","name":"HBO","origin_country":"US"}'
+              schema:
+                type: object
+                properties:
+                  headquarters:
+                    type: string
+                    example: New York City, New York
+                  homepage:
+                    type: string
+                    example: https://www.hbo.com
+                  id:
+                    type: integer
+                    example: 49
+                    default: 0
+                  logo_path:
+                    type: string
+                    example: /tuomPhY2UtuPTqqFnKMVHvSb724.png
+                  name:
+                    type: string
+                    example: HBO
+                  origin_country:
+                    type: string
+                    example: US
+      deprecated: false
+      tags:
+      - Network
+  /3/network/{network_id}/alternative_names:
+    get:
+      summary: Alternative Names
+      description: Get the alternative names of a network.
+      operationId: details-copy
+      parameters:
+      - name: network_id
+        in: path
+        schema:
+          type: integer
+          format: int32
+        required: true
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"id":49,"results":[{"name":"Home Box Office","type":""},{"name":"HBO HD","type":""}]}'
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 49
+                    default: 0
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          example: Home Box Office
+                        type:
+                          type: string
+                          example: ''
+      deprecated: false
+      tags:
+      - Network
+  /3/network/{network_id}/images:
+    get:
+      summary: Images
+      description: Get the TV network logos by id.
+      operationId: alternative-names-copy
+      parameters:
+      - name: network_id
+        in: path
+        schema:
+          type: integer
+          format: int32
+        required: true
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"id":49,"logos":[{"aspect_ratio":2.425287356321839,"file_path":"/tuomPhY2UtuPTqqFnKMVHvSb724.png","height":174,"id":"5a7a67a40e0a26020a000091","file_type":".svg","vote_average":5.318,"vote_count":3,"width":422},{"aspect_ratio":2.424242424242424,"file_path":"/hizvY65SpyF3BPY2qsBZMgUOxjs.png","height":495,"id":"63e7979663aad200858726da","file_type":".png","vote_average":5.312,"vote_count":1,"width":1200}]}'
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 49
+                    default: 0
+                  logos:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        aspect_ratio:
+                          type: number
+                          example: 2.425287356321839
+                          default: 0
+                        file_path:
+                          type: string
+                          example: /tuomPhY2UtuPTqqFnKMVHvSb724.png
+                        height:
+                          type: integer
+                          example: 174
+                          default: 0
+                        id:
+                          type: string
+                          example: 5a7a67a40e0a26020a000091
+                        file_type:
+                          type: string
+                          example: .svg
+                        vote_average:
+                          type: number
+                          example: 5.318
+                          default: 0
+                        vote_count:
+                          type: integer
+                          example: 3
+                          default: 0
+                        width:
+                          type: integer
+                          example: 422
+                          default: 0
+      deprecated: false
+      tags:
+      - Network
+components:
+  securitySchemes:
+    sec0:
+      type: apiKey
+      in: header
+      name: Authorization
+      x-bearer-format: bearer
+x-readme:
+  headers: []
+  explorer-enabled: true
+  proxy-enabled: true
+x-readme-fauxas: true

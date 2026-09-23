@@ -1,0 +1,171 @@
+# x-archived-from: the-movie-database-keyword-api-openapi.yml
+# x-archived-on: 2026-09-16
+openapi: 3.2.0
+info:
+  title: tmdb-api Account Keyword API
+  version: '3'
+servers:
+- url: https://api.themoviedb.org
+security:
+- sec0: []
+tags:
+- name: Keyword
+paths:
+  /3/keyword/{keyword_id}:
+    get:
+      summary: Details
+      description: ''
+      operationId: keyword-details
+      parameters:
+      - name: keyword_id
+        in: path
+        schema:
+          type: integer
+          format: int32
+        required: true
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"id":1701,"name":"hero"}'
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1701
+                    default: 0
+                  name:
+                    type: string
+                    example: hero
+      deprecated: false
+      tags:
+      - Keyword
+  /3/keyword/{keyword_id}/movies:
+    get:
+      summary: Movies
+      description: ''
+      operationId: keyword-movies
+      parameters:
+      - name: keyword_id
+        in: path
+        schema:
+          type: string
+        required: true
+      - name: include_adult
+        in: query
+        schema:
+          type: boolean
+          default: false
+      - name: language
+        in: query
+        schema:
+          type: string
+          default: en-US
+      - name: page
+        in: query
+        schema:
+          type: integer
+          format: int32
+          default: 1
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"id":1701,"page":1,"results":[{"adult":false,"backdrop_path":"/3CxUndGhUcZdt1Zggjdb2HkLLQX.jpg","genre_ids":[28,12,878],"id":640146,"original_language":"en","original_title":"Ant-Man and the Wasp: Quantumania","overview":"Das Superhelden-Duo Scott Lang und Hope Van Dyne erkundet zusammen mit Hopes Eltern Hank Pym und Janet Van Dyne das Quantenreich, interagiert mit seltsamen neuen Kreaturen und begibt sich auf ein Abenteuer, das sie über die Grenzen dessen hinaustreiben wird, was sie für möglich gehalten haben.","popularity":9200.005,"poster_path":"/nA5otwVxAfpBP4PVgeuBk3qHcLY.jpg","release_date":"2023-02-15","title":"Ant-Man and the Wasp: Quantumania","video":false,"vote_average":6.5,"vote_count":2079},{"adult":false,"backdrop_path":"/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg","genre_ids":[28,12,878],"id":505642,"original_language":"en","original_title":"Black Panther: Wakanda Forever","overview":"Der König ist tot! König T''Challa, der als Black Panther auch Mitglied der Avengers-Heldentruppe war, stirbt an einer unbekannten Krankheit und ganz Wakanda ist in Trauer. Die Weltgemeinschaft sieht ihre Chance gekommen, um das vermeintlich geschwächte Königreich endlich zu Zugeständnissen bei der Lieferung des mächtigen Minerals Vibranium zu bewegen - und scheut dabei auch vor bewaffneten Überfällen nicht zurück. Doch Königin Ramonda bleibt standhaft und weist die Staatsoberhäupter in ihre Schranken. Wakanda wird auch ohne König T''Challa und den Black Panther weiter existieren und nicht vor anderen Nationen buckeln. Zur selben Zeit haben die USA mithilfe der erst 19 Jahre alten MIT-Studentin Riri Williams ein Gerät zur Aufspürung von Vibranium entwickelt und werden auch auf dem Grund des Meeres fündig. Angeführt von König Namor, bereitet sich das unter dem Meer lebende Volk der Talokanil aus dem Königreich Talokan darauf vor, einen Krieg mit den Landbewohnern zu beginnen.","popularity":931.513,"poster_path":"/vo9QISNKYtDN40VKfQkPxbMOO9j.jpg","release_date":"2022-11-09","title":"Black Panther: Wakanda Forever","video":false,"vote_average":7.3,"vote_count":4695},{"adult":false,"backdrop_path":"/7TUp4uKIaX9c2TAZLPwjty5A0EP.jpg","genre_ids":[878,12,28],"id":447365,"original_language":"en","original_title":"Guardians of the Galaxy Volume 3","overview":"Thor schließt sich nach den Geschehnissen von Endgame den Guardians an & schickt sich an, als neues Team-Mitglied neue Weltraumabenteuer zu erleben. Es muss nur vorher noch die Frage des Schiffskapitäns geklärt werden…","popularity":647.851,"poster_path":"/72Rz9HSQWnPqwpa3qJzgiZ6WHh.jpg","release_date":"2023-05-03","title":"Guardians of the Galaxy: Volume 3","video":false,"vote_average":8.5,"vote_count":13},{"adult":false,"backdrop_path":"/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg","genre_ids":[28,12,878],"id":634649,"original_language":"en","original_title":"Spider-Man: No Way Home","overview":"Peter Parker ist demaskiert und kann sein normales Leben nicht mehr von den hohen Einsätzen als Superheld trennen. Als er Doctor Strange um Hilfe bittet, wird die Lage noch gefährlicher und er muss entdecken, was es wirklich bedeutet, Spider-Man zu sein.","popularity":398.217,"poster_path":"/iNKf4D0AzOj9GLq8ZyG3WZaqibL.jpg","release_date":"2021-12-15","title":"Spider-Man: No Way Home","video":false,"vote_average":8,"vote_count":17267},{"adult":false,"backdrop_path":"/jsoz1HlxczSuTx0mDl2h0lxy36l.jpg","genre_ids":[14,28,35],"id":616037,"original_language":"en","original_title":"Thor: Love and Thunder","overview":"Nachdem sein Ruhestand von Gorr dem Götterschlächter, einem galaktischen Killer, der die Auslöschung der Götter anstrebt, unterbrochen wird, bittet Thor Odinson um die Hilfe von König Walküre, Korg und seiner Ex-Freundin Jane Foster, die nun als Mighty Thor das Mjolnir schwingt. Gemeinsam begeben sie sich auf ein erschütterndes kosmisches Abenteuer, um das Geheimnis der Rache des Götterschlächters zu lüften und ihn aufzuhalten, bevor es zu spät ist.","popularity":352.776,"poster_path":"/yplCZnNHgMeGWEOa0e1bp6kfDOB.jpg","release_date":"2022-07-06","title":"Thor: Love and Thunder","video":false,"vote_average":6.6,"vote_count":5862},{"adult":false,"backdrop_path":"/vIgyYkXkg6NC2whRbYjBD7eb3Er.jpg","genre_ids":[878,28,12],"id":580489,"original_language":"en","original_title":"Venom: Let There Be Carnage","overview":"Venom und sein Wirt Eddie Brock bekommen es mit dem Serienkiller Cletus Kasady zu tun, der sich in den blutrünstigen Carnage verwandelt, nachdem er ebenfalls mit einem Symbiont in Kontakt gekommen ist.","popularity":186.67,"poster_path":"/ztoy8TiHu9qa22bW1DkhdNIzeF9.jpg","release_date":"2021-09-30","title":"Venom: Let There Be Carnage","video":false,"vote_average":6.9,"vote_count":8751},{"adult":false,"backdrop_path":"/9lL3VVktfy8ny774XP00tJHXGvP.jpg","genre_ids":[878,28,12],"id":298618,"original_language":"en","original_title":"The Flash","overview":"","popularity":153.407,"poster_path":"/1um4RgzHQ5r0pKPrQryPmqwk1iS.jpg","release_date":"2023-06-14","title":"The Flash","video":false,"vote_average":0,"vote_count":0},{"adult":false,"backdrop_path":"/vcNXzOfACCXZA7vb8SNde0LUC9o.jpg","genre_ids":[28,878,14],"id":1068141,"original_language":"en","original_title":"Mighty Morphin Power Rangers: Once & Always","overview":"Dreißig Jahre nachdem der weise und mächtige Zordon die Mighty Morphin Power Rangers gegründet hat, sieht sich das Team einer vertrauten Bedrohung aus der Vergangenheit gegenüber. Mitten in einer globalen Krise werden sie erneut aufgefordert, die Helden zu sein, die die Welt braucht.","popularity":130.019,"poster_path":"/vc87upO8vcAGj9OmgH3AIz6ikKB.jpg","release_date":"2023-04-19","title":"Power Rangers: Once & Always","video":false,"vote_average":6.8,"vote_count":149},{"adult":false,"backdrop_path":"/skauHPLA4so9PqOuu3jhWmiWnFd.jpg","genre_ids":[28,12,14],"id":297802,"original_language":"en","original_title":"Aquaman","overview":"Arthur Curry besser bekannt unter seinem Alias \"Aquaman\",  ist der rechtmäßige Erbe des Thrones von Atlantis.  Doch bisher ist dem Sohn eines menschlichen Vaters und einer atlantischen Mutter die Herrschaft über das mystische Unterwasserkönigreich verwehrt. Aquamans Halbbruder Orm herrscht über Atlantis und möchte auch die anderen sechs Königreiche der Meere um sich scharen, um vereint einen Krieg gegen die Menschen an der Erdoberfläche zu führen.  Um seinen Anspruch auf den Thron zu beweisen, macht sich Aquaman gemeinsam mit Mera auf die Suche nach dem Dreizack des ersten Königs von Atlantis. Als Orm von diesem Plan erfährt, hetzt er den beiden den Piraten Black Manta auf den Hals, welcher mit Aquaman selbst noch eine Rechnung zu begleichen hat.","popularity":111.492,"poster_path":"/pxMM3OJoVVkYFyj52YUIlN8fux.jpg","release_date":"2018-12-07","title":"Aquaman","video":false,"vote_average":6.9,"vote_count":12588},{"adult":false,"backdrop_path":"/keIxh0wPr2Ymj0Btjh4gW7JJ89e.jpg","genre_ids":[28,12,878],"id":497698,"original_language":"en","original_title":"Black Widow","overview":"Nachdem sie das Sokovia-Abkommen abgelehnt und Steve Rogers zur Flucht verholfen hat, befindet sich Natasha Romanoff auf der Flucht. Von der Regierung gejagt, führt sie ihr Weg nach Russland, wo sie auf alte Verbündete und neue Feinde trifft.","popularity":107.622,"poster_path":"/gkyoYo9d6g98xjScnZwh3nL2Yfp.jpg","release_date":"2021-07-07","title":"Black Widow","video":false,"vote_average":7.3,"vote_count":8866},{"adult":false,"backdrop_path":"/gWuiOPAz3WImzFZUzHTT6c4omrD.jpg","genre_ids":[878,28,12,35],"id":98566,"original_language":"en","original_title":"Teenage Mutant Ninja Turtles","overview":"Die humanoiden Schildkröten Leonardo, Michelangelo, Raphael, Donatello und ihr Meister, die humanoide Ratte Splinter, kämpfen gegen den bösen Shredder und seine Armee von Foot Soldiern. Unterstützt werden sie dabei von der furchtlosen Journalistin April O’Neil und ihrem Kameramann Vern Fenwick. Ihre wichtigsten Waffen sind dabei nicht nur ihre Ninja-Ausbildung samt Waffengebrauch, sondern auch ihr Witz und ihre tiefe brüderliche Verbundenheit, sowie die Energie, die sie aus ihrem täglichen Pizzaverzehr ziehen.","popularity":107.414,"poster_path":"/b0Do93IEW8UeIqCbHHztT24bAep.jpg","release_date":"2014-08-07","title":"Teenage Mutant Ninja Turtles","video":false,"vote_average":5.9,"vote_count":6215},{"adult":false,"backdrop_path":"/kdbLf3aTQsEXqYlH9vA4fzmnSFz.jpg","genre_ids":[10752,18,28],"id":228150,"original_language":"en","original_title":"Fury","overview":"April 1945: Die Alliierten starten im Zweiten Weltkrieg ihre finale Offensive gegen Nazi-Deutschland. Ganz vorne dabei ist ein Sherman-Panzer, der von seiner Crew liebevoll \"Fury\" getauft wurde. Angeführt wird die fünfköpfige Truppe vom kampferprobten Sergeant Wardaddy, der den Krieg bestens kennt und schon viele Schlachten geschlagen hat. Immer weiter stoßen er und seine Männer ins feindliche Gebiet vor und finden sich bald in einer gefährlichen Lage wieder. Denn plötzlich sind sie in der Unterzahl, mit dem jungen Norman Ellison ist zudem erst kürzlich ein Rookie zum Team gestoßen. Doch gegen jede Wahrscheinlichkeit wollen die tapferen Männer ein weiteres Mal bestehen und Nazi-Deutschland mitten ins Herz treffen.","popularity":103.991,"poster_path":"/fFJd1HggkQilFblsk5mQUrrpU5h.jpg","release_date":"2014-10-15","title":"Herz aus Stahl","video":false,"vote_average":7.5,"vote_count":10711},{"adult":false,"backdrop_path":"/3MF0ADRkiNkhklmCo9o4zTT39Mj.jpg","genre_ids":[35,12,878],"id":550988,"original_language":"en","original_title":"Free Guy","overview":"Guy führt ein Leben als Kassierer in einer Bank, das vor allem von der täglichen Routine und dem Chaos und der Gewalt um ihn herum geprägt ist. Jeden Tag wird seine Bank aufs Neue überfallen, aber damit hat sich Guy abgefunden. Eines Tages findet er dann jedoch heraus, dass er in Wahrheit in einem brutalen Open-World-Videospiel namens „Free City“ lebt und ein sogenannter NPC ist – eine Videospielfigur, die nicht von einem menschlichen Spieler gesteuert wird. Verantwortlich für diese Erkenntnis sind die Programmierer Milly und Keys, die „Free City“ gehackt haben. Guy verliebt sich in Millys Avatar Molotovgirl, doch die Tatsache, dass sich ein NPC merkwürdig verhält, bleibt den Köpfen hinter dem Spiel natürlich nicht verborgen. Der Publisher Antwan möchte „Free City“ abschalten und nun ist es an Guy, sich und die anderen Videospielfiguren zu retten.","popularity":101.454,"poster_path":"/7PY0SkhIGgPS4XVyDJqaiDb4T93.jpg","release_date":"2021-08-11","title":"Free Guy","video":false,"vote_average":7.6,"vote_count":7122},{"adult":false,"backdrop_path":"/5tub2Kw6NboWFblA1CgDEwB59jP.jpg","genre_ids":[12,10751,16,28,35],"id":177572,"original_language":"en","original_title":"Big Hero 6","overview":"Hiro Hamada ist ein brillanter Teenager und lebt in der futuristischen Stadt San Fransokyo ein relativ normales Leben. Zumindest solange, bis ihm sein Bruder Tadashi den aufblasbaren Roboter Baymax baut, zu dem Hiro schnell eine ganz besondere Beziehung entwickelt. Baymax'' tatkräftige Unterstützung kann der aufgeweckte Junge definitiv gut gebrauchen, droht doch schon bald eine kriminelle Organisation damit, seine Heimatstadt zu zerstören. Mit der Hilfe von Baymax und seinen Freunden Go Go Tomago, Wasabi, Honey Lemon und Fred beschließt Hiro, alles zu tun, um die Katastrophe zu verhindern.","popularity":97.704,"poster_path":"/tBOl7K5HeBrMtLV73EsNI2hRryK.jpg","release_date":"2014-10-24","title":"Baymax - Riesiges Robowabohu","video":false,"vote_average":7.7,"vote_count":14397},{"adult":false,"backdrop_path":"/3P52oz9HPQWxcwHOwxtyrVV1LKi.jpg","genre_ids":[28,35,12],"id":383498,"original_language":"en","original_title":"Deadpool 2","overview":"Nach einem weiteren herben Schicksalsschlag ist Deadpool des Lebens überdrüssig und versucht sich mithilfe von Benzinkanistern und einer Zigarette umzubringen. Doch der unkaputtbare Antiheld wird von seinem X-Men-Kumpanen Colossus gerettet und mit auf das abgeschiedene Anwesen der Mutanten genommen. Durch einen Zwischenfall mit dem Teenager-Mutanten Russell lernt Deadpool den Superschurken Cable kennen, der es auf den wütenden Halbstarken abgesehen hat. Zunächst kann Deadpool die Situation entschärfen – doch dann landen Russell und er plötzlich im Knast. Nun stellt er sich seine eigene Superheldencrew zusammen und rekrutiert unter anderem Domino und Zeitgeist um es mit Cable aufzunehmen …","popularity":91.783,"poster_path":"/uC7YwWcXusYgpWHSxl6njJDiFfk.jpg","release_date":"2018-05-10","title":"Deadpool 2","video":false,"vote_average":7.5,"vote_count":15846},{"adult":false,"backdrop_path":"/lOXVbF2mBK0xUt8sLInF3TIk5YS.jpg","genre_ids":[28,878],"id":2048,"original_language":"en","original_title":"I, Robot","overview":"Chicago, 2035: Fast jeder Haushalt verfügt über einen Roboter. Die hoch entwickelten Maschinenwesen verrichten für ihre Besitzer alltägliche Arbeiten wie Einkäufe erledigen oder den Hund ausführen. Spezielle Sicherheitsvorkehrungen in der Programmierung sorgen für ein ungefährliches Zusammenleben mit den Menschen. Nur der leicht paranoide Detective Del Spooner traut ihnen nicht. Als er in einem Mordfall ermittelt, in dem der Roboter Sonny der Hauptverdächtige ist, sieht er sich in seinem Misstrauen bestätigt. Mit Hilfe der Roboterpsychologin Dr. Susan Calvin versucht Del Spooner den mysteriösen Fall zu lösen und macht dabei eine schreckliche Entdeckung.","popularity":86.064,"poster_path":"/nFTQkC8COaEthQRfeOCqIhKHk67.jpg","release_date":"2004-07-15","title":"I, Robot","video":false,"vote_average":6.9,"vote_count":10642},{"adult":false,"backdrop_path":"/cugmVwK0N4aAcLibelKN5jWDXSx.jpg","genre_ids":[16,28,12,878],"id":768744,"original_language":"ja","original_title":"僕のヒーローアカデミア THE MOVIE ワールド ヒーローズ ミッション","overview":"Ein Terroristenkult versucht mittels Giftgas, alle Menschen mit angeborenen Spezialitäten auf der ganzen Welt zu vernichten. Nachdem bereits die erste Stadt verwüstet ist, werden die Helden ausgesandt, um den Anführer des Kultes festzusetzen. Deku, Bakugo und Shoto reisen als Teil des Teams von Endeavor nach Otheon in Europa. Doch dort haben sie aber zunächst weniger mit dem Kult, sondern erst einmal mit der Polizei und der Anklage, 12 Menschen getötet zu haben, zu kämpfen …","popularity":80.103,"poster_path":"/kiVhYqu2FKNJNlFaUTN0UTQqKu7.jpg","release_date":"2021-08-06","title":"My Hero Academia: World Heroes’ Mission","video":false,"vote_average":7.6,"vote_count":398},{"adult":false,"backdrop_path":"/zMrk2G3XsnfYKiIp1NEfdtvDyBH.jpg","genre_ids":[12,14,18,28],"id":337401,"original_language":"en","original_title":"Mulan","overview":"Als Chinas mächtiger Kaiser ein Dekret erlässt, dass aus jeder Familie je ein Mann in die kaiserliche Armee eingezogen wird, um das Land vor Eindringlingen aus dem Norden zu verteidigen, beschließt Mulan Hua, die Tochter und einziges Kind eines hoch dekorierten Soldaten, anstelle ihres kranken und geschwächten Vaters dem Einberufungsbefehl Folge zu leisten. Mulan gibt sich in Männerverkleidung als Jun Hua aus und muss sich den strengsten Prüfungen unterziehen. Mit den zahlreichen Abenteuern, die sie auf ihrer epischen Reise durchlebt, lernt sie auf ihre innere Stärke zu vertrauen und entdeckt dabei ihr wahres Potenzial. So kann Mulan am Ende ihres aufregenden Wegs zur respektierten Kriegerin nicht nur der Dankbarkeit der ganzen Nation sicher sein, auch die Hochachtung ihres so stolzen Vaters wird sie sich verdienen.","popularity":70.702,"poster_path":"/SnXUdLT7AyZWoeaINVGYJ0xg5U.jpg","release_date":"2020-09-04","title":"Mulan","video":false,"vote_average":6.9,"vote_count":6116},{"adult":false,"backdrop_path":"/2ex2beZ4ssMeOduLD0ILzXKCiep.jpg","genre_ids":[28,12,878,14],"id":246655,"original_language":"en","original_title":"X-Men: Apocalypse","overview":"Der Motor für das Fortbestehen einer Art ist die Mutation, die unter bestimmten sich ändernden Umweltbedingungen sich von größtem Vorteil erweist. Noch sah sich immer der Mensch, der Homo sapiens, als die Krone der Schöpfung. Doch nun – mit dem Auftritt der Mutanten – sehen sich die Menschen in ihrer Alleinstellung bedroht vom Homo sapiens superior. Und tatsächlich sollen sie von ihrem Thron gestürzt werden. Denn keiner Vertritt mehr die Maxime des Survival of the Fittest als Apocalypse, der erste der Mutanten.  Doch Apocalypse ist wenig zimperlich im Kampf ums Überleben, auch Mutanten, die Schwäche zeigen, müssen ausgetilgt und vernichtet werden.  Und so müssen die Menschen und die Mutanten um Professor Xavier und Magneto Seite an Seite stehen, um gegen Apocalypse und seinen Selektionsdruck eine Chance zu haben.","popularity":63.735,"poster_path":"/vsv91Fj4pxOEm2QJ96jq2EXS7QT.jpg","release_date":"2016-05-18","title":"X-Men: Apocalypse","video":false,"vote_average":6.5,"vote_count":11938},{"adult":false,"backdrop_path":"/se5Hxz7PArQZOG3Nx2bpfOhLhtV.jpg","genre_ids":[28,12,16,10751],"id":9806,"original_language":"en","original_title":"The Incredibles","overview":"Einmal den Falschen gerettet und schon ist’s passiert! Der Superheld Mr. Incredible hat eine Klage wegen „unerwünschter Lebensrettung“ am Hals und muss fortan sein Dasein als Versicherungsangestellter fristen – gut getarnt hinter wachsendem Bauchansatz. Als er die Gelegenheit wittert, wieder aktiv zu werden, hängt nicht nur der Haussegen schief, sondern auch der Weltfrieden ist in höchster Gefahr! Zum Glück ist seine Frau Helen flexibel. Mit ihrem außergewöhnlichen Nachwuchs, dem kleinen Flitzer Flash und der scheinbar unscheinbaren Violetta, macht sie sich auf, mal eben die Welt zu retten …","popularity":60.659,"poster_path":"/tLcIGje9lDE0J4FyYGJoQShlK7X.jpg","release_date":"2004-10-27","title":"Die Unglaublichen","video":false,"vote_average":7.7,"vote_count":16170}],"total_pages":11,"total_results":211}'
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1701
+                    default: 0
+                  page:
+                    type: integer
+                    example: 1
+                    default: 0
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        adult:
+                          type: boolean
+                          example: false
+                          default: true
+                        backdrop_path:
+                          type: string
+                          example: /3CxUndGhUcZdt1Zggjdb2HkLLQX.jpg
+                        genre_ids:
+                          type: array
+                          items:
+                            type: integer
+                            example: 28
+                            default: 0
+                        id:
+                          type: integer
+                          example: 640146
+                          default: 0
+                        original_language:
+                          type: string
+                          example: en
+                        original_title:
+                          type: string
+                          example: 'Ant-Man and the Wasp: Quantumania'
+                        overview:
+                          type: string
+                          example: Das Superhelden-Duo Scott Lang und Hope Van Dyne erkundet zusammen mit Hopes Eltern Hank Pym und Janet Van Dyne das Quantenreich, interagiert mit seltsamen neuen Kreaturen und begibt sich auf ein Abenteuer, das sie über die Grenzen dessen hinaustreiben wird, was sie für möglich gehalten haben.
+                        popularity:
+                          type: number
+                          example: 9200.005
+                          default: 0
+                        poster_path:
+                          type: string
+                          example: /nA5otwVxAfpBP4PVgeuBk3qHcLY.jpg
+                        release_date:
+                          type: string
+                          example: '2023-02-15'
+                        title:
+                          type: string
+                          example: 'Ant-Man and the Wasp: Quantumania'
+                        video:
+                          type: boolean
+                          example: false
+                          default: true
+                        vote_average:
+                          type: number
+                          example: 6.5
+                          default: 0
+                        vote_count:
+                          type: integer
+                          example: 2079
+                          default: 0
+                  total_pages:
+                    type: integer
+                    example: 11
+                    default: 0
+                  total_results:
+                    type: integer
+                    example: 211
+                    default: 0
+      deprecated: false
+      tags:
+      - Keyword
+components:
+  securitySchemes:
+    sec0:
+      type: apiKey
+      in: header
+      name: Authorization
+      x-bearer-format: bearer
+x-readme:
+  headers: []
+  explorer-enabled: true
+  proxy-enabled: true
+x-readme-fauxas: true

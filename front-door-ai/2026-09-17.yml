@@ -1,0 +1,24 @@
+# Front Door AI Index — tmdb — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: tmdb
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.themoviedb.org
+  final_host: www.themoviedb.org
+  ownership: own
+  owner: tmdb
+  shares_host_with: null
+  inherited_from: null
+  verdict: silent
+  score: 0
+  host_score: 0
+  density: 0.0
+  words: 403
+  tiers:
+    agentic: 0
+    core: 0
+    model: 0
+  ambiguous: 0
+  top_terms: null

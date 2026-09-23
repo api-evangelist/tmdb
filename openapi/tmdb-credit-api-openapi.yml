@@ -1,0 +1,199 @@
+openapi: 3.2.0
+info:
+  title: tmdb-api Account Credit API
+  version: '3'
+servers:
+- url: https://api.themoviedb.org
+security:
+- sec0: []
+tags:
+- name: Credit
+paths:
+  /3/credit/{credit_id}:
+    get:
+      summary: Details
+      description: Get a movie or TV credit details by ID.
+      operationId: credit-details
+      parameters:
+      - name: credit_id
+        in: path
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: language
+        schema:
+          type: string
+          default: en-US
+        required: false
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"credit_type":"cast","department":"Acting","job":"Actor","media":{"adult":false,"backdrop_path":"/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg","id":100088,"name":"The Last of Us","original_language":"en","original_name":"The Last of Us","overview":"Zwanzig Jahre nachdem die moderne Zivilisation zerstört wurde. – Joel, ein abgehärteter Überlebender, wird angeheuert, um Ellie, ein 14-jähriges Mädchen, aus einer bedrückenden Quarantänezone zu schmuggeln. Was als kleiner Job beginnt, wird bald zu einer brutalen, herzzerreißenden Reise, bei der die beiden die USA durchqueren müssen und aufeinander angewiesen sind, um zu überleben.","poster_path":"/igwIPNClQpGVzb61QlGqcpT5zUy.jpg","media_type":"tv","genre_ids":[18],"popularity":898.378,"first_air_date":"2023-01-15","vote_average":8.749,"vote_count":3341,"origin_country":["US"],"character":"Joel Miller","episodes":[],"seasons":[{"air_date":"2023-01-15","episode_count":9,"id":144593,"name":"Staffel 1","overview":"Die 1. Staffel der Endzeit-Horrorserie The Last of Us feierte ihre Premiere am 15. Januar 2023 bei HBO. In Staffel 1 beginnt für den Überlebenden Joel und das Mädchen Ellie eine Reise durch das postapokalyptische Amerika, in dem Plünderer und mutierte Wesen ihnen nach dem Leben trachten.","poster_path":"/aUQKIpZZ31KWbpdHMCmaV76u78T.jpg","season_number":1,"show_id":100088}]},"media_type":"tv","id":"6024a814c0ae36003d59cc3c","person":{"adult":false,"id":1253360,"name":"Pedro Pascal","original_name":"Pedro Pascal","media_type":"person","popularity":106.095,"gender":2,"known_for_department":"Acting","profile_path":"/dBOrm29cr7NUrjiDQMTtrTyDpfy.jpg"}}'
+              schema:
+                type: object
+                properties:
+                  credit_type:
+                    type: string
+                    example: cast
+                  department:
+                    type: string
+                    example: Acting
+                  job:
+                    type: string
+                    example: Actor
+                  media:
+                    type: object
+                    properties:
+                      adult:
+                        type: boolean
+                        example: false
+                        default: true
+                      backdrop_path:
+                        type: string
+                        example: /uDgy6hyPd82kOHh6I95FLtLnj6p.jpg
+                      id:
+                        type: integer
+                        example: 100088
+                        default: 0
+                      name:
+                        type: string
+                        example: The Last of Us
+                      original_language:
+                        type: string
+                        example: en
+                      original_name:
+                        type: string
+                        example: The Last of Us
+                      overview:
+                        type: string
+                        example: Zwanzig Jahre nachdem die moderne Zivilisation zerstört wurde. – Joel, ein abgehärteter Überlebender, wird angeheuert, um Ellie, ein 14-jähriges Mädchen, aus einer bedrückenden Quarantänezone zu schmuggeln. Was als kleiner Job beginnt, wird bald zu einer brutalen, herzzerreißenden Reise, bei der die beiden die USA durchqueren müssen und aufeinander angewiesen sind, um zu überleben.
+                      poster_path:
+                        type: string
+                        example: /igwIPNClQpGVzb61QlGqcpT5zUy.jpg
+                      media_type:
+                        type: string
+                        example: tv
+                      genre_ids:
+                        type: array
+                        items:
+                          type: integer
+                          example: 18
+                          default: 0
+                      popularity:
+                        type: number
+                        example: 898.378
+                        default: 0
+                      first_air_date:
+                        type: string
+                        example: '2023-01-15'
+                      vote_average:
+                        type: number
+                        example: 8.749
+                        default: 0
+                      vote_count:
+                        type: integer
+                        example: 3341
+                        default: 0
+                      origin_country:
+                        type: array
+                        items:
+                          type: string
+                          example: US
+                      character:
+                        type: string
+                        example: Joel Miller
+                      episodes:
+                        type: array
+                      seasons:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            air_date:
+                              type: string
+                              example: '2023-01-15'
+                            episode_count:
+                              type: integer
+                              example: 9
+                              default: 0
+                            id:
+                              type: integer
+                              example: 144593
+                              default: 0
+                            name:
+                              type: string
+                              example: Staffel 1
+                            overview:
+                              type: string
+                              example: Die 1. Staffel der Endzeit-Horrorserie The Last of Us feierte ihre Premiere am 15. Januar 2023 bei HBO. In Staffel 1 beginnt für den Überlebenden Joel und das Mädchen Ellie eine Reise durch das postapokalyptische Amerika, in dem Plünderer und mutierte Wesen ihnen nach dem Leben trachten.
+                            poster_path:
+                              type: string
+                              example: /aUQKIpZZ31KWbpdHMCmaV76u78T.jpg
+                            season_number:
+                              type: integer
+                              example: 1
+                              default: 0
+                            show_id:
+                              type: integer
+                              example: 100088
+                              default: 0
+                  media_type:
+                    type: string
+                    example: tv
+                  id:
+                    type: string
+                    example: 6024a814c0ae36003d59cc3c
+                  person:
+                    type: object
+                    properties:
+                      adult:
+                        type: boolean
+                        example: false
+                        default: true
+                      id:
+                        type: integer
+                        example: 1253360
+                        default: 0
+                      name:
+                        type: string
+                        example: Pedro Pascal
+                      original_name:
+                        type: string
+                        example: Pedro Pascal
+                      media_type:
+                        type: string
+                        example: person
+                      popularity:
+                        type: number
+                        example: 106.095
+                        default: 0
+                      gender:
+                        type: integer
+                        example: 2
+                        default: 0
+                      known_for_department:
+                        type: string
+                        example: Acting
+                      profile_path:
+                        type: string
+                        example: /dBOrm29cr7NUrjiDQMTtrTyDpfy.jpg
+      deprecated: false
+      tags:
+      - Credit
+components:
+  securitySchemes:
+    sec0:
+      type: apiKey
+      in: header
+      name: Authorization
+      x-bearer-format: bearer
+x-readme:
+  headers: []
+  explorer-enabled: true
+  proxy-enabled: true
+x-readme-fauxas: true

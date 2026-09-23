@@ -1,0 +1,177 @@
+openapi: 3.2.0
+info:
+  title: tmdb-api Account Company API
+  version: '3'
+servers:
+- url: https://api.themoviedb.org
+security:
+- sec0: []
+tags:
+- name: Company
+paths:
+  /3/company/{company_id}:
+    get:
+      summary: Details
+      description: Get the company details by ID.
+      operationId: company-details
+      parameters:
+      - name: company_id
+        in: path
+        schema:
+          type: integer
+          format: int32
+        required: true
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"description":"","headquarters":"San Francisco, California","homepage":"https://www.lucasfilm.com","id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm Ltd.","origin_country":"US","parent_company":null}'
+              schema:
+                type: object
+                properties:
+                  description:
+                    type: string
+                    example: ''
+                  headquarters:
+                    type: string
+                    example: San Francisco, California
+                  homepage:
+                    type: string
+                    example: https://www.lucasfilm.com
+                  id:
+                    type: integer
+                    example: 1
+                    default: 0
+                  logo_path:
+                    type: string
+                    example: /o86DbpburjxrqAzEDhXZcyE8pDb.png
+                  name:
+                    type: string
+                    example: Lucasfilm Ltd.
+                  origin_country:
+                    type: string
+                    example: US
+                  parent_company: {}
+      deprecated: false
+      tags:
+      - Company
+  /3/company/{company_id}/alternative_names:
+    get:
+      summary: Alternative Names
+      description: Get the company details by ID.
+      operationId: company-alternative-names
+      parameters:
+      - name: company_id
+        in: path
+        schema:
+          type: integer
+          format: int32
+        required: true
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"id":1,"results":[{"name":"루카스필름","type":""},{"name":"Lucasfilm Limited, LLC","type":""},{"name":"Lucasfilm Ltd. LLC","type":""},{"name":"Lucasfilm","type":""}]}'
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                    default: 0
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          example: 루카스필름
+                        type:
+                          type: string
+                          example: ''
+      deprecated: false
+      tags:
+      - Company
+  /3/company/{company_id}/images:
+    get:
+      summary: Images
+      description: Get the company logos by id.
+      operationId: company-images
+      parameters:
+      - name: company_id
+        in: path
+        schema:
+          type: integer
+          format: int32
+        required: true
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"id":1,"logos":[{"aspect_ratio":2.97979797979798,"file_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","height":99,"id":"5aa080d6c3a3683fea00011e","file_type":".svg","vote_average":5.384,"vote_count":2,"width":295},{"aspect_ratio":3.03951367781155,"file_path":"/tlVSws0RvvtPBwViUyOFAO0vcQS.png","height":329,"id":"63306b352b8a430096598b3d","file_type":".svg","vote_average":5.312,"vote_count":1,"width":1000}]}'
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                    default: 0
+                  logos:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        aspect_ratio:
+                          type: number
+                          example: 2.97979797979798
+                          default: 0
+                        file_path:
+                          type: string
+                          example: /o86DbpburjxrqAzEDhXZcyE8pDb.png
+                        height:
+                          type: integer
+                          example: 99
+                          default: 0
+                        id:
+                          type: string
+                          example: 5aa080d6c3a3683fea00011e
+                        file_type:
+                          type: string
+                          example: .svg
+                        vote_average:
+                          type: number
+                          example: 5.384
+                          default: 0
+                        vote_count:
+                          type: integer
+                          example: 2
+                          default: 0
+                        width:
+                          type: integer
+                          example: 295
+                          default: 0
+      deprecated: false
+      tags:
+      - Company
+components:
+  securitySchemes:
+    sec0:
+      type: apiKey
+      in: header
+      name: Authorization
+      x-bearer-format: bearer
+x-readme:
+  headers: []
+  explorer-enabled: true
+  proxy-enabled: true
+x-readme-fauxas: true

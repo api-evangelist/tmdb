@@ -1,0 +1,298 @@
+openapi: 3.2.0
+info:
+  title: tmdb-api Account Authentication API
+  version: '3'
+servers:
+- url: https://api.themoviedb.org
+security:
+- sec0: []
+tags:
+- name: Authentication
+paths:
+  /3/authentication:
+    get:
+      summary: Validate Key
+      description: Test your API Key to see if it's valid.
+      operationId: authentication-validate-key
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"success":true,"status_code":1,"status_message":"Success."}'
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                    default: true
+                  status_code:
+                    type: integer
+                    example: 1
+                    default: 0
+                  status_message:
+                    type: string
+                    example: Success.
+        '401':
+          description: '401'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: '{"status_code":7,"status_message":"Invalid API key: You must be granted a valid key.","success":false}'
+              schema:
+                type: object
+                properties:
+                  status_code:
+                    type: integer
+                    example: 7
+                    default: 0
+                  status_message:
+                    type: string
+                    example: 'Invalid API key: You must be granted a valid key.'
+                  success:
+                    type: boolean
+                    example: false
+                    default: true
+      deprecated: false
+      tags:
+      - Authentication
+  /3/authentication/guest_session/new:
+    get:
+      summary: Create Guest Session
+      description: ''
+      operationId: authentication-create-guest-session
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{\n  \"success\": true,\n  \"guest_session_id\": \"1ce82ec1223641636ad4a60b07de3581\",\n  \"expires_at\": \"2016-08-27 16:26:40 UTC\"\n}"
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                    default: true
+                  guest_session_id:
+                    type: string
+                    example: 1ce82ec1223641636ad4a60b07de3581
+                  expires_at:
+                    type: string
+                    example: 2016-08-27 16:26:40 UTC
+      deprecated: false
+      tags:
+      - Authentication
+  /3/authentication/token/new:
+    get:
+      summary: Create Request Token
+      description: ''
+      operationId: authentication-create-request-token
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{\n  \"success\": true,\n  \"expires_at\": \"2016-08-26 17:04:39 UTC\",\n  \"request_token\": \"ff5c7eeb5a8870efe3cd7fc5c282cffd26800ecd\"\n}"
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                    default: true
+                  expires_at:
+                    type: string
+                    example: 2016-08-26 17:04:39 UTC
+                  request_token:
+                    type: string
+                    example: ff5c7eeb5a8870efe3cd7fc5c282cffd26800ecd
+      deprecated: false
+      tags:
+      - Authentication
+  /3/authentication/session/new:
+    post:
+      summary: Create Session
+      description: ''
+      operationId: authentication-create-session
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - RAW_BODY
+              properties:
+                RAW_BODY:
+                  type: string
+                  format: json
+            examples:
+              Request Example:
+                value:
+                  request_token: 6bc047b88f669d1fb86574f06381005d93d3517a
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{\n  \"success\": true,\n  \"session_id\": \"79191836ddaa0da3df76a5ffef6f07ad6ab0c641\"\n}"
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                    default: true
+                  session_id:
+                    type: string
+                    example: 79191836ddaa0da3df76a5ffef6f07ad6ab0c641
+      deprecated: false
+      tags:
+      - Authentication
+  /3/authentication/session/convert/4:
+    post:
+      summary: Create Session (from v4 token)
+      description: ''
+      operationId: authentication-create-session-from-v4-token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - RAW_BODY
+              properties:
+                RAW_BODY:
+                  type: string
+                  format: json
+            examples:
+              Request Example:
+                value:
+                  access_token: eyK0eXAiOiJAV1QiLCJhbGciOiUIUzI1NiJ9.eyJhdWQiOiI0Ozc2YzA1ZTg4YTY1Yzk0MjFjZDI1NmBiYzRiNGE0NyIsInN1YiI6IjRiYzg4OTJhMDE3YTNjMGY5MjAwMDAwMiIsInNjb3BlayI6WyJhcGlfcmVhZCJdLCL2ZXJzaW9uIjoxfQ.Bn660W0Vi-_AI5HvwIEqtc2s5mAXDknBnTrUREZYH7A
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{\n  \"success\": true,\n  \"session_id\": \"2629f70fb498edc263a0adb99118ac41f0053e8c\"\n}"
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                    default: true
+                  session_id:
+                    type: string
+                    example: 2629f70fb498edc263a0adb99118ac41f0053e8c
+      deprecated: false
+      tags:
+      - Authentication
+  /3/authentication/token/validate_with_login:
+    post:
+      summary: Create Session (with login)
+      description: This method allows an application to validate a request token by entering a username and password.
+      operationId: authentication-create-session-from-login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - RAW_BODY
+              properties:
+                RAW_BODY:
+                  type: string
+                  format: json
+            examples:
+              Request Example:
+                value:
+                  username: johnny_appleseed
+                  password: test123
+                  request_token: 1531f1a558c8357ce8990cf887ff196e8f5402ec
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{\n  \"success\": true,\n  \"expires_at\": \"2018-07-24 04:10:26 UTC\",\n  \"request_token\": \"1531f1a558c8357ce8990cf887ff196e8f5402ec\"\n}"
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                    default: true
+                  expires_at:
+                    type: string
+                    example: 2018-07-24 04:10:26 UTC
+                  request_token:
+                    type: string
+                    example: 1531f1a558c8357ce8990cf887ff196e8f5402ec
+      deprecated: false
+      tags:
+      - Authentication
+  /3/authentication/session:
+    delete:
+      summary: Delete Session
+      description: ''
+      operationId: authentication-delete-session
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - RAW_BODY
+              properties:
+                RAW_BODY:
+                  type: string
+                  format: json
+            examples:
+              Request Example:
+                value:
+                  session_id: 2629f70fb498edc263a0adb99118ac41f0053e8c
+      responses:
+        '200':
+          description: '200'
+          content:
+            application/json:
+              examples:
+                Result:
+                  value: "{\n  \"success\": true\n}"
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                    default: true
+      deprecated: false
+      tags:
+      - Authentication
+components:
+  securitySchemes:
+    sec0:
+      type: apiKey
+      in: header
+      name: Authorization
+      x-bearer-format: bearer
+x-readme:
+  headers: []
+  explorer-enabled: true
+  proxy-enabled: true
+x-readme-fauxas: true
