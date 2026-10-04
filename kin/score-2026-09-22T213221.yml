@@ -1,25 +1,23 @@
-# Kin Score artifact — tmdb — 2026-08-25T133943
+# Kin Score artifact — tmdb — 2026-09-22T213221
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: tmdb
-  schema_version: 0.14.0
-  scored_at: '2026-08-25'
-  run_ts: 2026-08-25T133943
-  composite: 52.2
+  schema_version: 0.22.0
+  scored_at: '2026-09-22'
+  run_ts: 2026-09-22T213221
+  composite: 52.8
   band: developing
   facets:
-    discoverability: 75.9
-    contract_quality: 63.9
-    governance: 28.8
-    operational_transparency: 47.4
-    developer_ergonomics: 32.1
-    commercial_clarity: 63.2
+    discoverability: 81.5
+    contract_quality: 45.1
     contract_governance: 28.8
+    operational_transparency: 63.2
+    developer_ergonomics: 45.2
     access_clarity: 63.2
   agent_readiness:
-    score: 28.8
-    band: agent-ready
+    score: 20.5
+    band: agent-aware
     dimensions:
       spec_presence: true
       agentic_access: false
@@ -27,8 +25,8 @@ kin_score:
       mcp_server: false
       auth_clarity: bearer
       idempotency: false
-      error_semantics: verified
-      openapi_examples: verified
+      error_semantics: false
+      openapi_examples: partial
       rate_limit_signal: documented
       event_surface_described: false
       agent_skills: false
