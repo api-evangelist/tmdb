@@ -97,3 +97,34 @@ plans:
   - name: Sublicensing rights (when negotiated)
   - name: Custom rate-limit accommodations
   - name: Direct support channel
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - metered
+  units:
+  - negotiated
+  - period
+  - request
+  plans:
+  - name: Non-Commercial
+    access: freemium
+    model: metered
+    model_how: derived
+    units:
+    - period
+    - request
+    periods:
+    - month
+    - per-use
+  - name: Commercial
+    access: enterprise
+    model: hybrid
+    model_how: derived
+    units:
+    - negotiated
+    - request
+    periods:
+    - per-use
+    - year
