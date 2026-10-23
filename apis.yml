@@ -668,6 +668,8 @@ apis:
   - type: GettingStarted
     url: https://developer.themoviedb.org/docs/getting-started
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/the-movie-database/overview
 - type: DomainSecurity
   url: security/tmdb-domain-security.yml
 - type: Website
