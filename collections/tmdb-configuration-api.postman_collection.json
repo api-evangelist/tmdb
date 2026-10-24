@@ -1,0 +1,574 @@
+{
+  "info": {
+    "_postman_id": "909f7aa3-8686-4e28-ba8d-faf782fbf7f3",
+    "name": "tmdb-api Account Configuration API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:15:41.000Z",
+    "updatedAt": "2026-10-22T01:15:42.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-909f7aa3-8686-4e28-ba8d-faf782fbf7f3"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "configuration",
+          "item": [
+            {
+              "name": "countries",
+              "item": [
+                {
+                  "name": "Countries",
+                  "id": "c2fa1bcb-f198-4bc4-9aac-18b212feff20",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/configuration/countries?language=en-US",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "configuration",
+                        "countries"
+                      ],
+                      "query": [
+                        {
+                          "key": "language",
+                          "value": "en-US"
+                        }
+                      ]
+                    },
+                    "description": "Get the list of countries (ISO 3166-1 tags) used throughout TMDB."
+                  },
+                  "response": [
+                    {
+                      "id": "edccab57-c403-4035-a029-80b6a3422aa2",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/configuration/countries?language=en-US",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "configuration",
+                            "countries"
+                          ],
+                          "query": [
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n  {\n    \"iso_3166_1\": \"<string>\",\n    \"english_name\": \"<string>\",\n    \"native_name\": \"<string>\"\n  },\n  {\n    \"iso_3166_1\": \"<string>\",\n    \"english_name\": \"<string>\",\n    \"native_name\": \"<string>\"\n  }\n]",
+                      "createdAt": "2026-10-22T01:15:42.000Z",
+                      "updatedAt": "2026-10-22T01:15:42.000Z",
+                      "uid": "35240-edccab57-c403-4035-a029-80b6a3422aa2"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:15:42.000Z",
+                  "updatedAt": "2026-10-22T01:15:42.000Z",
+                  "uid": "35240-c2fa1bcb-f198-4bc4-9aac-18b212feff20"
+                }
+              ],
+              "id": "f9cc35fa-82ee-4b10-a415-6a58f706f209",
+              "createdAt": "2026-10-22T01:15:42.000Z",
+              "updatedAt": "2026-10-22T01:15:42.000Z",
+              "uid": "35240-f9cc35fa-82ee-4b10-a415-6a58f706f209"
+            },
+            {
+              "name": "jobs",
+              "item": [
+                {
+                  "name": "Jobs",
+                  "id": "6aff7515-95cc-43bc-bdd2-17cbc03b4c5e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/configuration/jobs",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "configuration",
+                        "jobs"
+                      ]
+                    },
+                    "description": "Get the list of the jobs and departments we use on TMDB."
+                  },
+                  "response": [
+                    {
+                      "id": "04eb5a58-eb50-43a1-8caa-a394e3203dba",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/configuration/jobs",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "configuration",
+                            "jobs"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n  {\n    \"department\": \"<string>\",\n    \"jobs\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  {\n    \"department\": \"<string>\",\n    \"jobs\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n]",
+                      "createdAt": "2026-10-22T01:15:42.000Z",
+                      "updatedAt": "2026-10-22T01:15:42.000Z",
+                      "uid": "35240-04eb5a58-eb50-43a1-8caa-a394e3203dba"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:15:42.000Z",
+                  "updatedAt": "2026-10-22T01:15:42.000Z",
+                  "uid": "35240-6aff7515-95cc-43bc-bdd2-17cbc03b4c5e"
+                }
+              ],
+              "id": "cab5ad89-99f7-4500-9392-59cd8850aa5b",
+              "createdAt": "2026-10-22T01:15:42.000Z",
+              "updatedAt": "2026-10-22T01:15:42.000Z",
+              "uid": "35240-cab5ad89-99f7-4500-9392-59cd8850aa5b"
+            },
+            {
+              "name": "languages",
+              "item": [
+                {
+                  "name": "Languages",
+                  "id": "1990a100-842f-4518-b3ea-92e21a3bfeaf",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/configuration/languages",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "configuration",
+                        "languages"
+                      ]
+                    },
+                    "description": "Get the list of languages (ISO 639-1 tags) used throughout TMDB."
+                  },
+                  "response": [
+                    {
+                      "id": "d4a88d0b-c578-44e5-a20e-62f65565b146",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/configuration/languages",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "configuration",
+                            "languages"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n  {\n    \"iso_639_1\": \"<string>\",\n    \"english_name\": \"<string>\",\n    \"name\": \"<string>\"\n  },\n  {\n    \"iso_639_1\": \"<string>\",\n    \"english_name\": \"<string>\",\n    \"name\": \"<string>\"\n  }\n]",
+                      "createdAt": "2026-10-22T01:15:42.000Z",
+                      "updatedAt": "2026-10-22T01:15:42.000Z",
+                      "uid": "35240-d4a88d0b-c578-44e5-a20e-62f65565b146"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:15:42.000Z",
+                  "updatedAt": "2026-10-22T01:15:42.000Z",
+                  "uid": "35240-1990a100-842f-4518-b3ea-92e21a3bfeaf"
+                }
+              ],
+              "id": "3d1e32c8-bbf2-452d-bad9-6b8ff2379f4e",
+              "createdAt": "2026-10-22T01:15:42.000Z",
+              "updatedAt": "2026-10-22T01:15:42.000Z",
+              "uid": "35240-3d1e32c8-bbf2-452d-bad9-6b8ff2379f4e"
+            },
+            {
+              "name": "primary_translations",
+              "item": [
+                {
+                  "name": "Primary Translations",
+                  "id": "36a382e9-20ba-4307-8bc9-ca7c2d3ebea3",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/configuration/primary_translations",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "configuration",
+                        "primary_translations"
+                      ]
+                    },
+                    "description": "Get a list of the officially supported translations on TMDB."
+                  },
+                  "response": [
+                    {
+                      "id": "eb04fa9c-ab51-4819-89d7-07933e5c7f53",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/configuration/primary_translations",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "configuration",
+                            "primary_translations"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n  \"<string>\",\n  \"<string>\"\n]",
+                      "createdAt": "2026-10-22T01:15:42.000Z",
+                      "updatedAt": "2026-10-22T01:15:42.000Z",
+                      "uid": "35240-eb04fa9c-ab51-4819-89d7-07933e5c7f53"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:15:42.000Z",
+                  "updatedAt": "2026-10-22T01:15:42.000Z",
+                  "uid": "35240-36a382e9-20ba-4307-8bc9-ca7c2d3ebea3"
+                }
+              ],
+              "id": "18d2b416-04a8-49ab-91af-6ce390ccc96e",
+              "createdAt": "2026-10-22T01:15:42.000Z",
+              "updatedAt": "2026-10-22T01:15:42.000Z",
+              "uid": "35240-18d2b416-04a8-49ab-91af-6ce390ccc96e"
+            },
+            {
+              "name": "timezones",
+              "item": [
+                {
+                  "name": "Timezones",
+                  "id": "ce69a124-8957-4ac9-ad27-466c44b84e52",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/configuration/timezones",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "configuration",
+                        "timezones"
+                      ]
+                    },
+                    "description": "Get the list of timezones used throughout TMDB."
+                  },
+                  "response": [
+                    {
+                      "id": "9828a829-a889-41bf-b32b-0b774a4c05b8",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/configuration/timezones",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "configuration",
+                            "timezones"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n  {\n    \"iso_3166_1\": \"<string>\",\n    \"zones\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  {\n    \"iso_3166_1\": \"<string>\",\n    \"zones\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n]",
+                      "createdAt": "2026-10-22T01:15:42.000Z",
+                      "updatedAt": "2026-10-22T01:15:42.000Z",
+                      "uid": "35240-9828a829-a889-41bf-b32b-0b774a4c05b8"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:15:42.000Z",
+                  "updatedAt": "2026-10-22T01:15:42.000Z",
+                  "uid": "35240-ce69a124-8957-4ac9-ad27-466c44b84e52"
+                }
+              ],
+              "id": "e803e310-e283-4f4c-aac0-67671457d9a1",
+              "createdAt": "2026-10-22T01:15:42.000Z",
+              "updatedAt": "2026-10-22T01:15:42.000Z",
+              "uid": "35240-e803e310-e283-4f4c-aac0-67671457d9a1"
+            },
+            {
+              "name": "Details",
+              "id": "114d0272-b63b-468d-b50b-afa32567f2cf",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/3/configuration",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "3",
+                    "configuration"
+                  ]
+                },
+                "description": "Query the API configuration details."
+              },
+              "response": [
+                {
+                  "id": "7df05cb8-8967-43a0-bb68-fe90009dbb30",
+                  "name": "200",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/configuration",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "configuration"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"images\": {\n    \"base_url\": \"<string>\",\n    \"secure_base_url\": \"<string>\",\n    \"backdrop_sizes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"logo_sizes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"poster_sizes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"profile_sizes\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"still_sizes\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"change_keys\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "createdAt": "2026-10-22T01:15:42.000Z",
+                  "updatedAt": "2026-10-22T01:15:42.000Z",
+                  "uid": "35240-7df05cb8-8967-43a0-bb68-fe90009dbb30"
+                }
+              ],
+              "createdAt": "2026-10-22T01:15:42.000Z",
+              "updatedAt": "2026-10-22T01:15:42.000Z",
+              "uid": "35240-114d0272-b63b-468d-b50b-afa32567f2cf"
+            }
+          ],
+          "id": "c750fcd2-1c9d-4707-a298-be6f40b6221a",
+          "createdAt": "2026-10-22T01:15:42.000Z",
+          "updatedAt": "2026-10-22T01:15:42.000Z",
+          "uid": "35240-c750fcd2-1c9d-4707-a298-be6f40b6221a"
+        }
+      ],
+      "id": "b6ab850d-e4bd-4385-b13a-ec7bb0edd026",
+      "createdAt": "2026-10-22T01:15:42.000Z",
+      "updatedAt": "2026-10-22T01:15:42.000Z",
+      "uid": "35240-b6ab850d-e4bd-4385-b13a-ec7bb0edd026"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}

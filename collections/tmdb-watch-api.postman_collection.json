@@ -1,0 +1,382 @@
+{
+  "info": {
+    "_postman_id": "cd40a87b-f032-400b-9698-c0fd782f5d5a",
+    "name": "tmdb-api Account Watch API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:16:54.000Z",
+    "updatedAt": "2026-10-22T01:16:54.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-cd40a87b-f032-400b-9698-c0fd782f5d5a"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "watch",
+          "item": [
+            {
+              "name": "providers",
+              "item": [
+                {
+                  "name": "regions",
+                  "item": [
+                    {
+                      "name": "Available Regions",
+                      "id": "44a44366-9f65-4f40-a6d5-eb210eb6468a",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/watch/providers/regions?language=en-US",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "watch",
+                            "providers",
+                            "regions"
+                          ],
+                          "query": [
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            }
+                          ]
+                        },
+                        "description": "Get the list of the countries we have watch provider (OTT/streaming) data for."
+                      },
+                      "response": [
+                        {
+                          "id": "c494f7fb-aeaf-451f-ac4e-ae72f2adbe2d",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/watch/providers/regions?language=en-US",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "watch",
+                                "providers",
+                                "regions"
+                              ],
+                              "query": [
+                                {
+                                  "key": "language",
+                                  "value": "en-US"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"results\": [\n    {\n      \"iso_3166_1\": \"<string>\",\n      \"english_name\": \"<string>\",\n      \"native_name\": \"<string>\"\n    },\n    {\n      \"iso_3166_1\": \"<string>\",\n      \"english_name\": \"<string>\",\n      \"native_name\": \"<string>\"\n    }\n  ]\n}",
+                          "createdAt": "2026-10-22T01:16:55.000Z",
+                          "updatedAt": "2026-10-22T01:16:55.000Z",
+                          "uid": "35240-c494f7fb-aeaf-451f-ac4e-ae72f2adbe2d"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:16:55.000Z",
+                      "updatedAt": "2026-10-22T01:16:55.000Z",
+                      "uid": "35240-44a44366-9f65-4f40-a6d5-eb210eb6468a"
+                    }
+                  ],
+                  "id": "8ede53f9-f101-470c-91c5-57cd685fecde",
+                  "createdAt": "2026-10-22T01:16:55.000Z",
+                  "updatedAt": "2026-10-22T01:16:55.000Z",
+                  "uid": "35240-8ede53f9-f101-470c-91c5-57cd685fecde"
+                },
+                {
+                  "name": "movie",
+                  "item": [
+                    {
+                      "name": "Movie Providers",
+                      "id": "4dd7d6f7-28b1-437b-b6ea-7dd8ade4cb88",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/watch/providers/movie?language=en-US&watch_region=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "watch",
+                            "providers",
+                            "movie"
+                          ],
+                          "query": [
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            },
+                            {
+                              "key": "watch_region",
+                              "value": "<string>"
+                            }
+                          ]
+                        },
+                        "description": "Get the list of streaming providers we have for movies."
+                      },
+                      "response": [
+                        {
+                          "id": "17b78396-9f29-49e9-8dd7-cc119e5763ce",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/watch/providers/movie?language=en-US&watch_region=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "watch",
+                                "providers",
+                                "movie"
+                              ],
+                              "query": [
+                                {
+                                  "key": "language",
+                                  "value": "en-US"
+                                },
+                                {
+                                  "key": "watch_region",
+                                  "value": "<string>"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"results\": [\n    {\n      \"display_priorities\": {\n        \"CA\": 0,\n        \"AE\": 0,\n        \"AR\": 0,\n        \"AT\": 0,\n        \"AU\": 0,\n        \"BE\": 0,\n        \"BO\": 0,\n        \"BR\": 0,\n        \"BG\": 0,\n        \"CH\": 0,\n        \"CL\": 0,\n        \"CO\": 0,\n        \"CR\": 0,\n        \"CZ\": 0,\n        \"DE\": 0,\n        \"DK\": 0,\n        \"EC\": 0,\n        \"EE\": 0,\n        \"EG\": 0,\n        \"ES\": 0,\n        \"FI\": 0,\n        \"FR\": 0,\n        \"GB\": 0,\n        \"GR\": 0,\n        \"GT\": 0,\n        \"HK\": 0,\n        \"HN\": 0,\n        \"HU\": 0,\n        \"ID\": 0,\n        \"IE\": 0,\n        \"IN\": 0,\n        \"IT\": 0,\n        \"JP\": 0,\n        \"LT\": 0,\n        \"LV\": 0,\n        \"MX\": 0,\n        \"MY\": 0,\n        \"NL\": 0,\n        \"NO\": 0,\n        \"NZ\": 0,\n        \"PE\": 0,\n        \"PH\": 0,\n        \"PL\": 0,\n        \"PT\": 0,\n        \"PY\": 0,\n        \"RU\": 0,\n        \"SA\": 0,\n        \"SE\": 0,\n        \"SG\": 0,\n        \"SK\": 0,\n        \"TH\": 0,\n        \"TR\": 0,\n        \"TW\": 0,\n        \"US\": 0,\n        \"VE\": 0,\n        \"ZA\": 0,\n        \"SI\": 0,\n        \"CV\": 0,\n        \"GH\": 0,\n        \"MU\": 0,\n        \"MZ\": 0,\n        \"UG\": 0,\n        \"IL\": 0\n      },\n      \"display_priority\": 0,\n      \"logo_path\": \"<string>\",\n      \"provider_name\": \"<string>\",\n      \"provider_id\": 0\n    },\n    {\n      \"display_priorities\": {\n        \"CA\": 0,\n        \"AE\": 0,\n        \"AR\": 0,\n        \"AT\": 0,\n        \"AU\": 0,\n        \"BE\": 0,\n        \"BO\": 0,\n        \"BR\": 0,\n        \"BG\": 0,\n        \"CH\": 0,\n        \"CL\": 0,\n        \"CO\": 0,\n        \"CR\": 0,\n        \"CZ\": 0,\n        \"DE\": 0,\n        \"DK\": 0,\n        \"EC\": 0,\n        \"EE\": 0,\n        \"EG\": 0,\n        \"ES\": 0,\n        \"FI\": 0,\n        \"FR\": 0,\n        \"GB\": 0,\n        \"GR\": 0,\n        \"GT\": 0,\n        \"HK\": 0,\n        \"HN\": 0,\n        \"HU\": 0,\n        \"ID\": 0,\n        \"IE\": 0,\n        \"IN\": 0,\n        \"IT\": 0,\n        \"JP\": 0,\n        \"LT\": 0,\n        \"LV\": 0,\n        \"MX\": 0,\n        \"MY\": 0,\n        \"NL\": 0,\n        \"NO\": 0,\n        \"NZ\": 0,\n        \"PE\": 0,\n        \"PH\": 0,\n        \"PL\": 0,\n        \"PT\": 0,\n        \"PY\": 0,\n        \"RU\": 0,\n        \"SA\": 0,\n        \"SE\": 0,\n        \"SG\": 0,\n        \"SK\": 0,\n        \"TH\": 0,\n        \"TR\": 0,\n        \"TW\": 0,\n        \"US\": 0,\n        \"VE\": 0,\n        \"ZA\": 0,\n        \"SI\": 0,\n        \"CV\": 0,\n        \"GH\": 0,\n        \"MU\": 0,\n        \"MZ\": 0,\n        \"UG\": 0,\n        \"IL\": 0\n      },\n      \"display_priority\": 0,\n      \"logo_path\": \"<string>\",\n      \"provider_name\": \"<string>\",\n      \"provider_id\": 0\n    }\n  ]\n}",
+                          "createdAt": "2026-10-22T01:16:55.000Z",
+                          "updatedAt": "2026-10-22T01:16:55.000Z",
+                          "uid": "35240-17b78396-9f29-49e9-8dd7-cc119e5763ce"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:16:55.000Z",
+                      "updatedAt": "2026-10-22T01:16:55.000Z",
+                      "uid": "35240-4dd7d6f7-28b1-437b-b6ea-7dd8ade4cb88"
+                    }
+                  ],
+                  "id": "efb341ca-43c0-43a5-9cdc-e97eb871bf86",
+                  "createdAt": "2026-10-22T01:16:55.000Z",
+                  "updatedAt": "2026-10-22T01:16:55.000Z",
+                  "uid": "35240-efb341ca-43c0-43a5-9cdc-e97eb871bf86"
+                },
+                {
+                  "name": "tv",
+                  "item": [
+                    {
+                      "name": "TV Providers",
+                      "id": "dcf65be9-5ff4-4704-81d1-0c94915e7e2c",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/watch/providers/tv?language=en-US&watch_region=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "watch",
+                            "providers",
+                            "tv"
+                          ],
+                          "query": [
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            },
+                            {
+                              "key": "watch_region",
+                              "value": "<string>"
+                            }
+                          ]
+                        },
+                        "description": "Get the list of streaming providers we have for TV shows."
+                      },
+                      "response": [
+                        {
+                          "id": "68a8fb66-e38e-4307-aa39-c55b2316b5c4",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/watch/providers/tv?language=en-US&watch_region=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "watch",
+                                "providers",
+                                "tv"
+                              ],
+                              "query": [
+                                {
+                                  "key": "language",
+                                  "value": "en-US"
+                                },
+                                {
+                                  "key": "watch_region",
+                                  "value": "<string>"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"results\": [\n    {\n      \"display_priorities\": {\n        \"CA\": 0,\n        \"AE\": 0,\n        \"AR\": 0,\n        \"AT\": 0,\n        \"AU\": 0,\n        \"BE\": 0,\n        \"BO\": 0,\n        \"BR\": 0,\n        \"BG\": 0,\n        \"CH\": 0,\n        \"CL\": 0,\n        \"CO\": 0,\n        \"CR\": 0,\n        \"CZ\": 0,\n        \"DE\": 0,\n        \"DK\": 0,\n        \"EC\": 0,\n        \"EE\": 0,\n        \"EG\": 0,\n        \"ES\": 0,\n        \"FI\": 0,\n        \"FR\": 0,\n        \"GB\": 0,\n        \"GR\": 0,\n        \"GT\": 0,\n        \"HK\": 0,\n        \"HN\": 0,\n        \"HU\": 0,\n        \"ID\": 0,\n        \"IE\": 0,\n        \"IN\": 0,\n        \"IT\": 0,\n        \"JP\": 0,\n        \"LT\": 0,\n        \"LV\": 0,\n        \"MX\": 0,\n        \"MY\": 0,\n        \"NL\": 0,\n        \"NO\": 0,\n        \"NZ\": 0,\n        \"PE\": 0,\n        \"PH\": 0,\n        \"PL\": 0,\n        \"PT\": 0,\n        \"PY\": 0,\n        \"RU\": 0,\n        \"SA\": 0,\n        \"SE\": 0,\n        \"SG\": 0,\n        \"SK\": 0,\n        \"TH\": 0,\n        \"TR\": 0,\n        \"TW\": 0,\n        \"US\": 0,\n        \"VE\": 0,\n        \"ZA\": 0,\n        \"SI\": 0,\n        \"CV\": 0,\n        \"GH\": 0,\n        \"MU\": 0,\n        \"MZ\": 0,\n        \"UG\": 0,\n        \"IL\": 0\n      },\n      \"display_priority\": 0,\n      \"logo_path\": \"<string>\",\n      \"provider_name\": \"<string>\",\n      \"provider_id\": 0\n    },\n    {\n      \"display_priorities\": {\n        \"CA\": 0,\n        \"AE\": 0,\n        \"AR\": 0,\n        \"AT\": 0,\n        \"AU\": 0,\n        \"BE\": 0,\n        \"BO\": 0,\n        \"BR\": 0,\n        \"BG\": 0,\n        \"CH\": 0,\n        \"CL\": 0,\n        \"CO\": 0,\n        \"CR\": 0,\n        \"CZ\": 0,\n        \"DE\": 0,\n        \"DK\": 0,\n        \"EC\": 0,\n        \"EE\": 0,\n        \"EG\": 0,\n        \"ES\": 0,\n        \"FI\": 0,\n        \"FR\": 0,\n        \"GB\": 0,\n        \"GR\": 0,\n        \"GT\": 0,\n        \"HK\": 0,\n        \"HN\": 0,\n        \"HU\": 0,\n        \"ID\": 0,\n        \"IE\": 0,\n        \"IN\": 0,\n        \"IT\": 0,\n        \"JP\": 0,\n        \"LT\": 0,\n        \"LV\": 0,\n        \"MX\": 0,\n        \"MY\": 0,\n        \"NL\": 0,\n        \"NO\": 0,\n        \"NZ\": 0,\n        \"PE\": 0,\n        \"PH\": 0,\n        \"PL\": 0,\n        \"PT\": 0,\n        \"PY\": 0,\n        \"RU\": 0,\n        \"SA\": 0,\n        \"SE\": 0,\n        \"SG\": 0,\n        \"SK\": 0,\n        \"TH\": 0,\n        \"TR\": 0,\n        \"TW\": 0,\n        \"US\": 0,\n        \"VE\": 0,\n        \"ZA\": 0,\n        \"SI\": 0,\n        \"CV\": 0,\n        \"GH\": 0,\n        \"MU\": 0,\n        \"MZ\": 0,\n        \"UG\": 0,\n        \"IL\": 0\n      },\n      \"display_priority\": 0,\n      \"logo_path\": \"<string>\",\n      \"provider_name\": \"<string>\",\n      \"provider_id\": 0\n    }\n  ]\n}",
+                          "createdAt": "2026-10-22T01:16:55.000Z",
+                          "updatedAt": "2026-10-22T01:16:55.000Z",
+                          "uid": "35240-68a8fb66-e38e-4307-aa39-c55b2316b5c4"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:16:55.000Z",
+                      "updatedAt": "2026-10-22T01:16:55.000Z",
+                      "uid": "35240-dcf65be9-5ff4-4704-81d1-0c94915e7e2c"
+                    }
+                  ],
+                  "id": "d33753a3-0f56-4fcf-ba2e-7b6f5f331eba",
+                  "createdAt": "2026-10-22T01:16:55.000Z",
+                  "updatedAt": "2026-10-22T01:16:55.000Z",
+                  "uid": "35240-d33753a3-0f56-4fcf-ba2e-7b6f5f331eba"
+                }
+              ],
+              "id": "9ab68ddd-d85f-4216-80fb-ff266558d6dd",
+              "createdAt": "2026-10-22T01:16:55.000Z",
+              "updatedAt": "2026-10-22T01:16:55.000Z",
+              "uid": "35240-9ab68ddd-d85f-4216-80fb-ff266558d6dd"
+            }
+          ],
+          "id": "3c54e934-2981-4329-ab64-6c073e83c3c3",
+          "createdAt": "2026-10-22T01:16:55.000Z",
+          "updatedAt": "2026-10-22T01:16:55.000Z",
+          "uid": "35240-3c54e934-2981-4329-ab64-6c073e83c3c3"
+        }
+      ],
+      "id": "8208ae23-52d4-4b60-b2a5-6e5ff9181f26",
+      "createdAt": "2026-10-22T01:16:55.000Z",
+      "updatedAt": "2026-10-22T01:16:55.000Z",
+      "uid": "35240-8208ae23-52d4-4b60-b2a5-6e5ff9181f26"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}

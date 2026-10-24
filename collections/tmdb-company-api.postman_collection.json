@@ -1,0 +1,358 @@
+{
+  "info": {
+    "_postman_id": "aa2ec872-0b33-40d7-876e-3a13c7d3ac81",
+    "name": "tmdb-api Account Company API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:15:35.000Z",
+    "updatedAt": "2026-10-22T01:15:35.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-aa2ec872-0b33-40d7-876e-3a13c7d3ac81"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "company",
+          "item": [
+            {
+              "name": "{company_id}",
+              "item": [
+                {
+                  "name": "alternative_names",
+                  "item": [
+                    {
+                      "name": "Alternative Names",
+                      "id": "00422b73-68fb-4627-a194-4c6f22ef988f",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/company/:company_id/alternative_names",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "company",
+                            ":company_id",
+                            "alternative_names"
+                          ],
+                          "variable": [
+                            {
+                              "id": "b497d06f-65b2-452b-b9ef-5ebf85b0cb71",
+                              "key": "company_id",
+                              "value": "<integer>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Get the company details by ID."
+                      },
+                      "response": [
+                        {
+                          "id": "3f42a6c1-0e87-4a15-b0a5-9bf2e116c8bc",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/company/:company_id/alternative_names",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "company",
+                                ":company_id",
+                                "alternative_names"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "company_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"id\": 0,\n  \"results\": [\n    {\n      \"name\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+                          "createdAt": "2026-10-22T01:15:35.000Z",
+                          "updatedAt": "2026-10-22T01:15:35.000Z",
+                          "uid": "35240-3f42a6c1-0e87-4a15-b0a5-9bf2e116c8bc"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:15:35.000Z",
+                      "updatedAt": "2026-10-22T01:15:35.000Z",
+                      "uid": "35240-00422b73-68fb-4627-a194-4c6f22ef988f"
+                    }
+                  ],
+                  "id": "21b5da14-92cb-4235-a346-9290ddbfa7d5",
+                  "createdAt": "2026-10-22T01:15:35.000Z",
+                  "updatedAt": "2026-10-22T01:15:35.000Z",
+                  "uid": "35240-21b5da14-92cb-4235-a346-9290ddbfa7d5"
+                },
+                {
+                  "name": "images",
+                  "item": [
+                    {
+                      "name": "Images",
+                      "id": "c5c534f3-4cf6-499c-b02d-dbafb9c38b48",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/company/:company_id/images",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "company",
+                            ":company_id",
+                            "images"
+                          ],
+                          "variable": [
+                            {
+                              "id": "9f719445-412d-4828-87fd-6e8d66026742",
+                              "key": "company_id",
+                              "value": "<integer>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Get the company logos by id."
+                      },
+                      "response": [
+                        {
+                          "id": "0e58a07f-26aa-4e8b-b9da-d62705c87517",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/company/:company_id/images",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "company",
+                                ":company_id",
+                                "images"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "company_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"id\": 0,\n  \"logos\": [\n    {\n      \"aspect_ratio\": 0,\n      \"file_path\": \"<string>\",\n      \"height\": 0,\n      \"id\": \"<string>\",\n      \"file_type\": \"<string>\",\n      \"vote_average\": 0,\n      \"vote_count\": 0,\n      \"width\": 0\n    },\n    {\n      \"aspect_ratio\": 0,\n      \"file_path\": \"<string>\",\n      \"height\": 0,\n      \"id\": \"<string>\",\n      \"file_type\": \"<string>\",\n      \"vote_average\": 0,\n      \"vote_count\": 0,\n      \"width\": 0\n    }\n  ]\n}",
+                          "createdAt": "2026-10-22T01:15:35.000Z",
+                          "updatedAt": "2026-10-22T01:15:35.000Z",
+                          "uid": "35240-0e58a07f-26aa-4e8b-b9da-d62705c87517"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:15:35.000Z",
+                      "updatedAt": "2026-10-22T01:15:35.000Z",
+                      "uid": "35240-c5c534f3-4cf6-499c-b02d-dbafb9c38b48"
+                    }
+                  ],
+                  "id": "61f46743-25ff-4500-8b10-65edba18f276",
+                  "createdAt": "2026-10-22T01:15:35.000Z",
+                  "updatedAt": "2026-10-22T01:15:35.000Z",
+                  "uid": "35240-61f46743-25ff-4500-8b10-65edba18f276"
+                },
+                {
+                  "name": "Details",
+                  "id": "25bcdc13-78ac-489d-96e3-11a156c3c221",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/company/:company_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "company",
+                        ":company_id"
+                      ],
+                      "variable": [
+                        {
+                          "id": "49c489d0-2952-4bf8-9605-d996b3dae836",
+                          "key": "company_id",
+                          "value": "<integer>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Get the company details by ID."
+                  },
+                  "response": [
+                    {
+                      "id": "fa84b233-5062-4596-9e19-52d447d4b261",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/company/:company_id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "company",
+                            ":company_id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "company_id"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"description\": \"<string>\",\n  \"headquarters\": \"<string>\",\n  \"homepage\": \"<string>\",\n  \"id\": 0,\n  \"logo_path\": \"<string>\",\n  \"name\": \"<string>\",\n  \"origin_country\": \"<string>\",\n  \"parent_company\": {}\n}",
+                      "createdAt": "2026-10-22T01:15:35.000Z",
+                      "updatedAt": "2026-10-22T01:15:35.000Z",
+                      "uid": "35240-fa84b233-5062-4596-9e19-52d447d4b261"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:15:35.000Z",
+                  "updatedAt": "2026-10-22T01:15:35.000Z",
+                  "uid": "35240-25bcdc13-78ac-489d-96e3-11a156c3c221"
+                }
+              ],
+              "id": "1c9fe0b4-1f61-4e7d-a8b3-5bc914def7d1",
+              "createdAt": "2026-10-22T01:15:35.000Z",
+              "updatedAt": "2026-10-22T01:15:35.000Z",
+              "uid": "35240-1c9fe0b4-1f61-4e7d-a8b3-5bc914def7d1"
+            }
+          ],
+          "id": "10e84d95-e0f7-45fe-adb7-144c508eab1f",
+          "createdAt": "2026-10-22T01:15:35.000Z",
+          "updatedAt": "2026-10-22T01:15:35.000Z",
+          "uid": "35240-10e84d95-e0f7-45fe-adb7-144c508eab1f"
+        }
+      ],
+      "id": "36014cbc-0848-4374-9bf0-a485dc6249e8",
+      "createdAt": "2026-10-22T01:15:35.000Z",
+      "updatedAt": "2026-10-22T01:15:35.000Z",
+      "uid": "35240-36014cbc-0848-4374-9bf0-a485dc6249e8"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}

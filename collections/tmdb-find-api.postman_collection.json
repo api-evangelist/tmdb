@@ -1,0 +1,178 @@
+{
+  "info": {
+    "_postman_id": "24cabaa5-1e3b-4929-86b1-2a56a5bdacc7",
+    "name": "tmdb-api Account Find API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:16:00.000Z",
+    "updatedAt": "2026-10-22T01:16:00.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-24cabaa5-1e3b-4929-86b1-2a56a5bdacc7"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "find",
+          "item": [
+            {
+              "name": "{external_id}",
+              "item": [
+                {
+                  "name": "Find By ID",
+                  "id": "e506af1e-c123-4180-a337-cb799037a5b7",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/find/:external_id?external_source=twitter_id&language=en-US",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "find",
+                        ":external_id"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) ",
+                          "key": "external_source",
+                          "value": "twitter_id"
+                        },
+                        {
+                          "key": "language",
+                          "value": "en-US"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "id": "e6cbbd60-2102-4afe-a344-b9e72df70a7f",
+                          "key": "external_id",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Find data by external ID's."
+                  },
+                  "response": [
+                    {
+                      "id": "d4007683-bd49-48cc-aa7f-1e3b55c7ed4e",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/find/:external_id?external_source=twitter_id&language=en-US",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "find",
+                            ":external_id"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "external_source",
+                              "value": "twitter_id"
+                            },
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "external_id"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"movie_results\": [\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"id\": 0,\n      \"title\": \"<string>\",\n      \"original_language\": \"<string>\",\n      \"original_title\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"poster_path\": \"<string>\",\n      \"media_type\": \"<string>\",\n      \"genre_ids\": [\n        0,\n        0\n      ],\n      \"popularity\": 0,\n      \"release_date\": \"<string>\",\n      \"video\": true,\n      \"vote_average\": 0,\n      \"vote_count\": 0\n    },\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"id\": 0,\n      \"title\": \"<string>\",\n      \"original_language\": \"<string>\",\n      \"original_title\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"poster_path\": \"<string>\",\n      \"media_type\": \"<string>\",\n      \"genre_ids\": [\n        0,\n        0\n      ],\n      \"popularity\": 0,\n      \"release_date\": \"<string>\",\n      \"video\": true,\n      \"vote_average\": 0,\n      \"vote_count\": 0\n    }\n  ],\n  \"person_results\": \"<array>\",\n  \"tv_results\": \"<array>\",\n  \"tv_episode_results\": \"<array>\",\n  \"tv_season_results\": \"<array>\"\n}",
+                      "createdAt": "2026-10-22T01:16:01.000Z",
+                      "updatedAt": "2026-10-22T01:16:01.000Z",
+                      "uid": "35240-d4007683-bd49-48cc-aa7f-1e3b55c7ed4e"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:16:01.000Z",
+                  "updatedAt": "2026-10-22T01:16:01.000Z",
+                  "uid": "35240-e506af1e-c123-4180-a337-cb799037a5b7"
+                }
+              ],
+              "id": "cf0c469a-f740-47a6-9ab5-0a2aaa174f70",
+              "createdAt": "2026-10-22T01:16:01.000Z",
+              "updatedAt": "2026-10-22T01:16:01.000Z",
+              "uid": "35240-cf0c469a-f740-47a6-9ab5-0a2aaa174f70"
+            }
+          ],
+          "id": "ac6d1e08-105e-425c-a48b-05e2de4b321b",
+          "createdAt": "2026-10-22T01:16:01.000Z",
+          "updatedAt": "2026-10-22T01:16:01.000Z",
+          "uid": "35240-ac6d1e08-105e-425c-a48b-05e2de4b321b"
+        }
+      ],
+      "id": "8eaa514e-388a-40e3-ad96-355e04544c5b",
+      "createdAt": "2026-10-22T01:16:01.000Z",
+      "updatedAt": "2026-10-22T01:16:01.000Z",
+      "uid": "35240-8eaa514e-388a-40e3-ad96-355e04544c5b"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}

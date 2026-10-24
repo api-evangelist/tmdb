@@ -1,0 +1,357 @@
+{
+  "info": {
+    "_postman_id": "42b79b0a-4632-4c92-8e02-3c135a4ed40a",
+    "name": "tmdb-api Account Network API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:16:28.000Z",
+    "updatedAt": "2026-10-22T01:16:28.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-42b79b0a-4632-4c92-8e02-3c135a4ed40a"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "network",
+          "item": [
+            {
+              "name": "{network_id}",
+              "item": [
+                {
+                  "name": "alternative_names",
+                  "item": [
+                    {
+                      "name": "Alternative Names",
+                      "id": "3fe149ae-88d7-4ff8-abbb-2553540f3ab3",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/network/:network_id/alternative_names",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "network",
+                            ":network_id",
+                            "alternative_names"
+                          ],
+                          "variable": [
+                            {
+                              "id": "62dd7549-ffc4-4474-a0c8-205fbd475af9",
+                              "key": "network_id",
+                              "value": "<integer>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Get the alternative names of a network."
+                      },
+                      "response": [
+                        {
+                          "id": "7a51f86d-4f16-4a43-ba88-a3965210c678",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/network/:network_id/alternative_names",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "network",
+                                ":network_id",
+                                "alternative_names"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "network_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"id\": 0,\n  \"results\": [\n    {\n      \"name\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+                          "createdAt": "2026-10-22T01:16:29.000Z",
+                          "updatedAt": "2026-10-22T01:16:29.000Z",
+                          "uid": "35240-7a51f86d-4f16-4a43-ba88-a3965210c678"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:16:29.000Z",
+                      "updatedAt": "2026-10-22T01:16:29.000Z",
+                      "uid": "35240-3fe149ae-88d7-4ff8-abbb-2553540f3ab3"
+                    }
+                  ],
+                  "id": "2717ecb9-1715-4551-9146-372d4a6331d6",
+                  "createdAt": "2026-10-22T01:16:29.000Z",
+                  "updatedAt": "2026-10-22T01:16:29.000Z",
+                  "uid": "35240-2717ecb9-1715-4551-9146-372d4a6331d6"
+                },
+                {
+                  "name": "images",
+                  "item": [
+                    {
+                      "name": "Images",
+                      "id": "a720acb5-ab4f-42e9-92df-079a7802d320",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/network/:network_id/images",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "network",
+                            ":network_id",
+                            "images"
+                          ],
+                          "variable": [
+                            {
+                              "id": "a030d87a-7ddf-4706-8611-ca67d4e6c566",
+                              "key": "network_id",
+                              "value": "<integer>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Get the TV network logos by id."
+                      },
+                      "response": [
+                        {
+                          "id": "5814652d-fa81-4e05-94bc-2aeac520d8f7",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/network/:network_id/images",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "network",
+                                ":network_id",
+                                "images"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "network_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"id\": 0,\n  \"logos\": [\n    {\n      \"aspect_ratio\": 0,\n      \"file_path\": \"<string>\",\n      \"height\": 0,\n      \"id\": \"<string>\",\n      \"file_type\": \"<string>\",\n      \"vote_average\": 0,\n      \"vote_count\": 0,\n      \"width\": 0\n    },\n    {\n      \"aspect_ratio\": 0,\n      \"file_path\": \"<string>\",\n      \"height\": 0,\n      \"id\": \"<string>\",\n      \"file_type\": \"<string>\",\n      \"vote_average\": 0,\n      \"vote_count\": 0,\n      \"width\": 0\n    }\n  ]\n}",
+                          "createdAt": "2026-10-22T01:16:29.000Z",
+                          "updatedAt": "2026-10-22T01:16:29.000Z",
+                          "uid": "35240-5814652d-fa81-4e05-94bc-2aeac520d8f7"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:16:29.000Z",
+                      "updatedAt": "2026-10-22T01:16:29.000Z",
+                      "uid": "35240-a720acb5-ab4f-42e9-92df-079a7802d320"
+                    }
+                  ],
+                  "id": "d26fcf41-020b-4693-97be-e374f07e5038",
+                  "createdAt": "2026-10-22T01:16:29.000Z",
+                  "updatedAt": "2026-10-22T01:16:29.000Z",
+                  "uid": "35240-d26fcf41-020b-4693-97be-e374f07e5038"
+                },
+                {
+                  "name": "Details",
+                  "id": "8a8d3104-2cc8-4754-8b2f-36624921fef4",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/network/:network_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "network",
+                        ":network_id"
+                      ],
+                      "variable": [
+                        {
+                          "id": "704717dd-a17d-499c-929b-bbe3e6389da9",
+                          "key": "network_id",
+                          "value": "<integer>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "9539412c-72fe-4e41-b622-cbde78fb1366",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/network/:network_id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "network",
+                            ":network_id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "network_id"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"headquarters\": \"<string>\",\n  \"homepage\": \"<string>\",\n  \"id\": 0,\n  \"logo_path\": \"<string>\",\n  \"name\": \"<string>\",\n  \"origin_country\": \"<string>\"\n}",
+                      "createdAt": "2026-10-22T01:16:29.000Z",
+                      "updatedAt": "2026-10-22T01:16:29.000Z",
+                      "uid": "35240-9539412c-72fe-4e41-b622-cbde78fb1366"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:16:29.000Z",
+                  "updatedAt": "2026-10-22T01:16:29.000Z",
+                  "uid": "35240-8a8d3104-2cc8-4754-8b2f-36624921fef4"
+                }
+              ],
+              "id": "7453ad14-be78-42e2-bb31-6cadc552e47a",
+              "createdAt": "2026-10-22T01:16:29.000Z",
+              "updatedAt": "2026-10-22T01:16:29.000Z",
+              "uid": "35240-7453ad14-be78-42e2-bb31-6cadc552e47a"
+            }
+          ],
+          "id": "dbffafbe-ade3-4567-af27-e206d2d0d3ba",
+          "createdAt": "2026-10-22T01:16:29.000Z",
+          "updatedAt": "2026-10-22T01:16:29.000Z",
+          "uid": "35240-dbffafbe-ade3-4567-af27-e206d2d0d3ba"
+        }
+      ],
+      "id": "2b88e7a9-ac6f-4777-99a5-6b890f59e067",
+      "createdAt": "2026-10-22T01:16:29.000Z",
+      "updatedAt": "2026-10-22T01:16:29.000Z",
+      "uid": "35240-2b88e7a9-ac6f-4777-99a5-6b890f59e067"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}

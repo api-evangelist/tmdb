@@ -1,0 +1,156 @@
+{
+  "info": {
+    "_postman_id": "b22fe158-d3d5-41d9-985a-6e1d04dc21b2",
+    "name": "tmdb-api Account Review API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:16:36.000Z",
+    "updatedAt": "2026-10-22T01:16:36.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-b22fe158-d3d5-41d9-985a-6e1d04dc21b2"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "review",
+          "item": [
+            {
+              "name": "{review_id}",
+              "item": [
+                {
+                  "name": "Details",
+                  "id": "9f6d3453-7236-4340-ac19-2d62e967238d",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/review/:review_id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "review",
+                        ":review_id"
+                      ],
+                      "variable": [
+                        {
+                          "id": "c505daeb-5211-4bd3-9255-99aaab836319",
+                          "key": "review_id",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Retrieve the details of a movie or TV show review."
+                  },
+                  "response": [
+                    {
+                      "id": "6c1d9d8b-5754-4159-9af8-732c3f85cab9",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/review/:review_id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "review",
+                            ":review_id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "review_id"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"id\": \"<string>\",\n  \"author\": \"<string>\",\n  \"author_details\": {\n    \"name\": \"<string>\",\n    \"username\": \"<string>\",\n    \"avatar_path\": \"<string>\",\n    \"rating\": 0\n  },\n  \"content\": \"<string>\",\n  \"created_at\": \"<string>\",\n  \"iso_639_1\": \"<string>\",\n  \"media_id\": 0,\n  \"media_title\": \"<string>\",\n  \"media_type\": \"<string>\",\n  \"updated_at\": \"<string>\",\n  \"url\": \"<string>\"\n}",
+                      "createdAt": "2026-10-22T01:16:37.000Z",
+                      "updatedAt": "2026-10-22T01:16:37.000Z",
+                      "uid": "35240-6c1d9d8b-5754-4159-9af8-732c3f85cab9"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:16:37.000Z",
+                  "updatedAt": "2026-10-22T01:16:37.000Z",
+                  "uid": "35240-9f6d3453-7236-4340-ac19-2d62e967238d"
+                }
+              ],
+              "id": "6dd96db3-4202-469d-a20e-0e4916ca738a",
+              "createdAt": "2026-10-22T01:16:37.000Z",
+              "updatedAt": "2026-10-22T01:16:37.000Z",
+              "uid": "35240-6dd96db3-4202-469d-a20e-0e4916ca738a"
+            }
+          ],
+          "id": "e63fdf25-5c80-424f-85f6-6f7cbf957669",
+          "createdAt": "2026-10-22T01:16:37.000Z",
+          "updatedAt": "2026-10-22T01:16:37.000Z",
+          "uid": "35240-e63fdf25-5c80-424f-85f6-6f7cbf957669"
+        }
+      ],
+      "id": "148d190a-0c5d-4435-a6bd-2616e7702744",
+      "createdAt": "2026-10-22T01:16:37.000Z",
+      "updatedAt": "2026-10-22T01:16:37.000Z",
+      "uid": "35240-148d190a-0c5d-4435-a6bd-2616e7702744"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}

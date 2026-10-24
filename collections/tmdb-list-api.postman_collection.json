@@ -1,0 +1,927 @@
+{
+  "info": {
+    "_postman_id": "439f453d-8f77-4537-a3e1-c4316635915f",
+    "name": "tmdb-api Account List API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:16:20.000Z",
+    "updatedAt": "2026-10-22T01:16:20.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-439f453d-8f77-4537-a3e1-c4316635915f"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "list",
+          "item": [
+            {
+              "name": "{list_id}",
+              "item": [
+                {
+                  "name": "add_item",
+                  "item": [
+                    {
+                      "name": "Add Movie",
+                      "id": "9ec68a91-5da1-4e31-8eb6-d5fbe7a2a6f3",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/3/list/:list_id/add_item?session_id=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "list",
+                            ":list_id",
+                            "add_item"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "session_id",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "id": "18c34320-94b9-48c2-9edc-2e7da16d50ec",
+                              "key": "list_id",
+                              "value": "<integer>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Add a movie to a list."
+                      },
+                      "response": [
+                        {
+                          "id": "991a5304-4f16-44e3-beb1-9c06648d3a19",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/3/list/:list_id/add_item?session_id=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "list",
+                                ":list_id",
+                                "add_item"
+                              ],
+                              "query": [
+                                {
+                                  "description": "(Required) ",
+                                  "key": "session_id",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "list_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"status_code\": 0,\n  \"status_message\": \"<string>\"\n}",
+                          "createdAt": "2026-10-22T01:16:21.000Z",
+                          "updatedAt": "2026-10-22T01:16:21.000Z",
+                          "uid": "35240-991a5304-4f16-44e3-beb1-9c06648d3a19"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:16:21.000Z",
+                      "updatedAt": "2026-10-22T01:16:21.000Z",
+                      "uid": "35240-9ec68a91-5da1-4e31-8eb6-d5fbe7a2a6f3"
+                    }
+                  ],
+                  "id": "8f8e82c8-9c9e-404f-8d59-ad27f1663ba0",
+                  "createdAt": "2026-10-22T01:16:21.000Z",
+                  "updatedAt": "2026-10-22T01:16:21.000Z",
+                  "uid": "35240-8f8e82c8-9c9e-404f-8d59-ad27f1663ba0"
+                },
+                {
+                  "name": "item_status",
+                  "item": [
+                    {
+                      "name": "Check Item Status",
+                      "id": "9acc0711-e96d-44ef-9c28-864da2f3b987",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/list/:list_id/item_status?language=en-US&movie_id=<integer>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "list",
+                            ":list_id",
+                            "item_status"
+                          ],
+                          "query": [
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            },
+                            {
+                              "key": "movie_id",
+                              "value": "<integer>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "id": "5d1419ab-d32f-43c0-b069-d317d613371d",
+                              "key": "list_id",
+                              "value": "<integer>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Use this method to check if an item has already been added to the list."
+                      },
+                      "response": [
+                        {
+                          "id": "9e4e241e-6aea-46ed-a044-d22b5c19596b",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/list/:list_id/item_status?language=en-US&movie_id=<integer>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "list",
+                                ":list_id",
+                                "item_status"
+                              ],
+                              "query": [
+                                {
+                                  "key": "language",
+                                  "value": "en-US"
+                                },
+                                {
+                                  "key": "movie_id",
+                                  "value": "<integer>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "list_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"id\": 0,\n  \"item_present\": true\n}",
+                          "createdAt": "2026-10-22T01:16:21.000Z",
+                          "updatedAt": "2026-10-22T01:16:21.000Z",
+                          "uid": "35240-9e4e241e-6aea-46ed-a044-d22b5c19596b"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:16:21.000Z",
+                      "updatedAt": "2026-10-22T01:16:21.000Z",
+                      "uid": "35240-9acc0711-e96d-44ef-9c28-864da2f3b987"
+                    }
+                  ],
+                  "id": "9da99cda-aed1-4cc1-a39c-8b1912551e7c",
+                  "createdAt": "2026-10-22T01:16:21.000Z",
+                  "updatedAt": "2026-10-22T01:16:21.000Z",
+                  "uid": "35240-9da99cda-aed1-4cc1-a39c-8b1912551e7c"
+                },
+                {
+                  "name": "clear",
+                  "item": [
+                    {
+                      "name": "Clear",
+                      "id": "dc8e1032-5551-499c-a92b-b6b281fdf282",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/list/:list_id/clear?session_id=<string>&confirm=false",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "list",
+                            ":list_id",
+                            "clear"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "session_id",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "(Required) ",
+                              "key": "confirm",
+                              "value": "false"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "id": "7367eb33-31d3-42f4-ab28-c0221de26089",
+                              "key": "list_id",
+                              "value": "<integer>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Clear all items from a list."
+                      },
+                      "response": [
+                        {
+                          "id": "eb4a5a3c-5534-4943-a34e-4564aa4a8fd4",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/list/:list_id/clear?session_id=<string>&confirm=false",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "list",
+                                ":list_id",
+                                "clear"
+                              ],
+                              "query": [
+                                {
+                                  "description": "(Required) ",
+                                  "key": "session_id",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "description": "(Required) ",
+                                  "key": "confirm",
+                                  "value": "false"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "list_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"status_code\": 0,\n  \"status_message\": \"<string>\"\n}",
+                          "createdAt": "2026-10-22T01:16:21.000Z",
+                          "updatedAt": "2026-10-22T01:16:21.000Z",
+                          "uid": "35240-eb4a5a3c-5534-4943-a34e-4564aa4a8fd4"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:16:21.000Z",
+                      "updatedAt": "2026-10-22T01:16:21.000Z",
+                      "uid": "35240-dc8e1032-5551-499c-a92b-b6b281fdf282"
+                    }
+                  ],
+                  "id": "319504c3-e72d-427c-aecf-5a8c9e0b7249",
+                  "createdAt": "2026-10-22T01:16:21.000Z",
+                  "updatedAt": "2026-10-22T01:16:21.000Z",
+                  "uid": "35240-319504c3-e72d-427c-aecf-5a8c9e0b7249"
+                },
+                {
+                  "name": "remove_item",
+                  "item": [
+                    {
+                      "name": "Remove Movie",
+                      "id": "48f9b219-2828-4ea1-9c60-94cd062c8eb9",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/3/list/:list_id/remove_item?session_id=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "list",
+                            ":list_id",
+                            "remove_item"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "session_id",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "id": "9834f5d1-ef54-429c-87d9-05081c8acb8b",
+                              "key": "list_id",
+                              "value": "<integer>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Remove a movie from a list."
+                      },
+                      "response": [
+                        {
+                          "id": "9015e472-0255-4388-bea8-53c33b22b928",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/3/list/:list_id/remove_item?session_id=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "list",
+                                ":list_id",
+                                "remove_item"
+                              ],
+                              "query": [
+                                {
+                                  "description": "(Required) ",
+                                  "key": "session_id",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "list_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"status_code\": 0,\n  \"status_message\": \"<string>\"\n}",
+                          "createdAt": "2026-10-22T01:16:21.000Z",
+                          "updatedAt": "2026-10-22T01:16:21.000Z",
+                          "uid": "35240-9015e472-0255-4388-bea8-53c33b22b928"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:16:21.000Z",
+                      "updatedAt": "2026-10-22T01:16:21.000Z",
+                      "uid": "35240-48f9b219-2828-4ea1-9c60-94cd062c8eb9"
+                    }
+                  ],
+                  "id": "95cfe027-efba-4736-b272-7a7cc9d3a254",
+                  "createdAt": "2026-10-22T01:16:21.000Z",
+                  "updatedAt": "2026-10-22T01:16:21.000Z",
+                  "uid": "35240-95cfe027-efba-4736-b272-7a7cc9d3a254"
+                },
+                {
+                  "name": "Delete",
+                  "id": "fc7e3869-fd82-4a98-8882-9c13f503b0c2",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/list/:list_id?session_id=<string>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "list",
+                        ":list_id"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) ",
+                          "key": "session_id",
+                          "value": "<string>"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "id": "74dc2c1c-33f4-40da-a03f-1bc3af9e0ae2",
+                          "key": "list_id",
+                          "value": "<integer>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Delete a list."
+                  },
+                  "response": [
+                    {
+                      "id": "3a4ab315-b1f9-4f30-aa30-630b69ed042c",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/list/:list_id?session_id=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "list",
+                            ":list_id"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "session_id",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "list_id"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"status_code\": 0,\n  \"status_message\": \"<string>\"\n}",
+                      "createdAt": "2026-10-22T01:16:21.000Z",
+                      "updatedAt": "2026-10-22T01:16:21.000Z",
+                      "uid": "35240-3a4ab315-b1f9-4f30-aa30-630b69ed042c"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:16:21.000Z",
+                  "updatedAt": "2026-10-22T01:16:21.000Z",
+                  "uid": "35240-fc7e3869-fd82-4a98-8882-9c13f503b0c2"
+                },
+                {
+                  "name": "Details",
+                  "id": "6f2ee70b-26b8-4a61-be7b-9d9e4666a9a1",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/list/:list_id?language=en-US&page=1",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "list",
+                        ":list_id"
+                      ],
+                      "query": [
+                        {
+                          "key": "language",
+                          "value": "en-US"
+                        },
+                        {
+                          "key": "page",
+                          "value": "1"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "id": "99b81178-588f-4030-be61-4fefc7f07f3d",
+                          "key": "list_id",
+                          "value": "<integer>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "ccabc3fd-97ee-4b69-8b0f-a20ac2197f52",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/list/:list_id?language=en-US&page=1",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "list",
+                            ":list_id"
+                          ],
+                          "query": [
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            },
+                            {
+                              "key": "page",
+                              "value": "1"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "list_id"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"created_by\": \"<string>\",\n  \"description\": \"<string>\",\n  \"favorite_count\": 0,\n  \"id\": \"<string>\",\n  \"items\": [\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"genre_ids\": [\n        0,\n        0\n      ],\n      \"id\": 0,\n      \"media_type\": \"<string>\",\n      \"original_language\": \"<string>\",\n      \"original_title\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"popularity\": 0,\n      \"poster_path\": \"<string>\",\n      \"release_date\": \"<string>\",\n      \"title\": \"<string>\",\n      \"video\": true,\n      \"vote_average\": 0,\n      \"vote_count\": 0\n    },\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"genre_ids\": [\n        0,\n        0\n      ],\n      \"id\": 0,\n      \"media_type\": \"<string>\",\n      \"original_language\": \"<string>\",\n      \"original_title\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"popularity\": 0,\n      \"poster_path\": \"<string>\",\n      \"release_date\": \"<string>\",\n      \"title\": \"<string>\",\n      \"video\": true,\n      \"vote_average\": 0,\n      \"vote_count\": 0\n    }\n  ],\n  \"item_count\": 0,\n  \"iso_639_1\": \"<string>\",\n  \"name\": \"<string>\",\n  \"poster_path\": \"<string>\"\n}",
+                      "createdAt": "2026-10-22T01:16:21.000Z",
+                      "updatedAt": "2026-10-22T01:16:21.000Z",
+                      "uid": "35240-ccabc3fd-97ee-4b69-8b0f-a20ac2197f52"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:16:21.000Z",
+                  "updatedAt": "2026-10-22T01:16:21.000Z",
+                  "uid": "35240-6f2ee70b-26b8-4a61-be7b-9d9e4666a9a1"
+                }
+              ],
+              "id": "57b8a0ad-048a-4da9-9e85-a0535d97594f",
+              "createdAt": "2026-10-22T01:16:21.000Z",
+              "updatedAt": "2026-10-22T01:16:21.000Z",
+              "uid": "35240-57b8a0ad-048a-4da9-9e85-a0535d97594f"
+            },
+            {
+              "name": "Create",
+              "id": "d87c4490-24d4-4e02-b6b4-82dc9aad6489",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/3/list?session_id=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "3",
+                    "list"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) ",
+                      "key": "session_id",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "79a87f78-eb59-40b8-a650-28eb75ac47ab",
+                  "name": "200",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/3/list?session_id=<string>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "list"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) ",
+                          "key": "session_id",
+                          "value": "<string>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"status_message\": \"<string>\",\n  \"success\": true,\n  \"status_code\": 0,\n  \"list_id\": 0\n}",
+                  "createdAt": "2026-10-22T01:16:21.000Z",
+                  "updatedAt": "2026-10-22T01:16:21.000Z",
+                  "uid": "35240-79a87f78-eb59-40b8-a650-28eb75ac47ab"
+                }
+              ],
+              "createdAt": "2026-10-22T01:16:21.000Z",
+              "updatedAt": "2026-10-22T01:16:21.000Z",
+              "uid": "35240-d87c4490-24d4-4e02-b6b4-82dc9aad6489"
+            }
+          ],
+          "id": "abf9e078-13b4-4b06-aead-73ef7a0bd5a2",
+          "createdAt": "2026-10-22T01:16:21.000Z",
+          "updatedAt": "2026-10-22T01:16:21.000Z",
+          "uid": "35240-abf9e078-13b4-4b06-aead-73ef7a0bd5a2"
+        }
+      ],
+      "id": "b75a751e-7888-4f22-a82f-d2267fcc6a05",
+      "createdAt": "2026-10-22T01:16:21.000Z",
+      "updatedAt": "2026-10-22T01:16:21.000Z",
+      "uid": "35240-b75a751e-7888-4f22-a82f-d2267fcc6a05"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}

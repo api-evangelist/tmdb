@@ -1,0 +1,837 @@
+{
+  "info": {
+    "_postman_id": "3ce69d49-8d11-4619-87ce-ad8691388c75",
+    "name": "tmdb-api Account Authentication API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:15:13.000Z",
+    "updatedAt": "2026-10-22T01:15:13.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-3ce69d49-8d11-4619-87ce-ad8691388c75"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "authentication",
+          "item": [
+            {
+              "name": "guest_session",
+              "item": [
+                {
+                  "name": "new",
+                  "item": [
+                    {
+                      "name": "Create Guest Session",
+                      "id": "8ab0eaa1-40ef-4d53-b127-4c2fcb2a5302",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/authentication/guest_session/new",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "authentication",
+                            "guest_session",
+                            "new"
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "e1753680-622f-47c5-a46f-dbc6ff8fa8b2",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/authentication/guest_session/new",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "authentication",
+                                "guest_session",
+                                "new"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"success\": true,\n  \"guest_session_id\": \"<string>\",\n  \"expires_at\": \"<string>\"\n}",
+                          "createdAt": "2026-10-22T01:15:13.000Z",
+                          "updatedAt": "2026-10-22T01:15:13.000Z",
+                          "uid": "35240-e1753680-622f-47c5-a46f-dbc6ff8fa8b2"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:15:13.000Z",
+                      "updatedAt": "2026-10-22T01:15:13.000Z",
+                      "uid": "35240-8ab0eaa1-40ef-4d53-b127-4c2fcb2a5302"
+                    }
+                  ],
+                  "id": "0afb8c37-daaf-4e24-ba16-e9a9e9a8240d",
+                  "createdAt": "2026-10-22T01:15:13.000Z",
+                  "updatedAt": "2026-10-22T01:15:13.000Z",
+                  "uid": "35240-0afb8c37-daaf-4e24-ba16-e9a9e9a8240d"
+                }
+              ],
+              "id": "864255b0-e449-48d5-ae62-2b08347e87ca",
+              "createdAt": "2026-10-22T01:15:13.000Z",
+              "updatedAt": "2026-10-22T01:15:13.000Z",
+              "uid": "35240-864255b0-e449-48d5-ae62-2b08347e87ca"
+            },
+            {
+              "name": "token",
+              "item": [
+                {
+                  "name": "new",
+                  "item": [
+                    {
+                      "name": "Create Request Token",
+                      "id": "512697b6-7c31-49c9-8cc8-3f59f01107e3",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/authentication/token/new",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "authentication",
+                            "token",
+                            "new"
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "e0c97463-b9f9-4ecc-a932-c124bef05efc",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/authentication/token/new",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "authentication",
+                                "token",
+                                "new"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"success\": true,\n  \"expires_at\": \"<string>\",\n  \"request_token\": \"<string>\"\n}",
+                          "createdAt": "2026-10-22T01:15:13.000Z",
+                          "updatedAt": "2026-10-22T01:15:13.000Z",
+                          "uid": "35240-e0c97463-b9f9-4ecc-a932-c124bef05efc"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:15:13.000Z",
+                      "updatedAt": "2026-10-22T01:15:13.000Z",
+                      "uid": "35240-512697b6-7c31-49c9-8cc8-3f59f01107e3"
+                    }
+                  ],
+                  "id": "d8ff558f-1376-47a3-afde-822cf06c444e",
+                  "createdAt": "2026-10-22T01:15:13.000Z",
+                  "updatedAt": "2026-10-22T01:15:13.000Z",
+                  "uid": "35240-d8ff558f-1376-47a3-afde-822cf06c444e"
+                },
+                {
+                  "name": "validate_with_login",
+                  "item": [
+                    {
+                      "name": "Create Session (with login)",
+                      "id": "5250446b-0477-4f57-ab41-cbaee39ce198",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/3/authentication/token/validate_with_login",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "authentication",
+                            "token",
+                            "validate_with_login"
+                          ]
+                        },
+                        "description": "This method allows an application to validate a request token by entering a username and password."
+                      },
+                      "response": [
+                        {
+                          "id": "01bacb45-c66a-4bbc-a270-8a9830a63009",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/3/authentication/token/validate_with_login",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "authentication",
+                                "token",
+                                "validate_with_login"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"success\": true,\n  \"expires_at\": \"<string>\",\n  \"request_token\": \"<string>\"\n}",
+                          "createdAt": "2026-10-22T01:15:13.000Z",
+                          "updatedAt": "2026-10-22T01:15:13.000Z",
+                          "uid": "35240-01bacb45-c66a-4bbc-a270-8a9830a63009"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:15:13.000Z",
+                      "updatedAt": "2026-10-22T01:15:13.000Z",
+                      "uid": "35240-5250446b-0477-4f57-ab41-cbaee39ce198"
+                    }
+                  ],
+                  "id": "c4a46512-2106-431c-9fe0-3e3eeb4cd5f6",
+                  "createdAt": "2026-10-22T01:15:13.000Z",
+                  "updatedAt": "2026-10-22T01:15:13.000Z",
+                  "uid": "35240-c4a46512-2106-431c-9fe0-3e3eeb4cd5f6"
+                }
+              ],
+              "id": "7000ed30-e747-42cb-beb7-3483c3114fdb",
+              "createdAt": "2026-10-22T01:15:13.000Z",
+              "updatedAt": "2026-10-22T01:15:13.000Z",
+              "uid": "35240-7000ed30-e747-42cb-beb7-3483c3114fdb"
+            },
+            {
+              "name": "session",
+              "item": [
+                {
+                  "name": "new",
+                  "item": [
+                    {
+                      "name": "Create Session",
+                      "id": "da3ce936-864c-4561-95ae-993720ca117e",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/3/authentication/session/new",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "authentication",
+                            "session",
+                            "new"
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "c7da3649-f35a-4b31-ac89-f658f5c31cf2",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/3/authentication/session/new",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "authentication",
+                                "session",
+                                "new"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"success\": true,\n  \"session_id\": \"<string>\"\n}",
+                          "createdAt": "2026-10-22T01:15:13.000Z",
+                          "updatedAt": "2026-10-22T01:15:13.000Z",
+                          "uid": "35240-c7da3649-f35a-4b31-ac89-f658f5c31cf2"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:15:13.000Z",
+                      "updatedAt": "2026-10-22T01:15:13.000Z",
+                      "uid": "35240-da3ce936-864c-4561-95ae-993720ca117e"
+                    }
+                  ],
+                  "id": "cb5e8b1b-c8cd-4049-9944-bcc18b7bb948",
+                  "createdAt": "2026-10-22T01:15:13.000Z",
+                  "updatedAt": "2026-10-22T01:15:13.000Z",
+                  "uid": "35240-cb5e8b1b-c8cd-4049-9944-bcc18b7bb948"
+                },
+                {
+                  "name": "convert",
+                  "item": [
+                    {
+                      "name": "4",
+                      "item": [
+                        {
+                          "name": "Create Session (from v4 token)",
+                          "id": "8d63732d-0519-4336-a1b8-0a63d697e33d",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/3/authentication/session/convert/4",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "authentication",
+                                "session",
+                                "convert",
+                                "4"
+                              ]
+                            }
+                          },
+                          "response": [
+                            {
+                              "id": "be5af972-becf-44d5-a6b9-2687ba5987f1",
+                              "name": "200",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: apikey",
+                                    "key": "Authorization",
+                                    "value": "<API Key>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/3/authentication/session/convert/4",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "3",
+                                    "authentication",
+                                    "session",
+                                    "convert",
+                                    "4"
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"success\": true,\n  \"session_id\": \"<string>\"\n}",
+                              "createdAt": "2026-10-22T01:15:13.000Z",
+                              "updatedAt": "2026-10-22T01:15:13.000Z",
+                              "uid": "35240-be5af972-becf-44d5-a6b9-2687ba5987f1"
+                            }
+                          ],
+                          "createdAt": "2026-10-22T01:15:13.000Z",
+                          "updatedAt": "2026-10-22T01:15:13.000Z",
+                          "uid": "35240-8d63732d-0519-4336-a1b8-0a63d697e33d"
+                        }
+                      ],
+                      "id": "931a71ae-d82b-4bee-b80b-e029cf027dec",
+                      "createdAt": "2026-10-22T01:15:13.000Z",
+                      "updatedAt": "2026-10-22T01:15:13.000Z",
+                      "uid": "35240-931a71ae-d82b-4bee-b80b-e029cf027dec"
+                    }
+                  ],
+                  "id": "7ed16b2f-9ca2-4177-bd7b-d9ad1a1013be",
+                  "createdAt": "2026-10-22T01:15:13.000Z",
+                  "updatedAt": "2026-10-22T01:15:13.000Z",
+                  "uid": "35240-7ed16b2f-9ca2-4177-bd7b-d9ad1a1013be"
+                },
+                {
+                  "name": "Delete Session",
+                  "id": "a63298cb-cd21-42c4-8d8b-543f907e454e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/3/authentication/session",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "authentication",
+                        "session"
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "d1c9339f-ec39-40b0-82d2-14b8cb4f6f82",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"RAW_BODY\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/3/authentication/session",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "authentication",
+                            "session"
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"success\": true\n}",
+                      "createdAt": "2026-10-22T01:15:13.000Z",
+                      "updatedAt": "2026-10-22T01:15:13.000Z",
+                      "uid": "35240-d1c9339f-ec39-40b0-82d2-14b8cb4f6f82"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:15:13.000Z",
+                  "updatedAt": "2026-10-22T01:15:13.000Z",
+                  "uid": "35240-a63298cb-cd21-42c4-8d8b-543f907e454e"
+                }
+              ],
+              "id": "578df0ff-8fd5-40f7-9ef7-f371d01a6ac4",
+              "createdAt": "2026-10-22T01:15:13.000Z",
+              "updatedAt": "2026-10-22T01:15:13.000Z",
+              "uid": "35240-578df0ff-8fd5-40f7-9ef7-f371d01a6ac4"
+            },
+            {
+              "name": "Validate Key",
+              "id": "c75e0daf-3249-467b-af86-356c973c7e54",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/3/authentication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "3",
+                    "authentication"
+                  ]
+                },
+                "description": "Test your API Key to see if it's valid."
+              },
+              "response": [
+                {
+                  "id": "ed17aa08-7758-4944-9457-c40f62dfc497",
+                  "name": "200",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/authentication",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "authentication"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"success\": true,\n  \"status_code\": 0,\n  \"status_message\": \"<string>\"\n}",
+                  "createdAt": "2026-10-22T01:15:13.000Z",
+                  "updatedAt": "2026-10-22T01:15:13.000Z",
+                  "uid": "35240-ed17aa08-7758-4944-9457-c40f62dfc497"
+                },
+                {
+                  "id": "570c423e-7a43-4f77-b679-34b171c7b064",
+                  "name": "401",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/authentication",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "authentication"
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"status_code\": 0,\n  \"status_message\": \"<string>\",\n  \"success\": true\n}",
+                  "createdAt": "2026-10-22T01:15:13.000Z",
+                  "updatedAt": "2026-10-22T01:15:13.000Z",
+                  "uid": "35240-570c423e-7a43-4f77-b679-34b171c7b064"
+                }
+              ],
+              "createdAt": "2026-10-22T01:15:13.000Z",
+              "updatedAt": "2026-10-22T01:15:13.000Z",
+              "uid": "35240-c75e0daf-3249-467b-af86-356c973c7e54"
+            }
+          ],
+          "id": "0ea48f4d-99f3-4c2b-8ed3-7f8c6e4449b4",
+          "createdAt": "2026-10-22T01:15:13.000Z",
+          "updatedAt": "2026-10-22T01:15:13.000Z",
+          "uid": "35240-0ea48f4d-99f3-4c2b-8ed3-7f8c6e4449b4"
+        }
+      ],
+      "id": "124b5032-f9ab-4cd6-b5eb-71061bd31930",
+      "createdAt": "2026-10-22T01:15:13.000Z",
+      "updatedAt": "2026-10-22T01:15:13.000Z",
+      "uid": "35240-124b5032-f9ab-4cd6-b5eb-71061bd31930"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}

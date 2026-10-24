@@ -1,0 +1,391 @@
+{
+  "info": {
+    "_postman_id": "92976376-be90-4c74-851f-2811f26ae23b",
+    "name": "tmdb-api Account Collection API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:15:29.000Z",
+    "updatedAt": "2026-10-22T01:15:29.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-92976376-be90-4c74-851f-2811f26ae23b"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "collection",
+          "item": [
+            {
+              "name": "{collection_id}",
+              "item": [
+                {
+                  "name": "images",
+                  "item": [
+                    {
+                      "name": "Images",
+                      "id": "53b97352-d17f-4e85-8db5-29d947c396de",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/collection/:collection_id/images?include_image_language=<string>&language=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "collection",
+                            ":collection_id",
+                            "images"
+                          ],
+                          "query": [
+                            {
+                              "description": "specify a comma separated list of ISO-639-1 values to query, for example: `en-US,null`",
+                              "key": "include_image_language",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "language",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "id": "0b7ca799-cfe2-4c67-a98f-457da0ea83f5",
+                              "key": "collection_id",
+                              "value": "<integer>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Get the images that belong to a collection."
+                      },
+                      "response": [
+                        {
+                          "id": "00998617-fdae-45b0-8a33-1744cc14ab61",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/collection/:collection_id/images?include_image_language=<string>&language=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "collection",
+                                ":collection_id",
+                                "images"
+                              ],
+                              "query": [
+                                {
+                                  "description": "specify a comma separated list of ISO-639-1 values to query, for example: `en-US,null`",
+                                  "key": "include_image_language",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "key": "language",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "collection_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"id\": 0,\n  \"backdrops\": [\n    {\n      \"aspect_ratio\": 0,\n      \"height\": 0,\n      \"iso_639_1\": {},\n      \"file_path\": \"<string>\",\n      \"vote_average\": 0,\n      \"vote_count\": 0,\n      \"width\": 0\n    },\n    {\n      \"aspect_ratio\": 0,\n      \"height\": 0,\n      \"iso_639_1\": {},\n      \"file_path\": \"<string>\",\n      \"vote_average\": 0,\n      \"vote_count\": 0,\n      \"width\": 0\n    }\n  ],\n  \"posters\": [\n    {\n      \"aspect_ratio\": 0,\n      \"height\": 0,\n      \"iso_639_1\": \"<string>\",\n      \"file_path\": \"<string>\",\n      \"vote_average\": 0,\n      \"vote_count\": 0,\n      \"width\": 0\n    },\n    {\n      \"aspect_ratio\": 0,\n      \"height\": 0,\n      \"iso_639_1\": \"<string>\",\n      \"file_path\": \"<string>\",\n      \"vote_average\": 0,\n      \"vote_count\": 0,\n      \"width\": 0\n    }\n  ]\n}",
+                          "createdAt": "2026-10-22T01:15:30.000Z",
+                          "updatedAt": "2026-10-22T01:15:30.000Z",
+                          "uid": "35240-00998617-fdae-45b0-8a33-1744cc14ab61"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:15:30.000Z",
+                      "updatedAt": "2026-10-22T01:15:30.000Z",
+                      "uid": "35240-53b97352-d17f-4e85-8db5-29d947c396de"
+                    }
+                  ],
+                  "id": "67d4288b-0fd9-4d63-836b-7325380d1864",
+                  "createdAt": "2026-10-22T01:15:30.000Z",
+                  "updatedAt": "2026-10-22T01:15:30.000Z",
+                  "uid": "35240-67d4288b-0fd9-4d63-836b-7325380d1864"
+                },
+                {
+                  "name": "translations",
+                  "item": [
+                    {
+                      "name": "Translations",
+                      "id": "0144b3d6-dce1-4c2e-ba57-daec07ea0579",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/collection/:collection_id/translations",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "collection",
+                            ":collection_id",
+                            "translations"
+                          ],
+                          "variable": [
+                            {
+                              "id": "482b153d-bd54-4cca-bb72-f3743f30e310",
+                              "key": "collection_id",
+                              "value": "<integer>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "6eb5b823-7bb5-4308-b61e-806b91a7d6ae",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/collection/:collection_id/translations",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "collection",
+                                ":collection_id",
+                                "translations"
+                              ],
+                              "variable": [
+                                {
+                                  "key": "collection_id"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"id\": 0,\n  \"translations\": [\n    {\n      \"iso_3166_1\": \"<string>\",\n      \"iso_639_1\": \"<string>\",\n      \"name\": \"<string>\",\n      \"english_name\": \"<string>\",\n      \"data\": {\n        \"title\": \"<string>\",\n        \"overview\": \"<string>\",\n        \"homepage\": \"<string>\"\n      }\n    },\n    {\n      \"iso_3166_1\": \"<string>\",\n      \"iso_639_1\": \"<string>\",\n      \"name\": \"<string>\",\n      \"english_name\": \"<string>\",\n      \"data\": {\n        \"title\": \"<string>\",\n        \"overview\": \"<string>\",\n        \"homepage\": \"<string>\"\n      }\n    }\n  ]\n}",
+                          "createdAt": "2026-10-22T01:15:30.000Z",
+                          "updatedAt": "2026-10-22T01:15:30.000Z",
+                          "uid": "35240-6eb5b823-7bb5-4308-b61e-806b91a7d6ae"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:15:30.000Z",
+                      "updatedAt": "2026-10-22T01:15:30.000Z",
+                      "uid": "35240-0144b3d6-dce1-4c2e-ba57-daec07ea0579"
+                    }
+                  ],
+                  "id": "aceb089d-0cfb-43b6-be94-a92c4352c5b8",
+                  "createdAt": "2026-10-22T01:15:30.000Z",
+                  "updatedAt": "2026-10-22T01:15:30.000Z",
+                  "uid": "35240-aceb089d-0cfb-43b6-be94-a92c4352c5b8"
+                },
+                {
+                  "name": "Details",
+                  "id": "9a5763db-1a03-4593-a4fa-e9cf8bf39ae2",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/collection/:collection_id?language=en-US",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "collection",
+                        ":collection_id"
+                      ],
+                      "query": [
+                        {
+                          "key": "language",
+                          "value": "en-US"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "id": "c15fbebc-a9be-4951-9d94-dc5b43e28361",
+                          "key": "collection_id",
+                          "value": "<integer>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Get collection details by ID."
+                  },
+                  "response": [
+                    {
+                      "id": "acdf004d-dd79-4945-934d-75801b5a8c18",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/collection/:collection_id?language=en-US",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "collection",
+                            ":collection_id"
+                          ],
+                          "query": [
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "collection_id"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"id\": 0,\n  \"name\": \"<string>\",\n  \"original_language\": \"<string>\",\n  \"original_name\": \"<string>\",\n  \"overview\": \"<string>\",\n  \"poster_path\": \"<string>\",\n  \"backdrop_path\": \"<string>\",\n  \"parts\": [\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"id\": 0,\n      \"name\": \"<string>\",\n      \"original_name\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"poster_path\": \"<string>\",\n      \"media_type\": \"<string>\",\n      \"original_language\": \"<string>\",\n      \"genre_ids\": [\n        0,\n        0\n      ],\n      \"popularity\": 0,\n      \"release_date\": \"<string>\",\n      \"video\": true,\n      \"vote_average\": 0,\n      \"vote_count\": 0\n    },\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"id\": 0,\n      \"name\": \"<string>\",\n      \"original_name\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"poster_path\": \"<string>\",\n      \"media_type\": \"<string>\",\n      \"original_language\": \"<string>\",\n      \"genre_ids\": [\n        0,\n        0\n      ],\n      \"popularity\": 0,\n      \"release_date\": \"<string>\",\n      \"video\": true,\n      \"vote_average\": 0,\n      \"vote_count\": 0\n    }\n  ]\n}",
+                      "createdAt": "2026-10-22T01:15:30.000Z",
+                      "updatedAt": "2026-10-22T01:15:30.000Z",
+                      "uid": "35240-acdf004d-dd79-4945-934d-75801b5a8c18"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:15:30.000Z",
+                  "updatedAt": "2026-10-22T01:15:30.000Z",
+                  "uid": "35240-9a5763db-1a03-4593-a4fa-e9cf8bf39ae2"
+                }
+              ],
+              "id": "fa8b5f64-e2d4-481d-ae34-ca1ea083a016",
+              "createdAt": "2026-10-22T01:15:30.000Z",
+              "updatedAt": "2026-10-22T01:15:30.000Z",
+              "uid": "35240-fa8b5f64-e2d4-481d-ae34-ca1ea083a016"
+            }
+          ],
+          "id": "ba04a705-be6b-4675-8598-98d2afa14b3c",
+          "createdAt": "2026-10-22T01:15:30.000Z",
+          "updatedAt": "2026-10-22T01:15:30.000Z",
+          "uid": "35240-ba04a705-be6b-4675-8598-98d2afa14b3c"
+        }
+      ],
+      "id": "67a550dc-8c5d-41ac-b351-abf91f2cf79e",
+      "createdAt": "2026-10-22T01:15:30.000Z",
+      "updatedAt": "2026-10-22T01:15:30.000Z",
+      "uid": "35240-67a550dc-8c5d-41ac-b351-abf91f2cf79e"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}

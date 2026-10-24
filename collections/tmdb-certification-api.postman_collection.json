@@ -1,0 +1,250 @@
+{
+  "info": {
+    "_postman_id": "c30b5cc0-8b1b-488e-92e6-ebffde84ca47",
+    "name": "tmdb-api Account Certification API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:15:20.000Z",
+    "updatedAt": "2026-10-22T01:15:21.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-c30b5cc0-8b1b-488e-92e6-ebffde84ca47"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "certification",
+          "item": [
+            {
+              "name": "movie",
+              "item": [
+                {
+                  "name": "list",
+                  "item": [
+                    {
+                      "name": "Movie Certifications",
+                      "id": "01a22cab-c431-41ec-8a9c-5e58ce7a0941",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/certification/movie/list",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "certification",
+                            "movie",
+                            "list"
+                          ]
+                        },
+                        "description": "Get an up to date list of the officially supported movie certifications on TMDB."
+                      },
+                      "response": [
+                        {
+                          "id": "53cc89e6-e3b5-48c9-b1a4-c395ac6026b4",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/certification/movie/list",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "certification",
+                                "movie",
+                                "list"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"certifications\": {\n    \"AU\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"BG\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"BR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"CA\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"CA-QC\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"DE\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"DK\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"ES\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"FI\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"FR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"GB\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"HU\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"IN\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"IT\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"LT\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"MY\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"NL\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"NO\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"NZ\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"PH\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"PT\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"RU\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"SE\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"US\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"KR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"SK\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"TH\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"MX\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"ID\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"TR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"AR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"GR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"TW\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"ZA\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"SG\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"IE\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"PR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"JP\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"VI\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"CH\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"IL\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"HK\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"MO\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"LV\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"LU\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ]\n  }\n}",
+                          "createdAt": "2026-10-22T01:15:21.000Z",
+                          "updatedAt": "2026-10-22T01:15:21.000Z",
+                          "uid": "35240-53cc89e6-e3b5-48c9-b1a4-c395ac6026b4"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:15:21.000Z",
+                      "updatedAt": "2026-10-22T01:15:21.000Z",
+                      "uid": "35240-01a22cab-c431-41ec-8a9c-5e58ce7a0941"
+                    }
+                  ],
+                  "id": "cfa789cf-6b5d-465b-ab6b-2d9bceabc277",
+                  "createdAt": "2026-10-22T01:15:21.000Z",
+                  "updatedAt": "2026-10-22T01:15:21.000Z",
+                  "uid": "35240-cfa789cf-6b5d-465b-ab6b-2d9bceabc277"
+                }
+              ],
+              "id": "eb6310b9-02db-4448-9f7f-f8d3840a4211",
+              "createdAt": "2026-10-22T01:15:21.000Z",
+              "updatedAt": "2026-10-22T01:15:21.000Z",
+              "uid": "35240-eb6310b9-02db-4448-9f7f-f8d3840a4211"
+            },
+            {
+              "name": "tv",
+              "item": [
+                {
+                  "name": "list",
+                  "item": [
+                    {
+                      "name": "TV Certifications",
+                      "id": "86ebd0be-bc59-415c-81a7-f8c3ff0a71e5",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/certification/tv/list",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "certification",
+                            "tv",
+                            "list"
+                          ]
+                        }
+                      },
+                      "response": [
+                        {
+                          "id": "1c395e6d-2dd0-473a-ac24-4e16bc728c54",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/certification/tv/list",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "certification",
+                                "tv",
+                                "list"
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"certifications\": {\n    \"AU\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"BR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"CA\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"CA-QC\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"DE\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"ES\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"FR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"GB\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"HU\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"KR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"LT\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"NL\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"PH\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"PT\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"RU\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"SK\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"TH\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"US\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"IT\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"FI\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"MY\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"NZ\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"NO\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"BG\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"MX\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"IN\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"DK\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"SE\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"ID\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"TR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"AR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"PL\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"MA\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"GR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"IL\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"TW\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"ZA\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"SG\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"PR\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ],\n    \"VI\": [\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      },\n      {\n        \"certification\": \"<string>\",\n        \"meaning\": \"<string>\",\n        \"order\": 0\n      }\n    ]\n  }\n}",
+                          "createdAt": "2026-10-22T01:15:21.000Z",
+                          "updatedAt": "2026-10-22T01:15:21.000Z",
+                          "uid": "35240-1c395e6d-2dd0-473a-ac24-4e16bc728c54"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:15:21.000Z",
+                      "updatedAt": "2026-10-22T01:15:21.000Z",
+                      "uid": "35240-86ebd0be-bc59-415c-81a7-f8c3ff0a71e5"
+                    }
+                  ],
+                  "id": "ce6bd230-5f5c-4729-b566-c0258b308cab",
+                  "createdAt": "2026-10-22T01:15:21.000Z",
+                  "updatedAt": "2026-10-22T01:15:21.000Z",
+                  "uid": "35240-ce6bd230-5f5c-4729-b566-c0258b308cab"
+                }
+              ],
+              "id": "e94e9519-b0cf-4ebf-9814-09eb056bcf30",
+              "createdAt": "2026-10-22T01:15:21.000Z",
+              "updatedAt": "2026-10-22T01:15:21.000Z",
+              "uid": "35240-e94e9519-b0cf-4ebf-9814-09eb056bcf30"
+            }
+          ],
+          "id": "6195c400-653e-44b3-85c1-c1561280a1bb",
+          "createdAt": "2026-10-22T01:15:21.000Z",
+          "updatedAt": "2026-10-22T01:15:21.000Z",
+          "uid": "35240-6195c400-653e-44b3-85c1-c1561280a1bb"
+        }
+      ],
+      "id": "a289ff64-4bf9-4a46-bcb3-67da9a90b219",
+      "createdAt": "2026-10-22T01:15:21.000Z",
+      "updatedAt": "2026-10-22T01:15:21.000Z",
+      "uid": "35240-a289ff64-4bf9-4a46-bcb3-67da9a90b219"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}

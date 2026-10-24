@@ -1,0 +1,275 @@
+{
+  "info": {
+    "_postman_id": "8c688de4-42dd-4d91-9195-65f41b6a9866",
+    "name": "tmdb-api Account Genre API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:16:04.000Z",
+    "updatedAt": "2026-10-22T01:16:05.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-8c688de4-42dd-4d91-9195-65f41b6a9866"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "genre",
+          "item": [
+            {
+              "name": "movie",
+              "item": [
+                {
+                  "name": "list",
+                  "item": [
+                    {
+                      "name": "Movie List",
+                      "id": "bb0f85c8-5a65-4e17-a743-5a85a84388dd",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/genre/movie/list?language=en",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "genre",
+                            "movie",
+                            "list"
+                          ],
+                          "query": [
+                            {
+                              "key": "language",
+                              "value": "en"
+                            }
+                          ]
+                        },
+                        "description": "Get the list of official genres for movies."
+                      },
+                      "response": [
+                        {
+                          "id": "5f5723b6-1ddd-4199-ba9c-e2ae0605cfc4",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/genre/movie/list?language=en",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "genre",
+                                "movie",
+                                "list"
+                              ],
+                              "query": [
+                                {
+                                  "key": "language",
+                                  "value": "en"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"genres\": [\n    {\n      \"id\": 0,\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": 0,\n      \"name\": \"<string>\"\n    }\n  ]\n}",
+                          "createdAt": "2026-10-22T01:16:05.000Z",
+                          "updatedAt": "2026-10-22T01:16:05.000Z",
+                          "uid": "35240-5f5723b6-1ddd-4199-ba9c-e2ae0605cfc4"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:16:05.000Z",
+                      "updatedAt": "2026-10-22T01:16:05.000Z",
+                      "uid": "35240-bb0f85c8-5a65-4e17-a743-5a85a84388dd"
+                    }
+                  ],
+                  "id": "ab038800-ad3f-4beb-b3cf-e23f73a7f847",
+                  "createdAt": "2026-10-22T01:16:05.000Z",
+                  "updatedAt": "2026-10-22T01:16:05.000Z",
+                  "uid": "35240-ab038800-ad3f-4beb-b3cf-e23f73a7f847"
+                }
+              ],
+              "id": "a3ace970-f6c4-448d-ac0a-3329577b0bcc",
+              "createdAt": "2026-10-22T01:16:05.000Z",
+              "updatedAt": "2026-10-22T01:16:05.000Z",
+              "uid": "35240-a3ace970-f6c4-448d-ac0a-3329577b0bcc"
+            },
+            {
+              "name": "tv",
+              "item": [
+                {
+                  "name": "list",
+                  "item": [
+                    {
+                      "name": "TV List",
+                      "id": "74dd577b-f1d4-42cb-a43a-c7eb37f485bc",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/genre/tv/list?language=en",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "genre",
+                            "tv",
+                            "list"
+                          ],
+                          "query": [
+                            {
+                              "key": "language",
+                              "value": "en"
+                            }
+                          ]
+                        },
+                        "description": "Get the list of official genres for TV shows."
+                      },
+                      "response": [
+                        {
+                          "id": "13c127dc-85f1-4da1-8900-bff1ec8cf46f",
+                          "name": "200",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              },
+                              {
+                                "description": "Added as a part of security scheme: apikey",
+                                "key": "Authorization",
+                                "value": "<API Key>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/3/genre/tv/list?language=en",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "3",
+                                "genre",
+                                "tv",
+                                "list"
+                              ],
+                              "query": [
+                                {
+                                  "key": "language",
+                                  "value": "en"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "json",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"genres\": [\n    {\n      \"id\": 0,\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": 0,\n      \"name\": \"<string>\"\n    }\n  ]\n}",
+                          "createdAt": "2026-10-22T01:16:05.000Z",
+                          "updatedAt": "2026-10-22T01:16:05.000Z",
+                          "uid": "35240-13c127dc-85f1-4da1-8900-bff1ec8cf46f"
+                        }
+                      ],
+                      "createdAt": "2026-10-22T01:16:05.000Z",
+                      "updatedAt": "2026-10-22T01:16:05.000Z",
+                      "uid": "35240-74dd577b-f1d4-42cb-a43a-c7eb37f485bc"
+                    }
+                  ],
+                  "id": "fa2c72c3-c802-44a8-ad84-afd8099f197a",
+                  "createdAt": "2026-10-22T01:16:05.000Z",
+                  "updatedAt": "2026-10-22T01:16:05.000Z",
+                  "uid": "35240-fa2c72c3-c802-44a8-ad84-afd8099f197a"
+                }
+              ],
+              "id": "5a334f57-014d-4735-8759-494a59183713",
+              "createdAt": "2026-10-22T01:16:05.000Z",
+              "updatedAt": "2026-10-22T01:16:05.000Z",
+              "uid": "35240-5a334f57-014d-4735-8759-494a59183713"
+            }
+          ],
+          "id": "58eba07c-ad66-42b9-9446-9e1374f53718",
+          "createdAt": "2026-10-22T01:16:05.000Z",
+          "updatedAt": "2026-10-22T01:16:05.000Z",
+          "uid": "35240-58eba07c-ad66-42b9-9446-9e1374f53718"
+        }
+      ],
+      "id": "b5d3e151-a7bf-4021-bb72-f60d3b140979",
+      "createdAt": "2026-10-22T01:16:05.000Z",
+      "updatedAt": "2026-10-22T01:16:05.000Z",
+      "uid": "35240-b5d3e151-a7bf-4021-bb72-f60d3b140979"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}

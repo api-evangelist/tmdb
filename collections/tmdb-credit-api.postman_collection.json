@@ -1,0 +1,168 @@
+{
+  "info": {
+    "_postman_id": "248c5c90-82a5-48c6-be9d-c4340e51dc50",
+    "name": "tmdb-api Account Credit API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:15:48.000Z",
+    "updatedAt": "2026-10-22T01:15:48.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-248c5c90-82a5-48c6-be9d-c4340e51dc50"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "credit",
+          "item": [
+            {
+              "name": "{credit_id}",
+              "item": [
+                {
+                  "name": "Details",
+                  "id": "a56638c2-e889-4dba-8403-c23fbbc8cd33",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/credit/:credit_id?language=en-US",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "credit",
+                        ":credit_id"
+                      ],
+                      "query": [
+                        {
+                          "key": "language",
+                          "value": "en-US"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "id": "5b9a21e6-3d74-4e62-a3a0-c62d832c2ff6",
+                          "key": "credit_id",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Get a movie or TV credit details by ID."
+                  },
+                  "response": [
+                    {
+                      "id": "5e008cca-e18f-405b-ba9c-4c4a298a4338",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/credit/:credit_id?language=en-US",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "credit",
+                            ":credit_id"
+                          ],
+                          "query": [
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "credit_id"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"credit_type\": \"<string>\",\n  \"department\": \"<string>\",\n  \"job\": \"<string>\",\n  \"media\": {\n    \"adult\": true,\n    \"backdrop_path\": \"<string>\",\n    \"id\": 0,\n    \"name\": \"<string>\",\n    \"original_language\": \"<string>\",\n    \"original_name\": \"<string>\",\n    \"overview\": \"<string>\",\n    \"poster_path\": \"<string>\",\n    \"media_type\": \"<string>\",\n    \"genre_ids\": [\n      0,\n      0\n    ],\n    \"popularity\": 0,\n    \"first_air_date\": \"<string>\",\n    \"vote_average\": 0,\n    \"vote_count\": 0,\n    \"origin_country\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"character\": \"<string>\",\n    \"episodes\": \"<array>\",\n    \"seasons\": [\n      {\n        \"air_date\": \"<string>\",\n        \"episode_count\": 0,\n        \"id\": 0,\n        \"name\": \"<string>\",\n        \"overview\": \"<string>\",\n        \"poster_path\": \"<string>\",\n        \"season_number\": 0,\n        \"show_id\": 0\n      },\n      {\n        \"air_date\": \"<string>\",\n        \"episode_count\": 0,\n        \"id\": 0,\n        \"name\": \"<string>\",\n        \"overview\": \"<string>\",\n        \"poster_path\": \"<string>\",\n        \"season_number\": 0,\n        \"show_id\": 0\n      }\n    ]\n  },\n  \"media_type\": \"<string>\",\n  \"id\": \"<string>\",\n  \"person\": {\n    \"adult\": true,\n    \"id\": 0,\n    \"name\": \"<string>\",\n    \"original_name\": \"<string>\",\n    \"media_type\": \"<string>\",\n    \"popularity\": 0,\n    \"gender\": 0,\n    \"known_for_department\": \"<string>\",\n    \"profile_path\": \"<string>\"\n  }\n}",
+                      "createdAt": "2026-10-22T01:15:48.000Z",
+                      "updatedAt": "2026-10-22T01:15:48.000Z",
+                      "uid": "35240-5e008cca-e18f-405b-ba9c-4c4a298a4338"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:15:48.000Z",
+                  "updatedAt": "2026-10-22T01:15:48.000Z",
+                  "uid": "35240-a56638c2-e889-4dba-8403-c23fbbc8cd33"
+                }
+              ],
+              "id": "a454b819-c3d5-4b45-bb66-7e80547d53fb",
+              "createdAt": "2026-10-22T01:15:48.000Z",
+              "updatedAt": "2026-10-22T01:15:48.000Z",
+              "uid": "35240-a454b819-c3d5-4b45-bb66-7e80547d53fb"
+            }
+          ],
+          "id": "22a951ba-a662-4e6f-8ac4-946434c55d20",
+          "createdAt": "2026-10-22T01:15:48.000Z",
+          "updatedAt": "2026-10-22T01:15:48.000Z",
+          "uid": "35240-22a951ba-a662-4e6f-8ac4-946434c55d20"
+        }
+      ],
+      "id": "e16d1d5c-ed87-4ce5-a5db-0cceffb2115b",
+      "createdAt": "2026-10-22T01:15:48.000Z",
+      "updatedAt": "2026-10-22T01:15:48.000Z",
+      "uid": "35240-e16d1d5c-ed87-4ce5-a5db-0cceffb2115b"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}

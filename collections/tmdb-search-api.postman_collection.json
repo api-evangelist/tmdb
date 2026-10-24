@@ -1,0 +1,945 @@
+{
+  "info": {
+    "_postman_id": "8c06fcec-075a-4235-b73a-3ce1dbc7513a",
+    "name": "tmdb-api Account Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-10-22T01:16:39.000Z",
+    "updatedAt": "2026-10-22T01:16:40.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-8c06fcec-075a-4235-b73a-3ce1dbc7513a"
+  },
+  "item": [
+    {
+      "name": "3",
+      "item": [
+        {
+          "name": "search",
+          "item": [
+            {
+              "name": "collection",
+              "item": [
+                {
+                  "name": "Collection",
+                  "id": "f17e4ffb-f465-4743-8fd5-0f53f69ebfc2",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/search/collection?query=<string>&include_adult=false&language=en-US&page=1&region=<string>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "search",
+                        "collection"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) ",
+                          "key": "query",
+                          "value": "<string>"
+                        },
+                        {
+                          "key": "include_adult",
+                          "value": "false"
+                        },
+                        {
+                          "key": "language",
+                          "value": "en-US"
+                        },
+                        {
+                          "key": "page",
+                          "value": "1"
+                        },
+                        {
+                          "key": "region",
+                          "value": "<string>"
+                        }
+                      ]
+                    },
+                    "description": "Search for collections by their original, translated and alternative names."
+                  },
+                  "response": [
+                    {
+                      "id": "06468487-9a21-41dc-b5e2-ef239a15417f",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/search/collection?query=<string>&include_adult=false&language=en-US&page=1&region=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "search",
+                            "collection"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "query",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "include_adult",
+                              "value": "false"
+                            },
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            },
+                            {
+                              "key": "page",
+                              "value": "1"
+                            },
+                            {
+                              "key": "region",
+                              "value": "<string>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"page\": 0,\n  \"results\": [\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"id\": 0,\n      \"name\": \"<string>\",\n      \"original_language\": \"<string>\",\n      \"original_name\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"poster_path\": \"<string>\"\n    },\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"id\": 0,\n      \"name\": \"<string>\",\n      \"original_language\": \"<string>\",\n      \"original_name\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"poster_path\": \"<string>\"\n    }\n  ],\n  \"total_pages\": 0,\n  \"total_results\": 0\n}",
+                      "createdAt": "2026-10-22T01:16:40.000Z",
+                      "updatedAt": "2026-10-22T01:16:40.000Z",
+                      "uid": "35240-06468487-9a21-41dc-b5e2-ef239a15417f"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:16:40.000Z",
+                  "updatedAt": "2026-10-22T01:16:40.000Z",
+                  "uid": "35240-f17e4ffb-f465-4743-8fd5-0f53f69ebfc2"
+                }
+              ],
+              "id": "fe9ed8c7-1b34-494e-b5d7-01a5db6df89a",
+              "createdAt": "2026-10-22T01:16:40.000Z",
+              "updatedAt": "2026-10-22T01:16:40.000Z",
+              "uid": "35240-fe9ed8c7-1b34-494e-b5d7-01a5db6df89a"
+            },
+            {
+              "name": "company",
+              "item": [
+                {
+                  "name": "Company",
+                  "id": "8c6af98b-cb0a-4fc6-8e82-cb85eada4471",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/search/company?query=<string>&page=1",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "search",
+                        "company"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) ",
+                          "key": "query",
+                          "value": "<string>"
+                        },
+                        {
+                          "key": "page",
+                          "value": "1"
+                        }
+                      ]
+                    },
+                    "description": "Search for companies by their original and alternative names."
+                  },
+                  "response": [
+                    {
+                      "id": "887d2cde-1289-4c82-a021-bcdb8d18aafa",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/search/company?query=<string>&page=1",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "search",
+                            "company"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "query",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "page",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"page\": 0,\n  \"results\": [\n    {\n      \"id\": 0,\n      \"logo_path\": \"<string>\",\n      \"name\": \"<string>\",\n      \"origin_country\": \"<string>\"\n    },\n    {\n      \"id\": 0,\n      \"logo_path\": \"<string>\",\n      \"name\": \"<string>\",\n      \"origin_country\": \"<string>\"\n    }\n  ],\n  \"total_pages\": 0,\n  \"total_results\": 0\n}",
+                      "createdAt": "2026-10-22T01:16:40.000Z",
+                      "updatedAt": "2026-10-22T01:16:40.000Z",
+                      "uid": "35240-887d2cde-1289-4c82-a021-bcdb8d18aafa"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:16:40.000Z",
+                  "updatedAt": "2026-10-22T01:16:40.000Z",
+                  "uid": "35240-8c6af98b-cb0a-4fc6-8e82-cb85eada4471"
+                }
+              ],
+              "id": "93dd08f4-7b28-447b-95a2-608ab5cb8f36",
+              "createdAt": "2026-10-22T01:16:40.000Z",
+              "updatedAt": "2026-10-22T01:16:40.000Z",
+              "uid": "35240-93dd08f4-7b28-447b-95a2-608ab5cb8f36"
+            },
+            {
+              "name": "keyword",
+              "item": [
+                {
+                  "name": "Keyword",
+                  "id": "ce41def8-9a90-4c98-9a37-058d3704a137",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/search/keyword?query=<string>&page=1",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "search",
+                        "keyword"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) ",
+                          "key": "query",
+                          "value": "<string>"
+                        },
+                        {
+                          "key": "page",
+                          "value": "1"
+                        }
+                      ]
+                    },
+                    "description": "Search for keywords by their name."
+                  },
+                  "response": [
+                    {
+                      "id": "a7cfe07b-b5d0-4348-bbcd-b35d26b8e358",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/search/keyword?query=<string>&page=1",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "search",
+                            "keyword"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "query",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "page",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"page\": 0,\n  \"results\": [\n    {\n      \"id\": 0,\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": 0,\n      \"name\": \"<string>\"\n    }\n  ],\n  \"total_pages\": 0,\n  \"total_results\": 0\n}",
+                      "createdAt": "2026-10-22T01:16:40.000Z",
+                      "updatedAt": "2026-10-22T01:16:40.000Z",
+                      "uid": "35240-a7cfe07b-b5d0-4348-bbcd-b35d26b8e358"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:16:40.000Z",
+                  "updatedAt": "2026-10-22T01:16:40.000Z",
+                  "uid": "35240-ce41def8-9a90-4c98-9a37-058d3704a137"
+                }
+              ],
+              "id": "074086ba-ab2d-4126-88a4-5e51c8a1837d",
+              "createdAt": "2026-10-22T01:16:40.000Z",
+              "updatedAt": "2026-10-22T01:16:40.000Z",
+              "uid": "35240-074086ba-ab2d-4126-88a4-5e51c8a1837d"
+            },
+            {
+              "name": "movie",
+              "item": [
+                {
+                  "name": "Movie",
+                  "id": "4657da98-68b0-48ac-9954-98af159164ac",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/search/movie?query=<string>&include_adult=false&language=en-US&primary_release_year=<string>&page=1&region=<string>&year=<string>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "search",
+                        "movie"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) ",
+                          "key": "query",
+                          "value": "<string>"
+                        },
+                        {
+                          "key": "include_adult",
+                          "value": "false"
+                        },
+                        {
+                          "key": "language",
+                          "value": "en-US"
+                        },
+                        {
+                          "key": "primary_release_year",
+                          "value": "<string>"
+                        },
+                        {
+                          "key": "page",
+                          "value": "1"
+                        },
+                        {
+                          "key": "region",
+                          "value": "<string>"
+                        },
+                        {
+                          "key": "year",
+                          "value": "<string>"
+                        }
+                      ]
+                    },
+                    "description": "Search for movies by their original, translated and alternative titles."
+                  },
+                  "response": [
+                    {
+                      "id": "1d095ff9-354c-41e9-9467-2b94a007fb6b",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/search/movie?query=<string>&include_adult=false&language=en-US&primary_release_year=<string>&page=1&region=<string>&year=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "search",
+                            "movie"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "query",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "include_adult",
+                              "value": "false"
+                            },
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            },
+                            {
+                              "key": "primary_release_year",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "page",
+                              "value": "1"
+                            },
+                            {
+                              "key": "region",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "year",
+                              "value": "<string>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"page\": 0,\n  \"results\": [\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"genre_ids\": [\n        0,\n        0\n      ],\n      \"id\": 0,\n      \"original_language\": \"<string>\",\n      \"original_title\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"popularity\": 0,\n      \"poster_path\": \"<string>\",\n      \"release_date\": \"<string>\",\n      \"title\": \"<string>\",\n      \"video\": true,\n      \"vote_average\": 0,\n      \"vote_count\": 0\n    },\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"genre_ids\": [\n        0,\n        0\n      ],\n      \"id\": 0,\n      \"original_language\": \"<string>\",\n      \"original_title\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"popularity\": 0,\n      \"poster_path\": \"<string>\",\n      \"release_date\": \"<string>\",\n      \"title\": \"<string>\",\n      \"video\": true,\n      \"vote_average\": 0,\n      \"vote_count\": 0\n    }\n  ],\n  \"total_pages\": 0,\n  \"total_results\": 0\n}",
+                      "createdAt": "2026-10-22T01:16:40.000Z",
+                      "updatedAt": "2026-10-22T01:16:40.000Z",
+                      "uid": "35240-1d095ff9-354c-41e9-9467-2b94a007fb6b"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:16:40.000Z",
+                  "updatedAt": "2026-10-22T01:16:40.000Z",
+                  "uid": "35240-4657da98-68b0-48ac-9954-98af159164ac"
+                }
+              ],
+              "id": "1e4b4986-b54d-4051-9fb6-41588ce3a281",
+              "createdAt": "2026-10-22T01:16:40.000Z",
+              "updatedAt": "2026-10-22T01:16:40.000Z",
+              "uid": "35240-1e4b4986-b54d-4051-9fb6-41588ce3a281"
+            },
+            {
+              "name": "multi",
+              "item": [
+                {
+                  "name": "Multi",
+                  "id": "c1764327-66aa-4e58-8417-3fa9ee7ab797",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/search/multi?query=<string>&include_adult=false&language=en-US&page=1",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "search",
+                        "multi"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) ",
+                          "key": "query",
+                          "value": "<string>"
+                        },
+                        {
+                          "key": "include_adult",
+                          "value": "false"
+                        },
+                        {
+                          "key": "language",
+                          "value": "en-US"
+                        },
+                        {
+                          "key": "page",
+                          "value": "1"
+                        }
+                      ]
+                    },
+                    "description": "Use multi search when you want to search for movies, TV shows and people in a single request."
+                  },
+                  "response": [
+                    {
+                      "id": "9923b3ee-2b5c-4562-bf95-a6d96b6e0de0",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/search/multi?query=<string>&include_adult=false&language=en-US&page=1",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "search",
+                            "multi"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "query",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "include_adult",
+                              "value": "false"
+                            },
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            },
+                            {
+                              "key": "page",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"page\": 0,\n  \"results\": [\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"id\": 0,\n      \"title\": \"<string>\",\n      \"original_language\": \"<string>\",\n      \"original_title\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"poster_path\": \"<string>\",\n      \"media_type\": \"<string>\",\n      \"genre_ids\": [\n        0,\n        0\n      ],\n      \"popularity\": 0,\n      \"release_date\": \"<string>\",\n      \"video\": true,\n      \"vote_average\": 0,\n      \"vote_count\": 0,\n      \"name\": \"<string>\",\n      \"original_name\": \"<string>\"\n    },\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"id\": 0,\n      \"title\": \"<string>\",\n      \"original_language\": \"<string>\",\n      \"original_title\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"poster_path\": \"<string>\",\n      \"media_type\": \"<string>\",\n      \"genre_ids\": [\n        0,\n        0\n      ],\n      \"popularity\": 0,\n      \"release_date\": \"<string>\",\n      \"video\": true,\n      \"vote_average\": 0,\n      \"vote_count\": 0,\n      \"name\": \"<string>\",\n      \"original_name\": \"<string>\"\n    }\n  ],\n  \"total_pages\": 0,\n  \"total_results\": 0\n}",
+                      "createdAt": "2026-10-22T01:16:40.000Z",
+                      "updatedAt": "2026-10-22T01:16:40.000Z",
+                      "uid": "35240-9923b3ee-2b5c-4562-bf95-a6d96b6e0de0"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:16:40.000Z",
+                  "updatedAt": "2026-10-22T01:16:40.000Z",
+                  "uid": "35240-c1764327-66aa-4e58-8417-3fa9ee7ab797"
+                }
+              ],
+              "id": "d1c12d19-136a-457d-afcc-2474abfa26e2",
+              "createdAt": "2026-10-22T01:16:40.000Z",
+              "updatedAt": "2026-10-22T01:16:40.000Z",
+              "uid": "35240-d1c12d19-136a-457d-afcc-2474abfa26e2"
+            },
+            {
+              "name": "person",
+              "item": [
+                {
+                  "name": "Person",
+                  "id": "0dacf223-43e4-470d-886a-9cb2db7b91bc",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/search/person?query=<string>&include_adult=false&language=en-US&page=1",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "search",
+                        "person"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) ",
+                          "key": "query",
+                          "value": "<string>"
+                        },
+                        {
+                          "key": "include_adult",
+                          "value": "false"
+                        },
+                        {
+                          "key": "language",
+                          "value": "en-US"
+                        },
+                        {
+                          "key": "page",
+                          "value": "1"
+                        }
+                      ]
+                    },
+                    "description": "Search for people by their name and also known as names."
+                  },
+                  "response": [
+                    {
+                      "id": "5a117b7b-f24a-43f8-a75e-ede969246738",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/search/person?query=<string>&include_adult=false&language=en-US&page=1",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "search",
+                            "person"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "query",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "include_adult",
+                              "value": "false"
+                            },
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            },
+                            {
+                              "key": "page",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"page\": 0,\n  \"results\": [\n    {\n      \"adult\": true,\n      \"gender\": 0,\n      \"id\": 0,\n      \"known_for_department\": \"<string>\",\n      \"name\": \"<string>\",\n      \"original_name\": \"<string>\",\n      \"popularity\": 0,\n      \"profile_path\": \"<string>\",\n      \"known_for\": [\n        {\n          \"adult\": true,\n          \"backdrop_path\": \"<string>\",\n          \"id\": 0,\n          \"title\": \"<string>\",\n          \"original_language\": \"<string>\",\n          \"original_title\": \"<string>\",\n          \"overview\": \"<string>\",\n          \"poster_path\": \"<string>\",\n          \"media_type\": \"<string>\",\n          \"genre_ids\": [\n            0,\n            0\n          ],\n          \"popularity\": 0,\n          \"release_date\": \"<string>\",\n          \"video\": true,\n          \"vote_average\": 0,\n          \"vote_count\": 0\n        },\n        {\n          \"adult\": true,\n          \"backdrop_path\": \"<string>\",\n          \"id\": 0,\n          \"title\": \"<string>\",\n          \"original_language\": \"<string>\",\n          \"original_title\": \"<string>\",\n          \"overview\": \"<string>\",\n          \"poster_path\": \"<string>\",\n          \"media_type\": \"<string>\",\n          \"genre_ids\": [\n            0,\n            0\n          ],\n          \"popularity\": 0,\n          \"release_date\": \"<string>\",\n          \"video\": true,\n          \"vote_average\": 0,\n          \"vote_count\": 0\n        }\n      ]\n    },\n    {\n      \"adult\": true,\n      \"gender\": 0,\n      \"id\": 0,\n      \"known_for_department\": \"<string>\",\n      \"name\": \"<string>\",\n      \"original_name\": \"<string>\",\n      \"popularity\": 0,\n      \"profile_path\": \"<string>\",\n      \"known_for\": [\n        {\n          \"adult\": true,\n          \"backdrop_path\": \"<string>\",\n          \"id\": 0,\n          \"title\": \"<string>\",\n          \"original_language\": \"<string>\",\n          \"original_title\": \"<string>\",\n          \"overview\": \"<string>\",\n          \"poster_path\": \"<string>\",\n          \"media_type\": \"<string>\",\n          \"genre_ids\": [\n            0,\n            0\n          ],\n          \"popularity\": 0,\n          \"release_date\": \"<string>\",\n          \"video\": true,\n          \"vote_average\": 0,\n          \"vote_count\": 0\n        },\n        {\n          \"adult\": true,\n          \"backdrop_path\": \"<string>\",\n          \"id\": 0,\n          \"title\": \"<string>\",\n          \"original_language\": \"<string>\",\n          \"original_title\": \"<string>\",\n          \"overview\": \"<string>\",\n          \"poster_path\": \"<string>\",\n          \"media_type\": \"<string>\",\n          \"genre_ids\": [\n            0,\n            0\n          ],\n          \"popularity\": 0,\n          \"release_date\": \"<string>\",\n          \"video\": true,\n          \"vote_average\": 0,\n          \"vote_count\": 0\n        }\n      ]\n    }\n  ],\n  \"total_pages\": 0,\n  \"total_results\": 0\n}",
+                      "createdAt": "2026-10-22T01:16:40.000Z",
+                      "updatedAt": "2026-10-22T01:16:40.000Z",
+                      "uid": "35240-5a117b7b-f24a-43f8-a75e-ede969246738"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:16:40.000Z",
+                  "updatedAt": "2026-10-22T01:16:40.000Z",
+                  "uid": "35240-0dacf223-43e4-470d-886a-9cb2db7b91bc"
+                }
+              ],
+              "id": "f54cac65-4a65-46fb-a542-49734f1e2cf4",
+              "createdAt": "2026-10-22T01:16:40.000Z",
+              "updatedAt": "2026-10-22T01:16:40.000Z",
+              "uid": "35240-f54cac65-4a65-46fb-a542-49734f1e2cf4"
+            },
+            {
+              "name": "tv",
+              "item": [
+                {
+                  "name": "TV",
+                  "id": "95c48860-ddf1-4383-8adc-9ae62e24b4c4",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/3/search/tv?query=<string>&first_air_date_year=<integer>&include_adult=false&language=en-US&page=1&year=<integer>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "3",
+                        "search",
+                        "tv"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) ",
+                          "key": "query",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "Search only the first air date. Valid values are: 1000..9999",
+                          "key": "first_air_date_year",
+                          "value": "<integer>"
+                        },
+                        {
+                          "key": "include_adult",
+                          "value": "false"
+                        },
+                        {
+                          "key": "language",
+                          "value": "en-US"
+                        },
+                        {
+                          "key": "page",
+                          "value": "1"
+                        },
+                        {
+                          "description": "Search the first air date and all episode air dates. Valid values are: 1000..9999",
+                          "key": "year",
+                          "value": "<integer>"
+                        }
+                      ]
+                    },
+                    "description": "Search for TV shows by their original, translated and also known as names."
+                  },
+                  "response": [
+                    {
+                      "id": "8b3b1c5d-2bc3-4c40-82f8-f67b51cb5c4e",
+                      "name": "200",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/3/search/tv?query=<string>&first_air_date_year=<integer>&include_adult=false&language=en-US&page=1&year=<integer>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "3",
+                            "search",
+                            "tv"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "query",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "Search only the first air date. Valid values are: 1000..9999",
+                              "key": "first_air_date_year",
+                              "value": "<integer>"
+                            },
+                            {
+                              "key": "include_adult",
+                              "value": "false"
+                            },
+                            {
+                              "key": "language",
+                              "value": "en-US"
+                            },
+                            {
+                              "key": "page",
+                              "value": "1"
+                            },
+                            {
+                              "description": "Search the first air date and all episode air dates. Valid values are: 1000..9999",
+                              "key": "year",
+                              "value": "<integer>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"page\": 0,\n  \"results\": [\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"genre_ids\": [\n        0,\n        0\n      ],\n      \"id\": 0,\n      \"origin_country\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"original_language\": \"<string>\",\n      \"original_name\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"popularity\": 0,\n      \"poster_path\": \"<string>\",\n      \"first_air_date\": \"<string>\",\n      \"name\": \"<string>\",\n      \"vote_average\": 0,\n      \"vote_count\": 0\n    },\n    {\n      \"adult\": true,\n      \"backdrop_path\": \"<string>\",\n      \"genre_ids\": [\n        0,\n        0\n      ],\n      \"id\": 0,\n      \"origin_country\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"original_language\": \"<string>\",\n      \"original_name\": \"<string>\",\n      \"overview\": \"<string>\",\n      \"popularity\": 0,\n      \"poster_path\": \"<string>\",\n      \"first_air_date\": \"<string>\",\n      \"name\": \"<string>\",\n      \"vote_average\": 0,\n      \"vote_count\": 0\n    }\n  ],\n  \"total_pages\": 0,\n  \"total_results\": 0\n}",
+                      "createdAt": "2026-10-22T01:16:40.000Z",
+                      "updatedAt": "2026-10-22T01:16:40.000Z",
+                      "uid": "35240-8b3b1c5d-2bc3-4c40-82f8-f67b51cb5c4e"
+                    }
+                  ],
+                  "createdAt": "2026-10-22T01:16:40.000Z",
+                  "updatedAt": "2026-10-22T01:16:40.000Z",
+                  "uid": "35240-95c48860-ddf1-4383-8adc-9ae62e24b4c4"
+                }
+              ],
+              "id": "04b3a255-e1d3-402e-b5ec-90dca9d9dd36",
+              "createdAt": "2026-10-22T01:16:40.000Z",
+              "updatedAt": "2026-10-22T01:16:40.000Z",
+              "uid": "35240-04b3a255-e1d3-402e-b5ec-90dca9d9dd36"
+            }
+          ],
+          "id": "9e2a616b-9ea5-469d-aabb-c73b452a8900",
+          "createdAt": "2026-10-22T01:16:40.000Z",
+          "updatedAt": "2026-10-22T01:16:40.000Z",
+          "uid": "35240-9e2a616b-9ea5-469d-aabb-c73b452a8900"
+        }
+      ],
+      "id": "0d4b1bd1-41aa-4118-831f-a94d3c0daafc",
+      "createdAt": "2026-10-22T01:16:40.000Z",
+      "updatedAt": "2026-10-22T01:16:40.000Z",
+      "uid": "35240-0d4b1bd1-41aa-4118-831f-a94d3c0daafc"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.themoviedb.org"
+    }
+  ]
+}
